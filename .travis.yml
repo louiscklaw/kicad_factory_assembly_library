@@ -1,9 +1,7 @@
 dist: bionic
 
 script:
-  - cd parser/JLCPCB
-  - pipenv sync
-  - pipenv run python3 parse.py
+  - bash build.sh
 
 after_success:
   - id
