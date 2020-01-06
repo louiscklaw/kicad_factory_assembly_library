@@ -7,6 +7,8 @@ from translate import *
 from const import *
 from util import *
 
+from categories.categories import *
+
 import gen_r
 
 import xlrd
@@ -75,22 +77,30 @@ r_handlers = {
   # '^AVR.+$': handle_resistor_with_partnumber,
 }
 
-
+shown_dictionary = {}
 
 i = 0
-for values in get_all_columns():
-  lcsc_part_value = values[COL_NUM_LCSC_PART]
+for cell_values in get_all_columns():
+  if i == 0:
+    pass
+  else:
 
-  first_category_value = values[COL_NUM_FIRST_CATEGORY]
-  secondary_category_value = values[COL_NUM_SECOND_CATEGORY]
+    lcsc_part_value = cell_values[COL_NUM_LCSC_PART]
 
-  component_packages = values[COL_NUM_PACKAGE]
+    first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
+    secondary_category_value = cell_values[COL_NUM_SECOND_CATEGORY]
 
-  for (category, check_process) in category_check_process.items():
-    check = check_process[0]
-    process = check_process[1]
-    if check(values):
-      process(values)
+    component_packages = cell_values[COL_NUM_PACKAGE]
 
+    for (key, value ) in categories.items():
+      check = value[0]
+      process = value[1]
+      m = check(first_category_value)
+      if m:
+        process(cell_values)
+      else:
+        pass
+
+  i+=1
 
 print("done")

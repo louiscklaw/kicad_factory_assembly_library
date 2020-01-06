@@ -3,7 +3,7 @@
 import os,sys
 import re
 
-print('hello translate')
+# print('hello translate')
 
 def check_if_r_without_smd_code(str_in):
   m = re.match(r'^(.+?)Ω\((.+?)\) (±\d+?%)',str_in)
