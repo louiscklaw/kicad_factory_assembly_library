@@ -5,9 +5,16 @@ import re
 
 print('hello translate')
 
-def check_if_R(str_in):
-  m = re.match(r'^(.+?)Ω \((.+?)\) (±\d+?%)',str_in)
+def check_if_r_without_smd_code(str_in):
+  m = re.match(r'^(.+?)Ω\((.+?)\) (±\d+?%)',str_in)
   return m
+
+def check_r_with_part_number(str_in):
+  m = re.match(r'[a-z|A-Z]+',str_in)
+  return m
+
+def check_r_with_misc_name_type(str_in):
+  pass
 
 def get_lib_filename(jlc_category):
 

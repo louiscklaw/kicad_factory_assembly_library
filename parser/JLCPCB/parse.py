@@ -5,19 +5,13 @@ from pprint import pprint
 
 from translate import *
 from const import *
+from util import *
 
 import gen_r
 
 import xlrd
 
-COL_NUM_LCSC_PART = 0
-COL_NUM_MFR_PART = 1
-COL_NUM_FIRST_CATEGORY =2
-COL_NUM_SECOND_CATEGORY =3
-COL_NUM_PACKAGE = 4
-COL_NUM_SOLDER_JOINT =5
-COL_NUM_MANUFACTURER =6
-COL_NUM_LIBRARY_TYPE =7
+
 
 CURRENT_ROW=0
 INITIAL_STRING='INITIAL_STRING'
@@ -72,39 +66,31 @@ def get_all_columns():
 # for i in range(START_ROW,10):
 #   print(worksheet.cell(i,COL_NUM_LCSC_PART).value)
 
-def handle_jlc_resistors(cell_values_array):
-  first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
-  mfr_part_value = cell_values_array[COL_NUM_MFR_PART]
-  m_r = check_if_R(mfr_part_value)
+def handle_resistor_with_partnumber(cell_values_array):
+  print('handle_resistor_with_partnumber')
 
-  r_text_value = m_r[1]
-  r_smd_code = m_r[2]
-  r_accuracy = m_r[3]
-  r_package = cell_values_array[COL_NUM_PACKAGE]
+r_handlers = {
+  '^(.+?)Ω ?\((.+?)\) (±\d+?%)': handle_jlc_resistors,
+  # '^RL.+$': handle_resistor_with_partnumber,
+  # '^AVR.+$': handle_resistor_with_partnumber,
+}
 
-  with open(f'{out_path}/jlc_r.lib', 'w') as fo_r:
-    fo_r.write(gen_r.getLibFile(r_smd_code, r_package, r_accuracy))
-
-  with open(f'{out_path}/jlc_r.dcm', 'w') as fo_dcm:
-    fo_dcm.write(gen_r.getDcmFile(r_smd_code, r_text_value, r_package, r_accuracy))
 
 
 i = 0
 for values in get_all_columns():
   lcsc_part_value = values[COL_NUM_LCSC_PART]
+
   first_category_value = values[COL_NUM_FIRST_CATEGORY]
+  secondary_category_value = values[COL_NUM_SECOND_CATEGORY]
+
   component_packages = values[COL_NUM_PACKAGE]
 
-  if first_category_value in CAT_RESISTORS:
-    if component_packages in ['0402']:
-      try:
-        handle_jlc_resistors(values)
-        pass
-      except Exception as e:
-        pprint(values)
-        raise e
-
-      break
+  for (category, check_process) in category_check_process.items():
+    check = check_process[0]
+    process = check_process[1]
+    if check(values):
+      process(values)
 
 
-print("helloworld")
+print("done")
