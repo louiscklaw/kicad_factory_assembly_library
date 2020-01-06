@@ -1,5 +1,11 @@
 # README
 
+### purpose:
+to handle the symbol provided by jlcpcb
+https://dubiouscreations.com/2019/10/21/using-kicad-with-jlcpcb-assembly-service/
+
+
+### references:
 - https://dubiouscreations.com/2019/10/21/using-kicad-with-jlcpcb-assembly-service/
 - https://jlcpcb.com/client/index.html#/parts
 - https://www.sz-jlc.com/portal/smtComponentList.html
