@@ -32,6 +32,8 @@ CURRENT_ROW=0
 INITIAL_STRING='INITIAL_STRING'
 
 out_path =os.getcwd()
+lib_output_path=os.path.join(out_path,'test/results')
+dcm_output_path=os.path.join(out_path,'test/results')
 
 def open_xl_sheet(wl_to_open):
   workbook = xlrd.open_workbook(wl_to_open)
@@ -142,10 +144,10 @@ def main():
     lib_store = lib_store.strip()
     dcm_store = dcm_store.strip()
 
-    with open(lib_filename,'w') as fo_lib:
+    with open(lib_output_path+'/'+lib_filename,'w+') as fo_lib:
       fo_lib.write(LIB_TEMPLATE.substitute(LIB_CONTENT = lib_store))
 
-    with open(dcm_filename,'w') as fo_dcm:
+    with open(dcm_output_path+'/'+dcm_filename,'w+') as fo_dcm:
       fo_dcm.write(DCM_TEMPLATE.substitute(DCM_CONTENT = dcm_store))
 
     sys.exit()
