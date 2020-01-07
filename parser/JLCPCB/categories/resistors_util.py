@@ -172,7 +172,7 @@ def handle_jlc_with_part_number(cell_values_array, m_r):
     temp_lib = gen_r.getLibText(*[
           r_text_value,
           cell_values_array[COL_NUM_PACKAGE],
-          '',
+          None,
           cell_values_array[COL_NUM_LCSC_PART],
           cell_values_array[COL_NUM_MFR_PART],
           cell_values_array[COL_NUM_FIRST_CATEGORY],

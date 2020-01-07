@@ -134,6 +134,9 @@ def main():
       lib_store += lib_content
       dcm_store += dcm_content
 
+    lib_store = lib_store.strip()
+    dcm_store = dcm_store.strip()
+
     with open(lib_filename,'w') as fo_lib:
       fo_lib.write(LIB_TEMPLATE.substitute(LIB_CONTENT = lib_store))
 
