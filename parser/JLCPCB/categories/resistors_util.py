@@ -35,7 +35,7 @@ def handle_jlc_resistors(cell_values_array, m_r):
     r_accuracy = m_r[3]
 
     # translate
-    temp_lib = gen_r.getLibFile(*[
+    temp_lib = gen_r.getLibText(*[
           r_smd_code,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
@@ -44,9 +44,10 @@ def handle_jlc_resistors(cell_values_array, m_r):
           cell_values_array[COL_NUM_FIRST_CATEGORY],
           cell_values_array[COL_NUM_SECOND_CATEGORY],
           cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER]
+          cell_values_array[COL_NUM_MANUFACTURER],
+          cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
-    temp_dcm = gen_r.getDcmFile(
+    temp_dcm = gen_r.getDcmText(
       r_smd_code, r_text_value,
       cell_values_array[COL_NUM_PACKAGE],
       r_accuracy)

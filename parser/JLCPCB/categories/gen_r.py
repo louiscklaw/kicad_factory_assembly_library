@@ -16,23 +16,33 @@ from checks_and_process import *
 
 from resistors_template import *
 
-def getLibFile( smd_code,package, accuracy,LCSC_PART,MFR_PART,first_cat, sec_cat, solder_joint_num, manufacturer):
+def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
     text_content=[]
     text_to_write = 'text_to_write'
 
     try:
-        R_r_name = 'R'+smd_code
+        R_r_name = 'R'+r_smd_code
         text_content.append(R_LIB_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=R_r_name,
         # default symbol done deserve a default footprint (no size specified)
         d_footprint=''
         ))
 
-        for r_size in l_r_size:
-            text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
-                R_THREE_DIGIT_VALUE_SIZE=','.join([R_r_name, r_size]),
-                R_SIZE=r_size,
-                d_footprint=fp_default_fp_matcher[r_size]
-            ))
+        # TODO: 🤦 Temporary solution ...
+        # for r_size in l_r_size:
+        # r_size = package
+
+        text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
+            R_THREE_DIGIT_VALUE_SIZE=','.join([R_r_name, r_size, r_accuracy]),
+            R_SIZE=r_size,
+            d_footprint=fp_default_fp_matcher[r_size],
+            R_LCSC_PART=lcsc_part,
+            R_MFR_PART= mfr_part,
+            R_SEC_CAT = secondary_category,
+            R_PACKAGE = r_size,
+            R_SOLDER_JOINT = solder_joint,
+            R_MANU = manufacturer,
+            R_LIB_TYPE = lib_type
+        ))
 
         text_to_write = R_LIB_TEMPLATE.substitute(
             R_CONTENT=''.join(text_content)
@@ -48,26 +58,29 @@ def getLibFile( smd_code,package, accuracy,LCSC_PART,MFR_PART,first_cat, sec_cat
 
 
 
-def getDcmFile(r_settings):
+def getDcmText(r_smd_code, r_text_value, r_size, r_accuracy):
     text_content=[]
-    for r_name, l_r_size in r_settings:
-        int_r_value = parseTextCode(r_name)
-        R_r_name = 'R'+getThreeDigitCode(int_r_value)
-        text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=R_r_name,
-        R_TEXT_VALUE=r_name))
 
-        for r_size in l_r_size:
-            text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=','.join([R_r_name,r_size]),
-            R_TEXT_VALUE=r_name))
+    # int_r_value = parseTextCode(r_name)
+    # R_r_name = 'R'+getThreeDigitCode(int_r_value)
+    R_r_name = r_smd_code
+    r_name = r_text_value
+    # text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=R_r_name,
+    # R_TEXT_VALUE=r_name))
+
+    text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=','.join([R_r_name,r_size, r_accuracy]),
+    R_TEXT_VALUE=r_name))
 
     text_to_write = R_DCM_TEMPLATE.substitute(
         R_CONTENT = ''.join(text_content)
     )
 
     text_to_write = text_to_write.replace('\n\n','\n')
+    return text_to_write
+    # with open(out_file_path, 'w') as f:
+    #     f.write(text_to_write)
 
-    with open(DCM_FILE_PATH, 'w') as f:
-        f.write(text_to_write)
+
 
 def parseTextCode(number_value):
     factor = 1
