@@ -52,7 +52,8 @@ def handle_jlc_resistors(cell_values_array, m_r):
       cell_values_array[COL_NUM_PACKAGE],
       r_accuracy)
 
-    pass
+    return temp_lib, temp_dcm
+
   except Exception as e:
     print('debug')
     pprint(cell_values_array)

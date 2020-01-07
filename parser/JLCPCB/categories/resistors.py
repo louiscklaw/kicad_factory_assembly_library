@@ -112,7 +112,7 @@ def process_chip_resistor_surface_mount(cell_values):
   m_with_part_number = check_if_r_with_part_number(mfr_part_value)
 
   if m_r:
-    handle_jlc_resistors(cell_values, m_r)
+    return handle_jlc_resistors(cell_values, m_r)
 
   elif m_without_smd_code:
     handle_jlc_without_smd_code(cell_values, m_without_smd_code)

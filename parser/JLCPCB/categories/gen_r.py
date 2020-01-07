@@ -44,14 +44,15 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
             R_LIB_TYPE = lib_type
         ))
 
-        text_to_write = R_LIB_TEMPLATE.substitute(
-            R_CONTENT=''.join(text_content)
-        )
-        text_to_write = text_to_write.replace('\n\n','\n')
+        # text_to_write = R_LIB_TEMPLATE.substitute(
+            # R_CONTENT=''.join(text_content)
+        # )
+        text_content = ''.join(text_content)
+        text_content = text_content.replace('\n\n','\n')
 
         # with open(LIB_FILE_PATH, 'w') as f:
         #     f.write(text_to_write)
-        return text_to_write
+        return text_content
 
     except Exception as e:
         raise e
@@ -71,12 +72,14 @@ def getDcmText(r_smd_code, r_text_value, r_size, r_accuracy):
     text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=','.join([R_r_name,r_size, r_accuracy]),
     R_TEXT_VALUE=r_name))
 
-    text_to_write = R_DCM_TEMPLATE.substitute(
-        R_CONTENT = ''.join(text_content)
-    )
+    # text_to_write = R_DCM_TEMPLATE.substitute(
+    #     R_CONTENT = ''.join(text_content)
+    # )
 
-    text_to_write = text_to_write.replace('\n\n','\n')
-    return text_to_write
+    text_content = ''.join(text_content)
+    text_content = text_content.replace('\n\n','\n')
+
+    return text_content
     # with open(out_file_path, 'w') as f:
     #     f.write(text_to_write)
 
