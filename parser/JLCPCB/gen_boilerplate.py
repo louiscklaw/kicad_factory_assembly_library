@@ -17,12 +17,23 @@ SEC_CAT_PY_TEMPLATE = '''
 import os,sys,re
 from pprint import pprint
 
+from {util_py_filename} import *
 from const import *
 
 {py_file_content}
 
 print('helloworld')
 '''
+
+UTIL_PY_TEMPLATE = '''
+#!/usr/bin/env python3
+
+import os,sys,re
+from pprint import pprint
+
+print('helloworld util py')
+'''
+util_filecontent = UTIL_PY_TEMPLATE
 
 
 OUT_PATH = os.path.join(os.getcwd(), 'categories')
@@ -199,10 +210,13 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       const_var_content_list = const_var_content_list_in[key]
       check_if_var_in = check_if_var_list_in[key]
       process_var_in = process_var_list_in[key]
-      output_py_file = f'{gen_filenames[key]}.py'
 
+      # output file
+      output_py_file = f'{gen_filenames[key]}.py'
+      output_util_py_file = f'{gen_filenames[key]}_util.py'
       output_filepath = os.path.join(OUT_PATH,output_py_file)
-      print(output_filepath)
+      output_util_filepath = os.path.join(OUT_PATH,output_util_py_file)
+
 
       constants = '\n'.join([f"{var_name_in} = '{var_content_in}'" for (var_name_in, var_content_in) in zip(const_var_list, const_var_content_list)])
 
@@ -218,10 +232,13 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       code_content = code_content.replace('{checks}', checking)
       code_content = code_content.replace('{process}', processing)
 
-      filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content)
+      filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content).replace('{util_py_filename}',output_util_py_file[0:-3])
 
       with open(output_filepath,'w') as fo:
         fo.write(filecontent)
+        with open(output_util_filepath, 'w') as fo_util:
+          fo_util.write(util_filecontent)
+
 
     except Exception as e:
       pprint(const_var_list)
