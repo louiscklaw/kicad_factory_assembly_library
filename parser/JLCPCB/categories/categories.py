@@ -3,6 +3,10 @@
 import os,sys, re
 from pprint import pprint
 
+sys.path.append(os.path.dirname(__file__))
+
+from resistors import *
+
 print('hello categories')
 
 FIRST_CAT_RESISTORS = "Resistors"
@@ -125,7 +129,29 @@ def check_first_cat_others(cell_values):
   pass
 
 def process_first_cat_resistors(cell_values):
-  print('findme')
+
+  SEC_CAT_CHIP_RESISTOR_SURFACE_MOUNT = 'Chip Resistor - Surface Mount'
+  SEC_CAT_HIGH_PRECISION_LOW_TCR_SMD_RESISTORS = 'High Precision & Low TCR SMD Resistors'
+  SEC_CAT_LED_STRIP_RESISTORS = 'LED Strip Resistors'
+  SEC_CAT_LOW_RESISTORS_CURRENT_SENSE_RESISTORS_SURFACE_MOUNT = 'Low Resistors & Current Sense Resistors - Surface Mount'
+  SEC_CAT_METAL_ALLOY_RESISTORS = 'Metal Alloy Resistors'
+  SEC_CAT_NTC_THERMISTORS = 'NTC Thermistors'
+  SEC_CAT_RESISTOR_NETWORKS_ARRAYS = 'Resistor Networks & Arrays'
+  SEC_CAT_VARISTORS = 'Varistors'
+
+  resistors_sec_category = {
+    SEC_CAT_CHIP_RESISTOR_SURFACE_MOUNT:[check_if_chip_resistor_surface_mount,process_chip_resistor_surface_mount],
+    SEC_CAT_HIGH_PRECISION_LOW_TCR_SMD_RESISTORS:[check_if_high_precision_low_tcr_smd_resistors,process_high_precision_low_tcr_smd_resistors],
+    SEC_CAT_LED_STRIP_RESISTORS:[check_if_led_strip_resistors,process_led_strip_resistors],
+    SEC_CAT_LOW_RESISTORS_CURRENT_SENSE_RESISTORS_SURFACE_MOUNT:[check_if_low_resistors_current_sense_resistors_surface_mount,process_low_resistors_current_sense_resistors_surface_mount],
+    SEC_CAT_METAL_ALLOY_RESISTORS:[check_if_metal_alloy_resistors,process_metal_alloy_resistors],
+    SEC_CAT_NTC_THERMISTORS:[check_if_ntc_thermistors,process_ntc_thermistors],
+    SEC_CAT_RESISTOR_NETWORKS_ARRAYS:[check_if_resistor_networks_arrays,process_resistor_networks_arrays],
+    SEC_CAT_VARISTORS:[check_if_varistors,process_varistors]
+  }
+
+
+
   pass
 
 def process_first_cat_inductors_chokes_transformers(cell_values):

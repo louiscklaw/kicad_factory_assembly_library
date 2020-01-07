@@ -21,7 +21,7 @@ INITIAL_STRING='INITIAL_STRING'
 out_path =os.getcwd()
 
 def open_xl_sheet():
-  workbook = xlrd.open_workbook('test/test.xls')
+  workbook = xlrd.open_workbook('test/resistor_only1.xls')
   worksheet = workbook.sheet_by_index(0)
   return worksheet
 
@@ -98,6 +98,7 @@ for cell_values in get_all_columns():
       m = check(first_category_value)
       if m:
         process(cell_values)
+        break
       else:
         pass
 
