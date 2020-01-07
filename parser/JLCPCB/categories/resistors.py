@@ -117,10 +117,12 @@ def process_chip_resistor_surface_mount(cell_values):
     return handle_jlc_resistors(cell_values, m_r)
 
   elif m_without_smd_code:
-    return handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
 
   elif m_with_part_number:
-    return handle_jlc_with_part_number(cell_values, m_with_part_number)
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
 
   else:
     print(cell_values)
