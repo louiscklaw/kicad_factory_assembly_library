@@ -108,6 +108,7 @@ def main():
 
   # pprint(result_dictionary)
   print("done")
+  sys.exit(0)
 
 if __name__ == '__main__':
   main()
