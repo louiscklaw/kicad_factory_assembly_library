@@ -160,7 +160,7 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
     # print(temp)
 
-    output_py_file = f'{gen_filenames[key]}.py'
+    output_py_file = f'{gen_filenames[key].lower()}.py'
     output_filepath = os.path.join(OUT_PATH,output_py_file)
     print(output_filepath)
 
@@ -176,7 +176,7 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
     # sys.exit()
 
     code_content = code_content.replace('{constants}', constants)
-    code_content = code_content.replace('{mapping}', f'{key.lower()}_mapping = '+'{'+mapping[0:-1]+'}')
+    code_content = code_content.replace('{mapping}', f'{gen_filenames[key].lower()}_mapping = '+'{'+mapping[0:-1]+'}')
     code_content = code_content.replace('{checks}', checking)
     code_content = code_content.replace('{process}', processing)
 
