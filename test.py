@@ -33,7 +33,7 @@ def test_convert_resistors():
 
     except subprocess.CalledProcessError as e:
       print(f'ERROR: difference found from result -> file: {current_result}')
-      return
+      sys.exit(1)
 
     except Exception as e:
       raise e
