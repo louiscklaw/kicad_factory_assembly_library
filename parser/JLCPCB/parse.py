@@ -108,7 +108,7 @@ def encap_dcm_content(dcm_content):
 
 def main():
   i = 0
-  for cell_values in get_all_columns('test/resistor_only_small.xls'):
+  for cell_values in get_all_columns(sys.argv[1]):
     if i == 0:
       pass
     else:

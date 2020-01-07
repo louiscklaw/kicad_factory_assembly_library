@@ -13,6 +13,29 @@ from const import *
 
 import gen_r
 
+def general_handler(cell_values):
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in general_handler')
+    print(cell_values)
+    sys.exit(1)
+
 def getThreeDigitCode(str_r_value):
 
     float_r_value = float(str_r_value)
