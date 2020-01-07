@@ -281,11 +281,11 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
       filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content).replace('{util_py_filename}',output_util_py_file[0:-3])
 
-      # with open(output_filepath,'w') as fo:
-      #   # fo.write(filecontent)
+      with open(output_filepath,'w') as fo:
+        fo.write(filecontent)
 
-      # with open(output_util_filepath, 'w') as fo_util:
-      #   fo_util.write(util_filecontent)
+      with open(output_util_filepath, 'w') as fo_util:
+        fo_util.write(util_filecontent)
 
       with open(output_template_filepath, 'w') as fo_templates:
         fo_templates.write(output_template_content)
