@@ -7,6 +7,8 @@ from pprint import pprint
 from resistors_util import *
 from const import *
 
+# py_util_content
+
 # SEC_CAT_CONSTANTS
 SEC_CAT_CHIP_RESISTOR_SURFACE_MOUNT = 'Chip Resistor - Surface Mount'
 SEC_CAT_HIGH_PRECISION_LOW_TCR_SMD_RESISTORS = 'High Precision & Low TCR SMD Resistors'
@@ -205,5 +207,7 @@ SEC_CAT_METAL_ALLOY_RESISTORS:[check_if_metal_alloy_resistors,process_metal_allo
 SEC_CAT_NTC_THERMISTORS:[check_if_ntc_thermistors,process_ntc_thermistors],
 SEC_CAT_RESISTOR_NETWORKS_ARRAYS:[check_if_resistor_networks_arrays,process_resistor_networks_arrays],
 SEC_CAT_VARISTORS:[check_if_varistors,process_varistors]}
+
+# py_util_content
 
 print('helloworld')
