@@ -68,40 +68,46 @@ def get_all_columns():
 # for i in range(START_ROW,10):
 #   print(worksheet.cell(i,COL_NUM_LCSC_PART).value)
 
-def handle_resistor_with_partnumber(cell_values_array):
-  print('handle_resistor_with_partnumber')
+# def handle_resistor_with_partnumber(cell_values_array):
+#   print('handle_resistor_with_partnumber')
 
-r_handlers = {
-  '^(.+?)Ω ?\((.+?)\) (±\d+?%)': handle_jlc_resistors,
-  # '^RL.+$': handle_resistor_with_partnumber,
-  # '^AVR.+$': handle_resistor_with_partnumber,
-}
+# r_handlers = {
+#   '^(.+?)Ω ?\((.+?)\) (±\d+?%)': handle_jlc_resistors,
+#   # '^RL.+$': handle_resistor_with_partnumber,
+#   # '^AVR.+$': handle_resistor_with_partnumber,
+# }
 
 shown_dictionary = {}
 
-i = 0
-for cell_values in get_all_columns():
-  if i == 0:
-    pass
-  else:
+result_dictionary = {'Resistors':[]}
 
-    lcsc_part_value = cell_values[COL_NUM_LCSC_PART]
+def transform(cell_values):
+  first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
+  for key,  (check, process) in categories.items():
+    m = check(first_category_value)
+    if m:
+      result = process(cell_values)
+      break
 
-    first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
-    secondary_category_value = cell_values[COL_NUM_SECOND_CATEGORY]
+  return result
 
-    component_packages = cell_values[COL_NUM_PACKAGE]
-
-    for (key, value ) in categories.items():
-      check = value[0]
-      process = value[1]
-      m = check(first_category_value)
-      if m:
-        process(cell_values)
-        break
+def main():
+  i = 0
+  for cell_values in get_all_columns():
+    if i == 0:
+      pass
+    else:
+      first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
+      transformed_result = transform(cell_values)
+      if first_category_value in result_dictionary.keys():
+        result_dictionary[first_category_value].append(transformed_result)
       else:
-        pass
+        result_dictionary[first_category_value] = [transformed_result]
 
-  i+=1
+    i+=1
 
-print("done")
+  pprint(result_dictionary)
+  print("done")
+
+if __name__ == '__main__':
+  main()

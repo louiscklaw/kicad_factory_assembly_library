@@ -1,0 +1,1 @@
+/home/logic/_workspace/kicad_factory_assembly_library/parser/JLCPCB/categories/transistors_template.py

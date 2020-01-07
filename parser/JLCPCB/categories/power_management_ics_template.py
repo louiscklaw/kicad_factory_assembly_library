@@ -1,0 +1,1 @@
+/home/logic/_workspace/kicad_factory_assembly_library/parser/JLCPCB/categories/power_management_ics_template.py
