@@ -76,7 +76,6 @@ def check_if_metal_alloy_resistors(cell_values):
   pass
 
 def check_if_ntc_thermistors(cell_values):
-  print('hello check_if_ntc_thermistors')
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_NTC_THERMISTORS
@@ -164,20 +163,40 @@ def process_metal_alloy_resistors(cell_values):
   pass
 
 def process_ntc_thermistors(cell_values):
-  default_result = 'process_ntc_thermistors'
-  print('hello process_ntc_thermistors')
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
 
-  # TODO: implement process_ntc_thermistors
-  return default_result
-  pass
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in ntc_thermistors')
+    print(cell_values)
+    sys.exit(1)
 
 def process_resistor_networks_arrays(cell_values):
-  default_result = 'process_resistor_networks_arrays'
-  print('hello process_resistor_networks_arrays')
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
 
-  # TODO: implement process_resistor_networks_arrays
-  return default_result
-  pass
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  else:
+    print('missing_implementation in network arrays')
+    print(cell_values)
+    sys.exit(1)
 
 def process_varistors(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]

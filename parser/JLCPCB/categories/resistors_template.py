@@ -13,13 +13,14 @@ from const import *
 
 
 fp_default_fp_matcher={
+    '0402_x4':'Resistor_SMD:R_0402_1005Metric',
     '2512':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
     '2010':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
     '1812':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
     '1210':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
     '1206':'Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder',
     '0805':'Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder',
-    '0603': 'Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder',
+    '0603':'Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder',
     '0402':'Resistor_SMD:R_0402_1005Metric',
 }
 
