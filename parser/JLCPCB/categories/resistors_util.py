@@ -19,6 +19,8 @@ def general_handler(cell_values):
   m_r = check_if_r_with_smd_code(mfr_part_value)
   m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
   m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+  m_with_ntc_name = check_if_r_with_ntc_name(mfr_part_value)
+  m_with_varistor_name = check_if_r_with_varistor_name(mfr_part_value)
 
   if m_r:
     return handle_jlc_resistors(cell_values, m_r)
@@ -29,6 +31,14 @@ def general_handler(cell_values):
 
   elif m_with_part_number:
     result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  elif m_with_ntc_name:
+    result = handle_jlc_ntc_name(cell_values, m_with_ntc_name)
+    return result
+
+  elif m_with_varistor_name:
+    result = handle_jlc_varistor_name(cell_values, m_with_varistor_name)
     return result
 
   else:
@@ -67,6 +77,8 @@ def getThreeDigitCode(str_r_value):
         pass
 
 def parseTextCode(number_value):
+    number_value = number_value.upper()
+
     factor = 1
     if number_value.find('K') ==1:
         if len(number_value) == 3:
@@ -100,6 +112,54 @@ def check_if_r_with_part_number(str_in):
   m = re.match(r'^([\w|\d]+?)$',str_in)
   return m
 
+
+def check_if_r_with_ntc_name(str_in):
+  m = re.match(r'^NTC (.+?) (\d+?) %$',str_in)
+  return m
+
+def check_if_r_with_varistor_name(str_in):
+  m = re.match(r'^(AVR-[\w|\d]+?)$',str_in)
+  return m
+
+def handle_jlc_varistor_name(cell_values_array, m_r):
+  try:
+    # extract
+    first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
+
+    r_text_value = m_r[1]
+
+    # r_smd_code = str(parseTextCode(r_text_value.replace('Ω','')))
+    # r_smd_code = getThreeDigitCode(r_smd_code)
+    # print(r_smd_code)
+    # print(getThreeDigitCode(r_smd_code))
+
+    # r_accuracy = m_r[2]
+
+    # translate
+    temp_lib = gen_r.getLibText(*[
+          r_text_value,
+          cell_values_array[COL_NUM_PACKAGE],
+          None,
+          cell_values_array[COL_NUM_LCSC_PART],
+          cell_values_array[COL_NUM_MFR_PART],
+          cell_values_array[COL_NUM_FIRST_CATEGORY],
+          cell_values_array[COL_NUM_SECOND_CATEGORY],
+          cell_values_array[COL_NUM_SOLDER_JOINT],
+          cell_values_array[COL_NUM_MANUFACTURER],
+          cell_values_array[COL_NUM_LIBRARY_TYPE]
+        ])
+    temp_dcm = gen_r.getDcmText(
+      cell_values_array[COL_NUM_MFR_PART], r_text_value,
+      cell_values_array[COL_NUM_PACKAGE],
+      '')
+
+    return temp_lib, temp_dcm
+
+  except Exception as e:
+    print('handle_jlc_varistor_name')
+    print('debug')
+    pprint(m_r)
+    raise e
 
 def handle_jlc_resistors(cell_values_array, m_r):
 
@@ -167,6 +227,46 @@ def handle_jlc_without_smd_code(cell_values_array, m_r):
       r_smd_code, r_text_value,
       cell_values_array[COL_NUM_PACKAGE],
       r_accuracy)
+
+    return temp_lib, temp_dcm
+
+  except Exception as e:
+    print('debug')
+    pprint(m_r)
+    raise e
+
+def handle_jlc_ntc_name(cell_values_array, m_r):
+
+  try:
+    # extract
+    first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
+
+    r_text_value = 'NTC_'+m_r[1]
+
+    # r_smd_code = str(parseTextCode(r_text_value.replace('Ω','')))
+    # r_smd_code = getThreeDigitCode(r_smd_code)
+    # print(r_smd_code)
+    # print(getThreeDigitCode(r_smd_code))
+
+    r_accuracy = m_r[2]
+
+    # translate
+    temp_lib = gen_r.getLibText(*[
+          r_text_value,
+          cell_values_array[COL_NUM_PACKAGE],
+          r_accuracy,
+          cell_values_array[COL_NUM_LCSC_PART],
+          cell_values_array[COL_NUM_MFR_PART],
+          cell_values_array[COL_NUM_FIRST_CATEGORY],
+          cell_values_array[COL_NUM_SECOND_CATEGORY],
+          cell_values_array[COL_NUM_SOLDER_JOINT],
+          cell_values_array[COL_NUM_MANUFACTURER],
+          cell_values_array[COL_NUM_LIBRARY_TYPE]
+        ])
+    temp_dcm = gen_r.getDcmText(
+      cell_values_array[COL_NUM_MFR_PART], r_text_value,
+      cell_values_array[COL_NUM_PACKAGE],
+      '')
 
     return temp_lib, temp_dcm
 

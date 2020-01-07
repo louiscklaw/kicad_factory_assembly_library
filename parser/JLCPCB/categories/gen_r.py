@@ -31,6 +31,12 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
         # for r_size in l_r_size:
         # r_size = package
 
+        try:
+            fp_default_fp_matcher[r_size]
+        except Exception as e:
+            print('ERROR: footprint not found in fp_default_fp_matcher')
+            pass
+
         text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
             R_THREE_DIGIT_VALUE_SIZE=','.join(filter(None, [R_r_name, r_size, r_accuracy])),
             R_SIZE=r_size,

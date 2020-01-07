@@ -7,6 +7,10 @@ from pprint import pprint
 # import gen_r
 from const import *
 
+def show_error(error_to_show):
+  temp = f'ERROR: {error_to_show}'
+  print(temp)
+
 # sys.path.append('categories')
 # from resistors import *
 

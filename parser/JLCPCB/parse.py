@@ -76,7 +76,7 @@ def get_all_columns(wl_to_open):
         ]
       ]
     )
-  return cell_values
+  return sorted(cell_values)
 
 shown_dictionary = {}
 result_dictionary = {'Resistors':[]}
