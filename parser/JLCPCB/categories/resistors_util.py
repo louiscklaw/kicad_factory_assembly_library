@@ -182,7 +182,7 @@ def handle_jlc_with_part_number(cell_values_array, m_r):
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
     temp_dcm = gen_r.getDcmText(
-      '', r_text_value,
+      cell_values_array[COL_NUM_MFR_PART], r_text_value,
       cell_values_array[COL_NUM_PACKAGE],
       '')
 

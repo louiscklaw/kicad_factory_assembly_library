@@ -25,7 +25,8 @@ SEC_CAT_SPECIAL_PURPOSE_AMPLIFIERS = 'Special Purpose Amplifiers'
 
 # check_defs
 def check_if_analog_comparators(cell_values):
-  print('hello check_if_analog_comparators')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ANALOG_COMPARATORS
@@ -34,7 +35,8 @@ def check_if_analog_comparators(cell_values):
   pass
 
 def check_if_audio_power_opamps(cell_values):
-  print('hello check_if_audio_power_opamps')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_AUDIO_POWER_OPAMPS
@@ -43,7 +45,8 @@ def check_if_audio_power_opamps(cell_values):
   pass
 
 def check_if_differential_opamps(cell_values):
-  print('hello check_if_differential_opamps')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_DIFFERENTIAL_OPAMPS
@@ -52,7 +55,8 @@ def check_if_differential_opamps(cell_values):
   pass
 
 def check_if_fet_inputamplifiers(cell_values):
-  print('hello check_if_fet_inputamplifiers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_FET_INPUTAMPLIFIERS
@@ -61,7 +65,8 @@ def check_if_fet_inputamplifiers(cell_values):
   pass
 
 def check_if_general_purpose_amplifiers(cell_values):
-  print('hello check_if_general_purpose_amplifiers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_GENERAL_PURPOSE_AMPLIFIERS
@@ -70,7 +75,8 @@ def check_if_general_purpose_amplifiers(cell_values):
   pass
 
 def check_if_high_speed_widebandopamps(cell_values):
-  print('hello check_if_high_speed_widebandopamps')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_HIGH_SPEED_WIDEBANDOPAMPS
@@ -79,7 +85,8 @@ def check_if_high_speed_widebandopamps(cell_values):
   pass
 
 def check_if_instrumentation_opamps(cell_values):
-  print('hello check_if_instrumentation_opamps')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INSTRUMENTATION_OPAMPS
@@ -88,7 +95,8 @@ def check_if_instrumentation_opamps(cell_values):
   pass
 
 def check_if_low_noise_opamps(cell_values):
-  print('hello check_if_low_noise_opamps')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_LOW_NOISE_OPAMPS
@@ -97,7 +105,8 @@ def check_if_low_noise_opamps(cell_values):
   pass
 
 def check_if_low_power_opamps(cell_values):
-  print('hello check_if_low_power_opamps')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_LOW_POWER_OPAMPS
@@ -106,7 +115,8 @@ def check_if_low_power_opamps(cell_values):
   pass
 
 def check_if_operational_amplifiers(cell_values):
-  print('hello check_if_operational_amplifiers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_OPERATIONAL_AMPLIFIERS
@@ -115,7 +125,8 @@ def check_if_operational_amplifiers(cell_values):
   pass
 
 def check_if_precision_opamps(cell_values):
-  print('hello check_if_precision_opamps')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_PRECISION_OPAMPS
@@ -124,7 +135,8 @@ def check_if_precision_opamps(cell_values):
   pass
 
 def check_if_special_purpose_amplifiers(cell_values):
-  print('hello check_if_special_purpose_amplifiers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_AMPLIFIERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SPECIAL_PURPOSE_AMPLIFIERS
@@ -135,96 +147,372 @@ def check_if_special_purpose_amplifiers(cell_values):
 
 # process_defs
 def process_analog_comparators(cell_values):
+  # implementation
+
   default_result = 'process_analog_comparators'
   print('hello process_analog_comparators')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_analog_comparators')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_analog_comparators
   return default_result
   pass
 
 def process_audio_power_opamps(cell_values):
+  # implementation
+
   default_result = 'process_audio_power_opamps'
   print('hello process_audio_power_opamps')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_audio_power_opamps')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_audio_power_opamps
   return default_result
   pass
 
 def process_differential_opamps(cell_values):
+  # implementation
+
   default_result = 'process_differential_opamps'
   print('hello process_differential_opamps')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_differential_opamps')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_differential_opamps
   return default_result
   pass
 
 def process_fet_inputamplifiers(cell_values):
+  # implementation
+
   default_result = 'process_fet_inputamplifiers'
   print('hello process_fet_inputamplifiers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_fet_inputamplifiers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_fet_inputamplifiers
   return default_result
   pass
 
 def process_general_purpose_amplifiers(cell_values):
+  # implementation
+
   default_result = 'process_general_purpose_amplifiers'
   print('hello process_general_purpose_amplifiers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_general_purpose_amplifiers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_general_purpose_amplifiers
   return default_result
   pass
 
 def process_high_speed_widebandopamps(cell_values):
+  # implementation
+
   default_result = 'process_high_speed_widebandopamps'
   print('hello process_high_speed_widebandopamps')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_high_speed_widebandopamps')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_high_speed_widebandopamps
   return default_result
   pass
 
 def process_instrumentation_opamps(cell_values):
+  # implementation
+
   default_result = 'process_instrumentation_opamps'
   print('hello process_instrumentation_opamps')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_instrumentation_opamps')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_instrumentation_opamps
   return default_result
   pass
 
 def process_low_noise_opamps(cell_values):
+  # implementation
+
   default_result = 'process_low_noise_opamps'
   print('hello process_low_noise_opamps')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_low_noise_opamps')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_low_noise_opamps
   return default_result
   pass
 
 def process_low_power_opamps(cell_values):
+  # implementation
+
   default_result = 'process_low_power_opamps'
   print('hello process_low_power_opamps')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_low_power_opamps')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_low_power_opamps
   return default_result
   pass
 
 def process_operational_amplifiers(cell_values):
+  # implementation
+
   default_result = 'process_operational_amplifiers'
   print('hello process_operational_amplifiers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_operational_amplifiers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_operational_amplifiers
   return default_result
   pass
 
 def process_precision_opamps(cell_values):
+  # implementation
+
   default_result = 'process_precision_opamps'
   print('hello process_precision_opamps')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_precision_opamps')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_precision_opamps
   return default_result
   pass
 
 def process_special_purpose_amplifiers(cell_values):
+  # implementation
+
   default_result = 'process_special_purpose_amplifiers'
   print('hello process_special_purpose_amplifiers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_special_purpose_amplifiers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_special_purpose_amplifiers
   return default_result

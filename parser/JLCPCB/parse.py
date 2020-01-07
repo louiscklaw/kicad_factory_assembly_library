@@ -9,9 +9,22 @@ from util import *
 
 from categories.categories import *
 
+from string import Template
+
 import gen_r
 
 import xlrd
+
+LIB_TEMPLATE=Template("""EESchema-LIBRARY Version 2.4
+#encoding utf-8
+$LIB_CONTENT
+#
+#End Library""")
+
+DCM_TEMPLATE=Template("""EESchema-DOCLIB  Version 2.0
+$DCM_CONTENT
+#
+#End Doc Library""")
 
 
 
@@ -65,20 +78,7 @@ def get_all_columns():
     )
   return cell_values
 
-# for i in range(START_ROW,10):
-#   print(worksheet.cell(i,COL_NUM_LCSC_PART).value)
-
-# def handle_resistor_with_partnumber(cell_values_array):
-#   print('handle_resistor_with_partnumber')
-
-# r_handlers = {
-#   '^(.+?)Ω ?\((.+?)\) (±\d+?%)': handle_jlc_resistors,
-#   # '^RL.+$': handle_resistor_with_partnumber,
-#   # '^AVR.+$': handle_resistor_with_partnumber,
-# }
-
 shown_dictionary = {}
-
 result_dictionary = {'Resistors':[]}
 
 def transform(cell_values):
@@ -91,6 +91,21 @@ def transform(cell_values):
 
   return result
 
+def get_lib_filename(first_cat_in):
+  return 'jlcpcb_'+first_cat_in.lower()+'.lib'
+
+def get_dcm_filename(first_cat_in):
+  return 'jlcpcb_'+first_cat_in.lower()+'.dcm'
+
+def get_output_filename(first_cat_in):
+  return [get_lib_filename(first_cat_in), get_dcm_filename(first_cat_in)]
+
+def encap_lib_content(lib_content):
+  pass
+
+def encap_dcm_content(dcm_content):
+  pass
+
 def main():
   i = 0
   for cell_values in get_all_columns():
@@ -98,13 +113,34 @@ def main():
       pass
     else:
       first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
+
       transformed_result = transform(cell_values)
+
       if first_category_value in result_dictionary.keys():
         result_dictionary[first_category_value].append(transformed_result)
       else:
         result_dictionary[first_category_value] = [transformed_result]
 
     i+=1
+
+
+  for k, lib_and_dcm_list in result_dictionary.items():
+    lib_filename, dcm_filename = get_output_filename(k)
+
+    lib_store = ''
+    dcm_store = ''
+
+    for (lib_content, dcm_content) in lib_and_dcm_list:
+      lib_store += lib_content
+      dcm_store += dcm_content
+
+    with open(lib_filename,'w') as fo_lib:
+      fo_lib.write(LIB_TEMPLATE.substitute(LIB_CONTENT = lib_store))
+
+    with open(dcm_filename,'w') as fo_dcm:
+      fo_dcm.write(DCM_TEMPLATE.substitute(DCM_CONTENT = dcm_store))
+
+    sys.exit()
 
   # pprint(result_dictionary)
   print("done")

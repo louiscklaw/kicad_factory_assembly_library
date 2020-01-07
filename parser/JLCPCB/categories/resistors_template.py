@@ -74,13 +74,6 @@ ENDDRAW
 ENDDEF
 """)
 
-
-R_LIB_TEMPLATE=Template("""EESchema-LIBRARY Version 2.4
-#encoding utf-8
-$R_CONTENT
-#
-#End Library""")
-
 R_DCM_UNIT_TEMPLATE=Template("""#
 $$CMP $R_THREE_DIGIT_VALUE
 D Resistor
@@ -88,6 +81,13 @@ K R r res resistor $R_THREE_DIGIT_VALUE $R_TEXT_VALUE
 F ~
 $$ENDCMP
 """)
+
+
+R_LIB_TEMPLATE=Template("""EESchema-LIBRARY Version 2.4
+#encoding utf-8
+$R_CONTENT
+#
+#End Library""")
 
 R_DCM_TEMPLATE=Template("""EESchema-DOCLIB  Version 2.0
 $R_CONTENT

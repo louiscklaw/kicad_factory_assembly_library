@@ -30,7 +30,8 @@ SEC_CAT_TOUCH_SCREEN_CONTROLLER_ICS = 'Touch Screen Controller ICs'
 
 # check_defs
 def check_if_ambient_light_sensors(cell_values):
-  print('hello check_if_ambient_light_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_AMBIENT_LIGHT_SENSORS
@@ -39,7 +40,8 @@ def check_if_ambient_light_sensors(cell_values):
   pass
 
 def check_if_angle_sensors(cell_values):
-  print('hello check_if_angle_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ANGLE_SENSORS
@@ -48,7 +50,8 @@ def check_if_angle_sensors(cell_values):
   pass
 
 def check_if_angular_velocity_sensors(cell_values):
-  print('hello check_if_angular_velocity_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ANGULAR_VELOCITY_SENSORS
@@ -57,7 +60,8 @@ def check_if_angular_velocity_sensors(cell_values):
   pass
 
 def check_if_attitude_sensors(cell_values):
-  print('hello check_if_attitude_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ATTITUDE_SENSORS
@@ -66,7 +70,8 @@ def check_if_attitude_sensors(cell_values):
   pass
 
 def check_if_color_sensors(cell_values):
-  print('hello check_if_color_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_COLOR_SENSORS
@@ -75,7 +80,8 @@ def check_if_color_sensors(cell_values):
   pass
 
 def check_if_current_sensors(cell_values):
-  print('hello check_if_current_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_CURRENT_SENSORS
@@ -84,7 +90,8 @@ def check_if_current_sensors(cell_values):
   pass
 
 def check_if_gas_sensors(cell_values):
-  print('hello check_if_gas_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_GAS_SENSORS
@@ -93,7 +100,8 @@ def check_if_gas_sensors(cell_values):
   pass
 
 def check_if_humidity_moisture_sensors(cell_values):
-  print('hello check_if_humidity_moisture_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_HUMIDITY_MOISTURE_SENSORS
@@ -102,7 +110,8 @@ def check_if_humidity_moisture_sensors(cell_values):
   pass
 
 def check_if_infrared_sensors(cell_values):
-  print('hello check_if_infrared_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INFRARED_SENSORS
@@ -111,7 +120,8 @@ def check_if_infrared_sensors(cell_values):
   pass
 
 def check_if_magnetic_sensors(cell_values):
-  print('hello check_if_magnetic_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_MAGNETIC_SENSORS
@@ -120,7 +130,8 @@ def check_if_magnetic_sensors(cell_values):
   pass
 
 def check_if_motion_sensors_accelerometers(cell_values):
-  print('hello check_if_motion_sensors_accelerometers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_MOTION_SENSORS_ACCELEROMETERS
@@ -129,7 +140,8 @@ def check_if_motion_sensors_accelerometers(cell_values):
   pass
 
 def check_if_optical_sensors(cell_values):
-  print('hello check_if_optical_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_OPTICAL_SENSORS
@@ -138,7 +150,8 @@ def check_if_optical_sensors(cell_values):
   pass
 
 def check_if_position_sensor(cell_values):
-  print('hello check_if_position_sensor')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_POSITION_SENSOR
@@ -147,7 +160,8 @@ def check_if_position_sensor(cell_values):
   pass
 
 def check_if_pressure_sensors(cell_values):
-  print('hello check_if_pressure_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_PRESSURE_SENSORS
@@ -156,7 +170,8 @@ def check_if_pressure_sensors(cell_values):
   pass
 
 def check_if_specialized_sensors(cell_values):
-  print('hello check_if_specialized_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SPECIALIZED_SENSORS
@@ -165,7 +180,8 @@ def check_if_specialized_sensors(cell_values):
   pass
 
 def check_if_temperature_sensors(cell_values):
-  print('hello check_if_temperature_sensors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_TEMPERATURE_SENSORS
@@ -174,7 +190,8 @@ def check_if_temperature_sensors(cell_values):
   pass
 
 def check_if_touch_screen_controller_ics(cell_values):
-  print('hello check_if_touch_screen_controller_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_SENSORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_TOUCH_SCREEN_CONTROLLER_ICS
@@ -185,136 +202,527 @@ def check_if_touch_screen_controller_ics(cell_values):
 
 # process_defs
 def process_ambient_light_sensors(cell_values):
+  # implementation
+
   default_result = 'process_ambient_light_sensors'
   print('hello process_ambient_light_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_ambient_light_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_ambient_light_sensors
   return default_result
   pass
 
 def process_angle_sensors(cell_values):
+  # implementation
+
   default_result = 'process_angle_sensors'
   print('hello process_angle_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_angle_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_angle_sensors
   return default_result
   pass
 
 def process_angular_velocity_sensors(cell_values):
+  # implementation
+
   default_result = 'process_angular_velocity_sensors'
   print('hello process_angular_velocity_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_angular_velocity_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_angular_velocity_sensors
   return default_result
   pass
 
 def process_attitude_sensors(cell_values):
+  # implementation
+
   default_result = 'process_attitude_sensors'
   print('hello process_attitude_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_attitude_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_attitude_sensors
   return default_result
   pass
 
 def process_color_sensors(cell_values):
+  # implementation
+
   default_result = 'process_color_sensors'
   print('hello process_color_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_color_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_color_sensors
   return default_result
   pass
 
 def process_current_sensors(cell_values):
+  # implementation
+
   default_result = 'process_current_sensors'
   print('hello process_current_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_current_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_current_sensors
   return default_result
   pass
 
 def process_gas_sensors(cell_values):
+  # implementation
+
   default_result = 'process_gas_sensors'
   print('hello process_gas_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_gas_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_gas_sensors
   return default_result
   pass
 
 def process_humidity_moisture_sensors(cell_values):
+  # implementation
+
   default_result = 'process_humidity_moisture_sensors'
   print('hello process_humidity_moisture_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_humidity_moisture_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_humidity_moisture_sensors
   return default_result
   pass
 
 def process_infrared_sensors(cell_values):
+  # implementation
+
   default_result = 'process_infrared_sensors'
   print('hello process_infrared_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_infrared_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_infrared_sensors
   return default_result
   pass
 
 def process_magnetic_sensors(cell_values):
+  # implementation
+
   default_result = 'process_magnetic_sensors'
   print('hello process_magnetic_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_magnetic_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_magnetic_sensors
   return default_result
   pass
 
 def process_motion_sensors_accelerometers(cell_values):
+  # implementation
+
   default_result = 'process_motion_sensors_accelerometers'
   print('hello process_motion_sensors_accelerometers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_motion_sensors_accelerometers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_motion_sensors_accelerometers
   return default_result
   pass
 
 def process_optical_sensors(cell_values):
+  # implementation
+
   default_result = 'process_optical_sensors'
   print('hello process_optical_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_optical_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_optical_sensors
   return default_result
   pass
 
 def process_position_sensor(cell_values):
+  # implementation
+
   default_result = 'process_position_sensor'
   print('hello process_position_sensor')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_position_sensor')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_position_sensor
   return default_result
   pass
 
 def process_pressure_sensors(cell_values):
+  # implementation
+
   default_result = 'process_pressure_sensors'
   print('hello process_pressure_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_pressure_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_pressure_sensors
   return default_result
   pass
 
 def process_specialized_sensors(cell_values):
+  # implementation
+
   default_result = 'process_specialized_sensors'
   print('hello process_specialized_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_specialized_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_specialized_sensors
   return default_result
   pass
 
 def process_temperature_sensors(cell_values):
+  # implementation
+
   default_result = 'process_temperature_sensors'
   print('hello process_temperature_sensors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_temperature_sensors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_temperature_sensors
   return default_result
   pass
 
 def process_touch_screen_controller_ics(cell_values):
+  # implementation
+
   default_result = 'process_touch_screen_controller_ics'
   print('hello process_touch_screen_controller_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_touch_screen_controller_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_touch_screen_controller_ics
   return default_result

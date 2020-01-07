@@ -22,7 +22,8 @@ SEC_CAT_VARISTORS = 'Varistors'
 
 # check_defs
 def check_if_chip_resistor_surface_mount(cell_values):
-  print('hello check_if_chip_resistor_surface_mount')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_CHIP_RESISTOR_SURFACE_MOUNT
@@ -31,7 +32,8 @@ def check_if_chip_resistor_surface_mount(cell_values):
   pass
 
 def check_if_high_precision_low_tcr_smd_resistors(cell_values):
-  print('hello check_if_high_precision_low_tcr_smd_resistors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_HIGH_PRECISION_LOW_TCR_SMD_RESISTORS
@@ -40,7 +42,8 @@ def check_if_high_precision_low_tcr_smd_resistors(cell_values):
   pass
 
 def check_if_high_voltage_resistor(cell_values):
-  print('hello check_if_high_voltage_resistor')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_HIGH_VOLTAGE_RESISTOR
@@ -49,7 +52,8 @@ def check_if_high_voltage_resistor(cell_values):
   pass
 
 def check_if_led_strip_resistors(cell_values):
-  print('hello check_if_led_strip_resistors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_LED_STRIP_RESISTORS
@@ -58,7 +62,8 @@ def check_if_led_strip_resistors(cell_values):
   pass
 
 def check_if_low_resistors_current_sense_resistors_surface_mount(cell_values):
-  print('hello check_if_low_resistors_current_sense_resistors_surface_mount')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_LOW_RESISTORS_CURRENT_SENSE_RESISTORS_SURFACE_MOUNT
@@ -67,7 +72,8 @@ def check_if_low_resistors_current_sense_resistors_surface_mount(cell_values):
   pass
 
 def check_if_metal_alloy_resistors(cell_values):
-  print('hello check_if_metal_alloy_resistors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_METAL_ALLOY_RESISTORS
@@ -76,6 +82,8 @@ def check_if_metal_alloy_resistors(cell_values):
   pass
 
 def check_if_ntc_thermistors(cell_values):
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_NTC_THERMISTORS
@@ -84,6 +92,8 @@ def check_if_ntc_thermistors(cell_values):
   pass
 
 def check_if_resistor_networks_arrays(cell_values):
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RESISTOR_NETWORKS_ARRAYS
@@ -92,6 +102,8 @@ def check_if_resistor_networks_arrays(cell_values):
   pass
 
 def check_if_varistors(cell_values):
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_VARISTORS
@@ -102,6 +114,8 @@ def check_if_varistors(cell_values):
 
 # process_defs
 def process_chip_resistor_surface_mount(cell_values):
+  # implementation
+
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
   m_r = check_if_r_with_smd_code(mfr_part_value)
   m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
@@ -119,50 +133,47 @@ def process_chip_resistor_surface_mount(cell_values):
     return result
 
   else:
+    print('missing_implementation in process_chip_resistor_surface_mount')
     print(cell_values)
     sys.exit(1)
 
+  # TODO: implement process_chip_resistor_surface_mount
+  return default_result
+  pass
+
 def process_high_precision_low_tcr_smd_resistors(cell_values):
-  default_result = 'process_high_precision_low_tcr_smd_resistors'
-  print('hello process_high_precision_low_tcr_smd_resistors')
+  # implementation
+
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_high_precision_low_tcr_smd_resistors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_high_precision_low_tcr_smd_resistors
   return default_result
   pass
 
 def process_high_voltage_resistor(cell_values):
-  default_result = 'process_high_voltage_resistor'
-  print('hello process_high_voltage_resistor')
+  # implementation
 
-  # TODO: implement process_high_voltage_resistor
-  return default_result
-  pass
 
-def process_led_strip_resistors(cell_values):
-  default_result = 'process_led_strip_resistors'
-  print('hello process_led_strip_resistors')
-
-  # TODO: implement process_led_strip_resistors
-  return default_result
-  pass
-
-def process_low_resistors_current_sense_resistors_surface_mount(cell_values):
-  default_result = 'process_low_resistors_current_sense_resistors_surface_mount'
-  print('hello process_low_resistors_current_sense_resistors_surface_mount')
-
-  # TODO: implement process_low_resistors_current_sense_resistors_surface_mount
-  return default_result
-  pass
-
-def process_metal_alloy_resistors(cell_values):
-  default_result = 'process_metal_alloy_resistors'
-  print('hello process_metal_alloy_resistors')
-
-  # TODO: implement process_metal_alloy_resistors
-  return default_result
-  pass
-
-def process_ntc_thermistors(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
   m_r = check_if_r_with_smd_code(mfr_part_value)
   m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
@@ -180,11 +191,17 @@ def process_ntc_thermistors(cell_values):
     return result
 
   else:
-    print('missing_implementation in ntc_thermistors')
+    print('missing_implementation in process_high_voltage_resistor')
     print(cell_values)
     sys.exit(1)
 
-def process_resistor_networks_arrays(cell_values):
+  # TODO: implement process_high_voltage_resistor
+  return default_result
+  pass
+
+def process_led_strip_resistors(cell_values):
+  # implementation
+
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
   m_r = check_if_r_with_smd_code(mfr_part_value)
   m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
@@ -193,24 +210,163 @@ def process_resistor_networks_arrays(cell_values):
   if m_r:
     return handle_jlc_resistors(cell_values, m_r)
 
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
   else:
-    print('missing_implementation in network arrays')
+    print('missing_implementation in process_led_strip_resistors')
     print(cell_values)
     sys.exit(1)
 
-def process_varistors(cell_values):
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  # TODO: implement process_led_strip_resistors
+  return default_result
+  pass
 
+def process_low_resistors_current_sense_resistors_surface_mount(cell_values):
+  # implementation
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
   m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_low_resistors_current_sense_resistors_surface_mount')
+    print(cell_values)
+    sys.exit(1)
+
+  # TODO: implement process_low_resistors_current_sense_resistors_surface_mount
+  return default_result
+  pass
+
+def process_metal_alloy_resistors(cell_values):
+  # implementation
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_metal_alloy_resistors')
+    print(cell_values)
+    sys.exit(1)
+
+  # TODO: implement process_metal_alloy_resistors
+  return default_result
+  pass
+
+def process_ntc_thermistors(cell_values):
+  # implementation
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_ntc_thermistors')
+    print(cell_values)
+    sys.exit(1)
+
+  # TODO: implement process_ntc_thermistors
+  return default_result
+  pass
+
+def process_resistor_networks_arrays(cell_values):
+  # implementation
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_resistor_networks_arrays')
+    print(cell_values)
+    sys.exit(1)
+
+  # TODO: implement process_resistor_networks_arrays
+  return default_result
+  pass
+
+def process_varistors(cell_values):
+  # implementation
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  # if m_r:
+  #   return handle_jlc_resistors(cell_values, m_r)
+
+  # elif m_without_smd_code:
+  #   result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    # return result
 
   if m_with_part_number:
     result = handle_jlc_with_part_number(cell_values, m_with_part_number)
     return result
 
   else:
-    print('missing_implementation in varistors')
+    print('missing_implementation in process_varistors')
     print(cell_values)
     sys.exit(1)
+
+  # TODO: implement process_varistors
+  return default_result
+  pass
+
 
 # MAPPING
 resistors_mapping = {SEC_CAT_CHIP_RESISTOR_SURFACE_MOUNT:[check_if_chip_resistor_surface_mount,process_chip_resistor_surface_mount],

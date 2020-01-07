@@ -42,7 +42,8 @@ SEC_CAT_SINOWEALTH = 'sinowealth'
 
 # check_defs
 def check_if_abov(cell_values):
-  print('hello check_if_abov')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ABOV
@@ -51,7 +52,8 @@ def check_if_abov(cell_values):
   pass
 
 def check_if_adi(cell_values):
-  print('hello check_if_adi')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ADI
@@ -60,7 +62,8 @@ def check_if_adi(cell_values):
   pass
 
 def check_if_atmel_avr(cell_values):
-  print('hello check_if_atmel_avr')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ATMEL_AVR
@@ -69,7 +72,8 @@ def check_if_atmel_avr(cell_values):
   pass
 
 def check_if_cypress(cell_values):
-  print('hello check_if_cypress')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_CYPRESS
@@ -78,7 +82,8 @@ def check_if_cypress(cell_values):
   pass
 
 def check_if_elan(cell_values):
-  print('hello check_if_elan')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ELAN
@@ -87,7 +92,8 @@ def check_if_elan(cell_values):
   pass
 
 def check_if_eastsoft(cell_values):
-  print('hello check_if_eastsoft')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_EASTSOFT
@@ -96,7 +102,8 @@ def check_if_eastsoft(cell_values):
   pass
 
 def check_if_fortior_technol(cell_values):
-  print('hello check_if_fortior_technol')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_FORTIOR_TECHNOL
@@ -105,7 +112,8 @@ def check_if_fortior_technol(cell_values):
   pass
 
 def check_if_gigadevice(cell_values):
-  print('hello check_if_gigadevice')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_GIGADEVICE
@@ -114,7 +122,8 @@ def check_if_gigadevice(cell_values):
   pass
 
 def check_if_holtek(cell_values):
-  print('hello check_if_holtek')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_HOLTEK
@@ -123,7 +132,8 @@ def check_if_holtek(cell_values):
   pass
 
 def check_if_hitrendtech(cell_values):
-  print('hello check_if_hitrendtech')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_HITRENDTECH
@@ -132,7 +142,8 @@ def check_if_hitrendtech(cell_values):
   pass
 
 def check_if_infineon(cell_values):
-  print('hello check_if_infineon')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INFINEON
@@ -141,7 +152,8 @@ def check_if_infineon(cell_values):
   pass
 
 def check_if_mdt(cell_values):
-  print('hello check_if_mdt')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_MDT
@@ -150,7 +162,8 @@ def check_if_mdt(cell_values):
   pass
 
 def check_if_megawin(cell_values):
-  print('hello check_if_megawin')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_MEGAWIN
@@ -159,7 +172,8 @@ def check_if_megawin(cell_values):
   pass
 
 def check_if_microchip(cell_values):
-  print('hello check_if_microchip')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_MICROCHIP
@@ -168,7 +182,8 @@ def check_if_microchip(cell_values):
   pass
 
 def check_if_nuvoton(cell_values):
-  print('hello check_if_nuvoton')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_NUVOTON
@@ -177,7 +192,8 @@ def check_if_nuvoton(cell_values):
   pass
 
 def check_if_nxp_mcu(cell_values):
-  print('hello check_if_nxp_mcu')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_NXP_MCU
@@ -186,7 +202,8 @@ def check_if_nxp_mcu(cell_values):
   pass
 
 def check_if_other_processors_and_microcontrollers_mcus(cell_values):
-  print('hello check_if_other_processors_and_microcontrollers_mcus')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_OTHER_PROCESSORS_AND_MICROCONTROLLERS_MCUS
@@ -195,7 +212,8 @@ def check_if_other_processors_and_microcontrollers_mcus(cell_values):
   pass
 
 def check_if_padauk(cell_values):
-  print('hello check_if_padauk')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_PADAUK
@@ -204,7 +222,8 @@ def check_if_padauk(cell_values):
   pass
 
 def check_if_renesas(cell_values):
-  print('hello check_if_renesas')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RENESAS
@@ -213,7 +232,8 @@ def check_if_renesas(cell_values):
   pass
 
 def check_if_silicon_labs(cell_values):
-  print('hello check_if_silicon_labs')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SILICON_LABS
@@ -222,7 +242,8 @@ def check_if_silicon_labs(cell_values):
   pass
 
 def check_if_soc(cell_values):
-  print('hello check_if_soc')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SOC
@@ -231,7 +252,8 @@ def check_if_soc(cell_values):
   pass
 
 def check_if_sonix(cell_values):
-  print('hello check_if_sonix')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SONIX
@@ -240,7 +262,8 @@ def check_if_sonix(cell_values):
   pass
 
 def check_if_st_microelectronics(cell_values):
-  print('hello check_if_st_microelectronics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ST_MICROELECTRONICS
@@ -249,7 +272,8 @@ def check_if_st_microelectronics(cell_values):
   pass
 
 def check_if_stc(cell_values):
-  print('hello check_if_stc')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_STC
@@ -258,7 +282,8 @@ def check_if_stc(cell_values):
   pass
 
 def check_if_synwit(cell_values):
-  print('hello check_if_synwit')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SYNWIT
@@ -267,7 +292,8 @@ def check_if_synwit(cell_values):
   pass
 
 def check_if_ti_mcu(cell_values):
-  print('hello check_if_ti_mcu')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_TI_MCU
@@ -276,7 +302,8 @@ def check_if_ti_mcu(cell_values):
   pass
 
 def check_if_wch(cell_values):
-  print('hello check_if_wch')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_WCH
@@ -285,7 +312,8 @@ def check_if_wch(cell_values):
   pass
 
 def check_if_mindmotion(cell_values):
-  print('hello check_if_mindmotion')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_MINDMOTION
@@ -294,7 +322,8 @@ def check_if_mindmotion(cell_values):
   pass
 
 def check_if_sinowealth(cell_values):
-  print('hello check_if_sinowealth')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SINOWEALTH
@@ -305,232 +334,899 @@ def check_if_sinowealth(cell_values):
 
 # process_defs
 def process_abov(cell_values):
+  # implementation
+
   default_result = 'process_abov'
   print('hello process_abov')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_abov')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_abov
   return default_result
   pass
 
 def process_adi(cell_values):
+  # implementation
+
   default_result = 'process_adi'
   print('hello process_adi')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_adi')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_adi
   return default_result
   pass
 
 def process_atmel_avr(cell_values):
+  # implementation
+
   default_result = 'process_atmel_avr'
   print('hello process_atmel_avr')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_atmel_avr')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_atmel_avr
   return default_result
   pass
 
 def process_cypress(cell_values):
+  # implementation
+
   default_result = 'process_cypress'
   print('hello process_cypress')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_cypress')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_cypress
   return default_result
   pass
 
 def process_elan(cell_values):
+  # implementation
+
   default_result = 'process_elan'
   print('hello process_elan')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_elan')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_elan
   return default_result
   pass
 
 def process_eastsoft(cell_values):
+  # implementation
+
   default_result = 'process_eastsoft'
   print('hello process_eastsoft')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_eastsoft')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_eastsoft
   return default_result
   pass
 
 def process_fortior_technol(cell_values):
+  # implementation
+
   default_result = 'process_fortior_technol'
   print('hello process_fortior_technol')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_fortior_technol')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_fortior_technol
   return default_result
   pass
 
 def process_gigadevice(cell_values):
+  # implementation
+
   default_result = 'process_gigadevice'
   print('hello process_gigadevice')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_gigadevice')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_gigadevice
   return default_result
   pass
 
 def process_holtek(cell_values):
+  # implementation
+
   default_result = 'process_holtek'
   print('hello process_holtek')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_holtek')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_holtek
   return default_result
   pass
 
 def process_hitrendtech(cell_values):
+  # implementation
+
   default_result = 'process_hitrendtech'
   print('hello process_hitrendtech')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_hitrendtech')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_hitrendtech
   return default_result
   pass
 
 def process_infineon(cell_values):
+  # implementation
+
   default_result = 'process_infineon'
   print('hello process_infineon')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_infineon')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_infineon
   return default_result
   pass
 
 def process_mdt(cell_values):
+  # implementation
+
   default_result = 'process_mdt'
   print('hello process_mdt')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_mdt')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_mdt
   return default_result
   pass
 
 def process_megawin(cell_values):
+  # implementation
+
   default_result = 'process_megawin'
   print('hello process_megawin')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_megawin')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_megawin
   return default_result
   pass
 
 def process_microchip(cell_values):
+  # implementation
+
   default_result = 'process_microchip'
   print('hello process_microchip')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_microchip')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_microchip
   return default_result
   pass
 
 def process_nuvoton(cell_values):
+  # implementation
+
   default_result = 'process_nuvoton'
   print('hello process_nuvoton')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_nuvoton')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_nuvoton
   return default_result
   pass
 
 def process_nxp_mcu(cell_values):
+  # implementation
+
   default_result = 'process_nxp_mcu'
   print('hello process_nxp_mcu')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_nxp_mcu')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_nxp_mcu
   return default_result
   pass
 
 def process_other_processors_and_microcontrollers_mcus(cell_values):
+  # implementation
+
   default_result = 'process_other_processors_and_microcontrollers_mcus'
   print('hello process_other_processors_and_microcontrollers_mcus')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_other_processors_and_microcontrollers_mcus')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_other_processors_and_microcontrollers_mcus
   return default_result
   pass
 
 def process_padauk(cell_values):
+  # implementation
+
   default_result = 'process_padauk'
   print('hello process_padauk')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_padauk')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_padauk
   return default_result
   pass
 
 def process_renesas(cell_values):
+  # implementation
+
   default_result = 'process_renesas'
   print('hello process_renesas')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_renesas')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_renesas
   return default_result
   pass
 
 def process_silicon_labs(cell_values):
+  # implementation
+
   default_result = 'process_silicon_labs'
   print('hello process_silicon_labs')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_silicon_labs')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_silicon_labs
   return default_result
   pass
 
 def process_soc(cell_values):
+  # implementation
+
   default_result = 'process_soc'
   print('hello process_soc')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_soc')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_soc
   return default_result
   pass
 
 def process_sonix(cell_values):
+  # implementation
+
   default_result = 'process_sonix'
   print('hello process_sonix')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_sonix')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_sonix
   return default_result
   pass
 
 def process_st_microelectronics(cell_values):
+  # implementation
+
   default_result = 'process_st_microelectronics'
   print('hello process_st_microelectronics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_st_microelectronics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_st_microelectronics
   return default_result
   pass
 
 def process_stc(cell_values):
+  # implementation
+
   default_result = 'process_stc'
   print('hello process_stc')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_stc')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_stc
   return default_result
   pass
 
 def process_synwit(cell_values):
+  # implementation
+
   default_result = 'process_synwit'
   print('hello process_synwit')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_synwit')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_synwit
   return default_result
   pass
 
 def process_ti_mcu(cell_values):
+  # implementation
+
   default_result = 'process_ti_mcu'
   print('hello process_ti_mcu')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_ti_mcu')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_ti_mcu
   return default_result
   pass
 
 def process_wch(cell_values):
+  # implementation
+
   default_result = 'process_wch'
   print('hello process_wch')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_wch')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_wch
   return default_result
   pass
 
 def process_mindmotion(cell_values):
+  # implementation
+
   default_result = 'process_mindmotion'
   print('hello process_mindmotion')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_mindmotion')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_mindmotion
   return default_result
   pass
 
 def process_sinowealth(cell_values):
+  # implementation
+
   default_result = 'process_sinowealth'
   print('hello process_sinowealth')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_sinowealth')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_sinowealth
   return default_result

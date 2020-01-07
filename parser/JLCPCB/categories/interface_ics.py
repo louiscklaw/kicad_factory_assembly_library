@@ -39,7 +39,8 @@ SEC_CAT_SERIAL_INTERFACE = 'serial interface'
 
 # check_defs
 def check_if_4_20ma(cell_values):
-  print('hello check_if_4_20ma')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_4_20MA
@@ -48,7 +49,8 @@ def check_if_4_20ma(cell_values):
   pass
 
 def check_if_can(cell_values):
-  print('hello check_if_can')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_CAN
@@ -57,7 +59,8 @@ def check_if_can(cell_values):
   pass
 
 def check_if_can_ics(cell_values):
-  print('hello check_if_can_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_CAN_ICS
@@ -66,7 +69,8 @@ def check_if_can_ics(cell_values):
   pass
 
 def check_if_dds(cell_values):
-  print('hello check_if_dds')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_DDS
@@ -75,7 +79,8 @@ def check_if_dds(cell_values):
   pass
 
 def check_if_digital_isolators(cell_values):
-  print('hello check_if_digital_isolators')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_DIGITAL_ISOLATORS
@@ -84,7 +89,8 @@ def check_if_digital_isolators(cell_values):
   pass
 
 def check_if_ethernet_ics(cell_values):
-  print('hello check_if_ethernet_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_ETHERNET_ICS
@@ -93,7 +99,8 @@ def check_if_ethernet_ics(cell_values):
   pass
 
 def check_if_interface_controllers(cell_values):
-  print('hello check_if_interface_controllers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_CONTROLLERS
@@ -102,7 +109,8 @@ def check_if_interface_controllers(cell_values):
   pass
 
 def check_if_interface_i_o_expanders(cell_values):
-  print('hello check_if_interface_i_o_expanders')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_I_O_EXPANDERS
@@ -111,7 +119,8 @@ def check_if_interface_i_o_expanders(cell_values):
   pass
 
 def check_if_interface_signal_buffers_repeaters_splitters(cell_values):
-  print('hello check_if_interface_signal_buffers_repeaters_splitters')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_SIGNAL_BUFFERS_REPEATERS_SPLITTERS
@@ -120,7 +129,8 @@ def check_if_interface_signal_buffers_repeaters_splitters(cell_values):
   pass
 
 def check_if_interface_specialized(cell_values):
-  print('hello check_if_interface_specialized')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_SPECIALIZED
@@ -129,7 +139,8 @@ def check_if_interface_specialized(cell_values):
   pass
 
 def check_if_interface_telecommunications(cell_values):
-  print('hello check_if_interface_telecommunications')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_TELECOMMUNICATIONS
@@ -138,7 +149,8 @@ def check_if_interface_telecommunications(cell_values):
   pass
 
 def check_if_interface_lin_transceiver(cell_values):
-  print('hello check_if_interface_lin_transceiver')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_LIN_TRANSCEIVER
@@ -147,7 +159,8 @@ def check_if_interface_lin_transceiver(cell_values):
   pass
 
 def check_if_interface_ics(cell_values):
-  print('hello check_if_interface_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_ICS
@@ -156,7 +169,8 @@ def check_if_interface_ics(cell_values):
   pass
 
 def check_if_interface_specialized(cell_values):
-  print('hello check_if_interface_specialized')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_SPECIALIZED
@@ -165,7 +179,8 @@ def check_if_interface_specialized(cell_values):
   pass
 
 def check_if_interface_telecommunications(cell_values):
-  print('hello check_if_interface_telecommunications')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_INTERFACE_TELECOMMUNICATIONS
@@ -174,7 +189,8 @@ def check_if_interface_telecommunications(cell_values):
   pass
 
 def check_if_lvds(cell_values):
-  print('hello check_if_lvds')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_LVDS
@@ -183,7 +199,8 @@ def check_if_lvds(cell_values):
   pass
 
 def check_if_rs_485_rs_422(cell_values):
-  print('hello check_if_rs_485_rs_422')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RS_485_RS_422
@@ -192,7 +209,8 @@ def check_if_rs_485_rs_422(cell_values):
   pass
 
 def check_if_rs_485_rs_422_ics(cell_values):
-  print('hello check_if_rs_485_rs_422_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RS_485_RS_422_ICS
@@ -201,7 +219,8 @@ def check_if_rs_485_rs_422_ics(cell_values):
   pass
 
 def check_if_rs232(cell_values):
-  print('hello check_if_rs232')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RS232
@@ -210,7 +229,8 @@ def check_if_rs232(cell_values):
   pass
 
 def check_if_rs232_ics(cell_values):
-  print('hello check_if_rs232_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RS232_ICS
@@ -219,7 +239,8 @@ def check_if_rs232_ics(cell_values):
   pass
 
 def check_if_sensor_interface_ics(cell_values):
-  print('hello check_if_sensor_interface_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SENSOR_INTERFACE_ICS
@@ -228,7 +249,8 @@ def check_if_sensor_interface_ics(cell_values):
   pass
 
 def check_if_touch_screen_controllers(cell_values):
-  print('hello check_if_touch_screen_controllers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_TOUCH_SCREEN_CONTROLLERS
@@ -237,7 +259,8 @@ def check_if_touch_screen_controllers(cell_values):
   pass
 
 def check_if_usb(cell_values):
-  print('hello check_if_usb')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_USB
@@ -246,7 +269,8 @@ def check_if_usb(cell_values):
   pass
 
 def check_if_usb_ics(cell_values):
-  print('hello check_if_usb_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_USB_ICS
@@ -255,7 +279,8 @@ def check_if_usb_ics(cell_values):
   pass
 
 def check_if_video_audio_interface_ics(cell_values):
-  print('hello check_if_video_audio_interface_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_VIDEO_AUDIO_INTERFACE_ICS
@@ -264,7 +289,8 @@ def check_if_video_audio_interface_ics(cell_values):
   pass
 
 def check_if_serial_interface(cell_values):
-  print('hello check_if_serial_interface')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_INTERFACE_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SERIAL_INTERFACE
@@ -275,208 +301,806 @@ def check_if_serial_interface(cell_values):
 
 # process_defs
 def process_4_20ma(cell_values):
+  # implementation
+
   default_result = 'process_4_20ma'
   print('hello process_4_20ma')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_4_20ma')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_4_20ma
   return default_result
   pass
 
 def process_can(cell_values):
+  # implementation
+
   default_result = 'process_can'
   print('hello process_can')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_can')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_can
   return default_result
   pass
 
 def process_can_ics(cell_values):
+  # implementation
+
   default_result = 'process_can_ics'
   print('hello process_can_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_can_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_can_ics
   return default_result
   pass
 
 def process_dds(cell_values):
+  # implementation
+
   default_result = 'process_dds'
   print('hello process_dds')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_dds')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_dds
   return default_result
   pass
 
 def process_digital_isolators(cell_values):
+  # implementation
+
   default_result = 'process_digital_isolators'
   print('hello process_digital_isolators')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_digital_isolators')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_digital_isolators
   return default_result
   pass
 
 def process_ethernet_ics(cell_values):
+  # implementation
+
   default_result = 'process_ethernet_ics'
   print('hello process_ethernet_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_ethernet_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_ethernet_ics
   return default_result
   pass
 
 def process_interface_controllers(cell_values):
+  # implementation
+
   default_result = 'process_interface_controllers'
   print('hello process_interface_controllers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_controllers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_controllers
   return default_result
   pass
 
 def process_interface_i_o_expanders(cell_values):
+  # implementation
+
   default_result = 'process_interface_i_o_expanders'
   print('hello process_interface_i_o_expanders')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_i_o_expanders')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_i_o_expanders
   return default_result
   pass
 
 def process_interface_signal_buffers_repeaters_splitters(cell_values):
+  # implementation
+
   default_result = 'process_interface_signal_buffers_repeaters_splitters'
   print('hello process_interface_signal_buffers_repeaters_splitters')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_signal_buffers_repeaters_splitters')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_signal_buffers_repeaters_splitters
   return default_result
   pass
 
 def process_interface_specialized(cell_values):
+  # implementation
+
   default_result = 'process_interface_specialized'
   print('hello process_interface_specialized')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_specialized')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_specialized
   return default_result
   pass
 
 def process_interface_telecommunications(cell_values):
+  # implementation
+
   default_result = 'process_interface_telecommunications'
   print('hello process_interface_telecommunications')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_telecommunications')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_telecommunications
   return default_result
   pass
 
 def process_interface_lin_transceiver(cell_values):
+  # implementation
+
   default_result = 'process_interface_lin_transceiver'
   print('hello process_interface_lin_transceiver')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_lin_transceiver')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_lin_transceiver
   return default_result
   pass
 
 def process_interface_ics(cell_values):
+  # implementation
+
   default_result = 'process_interface_ics'
   print('hello process_interface_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_ics
   return default_result
   pass
 
 def process_interface_specialized(cell_values):
+  # implementation
+
   default_result = 'process_interface_specialized'
   print('hello process_interface_specialized')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_specialized')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_specialized
   return default_result
   pass
 
 def process_interface_telecommunications(cell_values):
+  # implementation
+
   default_result = 'process_interface_telecommunications'
   print('hello process_interface_telecommunications')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_interface_telecommunications')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_interface_telecommunications
   return default_result
   pass
 
 def process_lvds(cell_values):
+  # implementation
+
   default_result = 'process_lvds'
   print('hello process_lvds')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_lvds')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_lvds
   return default_result
   pass
 
 def process_rs_485_rs_422(cell_values):
+  # implementation
+
   default_result = 'process_rs_485_rs_422'
   print('hello process_rs_485_rs_422')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rs_485_rs_422')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rs_485_rs_422
   return default_result
   pass
 
 def process_rs_485_rs_422_ics(cell_values):
+  # implementation
+
   default_result = 'process_rs_485_rs_422_ics'
   print('hello process_rs_485_rs_422_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rs_485_rs_422_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rs_485_rs_422_ics
   return default_result
   pass
 
 def process_rs232(cell_values):
+  # implementation
+
   default_result = 'process_rs232'
   print('hello process_rs232')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rs232')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rs232
   return default_result
   pass
 
 def process_rs232_ics(cell_values):
+  # implementation
+
   default_result = 'process_rs232_ics'
   print('hello process_rs232_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rs232_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rs232_ics
   return default_result
   pass
 
 def process_sensor_interface_ics(cell_values):
+  # implementation
+
   default_result = 'process_sensor_interface_ics'
   print('hello process_sensor_interface_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_sensor_interface_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_sensor_interface_ics
   return default_result
   pass
 
 def process_touch_screen_controllers(cell_values):
+  # implementation
+
   default_result = 'process_touch_screen_controllers'
   print('hello process_touch_screen_controllers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_touch_screen_controllers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_touch_screen_controllers
   return default_result
   pass
 
 def process_usb(cell_values):
+  # implementation
+
   default_result = 'process_usb'
   print('hello process_usb')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_usb')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_usb
   return default_result
   pass
 
 def process_usb_ics(cell_values):
+  # implementation
+
   default_result = 'process_usb_ics'
   print('hello process_usb_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_usb_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_usb_ics
   return default_result
   pass
 
 def process_video_audio_interface_ics(cell_values):
+  # implementation
+
   default_result = 'process_video_audio_interface_ics'
   print('hello process_video_audio_interface_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_video_audio_interface_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_video_audio_interface_ics
   return default_result
   pass
 
 def process_serial_interface(cell_values):
+  # implementation
+
   default_result = 'process_serial_interface'
   print('hello process_serial_interface')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_serial_interface')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_serial_interface
   return default_result

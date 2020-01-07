@@ -196,13 +196,15 @@ def translate(file_category_list_in):
 def get_checking_script(var_in, check_in, sec_cat_in, first_cat_in):
   template = '''
 def {check_in}(cell_values):
-  print('hello {check_in}')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == {first_cat_in},
     cell_values[COL_NUM_SECOND_CATEGORY] == {sec_cat_in}
   ])
 
-  pass'''
+  pass
+'''
 
   template = template.strip()
   template = template.replace('{check_in}',check_in)
@@ -214,8 +216,31 @@ def {check_in}(cell_values):
 def get_processing_script(var_in, process_in):
   template = '''
 def {process_in}(cell_values):
+  # implementation
+
   default_result = '{process_in}'
   print('hello {process_in}')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in {process_in}')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement {process_in}
   return default_result

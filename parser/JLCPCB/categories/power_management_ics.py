@@ -24,7 +24,8 @@ SEC_CAT_VOLTAGE_REFERENCES = 'Voltage References'
 
 # check_defs
 def check_if_battery_protection_ics(cell_values):
-  print('hello check_if_battery_protection_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_BATTERY_PROTECTION_ICS
@@ -33,7 +34,8 @@ def check_if_battery_protection_ics(cell_values):
   pass
 
 def check_if_dc_dc_converters(cell_values):
-  print('hello check_if_dc_dc_converters')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_DC_DC_CONVERTERS
@@ -42,7 +44,8 @@ def check_if_dc_dc_converters(cell_values):
   pass
 
 def check_if_linear_voltage_regulators(cell_values):
-  print('hello check_if_linear_voltage_regulators')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_LINEAR_VOLTAGE_REGULATORS
@@ -51,7 +54,8 @@ def check_if_linear_voltage_regulators(cell_values):
   pass
 
 def check_if_low_dropout_regulators_ldo(cell_values):
-  print('hello check_if_low_dropout_regulators_ldo')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_LOW_DROPOUT_REGULATORS_LDO
@@ -60,7 +64,8 @@ def check_if_low_dropout_regulators_ldo(cell_values):
   pass
 
 def check_if_pmic_battery_management(cell_values):
-  print('hello check_if_pmic_battery_management')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_PMIC_BATTERY_MANAGEMENT
@@ -69,7 +74,8 @@ def check_if_pmic_battery_management(cell_values):
   pass
 
 def check_if_pmic_power_distribution_switches(cell_values):
-  print('hello check_if_pmic_power_distribution_switches')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_PMIC_POWER_DISTRIBUTION_SWITCHES
@@ -78,7 +84,8 @@ def check_if_pmic_power_distribution_switches(cell_values):
   pass
 
 def check_if_pmic_supervisors(cell_values):
-  print('hello check_if_pmic_supervisors')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_PMIC_SUPERVISORS
@@ -87,7 +94,8 @@ def check_if_pmic_supervisors(cell_values):
   pass
 
 def check_if_power_management_specialized_pmic(cell_values):
-  print('hello check_if_power_management_specialized_pmic')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_POWER_MANAGEMENT_SPECIALIZED_PMIC
@@ -96,7 +104,8 @@ def check_if_power_management_specialized_pmic(cell_values):
   pass
 
 def check_if_power_modules(cell_values):
-  print('hello check_if_power_modules')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_POWER_MODULES
@@ -105,7 +114,8 @@ def check_if_power_modules(cell_values):
   pass
 
 def check_if_switching_controllers(cell_values):
-  print('hello check_if_switching_controllers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_SWITCHING_CONTROLLERS
@@ -114,7 +124,8 @@ def check_if_switching_controllers(cell_values):
   pass
 
 def check_if_voltage_references(cell_values):
-  print('hello check_if_voltage_references')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_POWER_MANAGEMENT_ICS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_VOLTAGE_REFERENCES
@@ -125,88 +136,341 @@ def check_if_voltage_references(cell_values):
 
 # process_defs
 def process_battery_protection_ics(cell_values):
+  # implementation
+
   default_result = 'process_battery_protection_ics'
   print('hello process_battery_protection_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_battery_protection_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_battery_protection_ics
   return default_result
   pass
 
 def process_dc_dc_converters(cell_values):
+  # implementation
+
   default_result = 'process_dc_dc_converters'
   print('hello process_dc_dc_converters')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_dc_dc_converters')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_dc_dc_converters
   return default_result
   pass
 
 def process_linear_voltage_regulators(cell_values):
+  # implementation
+
   default_result = 'process_linear_voltage_regulators'
   print('hello process_linear_voltage_regulators')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_linear_voltage_regulators')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_linear_voltage_regulators
   return default_result
   pass
 
 def process_low_dropout_regulators_ldo(cell_values):
+  # implementation
+
   default_result = 'process_low_dropout_regulators_ldo'
   print('hello process_low_dropout_regulators_ldo')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_low_dropout_regulators_ldo')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_low_dropout_regulators_ldo
   return default_result
   pass
 
 def process_pmic_battery_management(cell_values):
+  # implementation
+
   default_result = 'process_pmic_battery_management'
   print('hello process_pmic_battery_management')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_pmic_battery_management')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_pmic_battery_management
   return default_result
   pass
 
 def process_pmic_power_distribution_switches(cell_values):
+  # implementation
+
   default_result = 'process_pmic_power_distribution_switches'
   print('hello process_pmic_power_distribution_switches')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_pmic_power_distribution_switches')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_pmic_power_distribution_switches
   return default_result
   pass
 
 def process_pmic_supervisors(cell_values):
+  # implementation
+
   default_result = 'process_pmic_supervisors'
   print('hello process_pmic_supervisors')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_pmic_supervisors')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_pmic_supervisors
   return default_result
   pass
 
 def process_power_management_specialized_pmic(cell_values):
+  # implementation
+
   default_result = 'process_power_management_specialized_pmic'
   print('hello process_power_management_specialized_pmic')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_power_management_specialized_pmic')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_power_management_specialized_pmic
   return default_result
   pass
 
 def process_power_modules(cell_values):
+  # implementation
+
   default_result = 'process_power_modules'
   print('hello process_power_modules')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_power_modules')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_power_modules
   return default_result
   pass
 
 def process_switching_controllers(cell_values):
+  # implementation
+
   default_result = 'process_switching_controllers'
   print('hello process_switching_controllers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_switching_controllers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_switching_controllers
   return default_result
   pass
 
 def process_voltage_references(cell_values):
+  # implementation
+
   default_result = 'process_voltage_references'
   print('hello process_voltage_references')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_voltage_references')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_voltage_references
   return default_result

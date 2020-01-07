@@ -21,7 +21,8 @@ SEC_CAT_RMS_POWER_DETECTOR = 'RMS Power Detector'
 
 # check_defs
 def check_if_rf_amplifiers(cell_values):
-  print('hello check_if_rf_amplifiers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RF_RADIO,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RF_AMPLIFIERS
@@ -30,7 +31,8 @@ def check_if_rf_amplifiers(cell_values):
   pass
 
 def check_if_rf_chips(cell_values):
-  print('hello check_if_rf_chips')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RF_RADIO,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RF_CHIPS
@@ -39,7 +41,8 @@ def check_if_rf_chips(cell_values):
   pass
 
 def check_if_rf_coupler(cell_values):
-  print('hello check_if_rf_coupler')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RF_RADIO,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RF_COUPLER
@@ -48,7 +51,8 @@ def check_if_rf_coupler(cell_values):
   pass
 
 def check_if_rf_mixers(cell_values):
-  print('hello check_if_rf_mixers')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RF_RADIO,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RF_MIXERS
@@ -57,7 +61,8 @@ def check_if_rf_mixers(cell_values):
   pass
 
 def check_if_rf_switches(cell_values):
-  print('hello check_if_rf_switches')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RF_RADIO,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RF_SWITCHES
@@ -66,7 +71,8 @@ def check_if_rf_switches(cell_values):
   pass
 
 def check_if_rf_transceiver_ics(cell_values):
-  print('hello check_if_rf_transceiver_ics')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RF_RADIO,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RF_TRANSCEIVER_ICS
@@ -75,7 +81,8 @@ def check_if_rf_transceiver_ics(cell_values):
   pass
 
 def check_if_rf_attenuator(cell_values):
-  print('hello check_if_rf_attenuator')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RF_RADIO,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RF_ATTENUATOR
@@ -84,7 +91,8 @@ def check_if_rf_attenuator(cell_values):
   pass
 
 def check_if_rms_power_detector(cell_values):
-  print('hello check_if_rms_power_detector')
+  # implementation
+
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RF_RADIO,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RMS_POWER_DETECTOR
@@ -95,64 +103,248 @@ def check_if_rms_power_detector(cell_values):
 
 # process_defs
 def process_rf_amplifiers(cell_values):
+  # implementation
+
   default_result = 'process_rf_amplifiers'
   print('hello process_rf_amplifiers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rf_amplifiers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rf_amplifiers
   return default_result
   pass
 
 def process_rf_chips(cell_values):
+  # implementation
+
   default_result = 'process_rf_chips'
   print('hello process_rf_chips')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rf_chips')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rf_chips
   return default_result
   pass
 
 def process_rf_coupler(cell_values):
+  # implementation
+
   default_result = 'process_rf_coupler'
   print('hello process_rf_coupler')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rf_coupler')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rf_coupler
   return default_result
   pass
 
 def process_rf_mixers(cell_values):
+  # implementation
+
   default_result = 'process_rf_mixers'
   print('hello process_rf_mixers')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rf_mixers')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rf_mixers
   return default_result
   pass
 
 def process_rf_switches(cell_values):
+  # implementation
+
   default_result = 'process_rf_switches'
   print('hello process_rf_switches')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rf_switches')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rf_switches
   return default_result
   pass
 
 def process_rf_transceiver_ics(cell_values):
+  # implementation
+
   default_result = 'process_rf_transceiver_ics'
   print('hello process_rf_transceiver_ics')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rf_transceiver_ics')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rf_transceiver_ics
   return default_result
   pass
 
 def process_rf_attenuator(cell_values):
+  # implementation
+
   default_result = 'process_rf_attenuator'
   print('hello process_rf_attenuator')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rf_attenuator')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rf_attenuator
   return default_result
   pass
 
 def process_rms_power_detector(cell_values):
+  # implementation
+
   default_result = 'process_rms_power_detector'
   print('hello process_rms_power_detector')
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
+
+  if m_r:
+    return handle_jlc_resistors(cell_values, m_r)
+
+  elif m_without_smd_code:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in process_rms_power_detector')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rms_power_detector
   return default_result
