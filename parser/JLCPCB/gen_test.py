@@ -92,9 +92,15 @@ def get_first_and_sec_catetorys():
       i+=1
 
   for filename, content in filename_category_list.items():
-    filename_category_list[filename] = list(set(filename_category_list[filename]))
+    filename_category_list[filename] = sorted(list(set(filename_category_list[filename])))
 
   return filename_category_list
+
+def dilute_name(str_in):
+  # str_in = str_in.replace('，','_').replace(',','_').replace(' ','_').replace("-",'_').replace('&','_').replace('___','_')
+  str_in = re.sub('[^0-9a-zA-Z]+','_', str_in)
+  str_in = re.sub('_$','',str_in)
+  return str_in
 
 def translate(file_category_list_in):
   filename_category_list = file_category_list_in
@@ -104,7 +110,7 @@ def translate(file_category_list_in):
   # erase the blocking chars
   diluted_category_list = {}
   for key, secondary_cats in filename_category_list.items():
-    diluted_category_list[key] = [secondary_cat.replace(' ','_').replace("-",'_').replace('&','_').replace('___','_')  for secondary_cat in secondary_cats]
+    diluted_category_list[key] = [dilute_name(secondary_cat)  for secondary_cat in secondary_cats]
 
   check_if_var_list = {}
   for key, diluted_sec_cats in diluted_category_list.items():
