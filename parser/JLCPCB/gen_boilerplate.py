@@ -50,7 +50,7 @@ from const import *
 def helloworld():
   print('helloworld util py')
 
-helloworld()
+# helloworld()
 '''
 util_filecontent = UTIL_PY_TEMPLATE
 
@@ -77,7 +77,7 @@ from const import *
 def helloworld():
   print('helloworld util py')
 
-helloworld()
+# helloworld()
 '''
 output_template_content = SYMBOL_LIB_TEMPLATE
 
