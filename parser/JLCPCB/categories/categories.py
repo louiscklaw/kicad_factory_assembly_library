@@ -36,92 +36,92 @@ def check_first_cat_resistors(str_in):
   return str_in == FIRST_CAT_RESISTORS
 
 
-def check_first_cat_inductors_chokes_transformers():
-  print('def check_first_cat_inductors_chokes_transformers():')
+def check_first_cat_inductors_chokes_transformers(cell_values):
+  print('def check_first_cat_inductors_chokes_transformers(cell_values):')
   pass
 
-def check_first_cat_capacitors():
-  print('def check_first_cat_capacitors():')
+def check_first_cat_capacitors(cell_values):
+  print('def check_first_cat_capacitors(cell_values):')
   pass
 
-def check_first_cat_diodes():
-  print('def check_first_cat_diodes():')
+def check_first_cat_diodes(cell_values):
+  print('def check_first_cat_diodes(cell_values):')
   pass
 
-def check_first_cat_transistors():
-  print('def check_first_cat_transistors():')
+def check_first_cat_transistors(cell_values):
+  print('def check_first_cat_transistors(cell_values):')
   pass
 
-def check_first_cat_power_management_ics():
-  print('def check_first_cat_power_management_ics():')
+def check_first_cat_power_management_ics(cell_values):
+  print('def check_first_cat_power_management_ics(cell_values):')
   pass
 
-def check_first_cat_optocouplers_leds_infrared():
-  print('def check_first_cat_optocouplers_leds_infrared():')
+def check_first_cat_optocouplers_leds_infrared(cell_values):
+  print('def check_first_cat_optocouplers_leds_infrared(cell_values):')
   pass
 
-def check_first_cat_embedded_processors_controllers():
-  print('def check_first_cat_embedded_processors_controllers():')
+def check_first_cat_embedded_processors_controllers(cell_values):
+  print('def check_first_cat_embedded_processors_controllers(cell_values):')
   pass
 
-def check_first_cat_logic_ics():
-  print('def check_first_cat_logic_ics():')
+def check_first_cat_logic_ics(cell_values):
+  print('def check_first_cat_logic_ics(cell_values):')
   pass
 
-def check_first_cat_driver_ics():
-  print('def check_first_cat_driver_ics():')
+def check_first_cat_driver_ics(cell_values):
+  print('def check_first_cat_driver_ics(cell_values):')
   pass
 
-def check_first_cat_interface_ics():
-  print('def check_first_cat_interface_ics():')
+def check_first_cat_interface_ics(cell_values):
+  print('def check_first_cat_interface_ics(cell_values):')
   pass
 
-def check_first_cat_embedded_peripheral_ics():
-  print('def check_first_cat_embedded_peripheral_ics():')
+def check_first_cat_embedded_peripheral_ics(cell_values):
+  print('def check_first_cat_embedded_peripheral_ics(cell_values):')
   pass
 
-def check_first_cat_memory():
-  print('def check_first_cat_memory():')
+def check_first_cat_memory(cell_values):
+  print('def check_first_cat_memory(cell_values):')
   pass
 
-def check_first_cat_sensors():
-  print('def check_first_cat_sensors():')
+def check_first_cat_sensors(cell_values):
+  print('def check_first_cat_sensors(cell_values):')
   pass
 
-def check_first_cat_amplifiers():
-  print('def check_first_cat_amplifiers():')
+def check_first_cat_amplifiers(cell_values):
+  print('def check_first_cat_amplifiers(cell_values):')
   pass
 
-def check_first_cat_filters():
-  print('def check_first_cat_filters():')
+def check_first_cat_filters(cell_values):
+  print('def check_first_cat_filters(cell_values):')
   pass
 
-def check_first_cat_crystals():
-  print('def check_first_cat_crystals():')
+def check_first_cat_crystals(cell_values):
+  print('def check_first_cat_crystals(cell_values):')
   pass
 
-def check_first_cat_rf_radio():
-  print('def check_first_cat_rf_radio():')
+def check_first_cat_rf_radio(cell_values):
+  print('def check_first_cat_rf_radio(cell_values):')
   pass
 
-def check_first_cat_fuses():
-  print('def check_first_cat_fuses():')
+def check_first_cat_fuses(cell_values):
+  print('def check_first_cat_fuses(cell_values):')
   pass
 
-def check_first_cat_analog_ics():
-  print('def check_first_cat_analog_ics():')
+def check_first_cat_analog_ics(cell_values):
+  print('def check_first_cat_analog_ics(cell_values):')
   pass
 
-def check_first_cat_pushbutton_switches_relays():
-  print('def check_first_cat_pushbutton_switches_relays():')
+def check_first_cat_pushbutton_switches_relays(cell_values):
+  print('def check_first_cat_pushbutton_switches_relays(cell_values):')
   pass
 
-def check_first_cat_battery_products():
-  print('def check_first_cat_battery_products():')
+def check_first_cat_battery_products(cell_values):
+  print('def check_first_cat_battery_products(cell_values):')
   pass
 
-def check_first_cat_others():
-  print('def check_first_cat_others():')
+def check_first_cat_others(cell_values):
+  print('def check_first_cat_others(cell_values):')
   pass
 
 def process_first_cat_resistors(cell_values):
