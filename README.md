@@ -13,3 +13,9 @@ https://dubiouscreations.com/2019/10/21/using-kicad-with-jlcpcb-assembly-service
 
 ### build:
 https://travis-ci.org/louiscklaw/kicad_factory_assembly_library
+
+master
+[![Build Status](https://travis-ci.org/louiscklaw/kicad_factory_assembly_library.svg?branch=master)](https://travis-ci.org/louiscklaw/kicad_factory_assembly_library)
+
+develop
+[![Build Status](https://travis-ci.org/louiscklaw/kicad_factory_assembly_library.svg?branch=develop)](https://travis-ci.org/louiscklaw/kicad_factory_assembly_library)
