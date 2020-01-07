@@ -82,14 +82,21 @@ shown_dictionary = {}
 result_dictionary = {'Resistors':[]}
 
 def transform(cell_values):
+  found = False
+
   first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
   for key,  (check, process) in categories.items():
     m = check(first_category_value)
     if m:
+      found = True
       result = process(cell_values)
-      break
+      return result
 
-  return result
+  if not found:
+    print('ERROR: cannot transform value')
+    print(cell_values)
+    sys.exit(1)
+
 
 def get_lib_filename(first_cat_in):
   return 'jlcpcb_'+first_cat_in.lower()+'.lib'
@@ -107,9 +114,10 @@ def encap_dcm_content(dcm_content):
   pass
 
 def main():
-  i = 0
+
   for cell_values in get_all_columns(sys.argv[1]):
-    if i == 0:
+    if cell_values[COL_NUM_FIRST_CATEGORY] == 'First Category':
+      # skipping index column as sorted column appears in the middle
       pass
     else:
       first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
@@ -120,9 +128,6 @@ def main():
         result_dictionary[first_category_value].append(transformed_result)
       else:
         result_dictionary[first_category_value] = [transformed_result]
-
-    i+=1
-
 
   for k, lib_and_dcm_list in result_dictionary.items():
     lib_filename, dcm_filename = get_output_filename(k)

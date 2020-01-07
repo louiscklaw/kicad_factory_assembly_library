@@ -11,11 +11,13 @@ from const import *
 
 # py_template_content
 
-
+# SOLVE: 'ERROR: footprint not found in fp_default_fp_matcher'
 fp_default_fp_matcher={
     '0402_x4':'Resistor_SMD:R_0402_1005Metric',
+    '0402_x8':'Resistor_SMD:R_0402_1005Metric',
+    '0603_x2':'Resistor_SMD:R_0402_1005Metric',
     '0603_x4':'Resistor_SMD:R_0402_1005Metric',
-    '0402_x4':'Resistor_SMD:R_0402_1005Metric',
+    '0402x2':'Resistor_SMD:R_0402_1005Metric',
     '0402_x4':'Resistor_SMD:R_0402_1005Metric',
     '0402_x4':'Resistor_SMD:R_0402_1005Metric',
     'SOT-23-3':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',

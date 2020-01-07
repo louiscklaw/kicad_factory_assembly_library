@@ -140,6 +140,7 @@ def process_high_precision_low_tcr_smd_resistors(cell_values):
 
   else:
     print('missing_implementation in process_high_precision_low_tcr_smd_resistors')
+
     print(cell_values)
     sys.exit(1)
 
