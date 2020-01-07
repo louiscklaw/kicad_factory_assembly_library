@@ -148,24 +148,10 @@ def check_if_special_purpose_amplifiers(cell_values):
 # process_defs
 def process_analog_comparators(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_analog_comparators'
-  print('hello process_analog_comparators')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -179,24 +165,10 @@ def process_analog_comparators(cell_values):
 
 def process_audio_power_opamps(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_audio_power_opamps'
-  print('hello process_audio_power_opamps')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -210,24 +182,10 @@ def process_audio_power_opamps(cell_values):
 
 def process_differential_opamps(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_differential_opamps'
-  print('hello process_differential_opamps')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -241,24 +199,10 @@ def process_differential_opamps(cell_values):
 
 def process_fet_inputamplifiers(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_fet_inputamplifiers'
-  print('hello process_fet_inputamplifiers')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -272,24 +216,10 @@ def process_fet_inputamplifiers(cell_values):
 
 def process_general_purpose_amplifiers(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_general_purpose_amplifiers'
-  print('hello process_general_purpose_amplifiers')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -303,24 +233,10 @@ def process_general_purpose_amplifiers(cell_values):
 
 def process_high_speed_widebandopamps(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_high_speed_widebandopamps'
-  print('hello process_high_speed_widebandopamps')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -334,24 +250,10 @@ def process_high_speed_widebandopamps(cell_values):
 
 def process_instrumentation_opamps(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_instrumentation_opamps'
-  print('hello process_instrumentation_opamps')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -365,24 +267,10 @@ def process_instrumentation_opamps(cell_values):
 
 def process_low_noise_opamps(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_low_noise_opamps'
-  print('hello process_low_noise_opamps')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -396,24 +284,10 @@ def process_low_noise_opamps(cell_values):
 
 def process_low_power_opamps(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_low_power_opamps'
-  print('hello process_low_power_opamps')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -427,24 +301,10 @@ def process_low_power_opamps(cell_values):
 
 def process_operational_amplifiers(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_operational_amplifiers'
-  print('hello process_operational_amplifiers')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -458,24 +318,10 @@ def process_operational_amplifiers(cell_values):
 
 def process_precision_opamps(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_precision_opamps'
-  print('hello process_precision_opamps')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -489,24 +335,10 @@ def process_precision_opamps(cell_values):
 
 def process_special_purpose_amplifiers(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_special_purpose_amplifiers'
-  print('hello process_special_purpose_amplifiers')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:

@@ -137,24 +137,10 @@ def check_if_voltage_references(cell_values):
 # process_defs
 def process_battery_protection_ics(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_battery_protection_ics'
-  print('hello process_battery_protection_ics')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -168,24 +154,10 @@ def process_battery_protection_ics(cell_values):
 
 def process_dc_dc_converters(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_dc_dc_converters'
-  print('hello process_dc_dc_converters')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -199,24 +171,10 @@ def process_dc_dc_converters(cell_values):
 
 def process_linear_voltage_regulators(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_linear_voltage_regulators'
-  print('hello process_linear_voltage_regulators')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -230,24 +188,10 @@ def process_linear_voltage_regulators(cell_values):
 
 def process_low_dropout_regulators_ldo(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_low_dropout_regulators_ldo'
-  print('hello process_low_dropout_regulators_ldo')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -261,24 +205,10 @@ def process_low_dropout_regulators_ldo(cell_values):
 
 def process_pmic_battery_management(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_pmic_battery_management'
-  print('hello process_pmic_battery_management')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -292,24 +222,10 @@ def process_pmic_battery_management(cell_values):
 
 def process_pmic_power_distribution_switches(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_pmic_power_distribution_switches'
-  print('hello process_pmic_power_distribution_switches')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -323,24 +239,10 @@ def process_pmic_power_distribution_switches(cell_values):
 
 def process_pmic_supervisors(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_pmic_supervisors'
-  print('hello process_pmic_supervisors')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -354,24 +256,10 @@ def process_pmic_supervisors(cell_values):
 
 def process_power_management_specialized_pmic(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_power_management_specialized_pmic'
-  print('hello process_power_management_specialized_pmic')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -385,24 +273,10 @@ def process_power_management_specialized_pmic(cell_values):
 
 def process_power_modules(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_power_modules'
-  print('hello process_power_modules')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -416,24 +290,10 @@ def process_power_modules(cell_values):
 
 def process_switching_controllers(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_switching_controllers'
-  print('hello process_switching_controllers')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
@@ -447,24 +307,10 @@ def process_switching_controllers(cell_values):
 
 def process_voltage_references(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = 'process_voltage_references'
-  print('hello process_voltage_references')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:

@@ -2,6 +2,7 @@
 #!/usr/bin/env python3
 
 import os,sys,re
+from math import *
 from pprint import pprint
 
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))

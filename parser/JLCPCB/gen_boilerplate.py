@@ -33,6 +33,7 @@ UTIL_PY_TEMPLATE = '''
 #!/usr/bin/env python3
 
 import os,sys,re
+from math import *
 from pprint import pprint
 
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
@@ -217,24 +218,10 @@ def get_processing_script(var_in, process_in):
   template = '''
 def {process_in}(cell_values):
   # implementation
+  result = ''
+  result = general_handler(cell_values)
 
-  default_result = '{process_in}'
-  print('hello {process_in}')
-
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
-
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+  if result != '':
     return result
 
   else:
