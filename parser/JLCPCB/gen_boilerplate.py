@@ -17,9 +17,11 @@ SEC_CAT_PY_TEMPLATE = '''
 import os,sys,re
 from pprint import pprint
 
-print('helloworld')
+from const import *
 
 {py_file_content}
+
+print('helloworld')
 '''
 
 
@@ -157,8 +159,11 @@ def {check_in}(cell_values):
 def get_processing_script(var_in, process_in):
   template = '''
 def {process_in}(cell_values):
+  default_result = '{process_in}'
   print('hello {process_in}')
-  return '{process_in}'
+
+  # TODO: implement {process_in}
+  return default_result
   pass'''
 
   template = template.strip()
