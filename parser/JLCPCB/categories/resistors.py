@@ -94,7 +94,6 @@ def check_if_resistor_networks_arrays(cell_values):
   pass
 
 def check_if_varistors(cell_values):
-  print('hello check_if_varistors')
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_VARISTORS
@@ -105,9 +104,6 @@ def check_if_varistors(cell_values):
 
 # process_defs
 def process_chip_resistor_surface_mount(cell_values):
-  default_result = 'process_chip_resistor_surface_mount'
-  print('hello process_chip_resistor_surface_mount')
-
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
   m_r = check_if_r_with_smd_code(mfr_part_value)
   m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
@@ -126,13 +122,7 @@ def process_chip_resistor_surface_mount(cell_values):
 
   else:
     print(cell_values)
-    sys.exit()
-  # print(cell_values[COL_NUM_LCSC_PART])
-  # print('i am chip resistor')
-
-  # TODO: implement process_chip_resistor_surface_mount
-  return default_result
-  pass
+    sys.exit(1)
 
 def process_high_precision_low_tcr_smd_resistors(cell_values):
   default_result = 'process_high_precision_low_tcr_smd_resistors'
@@ -191,13 +181,18 @@ def process_resistor_networks_arrays(cell_values):
   pass
 
 def process_varistors(cell_values):
-  default_result = 'process_varistors'
-  print('hello process_varistors')
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
 
-  # TODO: implement process_varistors
-  return default_result
-  pass
+  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
 
+  if m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
+    return result
+
+  else:
+    print('missing_implementation in varistors')
+    print(cell_values)
+    sys.exit(1)
 
 # MAPPING
 resistors_mapping = {SEC_CAT_CHIP_RESISTOR_SURFACE_MOUNT:[check_if_chip_resistor_surface_mount,process_chip_resistor_surface_mount],

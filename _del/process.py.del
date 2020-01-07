@@ -141,6 +141,8 @@ def process_r_with_smd_code(cell_value, m_r):
     raise e
 
 def process_high_precision_low_tcr_smd_resistors(cell_value):
+  print('findme')
+  sys.exit()
   pass
 
 
@@ -173,6 +175,8 @@ def process_second_category(cell_value):
 
 
 def process_varistors (cell_value):
+  print('findme')
+  sys.exit()
   pass
 
 

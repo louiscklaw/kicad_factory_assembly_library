@@ -152,11 +152,47 @@ def handle_jlc_without_smd_code(cell_values_array, m_r):
     pprint(m_r)
     raise e
 
-  sys.exit()
-  return 'handle without smd code'
 
-def handle_jlc_with_part_number(cell_values, m_r):
-  print('handle with partnumber')
+def handle_jlc_with_part_number(cell_values_array, m_r):
+
+  try:
+    # extract
+    first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
+
+    r_text_value = m_r[1]
+
+    # r_smd_code = str(parseTextCode(r_text_value.replace('Ω','')))
+    # r_smd_code = getThreeDigitCode(r_smd_code)
+    # print(r_smd_code)
+    # print(getThreeDigitCode(r_smd_code))
+
+    # r_accuracy = m_r[2]
+
+    # translate
+    temp_lib = gen_r.getLibText(*[
+          r_text_value,
+          cell_values_array[COL_NUM_PACKAGE],
+          '',
+          cell_values_array[COL_NUM_LCSC_PART],
+          cell_values_array[COL_NUM_MFR_PART],
+          cell_values_array[COL_NUM_FIRST_CATEGORY],
+          cell_values_array[COL_NUM_SECOND_CATEGORY],
+          cell_values_array[COL_NUM_SOLDER_JOINT],
+          cell_values_array[COL_NUM_MANUFACTURER],
+          cell_values_array[COL_NUM_LIBRARY_TYPE]
+        ])
+    temp_dcm = gen_r.getDcmText(
+      '', r_text_value,
+      cell_values_array[COL_NUM_PACKAGE],
+      '')
+
+    return temp_lib, temp_dcm
+
+  except Exception as e:
+    print('debug')
+    pprint(m_r)
+    raise e
+
 
 # py_util_content
 
