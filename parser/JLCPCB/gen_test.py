@@ -75,9 +75,10 @@ def get_first_and_sec_catetorys():
   filename_category_list = {}
   i=0
   for cell_values in get_all_columns():
-    if i > 0:
-      first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
-      secondary_category_value = cell_values[COL_NUM_SECOND_CATEGORY]
+    first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
+    secondary_category_value = cell_values[COL_NUM_SECOND_CATEGORY]
+
+    if i > 0 and first_category_value.lower() != 'others':
       if secondary_category_value in print_already:
         pass
       else:
@@ -86,8 +87,6 @@ def get_first_and_sec_catetorys():
         else:
           filename_category_list[first_category_value] = [secondary_category_value]
 
-        # temp += f'{first_category_value}, {secondary_category_value}' +'\n'
-        # print_already[secondary_category_value] =1
     else:
       i+=1
 
@@ -97,7 +96,6 @@ def get_first_and_sec_catetorys():
   return filename_category_list
 
 def dilute_name(str_in):
-  # str_in = str_in.replace('，','_').replace(',','_').replace(' ','_').replace("-",'_').replace('&','_').replace('___','_')
   str_in = re.sub('[^0-9a-zA-Z]+','_', str_in)
   str_in = re.sub('_$','',str_in)
   return str_in
@@ -161,8 +159,6 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       process_var_in = process_var_list_in[key]
       output_py_file = f'{gen_filenames[key]}.py'
 
-
-
       output_filepath = os.path.join(OUT_PATH,output_py_file)
       print(output_filepath)
 
@@ -173,11 +169,6 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       checking = '\n'.join([f"\ndef {check_in}():\n  print('hello {check_in}')\n  pass" for (var_name_in, check_in) in zip(const_var_list, check_if_var_in)])
 
       processing = '\n'.join([f"\ndef {process_in}():\n  print('hello {process_in}')\n  pass" for (var_name_in, process_in) in zip(const_var_list, process_var_in)])
-
-      # pprint(checking)
-      # sys.exit()
-      # print(gen_filenames[key]+'_mapping = ')
-      # sys.exit()
 
       code_content = default_code_content
       code_content = code_content.replace('{constants}', constants)
@@ -190,18 +181,9 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       with open(output_filepath,'w') as fo:
         fo.write(filecontent)
 
-
-
     except Exception as e:
       pprint(const_var_list)
       raise e
-
-    # print(temp)
-
-
-
-
-  sys.exit()
 
 def main():
   temp = ''
