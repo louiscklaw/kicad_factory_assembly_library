@@ -59,7 +59,13 @@ def handle_jlc_resistors(cell_values_array, m_r):
     pprint(cell_values_array)
     raise e
 
+def handle_jlc_without_smd_code(cell_values, m_r):
+  print('findme')
+  sys.exit()
+  return 'handle without smd code'
 
+def handle_jlc_with_part_number(cell_values, m_r):
+  print('handle with partnumber')
 
 # py_util_content
 

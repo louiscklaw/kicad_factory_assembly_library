@@ -69,23 +69,3 @@ from const import *
 #     print('debug')
 #     pprint(cell_values_array)
 #     raise e
-
-
-# def handle_jlc_without_smd_code(cell_values, m_r):
-#   print('handle without smd code')
-
-# def handle_jlc_with_part_number(cell_values, m_r):
-#   print('handle with partnumber')
-
-# category_check_process = {
-#   CAT_CHIP_RESISTOR_SURFACE_MOUNT : [gen_r.check_if_chip_resistor_surface_mount, gen_r.process_chip_resistor_surface_mount],
-#   CAT_HIGH_PRECISION_LOW_TCR_SMD_RESISTORS : [gen_r.check_if_high_precision_low_tcr_smd_resistors, gen_r.process_high_precision_low_tcr_smd_resistors],
-#   CAT_HIGH_VOLTAGE_RESISTOR : [gen_r.check_if_high_voltage_resistor, gen_r.process_high_voltage_resistor],
-#   CAT_LED_STRIP_RESISTORS : [gen_r.check_if_led_strip_resistors, gen_r.process_led_strip_resistors],
-#   CAT_LOW_RESISTORS_CURRENT_SENSE_RESISTORS_SURFACE_MOUNT : [gen_r.check_if_low_resistors_current_sense_resistors_surface_mount, gen_r.process_low_resistors_current_sense_resistors_surface_mount],
-#   CAT_METAL_ALLOY_RESISTORS : [gen_r.check_if_metal_alloy_resistors, gen_r.process_metal_alloy_resistors],
-#   CAT_NTC_THERMISTORS : [gen_r.check_if_ntc_thermistors, gen_r.process_ntc_thermistors],
-#   CAT_RESISTOR_NETWORKS_ARRAYS : [gen_r.check_if_resistor_networks_arrays, gen_r.process_resistor_networks_arrays],
-#   CAT_VARISTORS : [gen_r.check_if_varistors, gen_r.process_varistors]
-
-#   }
