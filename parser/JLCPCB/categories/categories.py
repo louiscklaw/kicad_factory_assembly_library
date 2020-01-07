@@ -8,7 +8,7 @@ sys.path.append(os.path.dirname(__file__))
 from resistors import *
 from const import *
 
-print('hello categories')
+# print('hello categories')
 
 FIRST_CAT_RESISTORS = "Resistors"
 FIRST_CAT_INDUCTORS_CHOKES_TRANSFORMERS = "Inductors & Chokes & Transformers"
