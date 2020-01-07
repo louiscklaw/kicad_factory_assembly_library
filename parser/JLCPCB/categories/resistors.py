@@ -85,7 +85,6 @@ def check_if_ntc_thermistors(cell_values):
   pass
 
 def check_if_resistor_networks_arrays(cell_values):
-  print('hello check_if_resistor_networks_arrays')
   return all([
     cell_values[COL_NUM_FIRST_CATEGORY] == CAT_JLC_RESISTORS,
     cell_values[COL_NUM_SECOND_CATEGORY] == SEC_CAT_RESISTOR_NETWORKS_ARRAYS
