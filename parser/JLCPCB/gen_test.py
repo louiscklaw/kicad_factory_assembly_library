@@ -125,12 +125,12 @@ def translate(file_category_list_in):
   # dilute for filename
 
   for key in filename_category_list.keys():
-    gen_filenames[key] = key.replace(' ','_').replace('&','_').replace('___','_')
+    gen_filenames[key] = key.lower().replace(' ','_').replace('&','_').replace('___','_')
 
   return diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames
 
 def reform_list(filename_category_list, diluted_category_list, check_if_var_list_in, process_var_list_in, const_var_list_in, const_var_content_list_in, gen_filenames):
-  code_content ='''
+  default_code_content ='''
 
 # SEC_CAT_CONSTANTS
 {constants}
@@ -147,43 +147,53 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
   '''.strip()
 
   for key in filename_category_list.keys():
+
     try:
       const_var_list = const_var_list_in[key]
       const_var_content_list = const_var_content_list_in[key]
       check_if_var_in = check_if_var_list_in[key]
       process_var_in = process_var_list_in[key]
+      output_py_file = f'{gen_filenames[key]}.py'
 
-      pass
+
+
+      output_filepath = os.path.join(OUT_PATH,output_py_file)
+      print(output_filepath)
+
+      constants = '\n'.join([f"{var_name_in} = '{var_content_in}'" for (var_name_in, var_content_in) in zip(const_var_list, const_var_content_list)])
+
+      mapping = '\n'.join([f"{var_name_in}:[{check_in},{process_in}]," for (var_name_in, check_in, process_in) in zip(const_var_list, check_if_var_in, process_var_in)])
+
+      checking = '\n'.join([f"\ndef {check_in}():\n  print('hello {check_in}')\n  pass" for (var_name_in, check_in) in zip(const_var_list, check_if_var_in)])
+
+      processing = '\n'.join([f"\ndef {process_in}():\n  print('hello {process_in}')\n  pass" for (var_name_in, process_in) in zip(const_var_list, process_var_in)])
+
+      # pprint(checking)
+      # sys.exit()
+      # print(gen_filenames[key]+'_mapping = ')
+      # sys.exit()
+
+      code_content = default_code_content
+      code_content = code_content.replace('{constants}', constants)
+      code_content = code_content.replace('{mapping}', gen_filenames[key]+'_mapping = '+'{'+mapping[0:-1]+'}')
+      code_content = code_content.replace('{checks}', checking)
+      code_content = code_content.replace('{process}', processing)
+
+      filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content)
+
+      with open(output_filepath,'w') as fo:
+        fo.write(filecontent)
+
+
+
     except Exception as e:
       pprint(const_var_list)
       raise e
 
     # print(temp)
 
-    output_py_file = f'{gen_filenames[key].lower()}.py'
-    output_filepath = os.path.join(OUT_PATH,output_py_file)
-    print(output_filepath)
 
-    constants = '\n'.join([f"{var_name_in} = '{var_content_in}'" for (var_name_in, var_content_in) in zip(const_var_list, const_var_content_list)])
 
-    mapping = '\n'.join([f"{var_name_in}:[{check_in},{process_in}]," for (var_name_in, check_in, process_in) in zip(const_var_list, check_if_var_in, process_var_in)])
-
-    checking = '\n'.join([f"\ndef {check_in}():\n  print('hello {check_in}')\n  pass" for (var_name_in, check_in) in zip(const_var_list, check_if_var_in)])
-
-    processing = '\n'.join([f"\ndef {process_in}():\n  print('hello {process_in}')\n  pass" for (var_name_in, process_in) in zip(const_var_list, process_var_in)])
-
-    # pprint(checking)
-    # sys.exit()
-
-    code_content = code_content.replace('{constants}', constants)
-    code_content = code_content.replace('{mapping}', f'{gen_filenames[key].lower()}_mapping = '+'{'+mapping[0:-1]+'}')
-    code_content = code_content.replace('{checks}', checking)
-    code_content = code_content.replace('{process}', processing)
-
-    filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content)
-
-    with open(output_filepath,'w') as fo:
-      fo.write(filecontent)
 
   sys.exit()
 
