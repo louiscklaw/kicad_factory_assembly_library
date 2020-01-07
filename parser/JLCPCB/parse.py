@@ -33,16 +33,16 @@ INITIAL_STRING='INITIAL_STRING'
 
 out_path =os.getcwd()
 
-def open_xl_sheet():
-  workbook = xlrd.open_workbook('test/resistor_only1.xls')
+def open_xl_sheet(wl_to_open):
+  workbook = xlrd.open_workbook(wl_to_open)
   worksheet = workbook.sheet_by_index(0)
   return worksheet
 
 def close_xl_sheet():
   pass
 
-def get_xl_length():
-  worksheet = open_xl_sheet()
+def get_xl_length(wl_to_open):
+  worksheet = open_xl_sheet(wl_to_open)
   START_ROW=0
   CURRENT_ROW=START_ROW
   try:
@@ -58,10 +58,10 @@ def get_xl_length():
 
   return CURRENT_ROW
 
-def get_all_columns():
+def get_all_columns(wl_to_open):
   cell_values = []
-  worksheet = open_xl_sheet()
-  for i in range(0, get_xl_length()):
+  worksheet = open_xl_sheet(wl_to_open)
+  for i in range(0, get_xl_length(wl_to_open)):
     cell_values.append(
       [
         worksheet.cell(i, col_num).value for col_num in [
@@ -108,7 +108,7 @@ def encap_dcm_content(dcm_content):
 
 def main():
   i = 0
-  for cell_values in get_all_columns():
+  for cell_values in get_all_columns('test/resistor_only_small.xls'):
     if i == 0:
       pass
     else:
