@@ -14,10 +14,10 @@ from string import Template
 from const import *
 from checks_and_process import *
 
-
+from resistors_template import *
 
 def getLibFile( smd_code,package, accuracy,LCSC_PART,MFR_PART,first_cat, sec_cat, solder_joint_num, manufacturer):
-    # text_content=[]
+    text_content=[]
     text_to_write = 'text_to_write'
 
     try:
@@ -34,17 +34,19 @@ def getLibFile( smd_code,package, accuracy,LCSC_PART,MFR_PART,first_cat, sec_cat
                 d_footprint=fp_default_fp_matcher[r_size]
             ))
 
+        text_to_write = R_LIB_TEMPLATE.substitute(
+            R_CONTENT=''.join(text_content)
+        )
+        text_to_write = text_to_write.replace('\n\n','\n')
+
+        # with open(LIB_FILE_PATH, 'w') as f:
+        #     f.write(text_to_write)
+        return text_to_write
+
     except Exception as e:
         raise e
 
-    text_to_write = R_LIB_TEMPLATE.substitute(
-        R_CONTENT=''.join(text_content)
-    )
-    text_to_write = text_to_write.replace('\n\n','\n')
 
-    # with open(LIB_FILE_PATH, 'w') as f:
-    #     f.write(text_to_write)
-    return text_to_write
 
 def getDcmFile(r_settings):
     text_content=[]

@@ -54,6 +54,30 @@ helloworld()
 util_filecontent = UTIL_PY_TEMPLATE
 
 
+SYMBOL_LIB_TEMPLATE = '''
+#!/usr/bin/env python3
+
+import os,sys,re
+from pprint import pprint
+
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
+from const import *
+
+# py_template_content
+
+
+
+
+
+# py_template_content
+
+def helloworld():
+  print('helloworld util py')
+
+helloworld()
+'''
+output_template_content = SYMBOL_LIB_TEMPLATE
+
 OUT_PATH = os.path.join(os.getcwd(), 'categories')
 
 def open_xl_sheet():
@@ -257,11 +281,12 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
       # with open(output_filepath,'w') as fo:
       #   # fo.write(filecontent)
-      with open(output_util_filepath, 'w') as fo_util:
-        fo_util.write(util_filecontent)
+
+      # with open(output_util_filepath, 'w') as fo_util:
+      #   fo_util.write(util_filecontent)
 
       with open(output_template_filepath, 'w') as fo_templates:
-        fo_templates.write(output_template_filepath)
+        fo_templates.write(output_template_content)
 
 
     except Exception as e:
