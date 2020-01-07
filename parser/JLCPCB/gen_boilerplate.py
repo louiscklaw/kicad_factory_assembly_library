@@ -7,7 +7,6 @@ from translate import *
 from const import *
 from util import *
 
-from categories.categories import *
 
 import xlrd
 
@@ -103,6 +102,7 @@ def dilute_name(str_in):
 def translate(file_category_list_in):
   filename_category_list = file_category_list_in
   gen_filenames={}
+  first_cat_list = {}
 
   # translate
   # erase the blocking chars
@@ -131,9 +131,43 @@ def translate(file_category_list_in):
   for key in filename_category_list.keys():
     gen_filenames[key] = key.lower().replace(' ','_').replace('&','_').replace('___','_')
 
-  return diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames
+  for key in filename_category_list.keys():
+    first_cat_list[key] = 'CAT_JLC_'+dilute_name(key).upper()
 
-def reform_list(filename_category_list, diluted_category_list, check_if_var_list_in, process_var_list_in, const_var_list_in, const_var_content_list_in, gen_filenames):
+  return diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames, first_cat_list
+
+def get_checking_script(var_in, check_in, sec_cat_in, first_cat_in):
+  template = '''
+def {check_in}(cell_values):
+  print('hello {check_in}')
+  return all([
+    cell_values[COL_NUM_FIRST_CATEGORY] == {first_cat_in},
+    cell_values[COL_NUM_SECOND_CATEGORY] == {sec_cat_in}
+  ])
+
+  pass'''
+
+  template = template.strip()
+  template = template.replace('{check_in}',check_in)
+  template = template.replace('{first_cat_in}',first_cat_in)
+  template = template.replace('{sec_cat_in}',sec_cat_in)
+
+  return template
+
+def get_processing_script(var_in, process_in):
+  template = '''
+def {process_in}(cell_values):
+  print('hello {process_in}')
+  return '{process_in}'
+  pass'''
+
+  template = template.strip()
+  template = template.replace('{process_in}',process_in)
+
+  return template
+  pass
+
+def reform_list(filename_category_list, diluted_category_list, check_if_var_list_in, process_var_list_in, const_var_list_in, const_var_content_list_in, gen_filenames, first_cat_in):
   default_code_content ='''
 
 # SEC_CAT_CONSTANTS
@@ -153,6 +187,9 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
   for key in filename_category_list.keys():
 
     try:
+      first_cat = first_cat_in[key]
+
+      sec_cat_list = const_var_list_in[key]
       const_var_list = const_var_list_in[key]
       const_var_content_list = const_var_content_list_in[key]
       check_if_var_in = check_if_var_list_in[key]
@@ -166,9 +203,9 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
       mapping = '\n'.join([f"{var_name_in}:[{check_in},{process_in}]," for (var_name_in, check_in, process_in) in zip(const_var_list, check_if_var_in, process_var_in)])
 
-      checking = '\n'.join([f"\ndef {check_in}():\n  print('hello {check_in}')\n  pass" for (var_name_in, check_in) in zip(const_var_list, check_if_var_in)])
+      checking = '\n'.join([get_checking_script(var_name_in, check_in, sec_cat, first_cat)+'\n' for (var_name_in, check_in, sec_cat) in zip(const_var_list, check_if_var_in, sec_cat_list)])
 
-      processing = '\n'.join([f"\ndef {process_in}():\n  print('hello {process_in}')\n  pass" for (var_name_in, process_in) in zip(const_var_list, process_var_in)])
+      processing = '\n'.join([get_processing_script(var_name_in, process_in)+'\n' for (var_name_in, process_in) in zip(const_var_list, process_var_in)])
 
       code_content = default_code_content
       code_content = code_content.replace('{constants}', constants)
@@ -192,10 +229,10 @@ def main():
   filename_category_list = get_first_and_sec_catetorys()
 
   # translate
-  diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames = translate(filename_category_list)
+  diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames, first_cat_list = translate(filename_category_list)
 
   # re-form
-  reform_list(filename_category_list, diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames)
+  reform_list(filename_category_list, diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames, first_cat_list)
 
 if __name__ == '__main__':
   main()
