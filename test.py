@@ -9,10 +9,10 @@ CURRENT_RESULT_DIR = 'test/results'
 file_list = ['jlcpcb_resistors.lib','jlcpcb_resistors.dcm']
 
 def test_convert_resistors():
-  # subprocess.check_output(
-  #   'pipenv run python3 parse.py test/resistor_only.xls'.split(' '),
-  #   cwd='parser/JLCPCB'
-  #   )
+  subprocess.check_output(
+    'pipenv run python3 parse.py test/resistor_only.xls'.split(' '),
+    cwd='parser/JLCPCB'
+    )
 
   for (expected_result, current_result) in zip(
     [os.path.join(EXPECTED_RESULT_DIR, expected_result_file) for expected_result_file in file_list],
