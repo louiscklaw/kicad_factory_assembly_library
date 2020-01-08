@@ -207,9 +207,6 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       check_if_var_in = check_if_var_list_in[key]
       process_var_in = process_var_list_in[key]
 
-      print(gen_filenames[key])
-      continue
-
       # output file
       output_py_file = f'{gen_filenames[key]}.py'
       output_util_py_file = f'{gen_filenames[key]}_util.py'
@@ -238,33 +235,10 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
       filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content).replace('{util_py_filename}',output_util_py_file[0:-3])
 
-      # print(key)
-      # Resistors
-      # Inductors & Chokes & Transformers
-      # Capacitors
-      # Diodes
-      # Transistors
-      # Power Management ICs
-      # Optocouplers & LEDs & Infrared
-      # Embedded Processors & Controllers
-      # Logic ICs
-      # Driver ICs
-      # Interface ICs
-      # Embedded Peripheral ICs
-      # Memory
-      # Sensors
-      # Amplifiers
-      # Filters
-      # Crystals
-      # RF & Radio
-      # Fuses
-      # Analog ICs
-      # Pushbutton Switches & Relays
-      # Battery Products
-
       if key in ['Capacitors']:
         pass
       else:
+        print(f'writing {output_filepath}')
         with open(output_filepath,'w') as fo:
           fo.write(filecontent)
 

@@ -4,3 +4,4 @@
 
 **/*.dcm
 **/*.lib
+**/boilerplate/output

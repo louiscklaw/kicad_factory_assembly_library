@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 
-cd boilerplate
-pipenv sync
-pipenv run python3 gen_boilerplate.py
+nodemon -w './boilerplate/*.py' --ext '*.py' --exec './gen_boilerplate.sh'
