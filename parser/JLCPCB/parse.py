@@ -138,9 +138,6 @@ def main():
       else:
         result_dictionary[first_category_value] = [transformed_result]
 
-
-  pprint(result_dictionary.keys())
-  sys.exit()
   for k, lib_and_dcm_list in result_dictionary.items():
 
     lib_filename, dcm_filename = get_output_filename(k)
@@ -166,8 +163,6 @@ def main():
 
     lib_store = lib_store.strip()
     dcm_store = dcm_store.strip()
-
-    pprint(dcm_store)
 
     output_lib_filepath= lib_output_path+'/'+lib_filename
     output_dcm_filepath = dcm_output_path+'/'+dcm_filename\

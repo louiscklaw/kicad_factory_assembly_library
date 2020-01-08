@@ -31,7 +31,8 @@ fp_default_fp_matcher={
 }
 
 
-R_LIB_UNIT_TEMPLATE=Template("""#
+R_LIB_UNIT_TEMPLATE=Template("""
+#
 # $R_THREE_DIGIT_VALUE
 #
 DEF $R_THREE_DIGIT_VALUE R 0 10 N N 1 F N
@@ -50,9 +51,10 @@ X ~ 1 0 100 30 D 50 50 1 1 P
 X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
-""")
+""".strip())
 
-R_LIB_UNIT_WITH_SIZE_TEMPLATE=Template("""#
+R_LIB_UNIT_WITH_SIZE_TEMPLATE=Template("""
+#
 # $R_THREE_DIGIT_VALUE_SIZE
 #
 DEF $R_THREE_DIGIT_VALUE_SIZE R 0 10 N N 1 F N
@@ -68,7 +70,6 @@ F7 "$R_PACKAGE" 0 -800 50 H I C CNN "Package"
 F8 "$R_SOLDER_JOINT" 0 0 50 H I C CNN "Solder Joint"
 F9 "$R_MANU" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
-
 $$FPLIST
  Resistor_SMD:R_$R_SIZE*
 $$ENDFPLIST
@@ -78,27 +79,32 @@ X ~ 1 0 100 30 D 50 50 1 1 P
 X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
-""")
+""".strip())
 
-R_DCM_UNIT_TEMPLATE=Template("""#
+R_DCM_UNIT_TEMPLATE=Template("""
+#
 $$CMP $R_THREE_DIGIT_VALUE
 D Resistor
 K R r res resistor $R_THREE_DIGIT_VALUE $R_TEXT_VALUE
 F ~
 $$ENDCMP
-""")
+""".strip())
 
 
-R_LIB_TEMPLATE=Template("""EESchema-LIBRARY Version 2.4
+R_LIB_TEMPLATE=Template("""
+EESchema-LIBRARY Version 2.4
 #encoding utf-8
 $R_CONTENT
 #
-#End Library""")
+#End Library
+""".strip())
 
-R_DCM_TEMPLATE=Template("""EESchema-DOCLIB  Version 2.0
+R_DCM_TEMPLATE=Template("""
+EESchema-DOCLIB  Version 2.0
 $R_CONTENT
 #
-#End Doc Library""")
+#End Doc Library
+""".strip())
 
 
 # py_template_content

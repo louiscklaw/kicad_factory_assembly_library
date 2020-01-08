@@ -6,7 +6,10 @@ import subprocess
 
 EXPECTED_RESULT_DIR = 'test/expected_result'
 CURRENT_RESULT_DIR = 'test/results'
-file_list = ['jlcpcb_resistors.lib','jlcpcb_resistors.dcm']
+file_list = [
+  'jlcpcb_resistors.lib','jlcpcb_resistors.dcm',
+  'jlcpcb_capacitors.lib','jlcpcb_capacitors.dcm'
+  ]
 
 def try_build():
   commands = [
