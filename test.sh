@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 
+# pipenv run python3 test.py
+
 cd parser/JLCPCB
 
 pipenv sync
 
-  echo 'running python3'
-  pipenv run python3 parse.py /home/logic/_workspace/kicad_factory_assembly_library/parser/JLCPCB/test/resistor_only.xls
+pipenv run python3 parse.py test/resistor_only.xls parser/JLCPCB/test/results
+pipenv run python3 parse.py test/capacitors_only.xls parser/JLCPCB/test/results
 
-  echo 'comparing lib file...'
-  diff test/results/jlcpcb_resistors.lib test/expected_result/jlcpcb_resistors.lib
 
-  echo 'comparing dcm file...'
-  diff test/results/jlcpcb_resistors.dcm test/expected_result/jlcpcb_resistors.dcm
-
-cd ../..
+diff -r test/expected_result test/results
