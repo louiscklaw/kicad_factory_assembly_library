@@ -119,8 +119,15 @@ def encap_dcm_content(dcm_content):
 
 def main():
   # main
+  xls_file_input = sys.argv[1]
+  lib_output_path = sys.argv[2]
+  dcm_output_path = lib_output_path
 
-  for cell_values in get_all_columns(sys.argv[1]):
+  print(f'xls file input {xls_file_input}')
+  print(f'lib output file directory: {lib_output_path}')
+  print(f'dcm output file directory: {dcm_output_path}')
+
+  for cell_values in get_all_columns(xls_file_input):
 
     if cell_values[COL_NUM_FIRST_CATEGORY] == 'First Category':
       # skipping index column as sorted column appears in the middle
