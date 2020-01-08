@@ -13,8 +13,8 @@ file_list = [
 
 def try_build():
   commands = [
-    'pipenv run python3 parse.py test/resistor_only.xls',
-    'pipenv run python3 parse.py test/capacitors_only.xls',
+    'pipenv run python3 parse.py test/resistor_only.xls test/results',
+    'pipenv run python3 parse.py test/capacitors_only.xls test/results',
   ]
   try:
     for command in commands:
