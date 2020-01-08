@@ -81,7 +81,7 @@ def get_all_columns(wl_to_open):
   return sorted(cell_values)
 
 shown_dictionary = {}
-result_dictionary = {'Resistors':[]}
+result_dictionary = {}
 
 def transform(cell_values):
   found = False
@@ -92,6 +92,7 @@ def transform(cell_values):
     if m:
       found = True
       result = process(cell_values)
+
       return result
 
   if not found:
@@ -117,8 +118,8 @@ def encap_dcm_content(dcm_content):
   pass
 
 def main():
+  # main
 
-  # TODO: remove me
   for cell_values in get_all_columns(sys.argv[1]):
 
     if cell_values[COL_NUM_FIRST_CATEGORY] == 'First Category':
@@ -127,7 +128,8 @@ def main():
     else:
       first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
 
-      print(cell_values)
+
+      # print(cell_values)
       transformed_result = transform(cell_values)
       # print(transformed_result)
 
@@ -136,6 +138,9 @@ def main():
       else:
         result_dictionary[first_category_value] = [transformed_result]
 
+
+  pprint(result_dictionary.keys())
+  sys.exit()
   for k, lib_and_dcm_list in result_dictionary.items():
 
     lib_filename, dcm_filename = get_output_filename(k)
@@ -145,6 +150,7 @@ def main():
 
     temp_lib_content = []
     temp_dcm_content = []
+
     for lib_content, dcm_content in lib_and_dcm_list:
       temp_lib_content.append(lib_content)
       temp_dcm_content.append(dcm_content)
@@ -158,11 +164,10 @@ def main():
     # lib_store = '\n'.join(lib_content)
     # dcm_store = '\n\n'.join(dcm_content)
 
-
     lib_store = lib_store.strip()
     dcm_store = dcm_store.strip()
 
-
+    pprint(dcm_store)
 
     output_lib_filepath= lib_output_path+'/'+lib_filename
     output_dcm_filepath = dcm_output_path+'/'+dcm_filename\
