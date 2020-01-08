@@ -43,9 +43,9 @@ def run_command(command_body):
   print(command_result, command_result.stderr)
   return command_result
 
-for merge_from, merge_to in merge_directions:
-  BRANCH_TO_MERGE_INTO='develop'
-  BRANCH_TO_MERGE_REGEX='^feature'
+for merge_from, merge_to in merge_directions.items():
+  BRANCH_TO_MERGE_INTO=merge_to
+  BRANCH_TO_MERGE_REGEX=merge_from
 
   m = re.match(BRANCH_TO_MERGE_REGEX, TRAVIS_BRANCH)
   if (m == None ) :
@@ -54,8 +54,26 @@ for merge_from, merge_to in merge_directions:
 
   else:
     if len(m.groups()) == 2:
+      # test/xxx, feature/xxx
+
       print('found test sub branch')
       sys.exit()
+      with lcd(TEMP_DIR), settings(warn_only=True):
+        with( shell_env( GIT_COMMITTER_EMAIL='travis@travis', GIT_COMMITTER_NAME='Travis CI' ) ):
+          print('checkout {}/{} branch'.format(BRANCH_TO_MERGE_INTO,m[1]))
+          run_command('git checkout {}/{}'.format(BRANCH_TO_MERGE_INTO,m[1]))
+
+          print('Merging "{}"'.format(TRAVIS_COMMIT))
+          result_to_check = run_command('git merge --ff-only "{}"'.format(TRAVIS_COMMIT))
+          if result_to_check.failed:
+            slack_message('error found during merging BUILD{} `{}` from `{}` to `{}`'.format(TRAVIS_BUILD_NUMBER, GITHUB_REPO, TRAVIS_BRANCH, BRANCH_TO_MERGE_INTO), '#travis-build-result')
+          else:
+            slack_message('merging BUILD{} from {} `{}` to `{}` done, commit message "{}"'.format(TRAVIS_BUILD_NUMBER, GITHUB_REPO, TRAVIS_BRANCH, BRANCH_TO_MERGE_INTO, TRAVIS_COMMIT_MESSAGE), '#travis-build-result')
+
+
+          print('push commit')
+          run_command("git push {} {}".format(PUSH_URI, BRANCH_TO_MERGE_INTO))
+
     else:
       with lcd(TEMP_DIR), settings(warn_only=True):
         with( shell_env( GIT_COMMITTER_EMAIL='travis@travis', GIT_COMMITTER_NAME='Travis CI' ) ):
