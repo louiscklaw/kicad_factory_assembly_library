@@ -6,7 +6,8 @@ from pprint import pprint
 sys.path.append(os.path.dirname(__file__))
 from const import *
 
-from resistors import *
+# from resistors import *
+from resistors.resistors import *
 from capacitors import *
 
 
