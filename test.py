@@ -11,7 +11,7 @@ file_list = ['jlcpcb_resistors.lib','jlcpcb_resistors.dcm']
 def try_build():
   commands = [
     'pipenv run python3 parse.py test/resistor_only.xls',
-    # 'pipenv run python3 parse.py test/capacitors_only.xls',
+    'pipenv run python3 parse.py test/capacitors_only.xls',
   ]
   try:
     for command in commands:

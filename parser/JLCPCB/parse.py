@@ -118,6 +118,7 @@ def encap_dcm_content(dcm_content):
 
 def main():
 
+  # TODO: remove me
   for cell_values in get_all_columns(sys.argv[1]):
 
     if cell_values[COL_NUM_FIRST_CATEGORY] == 'First Category':
@@ -128,25 +129,35 @@ def main():
 
       print(cell_values)
       transformed_result = transform(cell_values)
-      print(transformed_result)
+      # print(transformed_result)
 
       if first_category_value in result_dictionary.keys():
         result_dictionary[first_category_value].append(transformed_result)
       else:
         result_dictionary[first_category_value] = [transformed_result]
 
-
   for k, lib_and_dcm_list in result_dictionary.items():
-
 
     lib_filename, dcm_filename = get_output_filename(k)
 
     lib_store = ''
     dcm_store = ''
 
-    for (lib_content, dcm_content) in lib_and_dcm_list:
-      lib_store += lib_content
-      dcm_store += dcm_content
+    temp_lib_content = []
+    temp_dcm_content = []
+    for lib_content, dcm_content in lib_and_dcm_list:
+      temp_lib_content.append(lib_content)
+      temp_dcm_content.append(dcm_content)
+
+    lib_store = '\n'.join(temp_lib_content)
+    dcm_store = '\n'.join(temp_dcm_content)
+
+    # a,b = list(zip(*[(1,2),(3,4),(5,6)]))
+    # libcontent, dcm_content = list(zip(*lib_and_dcm_list))
+    # sys.exit()
+    # lib_store = '\n'.join(lib_content)
+    # dcm_store = '\n\n'.join(dcm_content)
+
 
     lib_store = lib_store.strip()
     dcm_store = dcm_store.strip()
