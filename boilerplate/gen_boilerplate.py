@@ -263,7 +263,8 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       # Battery Products
 
       if key in ['Capacitors']:
-
+        pass
+      else:
         with open(output_filepath,'w') as fo:
           fo.write(filecontent)
 
