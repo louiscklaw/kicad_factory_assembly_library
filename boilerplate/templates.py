@@ -90,6 +90,26 @@ def general_handler(cell_values):
     return handle_jlc_{first_category}(cell_values, m_r)
 
   elif m_with_part_number:
+    result = handle_with_part_number(cell_values, m_without_smd_code)
+    return result
+
+  else:
+    print('missing_implementation in {filename}.general_handler')
+    print('SOLVE: missing_implementation in {filename}.general_handler')
+
+    print(cell_values)
+    sys.exit(1)
+
+
+def handle_with_part_number(cell_values):
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_with_package_size = check_if_str_with_smd_code(mfr_part_value)
+  m_with_part_number = check_if_str_with_part_number(mfr_part_value)
+
+  if m_with_package_size:
+    return handle_jlc_{first_category}(cell_values, m_r)
+
+  elif m_with_part_number:
     result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
     return result
 
@@ -136,7 +156,7 @@ def helloworld():
 
 helloworld()
 '''
-output_template_content = SYMBOL_LIB_TEMPLATE
+
 
 GENERATOR_TEMPLATE = '''
 #!/usr/bin/env python
@@ -160,4 +180,3 @@ def getLibText( c_smd_code, c_size, c_accuracy, lcsc_part, mfc_part,first_catego
 def getDcmText(c_smd_code, c_text_value, c_size, c_accuracy=None):
   pass
 '''
-output_generator_content = GENERATOR_TEMPLATE

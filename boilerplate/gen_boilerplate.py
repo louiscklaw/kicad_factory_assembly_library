@@ -262,11 +262,14 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
           fo_util.write(util_filecontent)
         sys.exit(0)
 
+        output_template_content = SYMBOL_LIB_TEMPLATE
         with open(output_template_filepath, 'w') as fo_templates:
           fo_templates.write(output_template_content)
 
         with open(output_generator_filepath, 'w') as fo_templates:
           fo_templates.write(output_template_content)
+
+        output_generator_content = GENERATOR_TEMPLATE
 
         print('done')
     except Exception as e:
