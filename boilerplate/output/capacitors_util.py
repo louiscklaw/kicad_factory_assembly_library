@@ -5,8 +5,6 @@ import os,sys,re
 from math import *
 from pprint import pprint
 
-import gen_c
-
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
 from const import *
 
@@ -16,7 +14,7 @@ import gen_capacitors
 
 
 def check_if_c_with_smd_code(str_in):
-  m = re.match(r'^([\w|\d]+?)F\((\d+?)\) (±\d+?%) 50V C0G$',str_in)
+  m = re.match(r'^75pF\(750\) ±5% 50V C0G$',str_in)
   return m
 
 def handle_jlc_capacitors(cell_values_array, m_r):
@@ -24,17 +22,13 @@ def handle_jlc_capacitors(cell_values_array, m_r):
   try:
     # extract
     first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
-    package = cell_values_array[COL_NUM_PACKAGE]
 
-    r_text_value = m_r[2]
-    r_smd_code = package
+    r_text_value = m_r[1]
+    r_smd_code = m_r[2]
     r_accuracy = m_r[3]
 
-    gen_capacitors.helloworld()
-    sys.exit()
-
     # translate
-    temp_lib = gen_c.getLibText(*[
+    temp_lib = gen_r.getLibText(*[
           r_smd_code,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
@@ -46,7 +40,7 @@ def handle_jlc_capacitors(cell_values_array, m_r):
           cell_values_array[COL_NUM_MANUFACTURER],
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
-    temp_dcm = gen_c.getDcmText(
+    temp_dcm = gen_r.getDcmText(
       r_smd_code, r_text_value,
       cell_values_array[COL_NUM_PACKAGE],
       r_accuracy)
@@ -60,9 +54,6 @@ def handle_jlc_capacitors(cell_values_array, m_r):
 
 def general_handler(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
-
-  pprint(mfr_part_value)
-
   m_r = check_if_c_with_smd_code(mfr_part_value)
 
 

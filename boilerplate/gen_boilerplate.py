@@ -1,14 +1,27 @@
 #!/usr/bin/env python3
 
-import os,sys
+import os,sys,re
 from pprint import pprint
 
-from translate import *
-from const import *
-from util import *
-
-
 import xlrd
+
+from templates import *
+
+CURR_DIR = os.path.dirname(__file__)
+OUT_PATH = os.path.join(CURR_DIR,'output')
+
+PROJ_HOME = os.path.join(CURR_DIR, '..')
+PARSER_DIR = os.path.join(PROJ_HOME,'parser')
+JLBPCB_PATH = os.path.join(PARSER_DIR,'JLCPCB')
+TEST_DIR = os.path.join(PROJ_HOME,'parser','JLCPCB','test')
+
+INPUT_XLS_PATH = os.path.join(TEST_DIR,'test.xls')
+
+sys.path.append(JLBPCB_PATH)
+# from translate import *
+from const import *
+# from util import *
+
 
 
 SEC_CAT_PY_TEMPLATE = '''
@@ -38,6 +51,8 @@ from pprint import pprint
 
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
 from const import *
+
+import gen_capacitors
 
 # py_util_content
 
@@ -163,10 +178,10 @@ def getDcmText(c_smd_code, c_text_value, c_size, c_accuracy=None):
 '''
 output_generator_content = GENERATOR_TEMPLATE
 
-OUT_PATH = os.path.join(os.getcwd(), 'categories')
+
 
 def open_xl_sheet():
-  workbook = xlrd.open_workbook('test/test.xls')
+  workbook = xlrd.open_workbook(INPUT_XLS_PATH)
   worksheet = workbook.sheet_by_index(0)
   return worksheet
 
