@@ -9,6 +9,7 @@ from const import *
 # from resistors import *
 from resistors.resistors import *
 from capacitors.capacitors import *
+from inductors_chokes_transformers.inductors_chokes_transformers import *
 
 
 print('hello categories')
@@ -38,15 +39,10 @@ FIRST_CAT_BATTERY_PRODUCTS = "Battery Products"
 FIRST_CAT_OTHERS = "Others"
 
 def check_first_cat_resistors(str_in):
-  # if str_in == FIRST_CAT_RESISTORS:
-  #   print('find me resistors')
-  #   sys.exit()
   return str_in == FIRST_CAT_RESISTORS
 
-
-def check_first_cat_inductors_chokes_transformers(cell_values):
-  print('def check_first_cat_inductors_chokes_transformers(cell_values):')
-  pass
+def check_first_cat_inductors_chokes_transformers(str_in):
+  return str_in == FIRST_CAT_INDUCTORS_CHOKES_TRANSFORMERS
 
 def check_first_cat_capacitors(str_in):
   return str_in == FIRST_CAT_CAPACITORS
@@ -152,8 +148,23 @@ def process_first_cat_resistors(cell_values):
   return result
 
 def process_first_cat_inductors_chokes_transformers(cell_values):
-  print('findme')
-  pass
+  first_cat_value = cell_values[COL_NUM_FIRST_CATEGORY]
+  second_cat_value = cell_values[COL_NUM_SECOND_CATEGORY]
+  result = 'empty'
+
+  found=False
+
+  for k, (checkers, processers) in inductors_chokes_transformers_mapping.items():
+    if checkers(cell_values):
+      found=True
+      result = processers(cell_values)
+      break
+
+  if not found:
+    print(second_cat_value)
+
+  return result
+
 
 def process_first_cat_capacitors(cell_values):
   first_cat_value = cell_values[COL_NUM_FIRST_CATEGORY]
