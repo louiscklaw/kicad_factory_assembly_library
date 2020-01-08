@@ -8,7 +8,7 @@ from pprint import pprint
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
 from const import *
 
-import gen_inductors
+import gen_l
 
 # py_util_content
 
@@ -44,9 +44,89 @@ def check_if_chokes(str_in):
   # 500uH @ 100kHz
   return re.match(r'^(.+?)[Ω|H] *?@ *?(.+?)Hz$', str_in)
 
-def handle_jlc_capacitors(cell_values_array, m_r):
+def handle_jlc_inductors(cell_values_array, m_r):
+  try:
+    # extract
+    first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
+    package = cell_values_array[COL_NUM_PACKAGE]
+    lcsc_part = cell_values_array[COL_NUM_LCSC_PART]
+    r_accuracy = m_r[2]
+
+    # pprint(m_r[1])
+    # pprint(cell_values_array)
+    # sys.exit()
+
+    # translate
+    component_name= ','.join([m_r[1], package, lcsc_part])
+
+    temp_lib = gen_l.getLibText(*[
+      component_name,
+      cell_values_array[COL_NUM_PACKAGE],
+      r_accuracy,
+      cell_values_array[COL_NUM_LCSC_PART],
+      cell_values_array[COL_NUM_MFR_PART],
+      cell_values_array[COL_NUM_FIRST_CATEGORY],
+      cell_values_array[COL_NUM_SECOND_CATEGORY],
+      cell_values_array[COL_NUM_SOLDER_JOINT],
+      cell_values_array[COL_NUM_MANUFACTURER],
+      cell_values_array[COL_NUM_LIBRARY_TYPE]
+    ])
+
+    temp_dcm = gen_l.getDcmText(
+      component_name,
+      cell_values_array[COL_NUM_PACKAGE],
+      r_accuracy
+    )
+
+    return temp_lib, temp_dcm
+
+  except Exception as e:
+    print('debug')
+    pprint(cell_values_array)
+
+    raise e
+
   pass
 
+
+def handle_jlc_transformer(cell_values_array, m_r):
+  try:
+    # extract
+    first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
+    package = cell_values_array[COL_NUM_PACKAGE]
+    lcsc_part = cell_values_array[COL_NUM_LCSC_PART]
+    r_accuracy = ''
+
+    # translate
+    component_name= ','.join([m_r[1], package, lcsc_part])
+
+    temp_lib = gen_l.getLibText(*[
+      component_name,
+      cell_values_array[COL_NUM_PACKAGE],
+      r_accuracy,
+      cell_values_array[COL_NUM_LCSC_PART],
+      cell_values_array[COL_NUM_MFR_PART],
+      cell_values_array[COL_NUM_FIRST_CATEGORY],
+      cell_values_array[COL_NUM_SECOND_CATEGORY],
+      cell_values_array[COL_NUM_SOLDER_JOINT],
+      cell_values_array[COL_NUM_MANUFACTURER],
+      cell_values_array[COL_NUM_LIBRARY_TYPE]
+    ])
+
+    temp_dcm = gen_l.getDcmText(
+      component_name,
+      cell_values_array[COL_NUM_PACKAGE],
+      r_accuracy
+    )
+
+    return temp_lib, temp_dcm
+
+  except Exception as e:
+    print('debug')
+    pprint(cell_values_array)
+    raise e
+
+  pass
 
 
 def general_handler(cell_values):
@@ -62,24 +142,25 @@ def general_handler(cell_values):
   m_match_part_number = check_if_input_is_a_part_number(mfr_part_value)
 
   if m_r:
-    return handle_jlc_capacitors(cell_values, m_r)
+    return handle_jlc_inductors(cell_values, m_r)
+
   elif m_transformer:
-    pass
+    return handle_jlc_transformer(cell_values, m_transformer)
 
   elif m_with_rating:
-    pass
+    return handle_jlc_inductors(cell_values, m_with_rating)
 
   elif m_with_package_size:
-    pass
+    return handle_jlc_inductors(cell_values, m_with_package_size)
 
   elif m_is_chokes:
-    pass
+    return handle_jlc_inductors(cell_values, m_is_chokes)
 
   elif m_without_rating:
-    pass
+    return handle_jlc_inductors(cell_values, m_without_rating)
 
   elif m_match_part_number:
-    pass
+    return handle_jlc_inductors(cell_values, m_match_part_number)
 
   # elif m_without_smd_code:
   #   result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
@@ -91,9 +172,6 @@ def general_handler(cell_values):
 
     print(cell_values)
     sys.exit(1)
-
-
-
 
 # py_util_content
 

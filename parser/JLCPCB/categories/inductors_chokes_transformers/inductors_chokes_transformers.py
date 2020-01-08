@@ -195,19 +195,19 @@ def process_power_inductors(cell_values):
 
 def process_rj45_transformer(cell_values):
   # implementation
-  result = ''
-  result = general_handler(cell_values)
+  # result = ''
+  # result = general_handler(cell_values)
 
-  if result != '':
-    return result
+  # if result != '':
+  #   return result
 
-  else:
-    print('missing_implementation in process_rj45_transformer')
-    print(cell_values)
-    sys.exit(1)
+  # else:
+  #   print('missing_implementation in process_rj45_transformer')
+  #   print(cell_values)
+  #   sys.exit(1)
 
   # TODO: implement process_rj45_transformer
-  return default_result
+  return ''
   pass
 
 
