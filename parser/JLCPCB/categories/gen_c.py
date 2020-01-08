@@ -13,6 +13,8 @@ import csv
 from capacitors_template import *
 
 def getLibText( c_smd_code, c_size, c_accuracy, lcsc_part, mfc_part,first_category, secondary_category, soldec_joint, manufacturer, lib_type ):
+  print(C_LIB_TEMPLATE)
+  sys.exit()
   pass
 
 

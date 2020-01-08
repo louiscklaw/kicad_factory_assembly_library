@@ -135,8 +135,6 @@ def main():
       else:
         result_dictionary[first_category_value] = [transformed_result]
 
-    print(result_dictionary)
-    sys.exit()
 
   for k, lib_and_dcm_list in result_dictionary.items():
 
@@ -157,9 +155,6 @@ def main():
 
     output_lib_filepath= lib_output_path+'/'+lib_filename
     output_dcm_filepath = dcm_output_path+'/'+dcm_filename\
-
-    print(output_lib_filepath)
-    continue
 
     with open(output_lib_filepath,'w+') as fo_lib:
       print(f'writing to file {output_lib_filepath}')
