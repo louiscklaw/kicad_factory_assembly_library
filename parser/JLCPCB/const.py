@@ -2,6 +2,16 @@
 
 import os,sys
 
+SEC_CAT_SKIP_LIST = [
+  # inductors
+  'Balun',
+  'Common Mode Chokes / Filters',
+  'Ferrite Beads And Chips',
+  'HF Inductors',
+  'Power Inductors',
+  'RJ45 Transformer'
+]
+
 COL_NUM_LCSC_PART = 0
 COL_NUM_MFR_PART = 1
 COL_NUM_FIRST_CATEGORY =2

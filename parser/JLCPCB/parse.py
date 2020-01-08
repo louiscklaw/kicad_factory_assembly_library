@@ -102,10 +102,16 @@ def transform(cell_values):
 
 
 def get_lib_filename(first_cat_in):
-  return 'jlcpcb_'+first_cat_in.lower()+'.lib'
+  first_cat_in = re.sub('[& ]','_',first_cat_in)
+  first_cat_in = re.sub('_+','_',first_cat_in)
+  filename = 'jlcpcb_'+first_cat_in.lower()+'.lib'
+  return filename
 
 def get_dcm_filename(first_cat_in):
-  return 'jlcpcb_'+first_cat_in.lower()+'.dcm'
+  first_cat_in = re.sub('[& ]','_',first_cat_in)
+  first_cat_in = re.sub('_+','_',first_cat_in)
+  filename = 'jlcpcb_'+first_cat_in.lower()+'.dcm'
+  return filename
 
 def get_output_filename(first_cat_in):
   print(f'debug first_cat_in {first_cat_in}')
@@ -134,16 +140,20 @@ def main():
       pass
     else:
       first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
+      sec_category_value = cell_values[COL_NUM_SECOND_CATEGORY]
 
+      if sec_category_value not in SEC_CAT_SKIP_LIST:
+        # print(cell_values)
+        transformed_result = transform(cell_values)
+        # print(transformed_result)
 
-      # print(cell_values)
-      transformed_result = transform(cell_values)
-      # print(transformed_result)
-
-      if first_category_value in result_dictionary.keys():
-        result_dictionary[first_category_value].append(transformed_result)
+        if first_category_value in result_dictionary.keys():
+          result_dictionary[first_category_value].append(transformed_result)
+        else:
+          result_dictionary[first_category_value] = [transformed_result]
       else:
-        result_dictionary[first_category_value] = [transformed_result]
+        print(f'INFO: skipping {sec_category_value} as in skip list')
+
 
   for k, lib_and_dcm_list in result_dictionary.items():
 
