@@ -38,17 +38,21 @@ import gen_capacitors
 # py_util_content
 
 
-def check_if_c_with_smd_code(str_in):
+def check_if_str_with_smd_code(str_in):
   m = re.match(r'^75pF\(750\) ±5% 50V C0G$',str_in)
   return m
 
-def handle_jlc_capacitors(cell_values_array, m_r):
+def check_if_str_with_part_number(str_in):
+  m = re.match(r'^75pF\(750\) ±5% 50V C0G$',str_in)
+  return m
+
+def handle_jlc_{first_category}(cell_values_array, m_r):
 
   try:
     # extract
     first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
 
-    r_text_value = m_r[1]
+    text_value = m_r[1]
     r_smd_code = m_r[2]
     r_accuracy = m_r[3]
 
@@ -66,7 +70,7 @@ def handle_jlc_capacitors(cell_values_array, m_r):
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
     temp_dcm = gen_r.getDcmText(
-      r_smd_code, r_text_value,
+      r_smd_code, text_value,
       cell_values_array[COL_NUM_PACKAGE],
       r_accuracy)
 
@@ -79,19 +83,19 @@ def handle_jlc_capacitors(cell_values_array, m_r):
 
 def general_handler(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_c_with_smd_code(mfr_part_value)
+  m_with_package_size = check_if_str_with_smd_code(mfr_part_value)
+  m_with_part_number = check_if_str_with_part_number(mfr_part_value)
 
+  if m_with_package_size:
+    return handle_jlc_{first_category}(cell_values, m_r)
 
-  if m_r:
-    return handle_jlc_capacitors(cell_values, m_r)
-
-  # elif m_without_smd_code:
-  #   result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-  #   return result
+  elif m_with_part_number:
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+    return result
 
   else:
-    print('missing_implementation in capacitors_util.general_handler')
-    print('SOLVE: missing_implementation in capacitors_util.general_handler')
+    print('missing_implementation in {filename}.general_handler')
+    print('SOLVE: missing_implementation in {filename}.general_handler')
 
     print(cell_values)
     sys.exit(1)
@@ -106,7 +110,6 @@ def helloworld():
 
 helloworld()
 '''
-util_filecontent = UTIL_PY_TEMPLATE
 
 
 SYMBOL_LIB_TEMPLATE = '''

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os,sys,re
+import subprocess
 from pprint import pprint
 
 import xlrd
@@ -8,14 +9,17 @@ import xlrd
 from templates import *
 
 CURR_DIR = os.path.dirname(__file__)
-OUT_PATH = os.path.join(CURR_DIR,'output')
+# OUT_PATH = os.path.join(CURR_DIR,'output')
+OUT_PATH = '/home/logic/_workspace/kicad_factory_assembly_library/parser/JLCPCB/categories'
 
 PROJ_HOME = os.path.join(CURR_DIR, '..')
 PARSER_DIR = os.path.join(PROJ_HOME,'parser')
 JLBPCB_PATH = os.path.join(PARSER_DIR,'JLCPCB')
-TEST_DIR = os.path.join(PROJ_HOME,'parser','JLCPCB','test')
 
-INPUT_XLS_PATH = os.path.join(TEST_DIR,'test.xls')
+TEST_DIR = os.path.join(JLBPCB_PATH,'test')
+XLS_TABLE_DIR = os.path.join(JLBPCB_PATH, 'xls_table')
+
+INPUT_XLS_PATH = os.path.join(XLS_TABLE_DIR,'test.xls')
 
 sys.path.append(JLBPCB_PATH)
 from const import *
@@ -196,10 +200,12 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
   '''.strip()
 
-  for key in filename_category_list.keys():
+  sorted(filename_category_list.keys())
+  for key in ['Diodes']:
 
     try:
       first_cat = first_cat_in[key]
+      lowercase_first_cat = gen_filenames[key]
 
       sec_cat_list = const_var_list_in[key]
       const_var_list = const_var_list_in[key]
@@ -213,11 +219,16 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       output_template_py_file = f'{gen_filenames[key]}_template.py'
       output_generator_py_file = f'gen_{gen_filenames[key]}.py'
 
-      output_filepath = os.path.join(OUT_PATH,output_py_file)
-      output_util_filepath = os.path.join(OUT_PATH,output_util_py_file)
-      output_template_filepath = os.path.join(OUT_PATH,output_template_py_file)
-      output_generator_filepath = os.path.join(OUT_PATH, output_generator_py_file)
+      CURRENT_OUTPUT_PATH = os.path.join(OUT_PATH, gen_filenames[key])
 
+      output_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_py_file)
+      output_util_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_util_py_file)
+      output_template_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_template_py_file)
+      output_generator_filepath = os.path.join(CURRENT_OUTPUT_PATH, output_generator_py_file)
+
+      # mkdir_command = f'mkdir -p {os.path.join(CURRENT_OUTPUT_PATH)}'
+      # print(mkdir_command)
+      # subprocess.check_output(mkdir_command.split(' '))
 
       constants = '\n'.join([f"{var_name_in} = '{var_content_in}'" for (var_name_in, var_content_in) in zip(const_var_list, const_var_content_list)])
 
@@ -235,15 +246,21 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
       filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content).replace('{util_py_filename}',output_util_py_file[0:-3])
 
-      if key in ['Capacitors']:
+      if key.lower() in ['capacitors','resistors','inductors & chokes & transformers']:
         pass
       else:
+        print(f'generating {key.lower()}...',end='')
+
         print(f'writing {output_filepath}')
         with open(output_filepath,'w') as fo:
           fo.write(filecontent)
 
+        util_filecontent = UTIL_PY_TEMPLATE
+        util_filecontent = util_filecontent.replace('{first_category}',lowercase_first_cat)
+        util_filecontent = util_filecontent.replace('{filename}',os.path.basename(output_util_filepath))
         with open(output_util_filepath, 'w') as fo_util:
           fo_util.write(util_filecontent)
+        sys.exit(0)
 
         with open(output_template_filepath, 'w') as fo_templates:
           fo_templates.write(output_template_content)
@@ -251,6 +268,7 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
         with open(output_generator_filepath, 'w') as fo_templates:
           fo_templates.write(output_template_content)
 
+        print('done')
     except Exception as e:
       pprint(const_var_list)
       raise e
