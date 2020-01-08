@@ -42,6 +42,64 @@ from const import *
 # py_util_content
 
 
+def check_if_c_with_smd_code(str_in):
+  m = re.match(r'^75pF\(750\) ±5% 50V C0G$',str_in)
+  return m
+
+def handle_jlc_capacitors(cell_values_array, m_r):
+
+  try:
+    # extract
+    first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
+
+    r_text_value = m_r[1]
+    r_smd_code = m_r[2]
+    r_accuracy = m_r[3]
+
+    # translate
+    temp_lib = gen_r.getLibText(*[
+          r_smd_code,
+          cell_values_array[COL_NUM_PACKAGE],
+          r_accuracy,
+          cell_values_array[COL_NUM_LCSC_PART],
+          cell_values_array[COL_NUM_MFR_PART],
+          cell_values_array[COL_NUM_FIRST_CATEGORY],
+          cell_values_array[COL_NUM_SECOND_CATEGORY],
+          cell_values_array[COL_NUM_SOLDER_JOINT],
+          cell_values_array[COL_NUM_MANUFACTURER],
+          cell_values_array[COL_NUM_LIBRARY_TYPE]
+        ])
+    temp_dcm = gen_r.getDcmText(
+      r_smd_code, r_text_value,
+      cell_values_array[COL_NUM_PACKAGE],
+      r_accuracy)
+
+    return temp_lib, temp_dcm
+
+  except Exception as e:
+    print('debug')
+    pprint(cell_values_array)
+    raise e
+
+def general_handler(cell_values):
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_r = check_if_c_with_smd_code(mfr_part_value)
+
+
+  if m_r:
+    return handle_jlc_capacitors(cell_values, m_r)
+
+  # elif m_without_smd_code:
+  #   result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
+  #   return result
+
+  else:
+    print('missing_implementation in capacitors_util.general_handler')
+    print('SOLVE: missing_implementation in capacitors_util.general_handler')
+
+    print(cell_values)
+    sys.exit(1)
+
 
 
 
@@ -80,6 +138,30 @@ def helloworld():
 helloworld()
 '''
 output_template_content = SYMBOL_LIB_TEMPLATE
+
+GENERATOR_TEMPLATE = '''
+#!/usr/bin/env python
+# coding:utf-8
+
+import os
+import sys
+import logging
+import traceback
+from pprint import pprint
+from math import log10, floor
+from string import Template
+import csv
+
+from capacitors_template import *
+
+def getLibText( c_smd_code, c_size, c_accuracy, lcsc_part, mfc_part,first_category, secondary_category, soldec_joint, manufacturer, lib_type ):
+  pass
+
+
+def getDcmText(c_smd_code, c_text_value, c_size, c_accuracy=None):
+  pass
+'''
+output_generator_content = GENERATOR_TEMPLATE
 
 OUT_PATH = os.path.join(os.getcwd(), 'categories')
 
@@ -271,10 +353,12 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       output_py_file = f'{gen_filenames[key]}.py'
       output_util_py_file = f'{gen_filenames[key]}_util.py'
       output_template_py_file = f'{gen_filenames[key]}_template.py'
+      output_generator_py_file = f'gen_{gen_filenames[key]}.py'
 
       output_filepath = os.path.join(OUT_PATH,output_py_file)
       output_util_filepath = os.path.join(OUT_PATH,output_util_py_file)
       output_template_filepath = os.path.join(OUT_PATH,output_template_py_file)
+      output_generator_filepath = os.path.join(OUT_PATH, output_generator_py_file)
 
 
       constants = '\n'.join([f"{var_name_in} = '{var_content_in}'" for (var_name_in, var_content_in) in zip(const_var_list, const_var_content_list)])
@@ -293,15 +377,43 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
       filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content).replace('{util_py_filename}',output_util_py_file[0:-3])
 
-      with open(output_filepath,'w') as fo:
-        fo.write(filecontent)
+      print(key)
+      # Resistors
+      # Inductors & Chokes & Transformers
+      # Capacitors
+      # Diodes
+      # Transistors
+      # Power Management ICs
+      # Optocouplers & LEDs & Infrared
+      # Embedded Processors & Controllers
+      # Logic ICs
+      # Driver ICs
+      # Interface ICs
+      # Embedded Peripheral ICs
+      # Memory
+      # Sensors
+      # Amplifiers
+      # Filters
+      # Crystals
+      # RF & Radio
+      # Fuses
+      # Analog ICs
+      # Pushbutton Switches & Relays
+      # Battery Products
 
-      with open(output_util_filepath, 'w') as fo_util:
-        fo_util.write(util_filecontent)
+      if key in ['Capacitors']:
 
-      with open(output_template_filepath, 'w') as fo_templates:
-        fo_templates.write(output_template_content)
+        with open(output_filepath,'w') as fo:
+          fo.write(filecontent)
 
+        with open(output_util_filepath, 'w') as fo_util:
+          fo_util.write(util_filecontent)
+
+        with open(output_template_filepath, 'w') as fo_templates:
+          fo_templates.write(output_template_content)
+
+        with open(output_generator_filepath, 'w') as fo_templates:
+          fo_templates.write(output_template_content)
 
     except Exception as e:
       pprint(const_var_list)

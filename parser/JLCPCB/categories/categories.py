@@ -4,9 +4,11 @@ import os,sys, re
 from pprint import pprint
 
 sys.path.append(os.path.dirname(__file__))
+from const import *
 
 from resistors import *
-from const import *
+from capacitors import *
+
 
 print('hello categories')
 
@@ -46,8 +48,21 @@ def check_first_cat_inductors_chokes_transformers(cell_values):
   pass
 
 def check_first_cat_capacitors(cell_values):
-  print('def check_first_cat_capacitors(cell_values):')
-  pass
+  first_cat_value = cell_values[COL_NUM_FIRST_CATEGORY]
+  second_cat_value = cell_values[COL_NUM_SECOND_CATEGORY]
+  result = 'empty'
+
+  found=False
+
+  for k, (checkers, processers) in capacitors_mapping.items():
+    if checkers(cell_values):
+      found=True
+      result = processers(cell_values)
+      break
+  if not found:
+    print(second_cat_value)
+
+  return result
 
 def check_first_cat_diodes(cell_values):
   print('def check_first_cat_diodes(cell_values):')
@@ -151,8 +166,21 @@ def process_first_cat_inductors_chokes_transformers(cell_values):
   pass
 
 def process_first_cat_capacitors(cell_values):
-  print('findme')
-  pass
+  first_cat_value = cell_values[COL_NUM_FIRST_CATEGORY]
+  second_cat_value = cell_values[COL_NUM_SECOND_CATEGORY]
+  result = 'empty'
+
+  found=False
+
+  for k, (checkers, processers) in capacitors_mapping.items():
+    if checkers(cell_values):
+      found=True
+      result = processers(cell_values)
+      break
+  if not found:
+    print(second_cat_value)
+
+  return result
 
 def process_first_cat_diodes(cell_values):
   print('findme')

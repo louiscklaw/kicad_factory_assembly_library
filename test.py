@@ -8,11 +8,25 @@ EXPECTED_RESULT_DIR = 'test/expected_result'
 CURRENT_RESULT_DIR = 'test/results'
 file_list = ['jlcpcb_resistors.lib','jlcpcb_resistors.dcm']
 
+def try_build():
+  commands = [
+    'pipenv run python3 parse.py test/resistor_only.xls',
+    'pipenv run python3 parse.py test/capacitors_only.xls',
+  ]
+  try:
+    for command in commands:
+      subprocess.check_output(
+        command.split(' '),
+      cwd='parser/JLCPCB'
+      )
+
+    pass
+  except Exception as e:
+    raise e
+
+
 def test_convert_resistors():
-  subprocess.check_output(
-    'pipenv run python3 parse.py test/resistor_only.xls'.split(' '),
-    cwd='parser/JLCPCB'
-    )
+  try_build()
 
   for (expected_result, current_result) in zip(
     [os.path.join(EXPECTED_RESULT_DIR, expected_result_file) for expected_result_file in file_list],

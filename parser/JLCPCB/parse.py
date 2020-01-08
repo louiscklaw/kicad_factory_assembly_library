@@ -107,6 +107,7 @@ def get_dcm_filename(first_cat_in):
   return 'jlcpcb_'+first_cat_in.lower()+'.dcm'
 
 def get_output_filename(first_cat_in):
+  print(f'debug first_cat_in {first_cat_in}')
   return [get_lib_filename(first_cat_in), get_dcm_filename(first_cat_in)]
 
 def encap_lib_content(lib_content):
@@ -118,20 +119,28 @@ def encap_dcm_content(dcm_content):
 def main():
 
   for cell_values in get_all_columns(sys.argv[1]):
+
     if cell_values[COL_NUM_FIRST_CATEGORY] == 'First Category':
       # skipping index column as sorted column appears in the middle
       pass
     else:
       first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
 
+      print(cell_values)
       transformed_result = transform(cell_values)
+      print(transformed_result)
 
       if first_category_value in result_dictionary.keys():
         result_dictionary[first_category_value].append(transformed_result)
       else:
         result_dictionary[first_category_value] = [transformed_result]
 
+    print(result_dictionary)
+    sys.exit()
+
   for k, lib_and_dcm_list in result_dictionary.items():
+
+
     lib_filename, dcm_filename = get_output_filename(k)
 
     lib_store = ''
@@ -144,13 +153,22 @@ def main():
     lib_store = lib_store.strip()
     dcm_store = dcm_store.strip()
 
-    with open(lib_output_path+'/'+lib_filename,'w+') as fo_lib:
+
+
+    output_lib_filepath= lib_output_path+'/'+lib_filename
+    output_dcm_filepath = dcm_output_path+'/'+dcm_filename\
+
+    print(output_lib_filepath)
+    continue
+
+    with open(output_lib_filepath,'w+') as fo_lib:
+      print(f'writing to file {output_lib_filepath}')
       fo_lib.write(LIB_TEMPLATE.substitute(LIB_CONTENT = lib_store))
 
-    with open(dcm_output_path+'/'+dcm_filename,'w+') as fo_dcm:
+    with open(output_dcm_filepath,'w+') as fo_dcm:
+      print(f'writing to file {output_dcm_filepath}')
       fo_dcm.write(DCM_TEMPLATE.substitute(DCM_CONTENT = dcm_store))
 
-    sys.exit()
 
   # pprint(result_dictionary)
   print("done")
