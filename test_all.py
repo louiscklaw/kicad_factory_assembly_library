@@ -7,11 +7,30 @@ import subprocess
 EXPECTED_RESULT_DIR = 'test/expected_result'
 CURRENT_RESULT_DIR = 'test/results'
 file_list = [
-  'jlcpcb_resistors.lib','jlcpcb_resistors.dcm',
-  'jlcpcb_capacitors.lib','jlcpcb_capacitors.dcm',
+  # 'jlcpcb_amplifiers.lib', 'jlcpcb_amplifiers.dcm',
+  # 'jlcpcb_analog_ics.lib', 'jlcpcb_analog_ics.dcm',
+  # 'jlcpcb_battery_products.lib', 'jlcpcb_battery_products.dcm',
+  'jlcpcb_capacitors.lib', 'jlcpcb_capacitors.dcm',
+  # 'jlcpcb_crystals.lib', 'jlcpcb_crystals.dcm,'
+  'jlcpcb_diodes.lib', 'jlcpcb_diodes.dcm',
+  # 'jlcpcb_driver_ics.lib', 'jlcpcb_driver_ics.dcm',
+  # 'jlcpcb_embedded_peripheral_ics.lib', 'jlcpcb_embedded_peripheral_ics.dcm',
+  # 'jlcpcb_embedded_processors_controllers.lib', 'jlcpcb_embedded_processors_controllers.dcm',
+  # 'jlcpcb_filters.lib', 'jlcpcb_filters.dcm',
+  # 'jlcpcb_first_category.lib', 'jlcpcb_first_category.dcm',
+  # 'jlcpcb_fuses.lib', 'jlcpcb_fuses.dcm',
   'jlcpcb_inductors_chokes_transformers.lib','jlcpcb_inductors_chokes_transformers.dcm',
-  'jlcpcb_diodes.lib','jlcpcb_diodes.dcm',
+  # 'jlcpcb_interface_ics.lib', 'jlcpcb_interface_ics.dcm',
+  # 'jlcpcb_logic_ics.lib', 'jlcpcb_logic_ics.dcm',
+  # 'jlcpcb_memory.lib', 'jlcpcb_memory.dcm',
+  # 'jlcpcb_optocouplers_leds_infrared.lib', 'jlcpcb_optocouplers_leds_infrared.dcm',
+  # 'jlcpcb_others.lib', 'jlcpcb_others.dcm',
+  # 'jlcpcb_power_management_ics.lib', 'jlcpcb_power_management_ics.dcm',
   'jlcpcb_pushbutton_switches_relays.lib','jlcpcb_pushbutton_switches_relays.dcm',
+  'jlcpcb_resistors.lib','jlcpcb_resistors.dcm',
+  # 'jlcpcb_rf_radio.lib', 'jlcpcb_rf_radio.dcm',
+  # 'jlcpcb_sensors.lib', 'jlcpcb_sensors.dcm',
+  # 'jlcpcb_transistors.lib', 'jlcpcb_transistors.dcm',
   ]
 
 def try_build():
@@ -20,7 +39,7 @@ def try_build():
     # 'pipenv run python3 parse.py test/analog_ics_only.xls test/results',
     # 'pipenv run python3 parse.py test/battery_products_only.xls test/results',
     'pipenv run python3 parse.py test/capacitors_only.xls test/results',
-    # 'pipenv run python3 parse.py test/crystals_only.xls test/results',
+    'pipenv run python3 parse.py test/crystals_only.xls test/results',
     'pipenv run python3 parse.py test/diodes_only.xls test/results',
     # 'pipenv run python3 parse.py test/driver_ics_only.xls test/results',
     # 'pipenv run python3 parse.py test/embedded_peripheral_ics_only.xls test/results',
