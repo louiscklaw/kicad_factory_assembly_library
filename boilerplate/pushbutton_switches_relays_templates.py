@@ -608,7 +608,7 @@ R_LIB_UNIT_WITH_SIZE_TEMPLATE=Template("""
 DEF $component_name D 0 10 N N 1 F N
 
 F0 "D" 0 100 50 H V C CNN
-F1 "$component_name" -400 -200 50 H V L CNN
+F1 "$component_name" 0 -200 50 H V C CNN
 F2 "$d_footprint" 0 -400 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 F4 "$R_LCSC_PART" 0 -500 50 H I C CNN "LCSC_Part"
@@ -623,11 +623,11 @@ $$FPLIST
  $footprint_alias
 $$ENDFPLIST
 DRAW
-P 2 0 1 0 -30 -40 -30 40 N
-P 2 0 1 0 -30 0 30 0 N
-P 4 0 1 0 30 -40 -30 0 30 40 30 -40 N
-X K 1 -100 0 70 R 50 50 1 1 P
-X A 2 100 0 70 L 50 50 1 1 P
+C -80 0 20 0 0 0 N
+C 80 0 20 0 0 0 N
+P 2 0 0 0 -60 10 60 70 N
+X A 1 -200 0 100 R 50 50 1 1 P
+X B 2 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 """.strip())

@@ -121,6 +121,13 @@ fp_default_fp_matcher={
     'SOT-323-6L':'not verified',
     'UFDFN-10_EP_2.6x2.6x0.5P':'not verified',
 
+    # switch footprints
+    'SMD-SW-4_5.1x5.1x1.5':'not verified',
+    'SMD-SW-4_5.1x5.1x3.5':'not verified',
+    'SMD-SW-4_5.1x5.1x2.5':'not verified',
+    'SMD-SW-4_5.1x5.1x2.0':'not verified',
+    'SMD-SW-4_5.1x5.1x1.7':'not verified',
+
 
 }
 

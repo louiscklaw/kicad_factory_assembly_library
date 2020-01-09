@@ -579,27 +579,27 @@ fp_default_fp_matcher={
 }
 
 
-R_LIB_UNIT_TEMPLATE=Template("""
-#
-# $component_name
-#
-DEF $component_name R 0 10 N N 1 F N
-F0 "R" 30 20 50 H V L CNN
-F1 "$component_name" 30 -40 50 H V L CNN
-F2 "$d_footprint" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$$FPLIST
- R_*
- Resistor_SMD:R_0805_*
- Resistor_SMD:R_0603_*
-$$ENDFPLIST
-DRAW
-S -30 70 30 -70 0 1 8 N
-X ~ 1 0 100 30 D 50 50 1 1 P
-X ~ 2 0 -100 30 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-""".strip())
+# R_LIB_UNIT_TEMPLATE=Template("""
+# #
+# # $component_name
+# #
+# DEF $component_name R 0 10 N N 1 F N
+# F0 "R" 30 20 50 H V L CNN
+# F1 "$component_name" 30 -40 50 H V L CNN
+# F2 "$d_footprint" 0 0 50 H I C CNN
+# F3 "" 0 0 50 H I C CNN
+# $$FPLIST
+#  R_*
+#  Resistor_SMD:R_0805_*
+#  Resistor_SMD:R_0603_*
+# $$ENDFPLIST
+# DRAW
+# S -30 70 30 -70 0 1 8 N
+# X ~ 1 0 100 30 D 50 50 1 1 P
+# X ~ 2 0 -100 30 U 50 50 1 1 P
+# ENDDRAW
+# ENDDEF
+# """.strip())
 
 R_LIB_UNIT_WITH_SIZE_TEMPLATE=Template("""
 #
@@ -623,11 +623,11 @@ $$FPLIST
  $footprint_alias
 $$ENDFPLIST
 DRAW
-P 2 0 1 0 -30 -40 -30 40 N
-P 2 0 1 0 -30 0 30 0 N
-P 4 0 1 0 30 -40 -30 0 30 40 30 -40 N
-X K 1 -100 0 70 R 50 50 1 1 P
-X A 2 100 0 70 L 50 50 1 1 P
+C -80 0 20 0 0 0 N
+C 80 0 20 0 0 0 N
+P 2 0 0 0 -60 10 60 70 N
+X A 1 -200 0 100 R 50 50 1 1 P
+X B 2 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 """.strip())
