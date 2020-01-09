@@ -1,18 +1,8 @@
 #!/usr/bin/env python3
-# GEN_TEMPLATE_TEMPLATE
 
-import os,sys,re
-from pprint import pprint
-from string import Template
-
-sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
-from const import *
-
-
-# py_template_content
-
+# footprint_templates.py
 # SOLVE: 'ERROR: footprint not found in fp_default_fp_matcher'
-fp_default_fp_matcher={
+footprint_list='''{
     '0402_x4':'Resistor_SMD:R_0402_1005Metric',
     '0402_x8':'Resistor_SMD:R_0402_1005Metric',
     '0402':'Resistor_SMD:R_0402_1005Metric',
@@ -337,91 +327,4 @@ fp_default_fp_matcher={
 
     'SMD-BAT-CR2032-BS-6-1':'not verified',
 
-}
-
-
-R_LIB_UNIT_TEMPLATE=Template("""
-#
-# $component_name
-#
-DEF $component_name R 0 10 N N 1 F N
-F0 "R" 30 20 50 H V L CNN
-F1 "$component_name" 30 -40 50 H V L CNN
-F2 "$d_footprint" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$$FPLIST
- R_*
- Resistor_SMD:R_0805_*
- Resistor_SMD:R_0603_*
-$$ENDFPLIST
-DRAW
-S -30 70 30 -70 0 1 8 N
-X ~ 1 0 100 30 D 50 50 1 1 P
-X ~ 2 0 -100 30 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-""".strip())
-
-R_LIB_UNIT_WITH_SIZE_TEMPLATE=Template("""
-#
-# $component_name
-#
-DEF $component_name D 0 10 N N 1 F N
-
-F0 "D" 0 100 50 H V C CNN
-F1 "$component_name" 0 -200 50 H V C CNN
-F2 "$d_footprint" 0 -400 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-F4 "$R_LCSC_PART" 0 -500 50 H I C CNN "LCSC_Part"
-F5 "$R_MFR_PART" -200 -300 50 H I L CNN "MFR_Part"
-F6 "$R_SEC_CAT" 0 -600 50 H I C CNN "Second Category"
-F7 "$R_PACKAGE" 0 -800 50 H I C CNN "Package"
-F8 "$R_SOLDER_JOINT" 0 -1000 50 H I C CNN "Solder Joint"
-F9 "$R_MANU" 0 -700 50 H I C CNN "Manufacturer"
-F10 "base" 0 -900 50 H I C CNN "Library Type"
-$$FPLIST
- ALIAS
- $footprint_alias
-$$ENDFPLIST
-DRAW
-P 2 0 1 0 -30 -40 -30 40 N
-P 2 0 1 0 -30 0 30 0 N
-P 4 0 1 0 30 -40 -30 0 30 40 30 -40 N
-X K 1 -100 0 70 R 50 50 1 1 P
-X A 2 100 0 70 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-""".strip())
-
-R_DCM_UNIT_TEMPLATE=Template("""
-#
-$$CMP $component_name
-D $description
-K $keyword
-F ~
-$$ENDCMP
-""".strip())
-
-
-R_LIB_TEMPLATE=Template("""
-EESchema-LIBRARY Version 2.4
-#encoding utf-8
-$R_CONTENT
-#
-#End Library
-""".strip())
-
-R_DCM_TEMPLATE=Template("""
-EESchema-DOCLIB  Version 2.0
-$R_CONTENT
-#
-#End Doc Library
-""".strip())
-
-
-# py_template_content
-
-def helloworld():
-  print('helloworld util py')
-
-helloworld()
+}'''

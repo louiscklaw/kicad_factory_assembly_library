@@ -25,5 +25,5 @@ cd parser/JLCPCB
 # nodemon -w . --ext "*.py" --exec "pipenv run python3 parse.py test/pushbutton_switches_relays_only.xls test/results"
 # nodemon -w . --ext "*.py" --exec "pipenv run python3 parse.py test/resistor_only.xls test/results"
 # nodemon -w . --ext "*.py" --exec "pipenv run python3 parse.py test/rf_radio_only.xls test/results"
-nodemon -w . --ext "*.py" --exec "pipenv run python3 parse.py test/sensors_only.xls test/results"
+# nodemon -w . --ext "*.py" --exec "pipenv run python3 parse.py test/sensors_only.xls test/results"
 # nodemon -w . --ext "*.py" --exec "pipenv run python3 parse.py test/transistors_only.xls test/results"
