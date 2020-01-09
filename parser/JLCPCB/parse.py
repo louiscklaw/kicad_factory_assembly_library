@@ -156,6 +156,8 @@ def main():
       else:
         print(f'INFO: skipping {sec_category_value} as in skip list')
 
+
+
   for k, lib_and_dcm_list in result_dictionary.items():
 
     lib_filename, dcm_filename = get_output_filename(k)
@@ -166,6 +168,8 @@ def main():
     temp_lib_content = []
     temp_dcm_content = []
 
+    # TODO: remove me
+    # for lib_content, dcm_content in lib_and_dcm_list:
     for lib_content, dcm_content in lib_and_dcm_list:
       temp_lib_content.append(lib_content)
       temp_dcm_content.append(dcm_content)

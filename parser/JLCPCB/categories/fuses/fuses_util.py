@@ -17,7 +17,8 @@ def check_if_str_with_smd_code(str_in):
   return m
 
 def check_if_str_with_part_number(str_in):
-  m = re.match(r'^([BAS|SMB|US|DF|ESD|PES|LMD|RS].+)$',str_in)
+  # m = re.match(r'^([BAS|SMB|US|DF|ESD|PES|LMD|RS].+)$',str_in)
+  m = re.match(r'^(.+)$',str_in)
   return m
 
 def handle_jlc_fuses(cell_values_array, m_r):
@@ -29,9 +30,11 @@ def handle_jlc_fuses(cell_values_array, m_r):
     text_value = m_r[1]
     r_smd_code = cell_values_array[COL_NUM_PACKAGE]
     r_accuracy = None
+
     # translate
+    component_name = m_r[1].replace(' ','_')
     temp_lib = gen_fuses.getLibText(*[
-          text_value,
+          component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
           cell_values_array[COL_NUM_LCSC_PART],
@@ -42,10 +45,18 @@ def handle_jlc_fuses(cell_values_array, m_r):
           cell_values_array[COL_NUM_MANUFACTURER],
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
-    temp_dcm = gen_fuses.getDcmText(
-      text_value, text_value,
-      cell_values_array[COL_NUM_PACKAGE],
-      r_accuracy)
+    temp_dcm = gen_fuses.getDcmText(*[
+          component_name,
+          cell_values_array[COL_NUM_PACKAGE],
+          r_accuracy,
+          cell_values_array[COL_NUM_LCSC_PART],
+          cell_values_array[COL_NUM_MFR_PART],
+          cell_values_array[COL_NUM_FIRST_CATEGORY],
+          cell_values_array[COL_NUM_SECOND_CATEGORY],
+          cell_values_array[COL_NUM_SOLDER_JOINT],
+          cell_values_array[COL_NUM_MANUFACTURER],
+          cell_values_array[COL_NUM_LIBRARY_TYPE]
+        ])
 
     return temp_lib, temp_dcm
 
@@ -64,8 +75,9 @@ def handle_with_part_number(cell_values_array, m_r):
     r_accuracy = None
 
     # translate
+    component_name = m_r[1].replace(' ','_')
     temp_lib = gen_fuses.getLibText(*[
-          text_value,
+          component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
           cell_values_array[COL_NUM_LCSC_PART],
@@ -76,11 +88,19 @@ def handle_with_part_number(cell_values_array, m_r):
           cell_values_array[COL_NUM_MANUFACTURER],
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
-    temp_dcm = gen_fuses.getDcmText(
-      text_value,
-      text_value,
-      cell_values_array[COL_NUM_PACKAGE],
-      r_accuracy)
+    temp_dcm = gen_fuses.getDcmText(*[
+          component_name,
+          cell_values_array[COL_NUM_PACKAGE],
+          r_accuracy,
+          cell_values_array[COL_NUM_LCSC_PART],
+          cell_values_array[COL_NUM_MFR_PART],
+          cell_values_array[COL_NUM_FIRST_CATEGORY],
+          cell_values_array[COL_NUM_SECOND_CATEGORY],
+          cell_values_array[COL_NUM_SOLDER_JOINT],
+          cell_values_array[COL_NUM_MANUFACTURER],
+          cell_values_array[COL_NUM_LIBRARY_TYPE]
+        ])
+
 
     return temp_lib, temp_dcm
 
@@ -93,12 +113,16 @@ def general_handler(cell_values):
   # print('fuses general handler')
 
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
+
   m_with_package_size = check_if_str_with_smd_code(mfr_part_value)
+
+  # bottom rule
   m_with_part_number = check_if_str_with_part_number(mfr_part_value)
 
   if m_with_package_size:
     return handle_jlc_fuses(cell_values, m_with_package_size)
 
+  # bottom rule
   elif m_with_part_number:
     result = handle_with_part_number(cell_values, m_with_part_number)
     return result

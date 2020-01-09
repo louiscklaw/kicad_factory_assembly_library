@@ -75,9 +75,15 @@ print_already = {}
 def get_first_and_sec_catetories():
   filename_category_list = {}
   i=0
-  for cell_values in get_all_columns():
+  whole_table = get_all_columns()
+
+  # pprint(whole_table)
+
+
+  for cell_values in whole_table:
     first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
     secondary_category_value = cell_values[COL_NUM_SECOND_CATEGORY]
+    component_name = cell_values[COL_NUM_LCSC_PART]
 
     if i > 0 and first_category_value.lower() != 'others':
       if secondary_category_value in print_already:
@@ -94,14 +100,18 @@ def get_first_and_sec_catetories():
   for filename, content in filename_category_list.items():
     filename_category_list[filename] = sorted(list(set(filename_category_list[filename])))
 
-  return filename_category_list
+  mfr_part_list = sorted(
+    list(zip(*whole_table[1:]))[COL_NUM_MFR_PART]
+  )
+
+  return filename_category_list, mfr_part_list
 
 def dilute_name(str_in):
   str_in = re.sub('[^0-9a-zA-Z]+','_', str_in)
   str_in = re.sub('_$','',str_in)
   return str_in
 
-def translate(file_category_list_in):
+def translate(file_category_list_in, mfr_part_list):
   filename_category_list = file_category_list_in
   gen_filenames={}
   first_cat_list = {}
@@ -136,7 +146,7 @@ def translate(file_category_list_in):
   for key in filename_category_list.keys():
     first_cat_list[key] = 'CAT_JLC_'+dilute_name(key).upper()
 
-  return diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames, first_cat_list
+  return diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames, first_cat_list, mfr_part_list
 
 def get_checking_script(var_in, check_in, sec_cat_in, first_cat_in):
   template = '''
@@ -235,7 +245,7 @@ def gen_gen_template_file(component_name, output_filepath):
   with open(output_filepath, 'w') as fo_util:
     fo_util.write(gen_file_content)
 
-def reform_list(filename_category_list, diluted_category_list, check_if_var_list_in, process_var_list_in, const_var_list_in, const_var_content_list_in, gen_filenames, first_cat_in):
+def reform_list(filename_category_list, diluted_category_list, check_if_var_list_in, process_var_list_in, const_var_list_in, const_var_content_list_in, gen_filenames, first_cat_in, mfr_part_list):
   default_code_content ='''
 
 # SEC_CAT_CONSTANTS
@@ -258,6 +268,10 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
   output_categories_file = 'categories.py'
   output_categories_filepath = os.path.join(OUT_PATH, output_categories_file)
 
+  output_lcsc_part_file = 'lcsc_part_name.out'
+  with open(output_lcsc_part_file,'w') as fo:
+    fo.write( '\n'.join(set([ test[0:3] for test in mfr_part_list])))
+
   # out to categories.py
   categories_content = CATEGORIES_TEMPLATE
   # component_list = list(filter(lambda x: x != '1', gen_filenames.values()))
@@ -272,11 +286,8 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       gen_mapping_imports(component_name) for component_name in component_list
     ])
   )
-  with open(output_categories_filepath, 'w') as fo_templates:
-    fo_templates.write(categories_content)
-
-  with open('test.out','w') as fo_component_lcsc:
-    fo_component_lcsc.write('hello lcsc')
+  # with open(output_categories_filepath, 'w') as fo_templates:
+    # fo_templates.write(categories_content)
 
   # for key in first_cat_in
   for key in first_cat_in:
@@ -371,11 +382,11 @@ def main():
   temp = ''
 
   # extract
-  filename_category_list = get_first_and_sec_catetories()
+  filename_category_list,mfr_part_list = get_first_and_sec_catetories()
 
   # translate
   # re-form
-  reform_list(filename_category_list, *translate(filename_category_list))
+  reform_list(filename_category_list, *translate(filename_category_list, mfr_part_list))
 
 if __name__ == '__main__':
   main()
