@@ -183,7 +183,7 @@ R_LIB_UNIT_WITH_SIZE_TEMPLATE=Template("""
 DEF $component_name D 0 10 N N 1 F N
 
 F0 "D" 0 100 50 H V C CNN
-F1 "$component_name" -400 -200 50 H V L CNN
+F1 "$component_name" 0 -200 50 H V C CNN
 F2 "$d_footprint" 0 -400 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 F4 "$R_LCSC_PART" 0 -500 50 H I C CNN "LCSC_Part"
