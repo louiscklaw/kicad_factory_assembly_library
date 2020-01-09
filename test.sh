@@ -4,7 +4,7 @@
 
 cd parser/JLCPCB
 
-rm -rf test/results/*.bck
+rm -rf test/results/*.*
 rm -rf test/expected_result/*.bck
 
 pipenv sync
@@ -13,7 +13,7 @@ pipenv sync
 # pipenv run python3 parse.py test/analog_ics_only.xls test/results
 # pipenv run python3 parse.py test/battery_products_only.xls test/results
 pipenv run python3 parse.py test/capacitors_only.xls test/results
-pipenv run python3 parse.py test/crystals_only.xls test/results
+# pipenv run python3 parse.py test/crystals_only.xls test/results
 pipenv run python3 parse.py test/diodes_only.xls test/results
 # pipenv run python3 parse.py test/driver_ics_only.xls test/results
 # pipenv run python3 parse.py test/embedded_peripheral_ics_only.xls test/results
@@ -36,3 +36,6 @@ pipenv run python3 parse.py test/resistor_only.xls test/results
 # pipenv run python3 parse.py test/transistors_only.xls test/results
 
 diff -r test/expected_result test/results
+
+
+echo 'test ok'
