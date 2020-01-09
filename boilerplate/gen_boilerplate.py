@@ -355,8 +355,10 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
   # with open(output_categories_filepath, 'w') as fo_templates:
     # fo_templates.write(categories_content)
 
-  # for key in first_cat_in
+  # TODO: remove me
+  # for key in ['Inductors & Chokes & Transformers']:
   for key in first_cat_in:
+    # first_cat_in=['Inductors & Chokes & Transformers']
     try:
       first_cat = first_cat_in[key]
       lowercase_first_cat = gen_filenames[key]
@@ -408,7 +410,10 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
       filecontent = SEC_CAT_PY_TEMPLATE.replace('{py_file_content}',code_content).replace('{util_py_filename}',output_util_py_file[0:-3])
 
-      if key.lower() in ['capacitors','resistors','inductors & chokes & transformers']:
+      # IDEA: skip for special procedure of gen file and templates
+      # if key.lower() in ['capacitors','resistors','inductors & chokes & transformers']:
+      if key.lower() in ['capacitors','resistors']:
+
         pass
       else:
         print(f'generating {key.lower()}...',end='')
@@ -429,15 +434,12 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
         with open(output_util_filepath, 'w') as fo_util:
           fo_util.write(util_filecontent)
 
-
-
-        # output_template_content = "???"
-        # with open(output_template_filepath, 'w') as fo_templates:
-        #   fo_templates.write("?????")
-
         gen_gen_file(component_name, output_generator_filepath, key)
-        gen_gen_template_file(component_name, output_gen_template_filepath, key)
 
+        gen_gen_template_file(component_name, output_gen_template_filepath, key)
+        # pprint('findme')
+        # pprint(key)
+        # sys.exit()
 
         output_generator_content = GENERATOR_TEMPLATE
 

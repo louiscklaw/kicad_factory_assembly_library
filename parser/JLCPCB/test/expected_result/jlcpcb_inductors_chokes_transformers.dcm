@@ -1,1269 +1,1089 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP 2.2u,0603,C1033
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH_±10%,0603,C1033
+D 2.2uH_±10%, 
+K 2.2uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0603,C1034
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH_±10%,0603,C1034
+D 4.7uH_±10%, 
+K 4.7uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,0603,C1035
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH_±10%,0603,C1035
+D 10uH_±10%, 
+K 10uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1u,0805,C1042
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1uH_±10%,0805,C1042
+D 1uH_±10%, 
+K 1uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2u,0805,C1043
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH_±10%,0805,C1043
+D 2.2uH_±10%, 
+K 2.2uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0805,C1044
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH_±10%,0805,C1044
+D 4.7uH_±10%, 
+K 4.7uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 5.6u,0805,C1045
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 5.6uH_±10%,0805,C1045
+D 5.6uH_±10%, 
+K 5.6uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,0805,C1046
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH_±10%,0805,C1046
+D 10uH_±10%, 
+K 10uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1u,1206,C1047
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1uH_±10%,1206,C1047
+D 1uH_±10%, 
+K 1uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2u,1206,C1048
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH_±10%,1206,C1048
+D 2.2uH_±10%, 
+K 2.2uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,1206,C1049
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH__±10%,1206,C1049
+D 4.7uH__±10%, 
+K 4.7uH__±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 5.6u,1206,C1050
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 5.6uH_±10%,1206,C1050
+D 5.6uH_±10%, 
+K 5.6uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,1206,C1051
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH_±10%,1206,C1051
+D 10uH_±10%, 
+K 10uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 33n,0603,C11774
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 33nH_±5%_600mA,0603,C11774
+D 33nH_±5%_600mA, 
+K 33nH_±5%_600mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 68n,0805,C11775
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 68nH_±5%,0805,C11775
+D 68nH_±5%, 
+K 68nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 39n,0603,C12327
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 39nH_±5%,0603,C12327
+D 39nH_±5%, 
+K 39nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 39n,0805,C12328
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 39nH_±5%,0805,C12328
+D 39nH_±5%, 
+K 39nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1u,0603,C12374
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1uH_±10%,0603,C12374
+D 1uH_±10%, 
+K 1uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 3.3u,0603,C12589
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 3.3uH_±10%,0603,C12589
+D 3.3uH_±10%, 
+K 3.3uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 47u,0805,C14304
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 47uH_±10%,0805,C14304
+D 47uH_±10%, 
+K 47uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10n,0805,C14457
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10nH_±5%_300mA,0805,C14457
+D 10nH_±5%_300mA, 
+K 10nH_±5%_300mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 22n,0805,C14459
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 22nH_±5%,0805,C14459
+D 22nH_±5%, 
+K 22nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 18n,0805,C14460
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 18nH_±5%_300mA,0805,C14460
+D 18nH_±5%_300mA, 
+K 18nH_±5%_300mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.5u,1206,C15581
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.5uH_±10%,1206,C15581
+D 1.5uH_±10%, 
+K 1.5uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 33u,0805,C18101
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 33uH_±10%,0805,C18101
+D 33uH_±10%, 
+K 33uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 12u,0603,C21306
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 12uH_±10%_3mA,0603,C21306
+D 12uH_±10%_3mA, 
+K 12uH_±10%_3mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 10n,0402,C21585
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10nH_±5%,0402,C21585
+D 10nH_±5%, 
+K 10nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 36n,0805,C21941
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 36nH_±5%,0805,C21941
+D 36nH_±5%, 
+K 36nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1u,1210,C22202
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1uH_±5%_400mA,1210,C22202
+D 1uH_±5%_400mA, 
+K 1uH_±5%_400mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.7u,0805,C24183
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.7uH_±10%_30mA,0805,C24183
+D 2.7uH_±10%_30mA, 
+K 2.7uH_±10%_30mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 47u,1206,C26910
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 47uH_±10%,1206,C26910
+D 47uH_±10%, 
+K 47uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.8u,1210,C27774
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.8uH_±10%,1210,C27774
+D 1.8uH_±10%, 
+K 1.8uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 100u,1210,C27775
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 100uH_±20%,1210,C27775
+D 100uH_±20%, 
+K 100uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 330n,0805,C29069
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 330nH_±10%_250mA,0805,C29069
+D 330nH_±10%_250mA, 
+K 330nH_±10%_250mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 18u,1210,C295126
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 18uH_±5%,1210,C295126
+D 18uH_±5%, 
+K 18uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.7u,0603,C29946
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.7uH_±10%,0603,C29946
+D 2.7uH_±10%, 
+K 2.7uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 390n,0805,C29972
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 390nH_±10%,0805,C29972
+D 390nH_±10%, 
+K 390nH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 330n,0805,C30617
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 330nH_±10%_250mA,0805,C30617
+D 330nH_±10%_250mA, 
+K 330nH_±10%_250mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 150n,0805,C30618
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 150nH_±10%_250mA,0805,C30618
+D 150nH_±10%_250mA, 
+K 150nH_±10%_250mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,1210,C31961
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH_±5%,1210,C31961
+D 10uH_±5%, 
+K 10uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 22u,0805,C32375
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 22uH_±10%,0805,C32375
+D 22uH_±10%, 
+K 22uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 100n,0805,C32878
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 100nH_±5%,0805,C32878
+D 100nH_±5%, 
+K 100nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2u,1210,C36828
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH_±5%,1210,C36828
+D 2.2uH_±5%, 
+K 2.2uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 560n,0805,C37297
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 560nH_±5%_230mA,0805,C37297
+D 560nH_±5%_230mA, 
+K 560nH_±5%_230mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 2n,0603,C40464
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2nH_±0.3nH_500mA,0603,C40464
+D 2nH_±0.3nH_500mA, 
+K 2nH_±0.3nH_500mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 3n,0603,C40465
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 3nH_±0.3nH,0603,C40465
+D 3nH_±0.3nH, 
+K 3nH_±0.3nH, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.8u,1210,C41039
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.8uH_±5%_350mA,1210,C41039
+D 1.8uH_±5%_350mA, 
+K 1.8uH_±5%_350mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 18u,0805,C42027
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 18uH__±10%,0805,C42027
+D 18uH__±10%, 
+K 18uH__±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.8u,1206,C43936
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.8uH_±10%,1206,C43936
+D 1.8uH_±10%, 
+K 1.8uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 24n,0603,C47614
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 24nH_±5%_300mA,0603,C47614
+D 24nH_±5%_300mA, 
+K 24nH_±5%_300mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 30n,0603,C47615
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 30nH_±0.3nH_300mA,0603,C47615
+D 30nH_±0.3nH_300mA, 
+K 30nH_±0.3nH_300mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 0.47u,0805,C48556
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 0.47uH__±10%,0805,C48556
+D 0.47uH__±10%, 
+K 0.47uH__±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 36n,0603,C48589
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 36nH_±5%_300mA,0603,C48589
+D 36nH_±5%_300mA, 
+K 36nH_±5%_300mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2u,0402,C49067
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH_±10%,0402,C49067
+D 2.2uH_±10%, 
+K 2.2uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 100n,0603,C49329
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 100nH_±5%,0603,C49329
+D 100nH_±5%, 
+K 100nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1u,0603,C49810
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1uH_±10%,0603,C49810
+D 1uH_±10%, 
+K 1uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 3.3u,0805,C51725
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 3.3uH±10%,0805,C51725
+D 3.3uH±10%, 
+K 3.3uH±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 36n,0402,C52050
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 36nH_±5%_150mA,0402,C52050
+D 36nH_±5%_150mA, 
+K 36nH_±5%_150mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 3.3u,1206,C52707
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 3.3uH_±10%_50mA,1206,C52707
+D 3.3uH_±10%_50mA, 
+K 3.3uH_±10%_50mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2u,0805,C55755
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH_±20%_900mA,0805,C55755
+D 2.2uH_±20%_900mA, 
+K 2.2uH_±20%_900mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 27n,0805,C56586
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 27nH_±5%,0805,C56586
+D 27nH_±5%, 
+K 27nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,1210,C56767
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH_±5%_220mA,1210,C56767
+D 4.7uH_±5%_220mA, 
+K 4.7uH_±5%_220mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 5.6u,0603,C57837
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 5.6uH_±10%_5mA,0603,C57837
+D 5.6uH_±10%_5mA, 
+K 5.6uH_±10%_5mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 15u,0603,C57838
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 15uH_±10%_1mA,0603,C57838
+D 15uH_±10%_1mA, 
+K 15uH_±10%_1mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 18u,0603,C57839
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 18uH__±10%,0603,C57839
+D 18uH__±10%, 
+K 18uH__±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 22u,0603,C57840
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 22uH_±10%_1mA,0603,C57840
+D 22uH_±10%_1mA, 
+K 22uH_±10%_1mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 27u,0603,C57841
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 27uH_±10%_1mA,0603,C57841
+D 27uH_±10%_1mA, 
+K 27uH_±10%_1mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 470u,1210,C63833
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 470uH_±5%,1210,C63833
+D 470uH_±5%, 
+K 470uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 22u,1206,C64476
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 22uH_±10%,1206,C64476
+D 22uH_±10%, 
+K 22uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 47u,1210,C66936
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 47uH___±5%___60mA,1210,C66936
+D 47uH___±5%___60mA, 
+K 47uH___±5%___60mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 100u,0805,C68035
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 100uH_±10%,0805,C68035
+D 100uH_±10%, 
+K 100uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 0.82u,0603,C74313
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 0.82uH_±10%,0603,C74313
+D 0.82uH_±10%, 
+K 0.82uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0805,C74314
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH_±10%,0805,C74314
+D 4.7uH_±10%, 
+K 4.7uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 0.68u,0805,C74315
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 0.68uH_±10%,0805,C74315
+D 0.68uH_±10%, 
+K 0.68uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.7u,0805,C74318
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.7uH_±10%,0805,C74318
+D 2.7uH_±10%, 
+K 2.7uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.5u,1206,C74477
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.5uH_±10%,1206,C74477
+D 1.5uH_±10%, 
+K 1.5uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 47u,1206,C75660
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 47uH_±10%,1206,C75660
+D 47uH_±10%, 
+K 47uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 6.8u,0603,C75929
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 6.8uH_±10%,0603,C75929
+D 6.8uH_±10%, 
+K 6.8uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0603,C76730
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH±10%,0603,C76730
+D 4.7uH±10%, 
+K 4.7uH±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 390n,0603,C76731
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 390nH±10%,0603,C76731
+D 390nH±10%, 
+K 390nH±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,0603,C76732
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH±10%,0603,C76732
+D 10uH±10%, 
+K 10uH±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 12u,0603,C76733
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 12uH±5%,0603,C76733
+D 12uH±5%, 
+K 12uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 5.6u,0603,C76734
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 5.6uH±10%,0603,C76734
+D 5.6uH±10%, 
+K 5.6uH±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 8.2u,0603,C76735
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 8.2uH±5%,0603,C76735
+D 8.2uH±5%, 
+K 8.2uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0805,C76736
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH±10%,0805,C76736
+D 4.7uH±10%, 
+K 4.7uH±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 100n,0805,C76737
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 100nH±5%,0805,C76737
+D 100nH±5%, 
+K 100nH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 120n,0805,C76738
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 120nH±10%,0805,C76738
+D 120nH±10%, 
+K 120nH±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 150n,0805,C76739
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 150nH±5%,0805,C76739
+D 150nH±5%, 
+K 150nH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 220n,0805,C76740
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 220nH±5%,0805,C76740
+D 220nH±5%, 
+K 220nH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 820n,0805,C76741
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 820nH±5%,0805,C76741
+D 820nH±5%, 
+K 820nH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,0805,C76742
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH±5%,0805,C76742
+D 10uH±5%, 
+K 10uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 12u,0805,C76744
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 12uH±5%,0805,C76744
+D 12uH±5%, 
+K 12uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1u,0805,C76793
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1uH±20%,0805,C76793
+D 1uH±20%, 
+K 1uH±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.5u,0805,C76794
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.5uH±20%,0805,C76794
+D 1.5uH±20%, 
+K 1.5uH±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2u,0603,C76797
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH±20%,0603,C76797
+D 2.2uH±20%, 
+K 2.2uH±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0603,C76799
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH±20%,0603,C76799
+D 4.7uH±20%, 
+K 4.7uH±20%, 
+F ~
 $ENDCMP
-
 #
 $CMP NL453232T-681J-PF,1812,C76821
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+D NL453232T-681J-PF, 
+K NL453232T-681J-PF, 
+F ~
 $ENDCMP
-
 #
-$CMP 15u,1812,C76823
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 15uH±10%,1812,C76823
+D 15uH±10%, 
+K 15uH±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,1210,C76835
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH±5%,1210,C76835
+D 10uH±5%, 
+K 10uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 100u,1210,C76836
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 100uH±5%,1210,C76836
+D 100uH±5%, 
+K 100uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.5u,1210,C76837
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.5uH±5%,1210,C76837
+D 1.5uH±5%, 
+K 1.5uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 27u,1210,C76839
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 27uH±5%,1210,C76839
+D 27uH±5%, 
+K 27uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 33u,1210,C76840
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 33uH±5%,1210,C76840
+D 33uH±5%, 
+K 33uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 39u,1210,C76841
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 39uH±5%,1210,C76841
+D 39uH±5%, 
+K 39uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,1210,C76842
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH±5%,1210,C76842
+D 4.7uH±5%, 
+K 4.7uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 68u,1210,C76843
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 68uH±5%,1210,C76843
+D 68uH±5%, 
+K 68uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 82u,1210,C76844
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 82uH±5%,1210,C76844
+D 82uH±5%, 
+K 82uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 8.2u,1210,C76845
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 8.2uH±5%,1210,C76845
+D 8.2uH±5%, 
+K 8.2uH±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 20n,0603,C77124
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 20nH__±2%,0603,C77124
+D 20nH__±2%, 
+K 20nH__±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 9.1n,0603,C77125
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 9.1nH_±0.5nH_650mA,0603,C77125
+D 9.1nH_±0.5nH_650mA, 
+K 9.1nH_±0.5nH_650mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 180n,0603,C77126
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 180nH_±5%,0603,C77126
+D 180nH_±5%, 
+K 180nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 220n,0603,C77127
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 220nH_±5%,0603,C77127
+D 220nH_±5%, 
+K 220nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 22n,0603,C84341
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 22nH_±2%,0603,C84341
+D 22nH_±2%, 
+K 22nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1u,0402,C84468
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1uH_±10%,0402,C84468
+D 1uH_±10%, 
+K 1uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.2u,0402,C84469
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.2uH_±10%,0402,C84469
+D 1.2uH_±10%, 
+K 1.2uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.5u,0402,C84470
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.5uH_±10%,0402,C84470
+D 1.5uH_±10%, 
+K 1.5uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2U,0402,C84472
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2UH__±10%,0402,C84472
+D 2.2UH__±10%, 
+K 2.2UH__±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 3.3u,0402,C84474
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 3.3uH_±10%,0402,C84474
+D 3.3uH_±10%, 
+K 3.3uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 33n,0402,C86062
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 33nH_±5%,0402,C86062
+D 33nH_±5%, 
+K 33nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 39n,0402,C86063
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 39nH_±5%,0402,C86063
+D 39nH_±5%, 
+K 39nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 3.3n,0402,C86064
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 3.3nH_±0.3nH_800mA,0402,C86064
+D 3.3nH_±0.3nH_800mA, 
+K 3.3nH_±0.3nH_800mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7n,0402,C86065
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7nH_±0.3nH_700mA,0402,C86065
+D 4.7nH_±0.3nH_700mA, 
+K 4.7nH_±0.3nH_700mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 5.1n,0402,C86066
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 5.1nH_±0.3nH,0402,C86066
+D 5.1nH_±0.3nH, 
+K 5.1nH_±0.3nH, 
+F ~
 $ENDCMP
-
 #
-$CMP 120n,0402,C86067
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 120nH_±5%,0402,C86067
+D 120nH_±5%, 
+K 120nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 33n,0603,C86068
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 33nH_±5%,0603,C86068
+D 33nH_±5%, 
+K 33nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1u,0805,C86086
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1uH_±30%,0805,C86086
+D 1uH_±30%, 
+K 1uH_±30%, 
+F ~
 $ENDCMP
-
 #
-$CMP 47u,0805,C86087
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 47uH_±30%,0805,C86087
+D 47uH_±30%, 
+K 47uH_±30%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0805,C86088
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH_±30%,0805,C86088
+D 4.7uH_±30%, 
+K 4.7uH_±30%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2u,0805,C86089
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH_±30%,0805,C86089
+D 2.2uH_±30%, 
+K 2.2uH_±30%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0805,C86090
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH_±20%,0805,C86090
+D 4.7uH_±20%, 
+K 4.7uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 12n,0402,C86128
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 12nH_±2%,0402,C86128
+D 12nH_±2%, 
+K 12nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 22n,0402,C86129
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 22nH_±2%,0402,C86129
+D 22nH_±2%, 
+K 22nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 100n,0402,C86130
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 100nH_±5%,0402,C86130
+D 100nH_±5%, 
+K 100nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 15n,0603,C86132
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 15nH_±2%,0603,C86132
+D 15nH_±2%, 
+K 15nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 18n,0603,C86133
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 18nH_±2%,0603,C86133
+D 18nH_±2%, 
+K 18nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 39n,0603,C86134
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 39nH_±2%,0603,C86134
+D 39nH_±2%, 
+K 39nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 68n,0603,C86135
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 68nH_±2%,0603,C86135
+D 68nH_±2%, 
+K 68nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 6.8n,0603,C86136
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 6.8nH_±0.2nH_750mA,0603,C86136
+D 6.8nH_±0.2nH_750mA, 
+K 6.8nH_±0.2nH_750mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 120n,0603,C86138
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 120nH_±2%,0603,C86138
+D 120nH_±2%, 
+K 120nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 220n,0603,C86139
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 220nH_±2%,0603,C86139
+D 220nH_±2%, 
+K 220nH_±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 47μ,1812,C86701
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 47μH_±5%,1812,C86701
+D 47μH_±5%, 
+K 47μH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,0603,C86752
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH_±20%,0603,C86752
+D 10uH_±20%, 
+K 10uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 22μ,1812,C86821
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 22μH_±10%,1812,C86821
+D 22μH_±10%, 
+K 22μH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10u,0603,C87216
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10uH_±10%,0603,C87216
+D 10uH_±10%, 
+K 10uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 820n,0402,C87452
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 820nH_±10%,0402,C87452
+D 820nH_±10%, 
+K 820nH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2u,0603,C87511
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2uH_±20%,0603,C87511
+D 2.2uH_±20%, 
+K 2.2uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.5u,0603,C87514
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.5uH_±5%,0603,C87514
+D 1.5uH_±5%, 
+K 1.5uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0603,C87515
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH_±5%,0603,C87515
+D 4.7uH_±5%, 
+K 4.7uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 120n,0603,C87517
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 120nH_±10%,0603,C87517
+D 120nH_±10%, 
+K 120nH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 150n,0603,C87518
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 150nH_±5%,0603,C87518
+D 150nH_±5%, 
+K 150nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 330n,0603,C87520
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 330nH_±10%,0603,C87520
+D 330nH_±10%, 
+K 330nH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 330n,0805,C87521
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 330nH_±5%,0805,C87521
+D 330nH_±5%, 
+K 330nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 6.2n,0402,C87534
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 6.2nH_±0.3nH_600mA,0402,C87534
+D 6.2nH_±0.3nH_600mA, 
+K 6.2nH_±0.3nH_600mA, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.2n,0603,C87537
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.2nH_±0.3nH,0603,C87537
+D 1.2nH_±0.3nH, 
+K 1.2nH_±0.3nH, 
+F ~
 $ENDCMP
-
 #
-$CMP 56n,0603,C87538
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 56nH_±5%,0603,C87538
+D 56nH_±5%, 
+K 56nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 8.2n,0402,C87541
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 8.2nH_±0.5nH,0402,C87541
+D 8.2nH_±0.5nH, 
+K 8.2nH_±0.5nH, 
+F ~
 $ENDCMP
-
 #
-$CMP 8.2n,0402,C87542
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 8.2nH_±5%,0402,C87542
+D 8.2nH_±5%, 
+K 8.2nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 4.7u,0805,C87543
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 4.7uH_±20%,0805,C87543
+D 4.7uH_±20%, 
+K 4.7uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.5u,1210,C87556
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.5uH_±20%,1210,C87556
+D 1.5uH_±20%, 
+K 1.5uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 330u,1210,C87557
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 330uH_±10%,1210,C87557
+D 330uH_±10%, 
+K 330uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 6.8u,1210,C87558
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 6.8uH_±20%,1210,C87558
+D 6.8uH_±20%, 
+K 6.8uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 6.8u,1210,C87559
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 6.8uH_±20%,1210,C87559
+D 6.8uH_±20%, 
+K 6.8uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 3.3u,1210,C87560
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 3.3uH_±20%,1210,C87560
+D 3.3uH_±20%, 
+K 3.3uH_±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 33n,1210,C87561
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 33nH_±5%,1210,C87561
+D 33nH_±5%, 
+K 33nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 1.2u,1210,C87562
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 1.2uH_±5%,1210,C87562
+D 1.2uH_±5%, 
+K 1.2uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 5.6u,1210,C87563
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 5.6uH_±5%,1210,C87563
+D 5.6uH_±5%, 
+K 5.6uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 22μ,0805,C88185
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 22μH__±20%,0805,C88185
+D 22μH__±20%, 
+K 22μH__±20%, 
+F ~
 $ENDCMP
-
 #
-$CMP 0.027u,1210,C88514
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 0.027uH_±5%,1210,C88514
+D 0.027uH_±5%, 
+K 0.027uH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 220μ,1210,C89015
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 220μH_±5%,1210,C89015
+D 220μH_±5%, 
+K 220μH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 2.2μ,1210,C89016
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 2.2μH_±5%,1210,C89016
+D 2.2μH_±5%, 
+K 2.2μH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 56μ,1210,C89022
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 56μH_±5%,1210,C89022
+D 56μH_±5%, 
+K 56μH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 0.15μ,1210,C89025
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 0.15μH_±5%,1210,C89025
+D 0.15μH_±5%, 
+K 0.15μH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 0.39μ,1210,C89028
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 0.39μH_±5%,1210,C89028
+D 0.39μH_±5%, 
+K 0.39μH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 0.47μ,1210,C89029
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 0.47μH_±5%,1210,C89029
+D 0.47μH_±5%, 
+K 0.47μH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 680n,1210,C89031
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 680nH_±5%,1210,C89031
+D 680nH_±5%, 
+K 680nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 10n,0402,C90642
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 10nH__±2%,0402,C90642
+D 10nH__±2%, 
+K 10nH__±2%, 
+F ~
 $ENDCMP
-
 #
-$CMP 470n,0805,C92032
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 470nH_±5%,0805,C92032
+D 470nH_±5%, 
+K 470nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 68n,0603,C92902
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 68nH_±5%,0603,C92902
+D 68nH_±5%, 
+K 68nH_±5%, 
+F ~
 $ENDCMP
-
 #
-$CMP 15u,0805,C92908
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 15uH_±10%,0805,C92908
+D 15uH_±10%, 
+K 15uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 3.3u,0805,C93799
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 3.3uH_±10%,0805,C93799
+D 3.3uH_±10%, 
+K 3.3uH_±10%, 
+F ~
 $ENDCMP
-
 #
-$CMP 18n,0402,C97980
-D Inductor, small symbol
-K inductor choke coil reactor magnetic 
-F 
+$CMP 18nH_±5%_350mA,0402,C97980
+D 18nH_±5%_350mA, 
+K 18nH_±5%_350mA, 
+F ~
 $ENDCMP
 #
 #End Doc Library

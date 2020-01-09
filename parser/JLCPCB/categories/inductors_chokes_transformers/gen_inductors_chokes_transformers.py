@@ -15,7 +15,7 @@ from string import Template
 from const import *
 from checks_and_process import *
 
-from sensors_template import *
+from inductors_chokes_transformers_template import *
 
 missing_footprint=[]
 
@@ -37,7 +37,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
             print(f"'{r_size}':'not verified', ")
             missing_footprint.append(r_size)
 
-          return '# temporary skipping'
+          return 'temporary skipping'
           pass
 
         text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
@@ -65,7 +65,6 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
         return text_content
 
     except Exception as e:
-        print('finddme')
         raise e
 
 
@@ -130,4 +129,4 @@ def getThreeDigitCode(str_r_value):
         pass
 
 def helloworld():
-    print('helloworld from gen_sensors')
+    print('helloworld from gen_inductors_chokes_transformers')

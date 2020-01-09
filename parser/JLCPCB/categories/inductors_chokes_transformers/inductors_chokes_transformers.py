@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -195,19 +195,19 @@ def process_power_inductors(cell_values):
 
 def process_rj45_transformer(cell_values):
   # implementation
-  # result = ''
-  # result = general_handler(cell_values)
+  result = ''
+  result = general_handler(cell_values)
 
-  # if result != '':
-  #   return result
+  if result != '':
+    return result
 
-  # else:
-  #   print('missing_implementation in process_rj45_transformer')
-  #   print(cell_values)
-  #   sys.exit(1)
+  else:
+    print('missing_implementation in process_rj45_transformer')
+    print(cell_values)
+    sys.exit(1)
 
   # TODO: implement process_rj45_transformer
-  return ''
+  return default_result
   pass
 
 
@@ -221,5 +221,3 @@ SEC_CAT_POWER_INDUCTORS:[check_if_power_inductors,process_power_inductors],
 SEC_CAT_RJ45_TRANSFORMER:[check_if_rj45_transformer,process_rj45_transformer]}
 
 # py_util_content
-
-print('helloworld')
