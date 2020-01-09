@@ -5,3 +5,5 @@
 **/*.dcm
 **/*.lib
 **/boilerplate/output
+
+**/*.out
