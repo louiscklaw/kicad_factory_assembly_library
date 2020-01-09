@@ -128,6 +128,63 @@ fp_default_fp_matcher={
     'SMD-SW-4_5.1x5.1x2.0':'not verified',
     'SMD-SW-4_5.1x5.1x1.7':'not verified',
 
+    # transistors
+    'DFN-6_EP_2.0x2.0x0.65P':'not verified',
+    'DFN-8_5x6x1.27P':'not verified',
+    'DFN-8_EP_3.0x3.0x0.65P':'not verified',
+    'DFN-8_EP_3.3x3.3x0.65P':'not verified',
+    'DFN-8_EP_5.2x6.0x1.27P':'not verified',
+    'DSOP-8_EP_5.0x6.0x1.27P':'not verified',
+    'Micro-8_3.0x3.0x0.65P':'not verified',
+    'MSOP-8_3.0x3.0x0.65P':'not verified',
+    'PDFN-8_5.2x6.2x1.27P':'not verified',
+    'PDFN-8_EP_3.0x3.0x0.65P':'not verified',
+    'PDFN-8_EP_3.3x3.4x0.65P':'not verified',
+    'PDFN-8_EP_5.2x6.2x1.27P':'not verified',
+    'PG-TDSON-8_EP_5.2x6.2x1.27P':'not verified',
+    'PG-TISON-8_EP_5.0x6.0x1.27P':'not verified',
+    'PG-TSDSON-8_EP_3.3x3.3x0.65P':'not verified',
+    'Power 56':'not verified',
+    'Power PAK-8_EP_3.3x3.3x0.65P':'not verified',
+    'PowerPAK SC-70-6':'not verified',
+    'PowerPAK SO-8_EP_5.2x6.2x1.27P':'not verified',
+    'PQFN-8_EP_3.0x3.0x0.666P':'not verified',
+    'PQFN-8_EP_5.1x6.2x1.27P':'not verified',
+    'SC-59-3':'not verified',
+    'SC-62-3':'not verified',
+    'SC-70-3':'not verified',
+    'SMD-4_4.6x6.5x2.54P':'not verified',
+    'SOD-553':'not verified',
+    'SON-8_EP_4.9x6.0x1.27P':'not verified',
+    'SOP-16_3.9x10.1x1.27P':'not verified',
+    'SOP-8_4.4x5.5x1.27P':'not verified',
+    'SOP-8_EP_3.9x4.9x1.27P':'not verified',
+    'SOP-8_EP_5.0x5.0x1.27P':'not verified',
+    'SOT-223-3':'not verified',
+    'SOT-223':'not verified',
+    'SOT-23-6':'not verified',
+    'SOT-457-6':'not verified',
+    'SOT-669-4':'not verified',
+    'SOT-89-3':'not verified',
+    'SuperSOT-3':'not verified',
+    'TO-252-2L':'not verified',
+    'TO-252-4':'not verified',
+    'TO-252-4L':'not verified',
+    'TO-252-5':'not verified',
+    'TO-263-3':'not verified',
+    'TSOT-26':'not verified',
+    'UDFN-6_EP_2.0x2.0x0.65P':'not verified',
+    'VDFN-8_EP_5.0x6.0x1.27P':'not verified',
+    'VSON-CLIP-8_EP_5.0x6.0x1.27P':'not verified',
+    'VSONP-8_EP_3.0x3.15x0.65P':'not verified',
+    'VSONP-8_EP_3.2x3.3x0.65P':'not verified',
+    'VSONP-8_EP_4.9x6.0x1.27P':'not verified',
+    'WDFN-6_EP_2.0x2.0x0.65P':'not verified',
+    'WDFN-8_EP_3.0x3.0x0.65P':'not verified',
+    'WDFN-8_EP_3.0x3.3x0.65P':'not verified',
+    'WSON-6__EP_2.0x2.0x0.65P':'not verified',
+    'WSON-6_EP_2.0x2.0x0.65P':'not verified',
+    'WSON-6_EP_2.2x2.5x0.65P':'not verified',
 
 }
 
@@ -158,10 +215,9 @@ R_LIB_UNIT_WITH_SIZE_TEMPLATE=Template("""
 #
 # $component_name
 #
-DEF $component_name D 0 10 N N 1 F N
-
-F0 "D" 0 100 50 H V C CNN
-F1 "$component_name" 0 -200 50 H V C CNN
+DEF $component_name Q 0 10 N N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "$component_name" 900 -50 50 H V C CNN
 F2 "$d_footprint" 0 -400 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 F4 "$R_LCSC_PART" 0 -500 50 H I C CNN "LCSC_Part"
@@ -172,15 +228,17 @@ F8 "$R_SOLDER_JOINT" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "$R_MANU" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $$FPLIST
- ALIAS
  $footprint_alias
 $$ENDFPLIST
 DRAW
-P 2 0 1 0 -30 -40 -30 40 N
-P 2 0 1 0 -30 0 30 0 N
-P 4 0 1 0 30 -40 -30 0 30 40 30 -40 N
-X K 1 -100 0 70 R 50 50 1 1 P
-X A 2 100 0 70 L 50 50 1 1 P
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
+X B 1 -200 0 225 R 50 50 1 1 I
+X C 2 100 200 100 D 50 50 1 1 P
+X E 3 100 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 """.strip())

@@ -19,6 +19,10 @@ from transistors_template import *
 
 missing_footprint=[]
 
+def massage_component_name(component_name):
+  output = component_name.replace(' ','_')
+  return output
+
 def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
     text_content=[]
     text_to_write = 'text_to_write'
@@ -26,8 +30,12 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
     try:
         R_r_name = r_smd_code
         component_name = ','.join(filter(None, [R_r_name, r_size, r_accuracy,lcsc_part]))
+
+        # saintize the name
+        component_name = massage_component_name(component_name)
+
         try:
-            fp_default_fp_matcher[r_size]
+          fp_default_fp_matcher[r_size]
         except Exception as e:
           if r_size in missing_footprint:
             pass
@@ -68,13 +76,16 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
         raise e
 
 
-
+# transistor_templates.py
 def getDcmText(r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type):
 
     text_content=[]
     R_r_name = r_smd_code
 
     component_name = ','.join(filter(None, [R_r_name, r_size, r_accuracy,lcsc_part]))
+    # saintize the name
+    component_name = massage_component_name(component_name)
+
     text_content.append(R_DCM_UNIT_TEMPLATE.substitute(
       component_name=component_name,
       description= R_r_name+', ',

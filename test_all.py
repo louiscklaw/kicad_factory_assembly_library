@@ -30,7 +30,7 @@ file_list = [
   'jlcpcb_resistors.lib','jlcpcb_resistors.dcm',
   # 'jlcpcb_rf_radio.lib', 'jlcpcb_rf_radio.dcm',
   # 'jlcpcb_sensors.lib', 'jlcpcb_sensors.dcm',
-  # 'jlcpcb_transistors.lib', 'jlcpcb_transistors.dcm',
+  'jlcpcb_transistors.lib', 'jlcpcb_transistors.dcm',
   ]
 
 def try_build():
@@ -59,7 +59,7 @@ def try_build():
     'pipenv run python3 parse.py test/resistor_only.xls test/results',
     # 'pipenv run python3 parse.py test/rf_radio_only.xls test/results',
     # 'pipenv run python3 parse.py test/sensors_only.xls test/results',
-    # 'pipenv run python3 parse.py test/transistors_only.xls test/results',
+    'pipenv run python3 parse.py test/transistors_only.xls test/results',
   ]
   try:
     for command in commands:
