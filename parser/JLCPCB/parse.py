@@ -87,11 +87,13 @@ def transform(cell_values):
   found = False
 
   first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
-  for key,  (check, process) in categories.items():
+  for key,  (check, process) in first_categories_check_process.items():
+
     m = check(first_category_value)
     if m:
       found = True
       result = process(cell_values)
+
 
       return result
 
@@ -130,8 +132,8 @@ def main():
   dcm_output_path = lib_output_path
 
   print(f'xls file input {xls_file_input}')
-  print(f'lib output file directory: {lib_output_path}')
-  print(f'dcm output file directory: {dcm_output_path}')
+  # print(f'lib output file directory: {lib_output_path}')
+  # print(f'dcm output file directory: {dcm_output_path}')
 
   for cell_values in get_all_columns(xls_file_input):
 
@@ -153,7 +155,6 @@ def main():
           result_dictionary[first_category_value] = [transformed_result]
       else:
         print(f'INFO: skipping {sec_category_value} as in skip list')
-
 
   for k, lib_and_dcm_list in result_dictionary.items():
 
@@ -182,7 +183,7 @@ def main():
     dcm_store = dcm_store.strip()
 
     output_lib_filepath= lib_output_path+'/'+lib_filename
-    output_dcm_filepath = dcm_output_path+'/'+dcm_filename\
+    output_dcm_filepath = dcm_output_path+'/'+dcm_filename
 
     with open(output_lib_filepath,'w+') as fo_lib:
       print(f'writing to file {output_lib_filepath}')

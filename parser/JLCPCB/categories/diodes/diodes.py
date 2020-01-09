@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -453,5 +453,3 @@ SEC_CAT_TVS:[check_if_tvs,process_tvs],
 SEC_CAT_ZENER_DIODES:[check_if_zener_diodes,process_zener_diodes]}
 
 # py_util_content
-
-print('helloworld')

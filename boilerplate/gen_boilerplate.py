@@ -183,6 +183,46 @@ def {process_in}(cell_values):
   return template
   pass
 
+def gen_check_first_cat(component_name):
+  template = '''
+def check_first_cat_{component_name}(str_in):
+  return str_in == {first_cat_constant}
+  pass
+'''.strip()
+
+
+  template = template.replace('{component_name}',component_name)
+  template = template.replace('{first_cat_constant}','FIRST_CAT_'+component_name.upper())
+  return template.replace('{component_name}',component_name)
+
+def gen_process_first_cat(component_name):
+  template = '''
+def process_first_cat_{component_name}(cell_values):
+  first_cat_value = cell_values[COL_NUM_FIRST_CATEGORY]
+  second_cat_value = cell_values[COL_NUM_SECOND_CATEGORY]
+  result = 'empty'
+
+  found=False
+
+  for k, (checkers, processers) in {component_name}_mapping.items():
+    if checkers(cell_values):
+      found=True
+      result = processers(cell_values)
+      break
+
+  if not found:
+    print(second_cat_value)
+
+  return result
+'''.strip()
+
+  template = template.replace('{component_name}',component_name)
+  return template
+
+def gen_mapping_imports(component_name):
+  template = 'from {component_name}.{component_name} import *'
+  return template.replace('{component_name}', component_name)
+
 def reform_list(filename_category_list, diluted_category_list, check_if_var_list_in, process_var_list_in, const_var_list_in, const_var_content_list_in, gen_filenames, first_cat_in):
   default_code_content ='''
 
@@ -200,9 +240,31 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
   '''.strip()
 
-  sorted(filename_category_list.keys())
-  for key in ['Diodes']:
+  # print(sorted(gen_filenames))
+  # sys.exit()
 
+  output_categories_file = 'categories.py'
+  output_categories_filepath = os.path.join(OUT_PATH, output_categories_file)
+
+  # out to categories.py
+  categories_content = CATEGORIES_TEMPLATE
+  # component_list = list(filter(lambda x: x != '1', gen_filenames.values()))
+  component_list = sorted(gen_filenames.values())
+
+  categories_content=categories_content.replace(
+    '{checks}', '\n\n'.join( [gen_check_first_cat(component_name) for component_name in component_list])
+  ).replace(
+    '{process}', '\n\n'.join( [gen_process_first_cat(component_name) for component_name in component_list])
+  ).replace(
+    '{mapping_import}', '\n'.join([
+      gen_mapping_imports(component_name) for component_name in component_list
+    ])
+  )
+  with open(output_categories_filepath, 'w') as fo_templates:
+    fo_templates.write(categories_content)
+
+  # for key in first_cat_in
+  for key in ['Diodes']:
     try:
       first_cat = first_cat_in[key]
       lowercase_first_cat = gen_filenames[key]
@@ -219,16 +281,21 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       output_template_py_file = f'{gen_filenames[key]}_template.py'
       output_generator_py_file = f'gen_{gen_filenames[key]}.py'
 
+
       CURRENT_OUTPUT_PATH = os.path.join(OUT_PATH, gen_filenames[key])
 
       output_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_py_file)
+      output_init_filepath = os.path.join(CURRENT_OUTPUT_PATH, '__init__.py')
+
       output_util_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_util_py_file)
       output_template_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_template_py_file)
       output_generator_filepath = os.path.join(CURRENT_OUTPUT_PATH, output_generator_py_file)
 
+
       # mkdir_command = f'mkdir -p {os.path.join(CURRENT_OUTPUT_PATH)}'
       # print(mkdir_command)
       # subprocess.check_output(mkdir_command.split(' '))
+      # sys.exit()
 
       constants = '\n'.join([f"{var_name_in} = '{var_content_in}'" for (var_name_in, var_content_in) in zip(const_var_list, const_var_content_list)])
 
@@ -250,6 +317,11 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
         pass
       else:
         print(f'generating {key.lower()}...',end='')
+
+        # inits
+        print(f'writing {output_init_filepath}')
+        with open(output_init_filepath,'w') as fo:
+          fo.write(INIT_TEMPLATE.strip())
 
         print(f'writing {output_filepath}')
         with open(output_filepath,'w') as fo:
