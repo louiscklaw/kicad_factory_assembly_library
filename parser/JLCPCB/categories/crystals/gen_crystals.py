@@ -30,7 +30,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
         manufacturer = manufacturer.replace('"','')
 
         try:
-          fp_default_fp_matcher[r_size]
+            fp_default_fp_matcher[r_size]
         except Exception as e:
           if r_size in missing_footprint:
             pass
@@ -40,8 +40,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
             print(f"'{r_size}':'not verified', ")
             missing_footprint.append(r_size)
 
-          # print('cannot find fp_default_fp_matcher[r_size]... ')
-          return f'missing footprint for {r_size}'
+          return '???'
           pass
 
         text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
@@ -72,7 +71,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
         raise e
 
 
-
+# crystal_templates.py
 def getDcmText(r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type):
 
     text_content=[]

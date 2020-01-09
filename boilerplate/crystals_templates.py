@@ -339,6 +339,9 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
     try:
         R_r_name = r_smd_code
         component_name = ','.join(filter(None, [R_r_name, r_size, r_accuracy,lcsc_part]))
+
+        manufacturer = manufacturer.replace('"','')
+
         try:
             fp_default_fp_matcher[r_size]
         except Exception as e:
@@ -381,7 +384,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
         raise e
 
 
-
+# crystal_templates.py
 def getDcmText(r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type):
 
     text_content=[]

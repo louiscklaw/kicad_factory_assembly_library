@@ -11,7 +11,7 @@ file_list = [
   # 'jlcpcb_analog_ics.lib', 'jlcpcb_analog_ics.dcm',
   # 'jlcpcb_battery_products.lib', 'jlcpcb_battery_products.dcm',
   'jlcpcb_capacitors.lib', 'jlcpcb_capacitors.dcm',
-  'jlcpcb_crystals.lib', 'jlcpcb_crystals.dcm,'
+  'jlcpcb_crystals.lib', 'jlcpcb_crystals.dcm',
   'jlcpcb_diodes.lib', 'jlcpcb_diodes.dcm',
   # 'jlcpcb_driver_ics.lib', 'jlcpcb_driver_ics.dcm',
   # 'jlcpcb_embedded_peripheral_ics.lib', 'jlcpcb_embedded_peripheral_ics.dcm',
@@ -81,11 +81,12 @@ def test_convert_resistors():
     [os.path.join(CURRENT_RESULT_DIR, expected_result_file) for expected_result_file in file_list]
   ):
     try:
-      print(f'checking {current_result} ... ',end='')
+      print(f'checking {current_result} ... ')
       # pprint(subprocess.check_output(['pwd'], cwd=os.getcwd()+'/parser/JLCPCB'))
       command = f'diff -s {expected_result} {current_result}'
       # pprint(command.split(' '))
-      # print(command)
+      print(f'running {command} ...')
+
       compare_result = subprocess.check_output(
         command.split(' '),
         cwd=os.getcwd()+'/parser/JLCPCB'

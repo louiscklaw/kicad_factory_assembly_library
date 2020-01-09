@@ -1,32 +1,32 @@
 EESchema-DOCLIB  Version 2.0
 #
 $CMP TS-1187A-B-A-B,SMD-SW-4_5.1x5.1x1.5,C318884
-D TS-1187A-B-A-B, diode, small symbol, 二极管
-K TS-1187A-B-A-B, diode, small symbol, 二极管
+D TS-1187A-B-A-B, 
+K TS-1187A-B-A-B, 
 F ~
 $ENDCMP
 #
 $CMP TS-1187A-C-G-B,SMD-SW-4_5.1x5.1x3.5,C318886
-D TS-1187A-C-G-B, diode, small symbol, 二极管
-K TS-1187A-C-G-B, diode, small symbol, 二极管
+D TS-1187A-C-G-B, 
+K TS-1187A-C-G-B, 
 F ~
 $ENDCMP
 #
 $CMP TS-1187A-C-E-B,SMD-SW-4_5.1x5.1x2.5,C318887
-D TS-1187A-C-E-B, diode, small symbol, 二极管
-K TS-1187A-C-E-B, diode, small symbol, 二极管
+D TS-1187A-C-E-B, 
+K TS-1187A-C-E-B, 
 F ~
 $ENDCMP
 #
 $CMP TS-1187A-C-D-B,SMD-SW-4_5.1x5.1x2.0,C318888
-D TS-1187A-C-D-B, diode, small symbol, 二极管
-K TS-1187A-C-D-B, diode, small symbol, 二极管
+D TS-1187A-C-D-B, 
+K TS-1187A-C-D-B, 
 F ~
 $ENDCMP
 #
 $CMP TS-1187A-C-C-B,SMD-SW-4_5.1x5.1x1.7,C318889
-D TS-1187A-C-C-B, diode, small symbol, 二极管
-K TS-1187A-C-C-B, diode, small symbol, 二极管
+D TS-1187A-C-C-B, 
+K TS-1187A-C-C-B, 
 F ~
 $ENDCMP
 #

@@ -257,8 +257,8 @@ def gen_mapping_imports(component_name):
   template = 'from {component_name}.{component_name} import *'
   return template.replace('{component_name}', component_name)
 
-def gen_gen_file(component_name, output_filepath):
-  gen_file_content = GEN_TEMPLATE
+def gen_gen_file(component_name, output_filepath, first_cat_name):
+  gen_file_content = gen_gen_template(first_cat_name)
   gen_file_content = gen_file_content.replace('{component_name}', component_name)
   with open(output_filepath, 'w') as fo_util:
     fo_util.write(gen_file_content)
@@ -270,31 +270,31 @@ def gen_gen_template_file(component_name, output_filepath, first_cat_name):
     fo_util.write(gen_file_content)
 
 template_map = {
-  CAT_JLC_AMPLIFIERS: amplifiers_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_ANALOG_ICS: analog_ics_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_BATTERY_PRODUCTS: battery_products_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_CAPACITORS: capacitors_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_CRYSTALS: crystals_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_DIODES: diodes_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_DRIVER_ICS: driver_ics_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_EMBEDDED_PERIPHERAL_ICS: embedded_peripheral_ics_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS: embedded_processors_controllers_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_FILTERS: filters_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_FUSES: fuses_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_INDUCTORS_CHOKES_TRANSFORMERS: inductors_chokes_transformers_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_INTERFACE_ICS: interface_ics_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_LOGIC_ICS: logic_ics_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_MEMORY: memory_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_OPTOCOUPLERS_LEDS_INFRARED: optocouplers_leds_infrared_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_POWER_MANAGEMENT_ICS: power_management_ics_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_PUSHBUTTON_SWITCHES_RELAYS: pushbutton_switches_relays_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_RESISTORS: resistors_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_RF_RADIO: rf_radio_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_SENSORS: sensors_templates.GEN_TEMPLATE_TEMPLATE,
-  CAT_JLC_TRANSISTORS: transistors_templates.GEN_TEMPLATE_TEMPLATE,
+  CAT_JLC_AMPLIFIERS: amplifiers_templates,
+  CAT_JLC_ANALOG_ICS: analog_ics_templates,
+  CAT_JLC_BATTERY_PRODUCTS: battery_products_templates,
+  CAT_JLC_CAPACITORS: capacitors_templates,
+  CAT_JLC_CRYSTALS: crystals_templates,
+  CAT_JLC_DIODES: diodes_templates,
+  CAT_JLC_DRIVER_ICS: driver_ics_templates,
+  CAT_JLC_EMBEDDED_PERIPHERAL_ICS: embedded_peripheral_ics_templates,
+  CAT_JLC_EMBEDDED_PROCESSORS_CONTROLLERS: embedded_processors_controllers_templates,
+  CAT_JLC_FILTERS: filters_templates,
+  CAT_JLC_FUSES: fuses_templates,
+  CAT_JLC_INDUCTORS_CHOKES_TRANSFORMERS: inductors_chokes_transformers_templates,
+  CAT_JLC_INTERFACE_ICS: interface_ics_templates,
+  CAT_JLC_LOGIC_ICS: logic_ics_templates,
+  CAT_JLC_MEMORY: memory_templates,
+  CAT_JLC_OPTOCOUPLERS_LEDS_INFRARED: optocouplers_leds_infrared_templates,
+  CAT_JLC_POWER_MANAGEMENT_ICS: power_management_ics_templates,
+  CAT_JLC_PUSHBUTTON_SWITCHES_RELAYS: pushbutton_switches_relays_templates,
+  CAT_JLC_RESISTORS: resistors_templates,
+  CAT_JLC_RF_RADIO: rf_radio_templates,
+  CAT_JLC_SENSORS: sensors_templates,
+  CAT_JLC_TRANSISTORS: transistors_templates,
 }
 
-def gen_lib_template(first_cat_in):
+def get_target_template(first_cat_in):
   if first_cat_in in template_map.keys():
     return template_map[first_cat_in]
 
@@ -302,6 +302,13 @@ def gen_lib_template(first_cat_in):
     print('template not found')
     print(first_cat_in)
     sys.exit(999)
+
+
+def gen_gen_template(first_cat_in):
+  return get_target_template(first_cat_in).GEN_TEMPLATE
+
+def gen_lib_template(first_cat_in):
+  return get_target_template(first_cat_in).GEN_TEMPLATE_TEMPLATE
 
 
 def reform_list(filename_category_list, diluted_category_list, check_if_var_list_in, process_var_list_in, const_var_list_in, const_var_content_list_in, gen_filenames, first_cat_in, mfr_part_list):
@@ -428,7 +435,7 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
         # with open(output_template_filepath, 'w') as fo_templates:
         #   fo_templates.write("?????")
 
-        gen_gen_file(component_name, output_generator_filepath)
+        gen_gen_file(component_name, output_generator_filepath, key)
         gen_gen_template_file(component_name, output_gen_template_filepath, key)
 
 
