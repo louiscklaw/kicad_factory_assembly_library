@@ -33,17 +33,16 @@ from pprint import pprint
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
 from const import *
 
-# import gen_capacitors
+import gen_{component_name}
 
 # py_util_content
 
-
 def check_if_str_with_smd_code(str_in):
-  m = re.match(r'^75pF\(750\) ±5% 50V C0G$',str_in)
+  m = re.match(r'^([1N].+?)$',str_in)
   return m
 
 def check_if_str_with_part_number(str_in):
-  m = re.match(r'^75pF\(750\) ±5% 50V C0G$',str_in)
+  m = re.match(r'^([BAS|SMB|US|DF|ESD|PES|LMD|RS].+)$',str_in)
   return m
 
 def handle_jlc_{first_category}(cell_values_array, m_r):
@@ -53,12 +52,11 @@ def handle_jlc_{first_category}(cell_values_array, m_r):
     first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
 
     text_value = m_r[1]
-    r_smd_code = m_r[2]
-    r_accuracy = m_r[3]
-
+    r_smd_code = cell_values_array[COL_NUM_PACKAGE]
+    r_accuracy = None
     # translate
-    temp_lib = gen_r.getLibText(*[
-          r_smd_code,
+    temp_lib = gen_{component_name}.getLibText(*[
+          text_value,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
           cell_values_array[COL_NUM_LCSC_PART],
@@ -69,8 +67,43 @@ def handle_jlc_{first_category}(cell_values_array, m_r):
           cell_values_array[COL_NUM_MANUFACTURER],
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
-    temp_dcm = gen_r.getDcmText(
-      r_smd_code, text_value,
+    temp_dcm = gen_{component_name}.getDcmText(
+      text_value, text_value,
+      cell_values_array[COL_NUM_PACKAGE],
+      r_accuracy)
+
+    return temp_lib, temp_dcm
+
+  except Exception as e:
+    print('debug')
+    pprint(cell_values_array)
+    raise e
+
+def handle_with_part_number(cell_values_array, m_r):
+  try:
+    # extract
+    first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
+
+    text_value = m_r[1]
+    r_smd_code = None
+    r_accuracy = None
+
+    # translate
+    temp_lib = gen_{component_name}.getLibText(*[
+          text_value,
+          cell_values_array[COL_NUM_PACKAGE],
+          r_accuracy,
+          cell_values_array[COL_NUM_LCSC_PART],
+          cell_values_array[COL_NUM_MFR_PART],
+          cell_values_array[COL_NUM_FIRST_CATEGORY],
+          cell_values_array[COL_NUM_SECOND_CATEGORY],
+          cell_values_array[COL_NUM_SOLDER_JOINT],
+          cell_values_array[COL_NUM_MANUFACTURER],
+          cell_values_array[COL_NUM_LIBRARY_TYPE]
+        ])
+    temp_dcm = gen_{component_name}.getDcmText(
+      text_value,
+      text_value,
       cell_values_array[COL_NUM_PACKAGE],
       r_accuracy)
 
@@ -82,18 +115,17 @@ def handle_jlc_{first_category}(cell_values_array, m_r):
     raise e
 
 def general_handler(cell_values):
-  print('{component_name} general handler')
-  sys.exit(99)
+  # print('{component_name} general handler')
 
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
   m_with_package_size = check_if_str_with_smd_code(mfr_part_value)
   m_with_part_number = check_if_str_with_part_number(mfr_part_value)
 
   if m_with_package_size:
-    return handle_jlc_{first_category}(cell_values, m_r)
+    return handle_jlc_{first_category}(cell_values, m_with_package_size)
 
   elif m_with_part_number:
-    result = handle_with_part_number(cell_values, m_without_smd_code)
+    result = handle_with_part_number(cell_values, m_with_part_number)
     return result
 
   else:
@@ -103,25 +135,6 @@ def general_handler(cell_values):
     print(cell_values)
     sys.exit(1)
 
-
-def handle_with_part_number(cell_values):
-  mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_with_package_size = check_if_str_with_smd_code(mfr_part_value)
-  m_with_part_number = check_if_str_with_part_number(mfr_part_value)
-
-  if m_with_package_size:
-    return handle_jlc_{first_category}(cell_values, m_r)
-
-  elif m_with_part_number:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
-  else:
-    print('missing_implementation in {filename}.general_handler')
-    print('SOLVE: missing_implementation in {filename}.general_handler')
-
-    print(cell_values)
-    sys.exit(1)
 
 
 
@@ -272,3 +285,298 @@ first_categories_check_process = {
 print('hello categories')
 
 '''.strip()
+
+
+GEN_TEMPLATE=r'''
+#!/usr/bin/env python
+# GEN_TEMPLATE
+
+import os
+import sys
+import logging
+import traceback
+from pprint import pprint
+
+from math import log10, floor
+
+from string import Template
+
+from const import *
+from checks_and_process import *
+
+from {component_name}_template import *
+
+missing_footprint=[]
+
+def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
+    text_content=[]
+    text_to_write = 'text_to_write'
+
+    try:
+        R_r_name = 'R'+r_smd_code
+        try:
+            fp_default_fp_matcher[r_size]
+        except Exception as e:
+          if r_size in missing_footprint:
+            pass
+          else:
+            # print('ERROR: footprint not found in fp_default_fp_matcher')
+            # print(f"footprint wanted")
+            print(f"'{r_size}':'not verified', ")
+            missing_footprint.append(r_size)
+
+          return 'temporary skipping'
+          pass
+
+        text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
+            R_THREE_DIGIT_VALUE_SIZE=','.join(filter(None, [R_r_name, r_size, r_accuracy])),
+            R_SIZE=r_size,
+            d_footprint=fp_default_fp_matcher[r_size],
+            R_LCSC_PART=lcsc_part,
+            R_MFR_PART= mfr_part,
+            R_SEC_CAT = secondary_category,
+            R_PACKAGE = r_size,
+            R_SOLDER_JOINT = solder_joint,
+            R_MANU = manufacturer,
+            R_LIB_TYPE = lib_type
+        ))
+
+        # text_to_write = R_LIB_TEMPLATE.substitute(
+            # R_CONTENT=''.join(text_content)
+        # )
+        text_content = ''.join(text_content)
+        text_content = text_content.replace('\n\n','\n')
+
+        # with open(LIB_FILE_PATH, 'w') as f:
+        #     f.write(text_to_write)
+        return text_content
+
+    except Exception as e:
+        raise e
+
+
+
+def getDcmText(r_smd_code, r_text_value, r_size, r_accuracy=None):
+    text_content=[]
+
+    # int_r_value = parseTextCode(r_name)
+    # R_r_name = 'R'+getThreeDigitCode(int_r_value)
+    R_r_name = 'R'+r_smd_code
+    r_name = r_text_value
+    # text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=R_r_name,
+    # R_TEXT_VALUE=r_name))
+
+    text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=','.join(filter(None, [R_r_name,r_size, r_accuracy])),
+    R_TEXT_VALUE=r_name))
+
+    # text_to_write = R_DCM_TEMPLATE.substitute(
+    #     R_CONTENT = ''.join(text_content)
+    # )
+
+    text_content = ''.join(text_content)
+    text_content = text_content.replace('\n\n','\n')
+
+    return text_content
+    # with open(out_file_path, 'w') as f:
+    #     f.write(text_to_write)
+
+
+
+def parseTextCode(number_value):
+    factor = 1
+    if number_value.find('K') ==1:
+        if len(number_value) == 3:
+            factor = 100
+        if len(number_value) == 2:
+            factor = 1000
+
+    if number_value.find('K') == 2:
+        factor = 1000
+    if number_value.find('K') == 3:
+        factor = 1000
+
+    if number_value.find('M') == 2:
+        factor = 1000000
+
+    return float(number_value.replace('K','').replace('M','')) * factor
+
+def getThreeDigitCode(str_r_value):
+    float_r_value = float(str_r_value)
+    str_r_value = str(str_r_value)
+    try:
+        if float_r_value == 0:
+            return '0'
+        if float_r_value < 10:
+            # for x.y format
+            return '%sR%s' % (str_r_value[0], str_r_value[2])
+
+        else:
+            str_r_value = str(float_r_value)
+            no_of_zero = floor(log10(float_r_value))
+
+            no_of_zero = int(no_of_zero)
+
+            left_2_digit = str_r_value[0:2]
+            last_digit = str(no_of_zero-1)
+            return left_2_digit+last_digit
+    except Exception as e:
+        # pprint(float_r_value)
+        # pprint(float_r_value < 10)
+        pprint(type(str_r_value))
+        pprint('%sR%s' % (str_r_value[0], str_r_value[2]))
+        pass
+
+
+# def main():
+#     print([['10M', ['0805']]])
+
+
+# if __name__ == '__main__':
+#     main()
+
+def helloworld():
+    print('helloworld from gen_{component_name}')
+'''
+
+GEN_TEMPLATE_TEMPLATE=r'''
+#!/usr/bin/env python3
+# GEN_TEMPLATE_TEMPLATE
+
+import os,sys,re
+from pprint import pprint
+from string import Template
+
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
+from const import *
+
+
+# py_template_content
+
+# SOLVE: 'ERROR: footprint not found in fp_default_fp_matcher'
+fp_default_fp_matcher={
+    '0402_x4':'Resistor_SMD:R_0402_1005Metric',
+    '0402_x8':'Resistor_SMD:R_0402_1005Metric',
+    '0402':'Resistor_SMD:R_0402_1005Metric',
+    '0402x2':'Resistor_SMD:R_0402_1005Metric',
+    '0603_x2':'Resistor_SMD:R_0402_1005Metric',
+    '0603_x4':'Resistor_SMD:R_0402_1005Metric',
+    '0603':'Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder',
+    '0805':'Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder',
+    '0MBS':'not verified',
+    '1206':'Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder',
+    '1210':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    '1812':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    '2010':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    '2220':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    '2512':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    'ABS_4.4x5.0x4.0P':'not verified',
+    'LED_0603':'not verified',
+    'LL-34':'not verified',
+    'MBF_3.8x4.7x2.5P':'not verified',
+    'SDIP-4_6.4x8.3x5.1P':'not verified',
+    'SMA,DO-214AC':'not verified',
+    'SMAF':'not verified',
+    'SMB,DO-214AA':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    'SMB,SMC,DO-214AB':'not exist',
+    'SMBF':'not verified',
+    'SMC,DO-214AB':'not verified',
+    'SMF,DO-219AB':'not verified',
+    'SOD-123':'not verified',
+    'SOD-323':'not verified',
+    'SOD-523':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    'SOD-80':'not verified',
+    'SOIC-8_3.9x4.9x1.27P':'not verified',
+    'SOT-23-3':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    'SOT-23-3':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    'SOT-23-5':'not verified',
+    'SOT-523':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    'TO-252-2':'not verified',
+    'TO-263-2':'not verified',
+
+
+}
+
+
+R_LIB_UNIT_TEMPLATE=Template("""
+#
+# $R_THREE_DIGIT_VALUE
+#
+DEF $R_THREE_DIGIT_VALUE R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "$R_THREE_DIGIT_VALUE" 30 -40 50 H V L CNN
+F2 "$d_footprint" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$$FPLIST
+ R_*
+ Resistor_SMD:R_0805_*
+ Resistor_SMD:R_0603_*
+$$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+""".strip())
+
+R_LIB_UNIT_WITH_SIZE_TEMPLATE=Template("""
+#
+# $R_THREE_DIGIT_VALUE_SIZE
+#
+DEF $R_THREE_DIGIT_VALUE_SIZE R 0 10 N N 1 F N
+
+F0 "R" 30 20 50 H V L CNN
+F1 "$R_THREE_DIGIT_VALUE_SIZE" 50 -50 50 H V L CNN
+F2 "$d_footprint" 0 -400 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "$R_LCSC_PART" 0 -500 50 H I C CNN "LCSC_Part"
+F5 "$R_MFR_PART" 50 -150 50 H I L CNN "MFR_Part"
+F6 "$R_SEC_CAT" 0 -600 50 H I C CNN "Second Category"
+F7 "$R_PACKAGE" 0 -800 50 H I C CNN "Package"
+F8 "$R_SOLDER_JOINT" 0 0 50 H I C CNN "Solder Joint"
+F9 "$R_MANU" 0 -700 50 H I C CNN "Manufacturer"
+F10 "base" 0 -900 50 H I C CNN "Library Type"
+$$FPLIST
+ Resistor_SMD:R_$R_SIZE*
+$$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+""".strip())
+
+R_DCM_UNIT_TEMPLATE=Template("""
+#
+$$CMP $R_THREE_DIGIT_VALUE
+D Resistor
+K R r res resistor $R_THREE_DIGIT_VALUE $R_TEXT_VALUE
+F ~
+$$ENDCMP
+""".strip())
+
+
+R_LIB_TEMPLATE=Template("""
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+$R_CONTENT
+#
+#End Library
+""".strip())
+
+R_DCM_TEMPLATE=Template("""
+EESchema-DOCLIB  Version 2.0
+$R_CONTENT
+#
+#End Doc Library
+""".strip())
+
+
+# py_template_content
+
+def helloworld():
+  print('helloworld util py')
+
+helloworld()
+'''

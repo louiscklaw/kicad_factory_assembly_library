@@ -72,7 +72,7 @@ def get_all_columns():
 print_already = {}
 
 
-def get_first_and_sec_catetorys():
+def get_first_and_sec_catetories():
   filename_category_list = {}
   i=0
   for cell_values in get_all_columns():
@@ -223,6 +223,18 @@ def gen_mapping_imports(component_name):
   template = 'from {component_name}.{component_name} import *'
   return template.replace('{component_name}', component_name)
 
+def gen_gen_file(component_name, output_filepath):
+  gen_file_content = GEN_TEMPLATE
+  gen_file_content = gen_file_content.replace('{component_name}', component_name)
+  with open(output_filepath, 'w') as fo_util:
+    fo_util.write(gen_file_content)
+
+def gen_gen_template_file(component_name, output_filepath):
+  gen_file_content = GEN_TEMPLATE_TEMPLATE
+  gen_file_content = gen_file_content.replace('{component_name}', component_name)
+  with open(output_filepath, 'w') as fo_util:
+    fo_util.write(gen_file_content)
+
 def reform_list(filename_category_list, diluted_category_list, check_if_var_list_in, process_var_list_in, const_var_list_in, const_var_content_list_in, gen_filenames, first_cat_in):
   default_code_content ='''
 
@@ -263,6 +275,9 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
   with open(output_categories_filepath, 'w') as fo_templates:
     fo_templates.write(categories_content)
 
+  with open('test.out','w') as fo_component_lcsc:
+    fo_component_lcsc.write('hello lcsc')
+
   # for key in first_cat_in
   for key in first_cat_in:
     try:
@@ -281,6 +296,7 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       output_util_py_file = f'{gen_filenames[key]}_util.py'
       output_template_py_file = f'{gen_filenames[key]}_template.py'
       output_generator_py_file = f'gen_{gen_filenames[key]}.py'
+      output_gen_template_file = f'{gen_filenames[key]}_template.py'
 
 
       CURRENT_OUTPUT_PATH = os.path.join(OUT_PATH, gen_filenames[key])
@@ -291,6 +307,7 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       output_util_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_util_py_file)
       output_template_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_template_py_file)
       output_generator_filepath = os.path.join(CURRENT_OUTPUT_PATH, output_generator_py_file)
+      output_gen_template_filepath = os.path.join(CURRENT_OUTPUT_PATH, output_gen_template_file)
 
 
       # mkdir_command = f'mkdir -p {os.path.join(CURRENT_OUTPUT_PATH)}'
@@ -332,7 +349,6 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
         util_filecontent = util_filecontent.replace('{first_category}',lowercase_first_cat)
         util_filecontent = util_filecontent.replace('{filename}',os.path.basename(output_util_filepath))
         util_filecontent = util_filecontent.replace('{component_name}', component_name)
-
         with open(output_util_filepath, 'w') as fo_util:
           fo_util.write(util_filecontent)
 
@@ -340,8 +356,9 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
         with open(output_template_filepath, 'w') as fo_templates:
           fo_templates.write(output_template_content)
 
-        with open(output_generator_filepath, 'w') as fo_templates:
-          fo_templates.write(output_template_content)
+        gen_gen_file(component_name, output_generator_filepath)
+        gen_gen_template_file(component_name, output_gen_template_filepath)
+
 
         output_generator_content = GENERATOR_TEMPLATE
 
@@ -354,13 +371,11 @@ def main():
   temp = ''
 
   # extract
-  filename_category_list = get_first_and_sec_catetorys()
+  filename_category_list = get_first_and_sec_catetories()
 
   # translate
-  diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames, first_cat_list = translate(filename_category_list)
-
   # re-form
-  reform_list(filename_category_list, diluted_category_list, check_if_var_list, process_var_list, const_var_list, const_var_content_list, gen_filenames, first_cat_list)
+  reform_list(filename_category_list, *translate(filename_category_list))
 
 if __name__ == '__main__':
   main()
