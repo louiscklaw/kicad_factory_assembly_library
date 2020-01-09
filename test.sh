@@ -29,7 +29,6 @@ pipenv run python3 parse.py test/inductors_chokes_transformers_only.xls test/res
 # pipenv run python3 parse.py test/others_only.xls test/results
 # pipenv run python3 parse.py test/power_management_ics_only.xls test/results
 pipenv run python3 parse.py test/pushbutton_switches_relays_only.xls test/results
-# pipenv run python3 parse.py test/resistor_only_small.xls test/results
 pipenv run python3 parse.py test/resistor_only.xls test/results
 # pipenv run python3 parse.py test/rf_radio_only.xls test/results
 # pipenv run python3 parse.py test/sensors_only.xls test/results
