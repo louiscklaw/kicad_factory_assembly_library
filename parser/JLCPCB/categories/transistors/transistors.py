@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -221,5 +221,3 @@ SEC_CAT_THYRISTORS_TRIACS:[check_if_thyristors_triacs,process_thyristors_triacs]
 SEC_CAT_TRANSISTORS_NPN_PNP:[check_if_transistors_npn_pnp,process_transistors_npn_pnp]}
 
 # py_util_content
-
-print('helloworld')

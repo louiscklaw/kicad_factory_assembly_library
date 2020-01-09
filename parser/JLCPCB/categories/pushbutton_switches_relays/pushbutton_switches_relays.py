@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -47,5 +47,3 @@ def process_tactile_switches(cell_values):
 pushbutton_switches_relays_mapping = {SEC_CAT_TACTILE_SWITCHES:[check_if_tactile_switches,process_tactile_switches]}
 
 # py_util_content
-
-print('helloworld')

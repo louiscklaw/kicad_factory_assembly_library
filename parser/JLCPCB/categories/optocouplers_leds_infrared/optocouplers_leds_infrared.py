@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -250,5 +250,3 @@ SEC_CAT_SOLID_STATE_RELAYS:[check_if_solid_state_relays,process_solid_state_rela
 SEC_CAT_TRIAC_OPTOCOUPLERS:[check_if_triac_optocouplers,process_triac_optocouplers]}
 
 # py_util_content
-
-print('helloworld')

@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -192,5 +192,3 @@ SEC_CAT_PMIC_CURRENT_POWER_MONITORS_REGULATORS:[check_if_pmic_current_power_moni
 SEC_CAT_PMIC_CURRENT_REGULATION:[check_if_pmic_current_regulation,process_pmic_current_regulation]}
 
 # py_util_content
-
-print('helloworld')

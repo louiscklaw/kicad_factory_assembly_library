@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -453,5 +453,3 @@ SEC_CAT_SPECIAL_LOGIC_CHIP:[check_if_special_logic_chip,process_special_logic_ch
 SEC_CAT_TIMER:[check_if_timer,process_timer]}
 
 # py_util_content
-
-print('helloworld')

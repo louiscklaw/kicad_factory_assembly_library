@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SYMBOL_LIB_TEMPLATE
 
 import os,sys,re
 from pprint import pprint

@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -366,5 +366,3 @@ SEC_CAT_PRECISION_OPAMPS:[check_if_precision_opamps,process_precision_opamps],
 SEC_CAT_SPECIAL_PURPOSE_AMPLIFIERS:[check_if_special_purpose_amplifiers,process_special_purpose_amplifiers]}
 
 # py_util_content
-
-print('helloworld')

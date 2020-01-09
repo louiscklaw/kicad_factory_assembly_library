@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -47,5 +47,3 @@ def process_battery_holders_clips_contacts(cell_values):
 battery_products_mapping = {SEC_CAT_BATTERY_HOLDERS_CLIPS_CONTACTS:[check_if_battery_holders_clips_contacts,process_battery_holders_clips_contacts]}
 
 # py_util_content
-
-print('helloworld')

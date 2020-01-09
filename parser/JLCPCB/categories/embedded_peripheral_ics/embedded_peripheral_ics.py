@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -250,5 +250,3 @@ SEC_CAT_REAL_TIME_CLOCKS:[check_if_real_time_clocks,process_real_time_clocks],
 SEC_CAT_SECURITY_AUTHENTICATION_ICS:[check_if_security_authentication_ics,process_security_authentication_ics]}
 
 # py_util_content
-
-print('helloworld')

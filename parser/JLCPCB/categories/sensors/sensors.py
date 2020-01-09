@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -511,5 +511,3 @@ SEC_CAT_TEMPERATURE_SENSORS:[check_if_temperature_sensors,process_temperature_se
 SEC_CAT_TOUCH_SCREEN_CONTROLLER_ICS:[check_if_touch_screen_controller_ics,process_touch_screen_controller_ics]}
 
 # py_util_content
-
-print('helloworld')

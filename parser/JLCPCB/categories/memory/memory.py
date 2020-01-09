@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -250,5 +250,3 @@ SEC_CAT_RAM:[check_if_ram,process_ram],
 SEC_CAT_SDRAM:[check_if_sdram,process_sdram]}
 
 # py_util_content
-
-print('helloworld')

@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -337,5 +337,3 @@ SEC_CAT_SWITCHING_CONTROLLERS:[check_if_switching_controllers,process_switching_
 SEC_CAT_VOLTAGE_REFERENCES:[check_if_voltage_references,process_voltage_references]}
 
 # py_util_content
-
-print('helloworld')

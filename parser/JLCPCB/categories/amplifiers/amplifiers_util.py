@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# UTIL_PY_TEMPLATE
 
 import os,sys,re
 from math import *
@@ -8,7 +8,7 @@ from pprint import pprint
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(),'..')))
 from const import *
 
-import gen_capacitors
+# import gen_capacitors
 
 # py_util_content
 
@@ -57,6 +57,29 @@ def handle_jlc_amplifiers(cell_values_array, m_r):
     raise e
 
 def general_handler(cell_values):
+  print('amplifiers general handler')
+  sys.exit(99)
+
+  mfr_part_value = cell_values[COL_NUM_MFR_PART]
+  m_with_package_size = check_if_str_with_smd_code(mfr_part_value)
+  m_with_part_number = check_if_str_with_part_number(mfr_part_value)
+
+  if m_with_package_size:
+    return handle_jlc_amplifiers(cell_values, m_r)
+
+  elif m_with_part_number:
+    result = handle_with_part_number(cell_values, m_without_smd_code)
+    return result
+
+  else:
+    print('missing_implementation in amplifiers_util.py.general_handler')
+    print('SOLVE: missing_implementation in amplifiers_util.py.general_handler')
+
+    print(cell_values)
+    sys.exit(1)
+
+
+def handle_with_part_number(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
   m_with_package_size = check_if_str_with_smd_code(mfr_part_value)
   m_with_part_number = check_if_str_with_part_number(mfr_part_value)

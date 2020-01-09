@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -250,5 +250,3 @@ SEC_CAT_RF_ATTENUATOR:[check_if_rf_attenuator,process_rf_attenuator],
 SEC_CAT_RMS_POWER_DETECTOR:[check_if_rms_power_detector,process_rms_power_detector]}
 
 # py_util_content
-
-print('helloworld')

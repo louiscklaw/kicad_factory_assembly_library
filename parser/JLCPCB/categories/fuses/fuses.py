@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -105,5 +105,3 @@ SEC_CAT_SURFACE_MOUNT_FUSES:[check_if_surface_mount_fuses,process_surface_mount_
 SEC_CAT_THERMAL_CUTOFFS:[check_if_thermal_cutoffs,process_thermal_cutoffs]}
 
 # py_util_content
-
-print('helloworld')

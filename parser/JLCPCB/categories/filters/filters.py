@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -134,5 +134,3 @@ SEC_CAT_EMI_RFI_FILTERS_LC_RC_NETWORKS:[check_if_emi_rfi_filters_lc_rc_networks,
 SEC_CAT_RF_FILTERS:[check_if_rf_filters,process_rf_filters]}
 
 # py_util_content
-
-print('helloworld')

@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -134,5 +134,3 @@ SEC_CAT_SMD_CRYSTAL_RESONATORS:[check_if_smd_crystal_resonators,process_smd_crys
 SEC_CAT_SMD_OSCILLATORS_XO:[check_if_smd_oscillators_xo,process_smd_oscillators_xo]}
 
 # py_util_content
-
-print('helloworld')

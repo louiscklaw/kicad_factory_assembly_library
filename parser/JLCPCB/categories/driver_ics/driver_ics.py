@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -366,5 +366,3 @@ SEC_CAT_SPECIAL_FUNCTION_DRIVER:[check_if_special_function_driver,process_specia
 SEC_CAT_VIDEO_FILTER_DRIVER:[check_if_video_filter_driver,process_video_filter_driver]}
 
 # py_util_content
-
-print('helloworld')

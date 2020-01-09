@@ -562,7 +562,7 @@ first_categories_check_process = {
   FIRST_CAT_LOGIC_ICS: [check_first_cat_logic_ics, process_first_cat_logic_ics],
   FIRST_CAT_MEMORY: [check_first_cat_memory, process_first_cat_memory],
   FIRST_CAT_OPTOCOUPLERS_LEDS_INFRARED: [check_first_cat_optocouplers_leds_infrared, process_first_cat_optocouplers_leds_infrared],
-  FIRST_CAT_OTHERS: [check_first_cat_others, process_first_cat_others],
+  # FIRST_CAT_OTHERS: [check_first_cat_others, process_first_cat_others],
   FIRST_CAT_POWER_MANAGEMENT_ICS: [check_first_cat_power_management_ics, process_first_cat_power_management_ics],
   FIRST_CAT_PUSHBUTTON_SWITCHES_RELAYS: [check_first_cat_pushbutton_switches_relays, process_first_cat_pushbutton_switches_relays],
   FIRST_CAT_RESISTORS: [check_first_cat_resistors, process_first_cat_resistors],

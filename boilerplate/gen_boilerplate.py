@@ -264,10 +264,11 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
     fo_templates.write(categories_content)
 
   # for key in first_cat_in
-  for key in ['Diodes']:
+  for key in first_cat_in:
     try:
       first_cat = first_cat_in[key]
       lowercase_first_cat = gen_filenames[key]
+      component_name = gen_filenames[key]
 
       sec_cat_list = const_var_list_in[key]
       const_var_list = const_var_list_in[key]
@@ -330,9 +331,10 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
         util_filecontent = UTIL_PY_TEMPLATE
         util_filecontent = util_filecontent.replace('{first_category}',lowercase_first_cat)
         util_filecontent = util_filecontent.replace('{filename}',os.path.basename(output_util_filepath))
+        util_filecontent = util_filecontent.replace('{component_name}', component_name)
+
         with open(output_util_filepath, 'w') as fo_util:
           fo_util.write(util_filecontent)
-        sys.exit(0)
 
         output_template_content = SYMBOL_LIB_TEMPLATE
         with open(output_template_filepath, 'w') as fo_templates:

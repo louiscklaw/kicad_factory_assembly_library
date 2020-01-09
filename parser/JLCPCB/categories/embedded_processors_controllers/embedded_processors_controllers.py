@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -859,5 +859,3 @@ SEC_CAT_MINDMOTION:[check_if_mindmotion,process_mindmotion],
 SEC_CAT_SINOWEALTH:[check_if_sinowealth,process_sinowealth]}
 
 # py_util_content
-
-print('helloworld')

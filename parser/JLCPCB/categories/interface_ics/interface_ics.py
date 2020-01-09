@@ -1,5 +1,5 @@
-
 #!/usr/bin/env python3
+# SEC_CAT_PY_TEMPLATE
 
 import os,sys,re
 from pprint import pprint
@@ -772,5 +772,3 @@ SEC_CAT_VIDEO_AUDIO_INTERFACE_ICS:[check_if_video_audio_interface_ics,process_vi
 SEC_CAT_SERIAL_INTERFACE:[check_if_serial_interface,process_serial_interface]}
 
 # py_util_content
-
-print('helloworld')
