@@ -128,6 +128,28 @@ fp_default_fp_matcher={
     'SMD-SW-4_5.1x5.1x2.0':'not verified',
     'SMD-SW-4_5.1x5.1x1.7':'not verified',
 
+    # crystal
+    'SMD-3225_4P':'not verified',
+    'SMD-5032_2P':'not verified',
+    'SMD-7050_4P':'not verified',
+    'SMD-4_3.2x5x3.8P':'not verified',
+    'SMD-2520_4P':'not verified',
+    'SMD-2016_4P':'not verified',
+    'SMD-5032_4P':'not verified',
+    'MC-146_1.5x7x0.55P':'not verified',
+    'SMD-3215_2P':'not verified',
+    'MC-306_3.8x8x5.5P':'not verified',
+    'SMD-3225_2P':'not verified',
+    'SMD-4_2520_4P_2.5':'not verified',
+    'SMD-2012_2P':'not verified',
+    'SMD-3225':'not verified',
+    'SMD_5032-2P':'not verified',
+    'TSX-3225':'not verified',
+    'SMD_4_3.2x5x2.4P':'not verified',
+    'SMD,5.0x3.2mm,4P':'not verified',
+    'SMD-4_3.8x8x5.5P':'not verified',
+    'SMD-3215':'not verified',
+
 
 }
 
@@ -176,11 +198,13 @@ $$FPLIST
  $footprint_alias
 $$ENDFPLIST
 DRAW
-P 2 0 1 0 -30 -40 -30 40 N
-P 2 0 1 0 -30 0 30 0 N
-P 4 0 1 0 30 -40 -30 0 30 40 30 -40 N
-X K 1 -100 0 70 R 50 50 1 1 P
-X A 2 100 0 70 L 50 50 1 1 P
+S -45 100 45 -100 0 1 12 N
+P 2 0 1 0 -100 0 -75 0 N
+P 2 0 1 20 -75 -50 -75 50 N
+P 2 0 1 20 75 -50 75 50 N
+P 2 0 1 0 100 0 75 0 N
+X 1 1 -150 0 50 R 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 """.strip())

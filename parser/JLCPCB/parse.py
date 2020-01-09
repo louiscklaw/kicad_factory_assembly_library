@@ -170,7 +170,7 @@ def main():
 
     # TODO: remove me
     # for lib_content, dcm_content in lib_and_dcm_list:
-    for lib_content, dcm_content in lib_and_dcm_list:
+    for lib_content, dcm_content in lib_and_dcm_list[0:1]:
       temp_lib_content.append(lib_content)
       temp_dcm_content.append(dcm_content)
 

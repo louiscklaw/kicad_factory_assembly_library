@@ -11,7 +11,7 @@ file_list = [
   # 'jlcpcb_analog_ics.lib', 'jlcpcb_analog_ics.dcm',
   # 'jlcpcb_battery_products.lib', 'jlcpcb_battery_products.dcm',
   'jlcpcb_capacitors.lib', 'jlcpcb_capacitors.dcm',
-  # 'jlcpcb_crystals.lib', 'jlcpcb_crystals.dcm,'
+  'jlcpcb_crystals.lib', 'jlcpcb_crystals.dcm,'
   'jlcpcb_diodes.lib', 'jlcpcb_diodes.dcm',
   # 'jlcpcb_driver_ics.lib', 'jlcpcb_driver_ics.dcm',
   # 'jlcpcb_embedded_peripheral_ics.lib', 'jlcpcb_embedded_peripheral_ics.dcm',
