@@ -8,7 +8,8 @@ EXPECTED_RESULT_DIR = 'test/expected_result'
 CURRENT_RESULT_DIR = 'test/results'
 file_list = [
   'jlcpcb_resistors.lib','jlcpcb_resistors.dcm',
-  'jlcpcb_capacitors.lib','jlcpcb_capacitors.dcm'
+  'jlcpcb_capacitors.lib','jlcpcb_capacitors.dcm',
+  'jlcpcb_inductors_chokes_transformers.lib','jlcpcb_inductors_chokes_transformers.dcm'
   ]
 
 def try_build():
