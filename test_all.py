@@ -11,6 +11,7 @@ file_list = [
   'jlcpcb_capacitors.lib','jlcpcb_capacitors.dcm',
   'jlcpcb_inductors_chokes_transformers.lib','jlcpcb_inductors_chokes_transformers.dcm',
   'jlcpcb_diodes.lib','jlcpcb_diodes.dcm',
+  'jlcpcb_pushbutton_switches_relays.lib','jlcpcb_pushbutton_switches_relays.dcm',
   ]
 
 def try_build():
@@ -18,7 +19,6 @@ def try_build():
     # 'pipenv run python3 parse.py test/amplifiers_only.xls test/results',
     # 'pipenv run python3 parse.py test/analog_ics_only.xls test/results',
     # 'pipenv run python3 parse.py test/battery_products_only.xls test/results',
-    # 'pipenv run python3 parse.py test/capacitors_only1.xls test/results',
     'pipenv run python3 parse.py test/capacitors_only.xls test/results',
     # 'pipenv run python3 parse.py test/crystals_only.xls test/results',
     'pipenv run python3 parse.py test/diodes_only.xls test/results',
