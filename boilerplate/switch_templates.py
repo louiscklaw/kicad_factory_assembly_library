@@ -390,8 +390,8 @@ def getDcmText(r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_categor
     component_name = ','.join(filter(None, [R_r_name, r_size, r_accuracy,lcsc_part]))
     text_content.append(R_DCM_UNIT_TEMPLATE.substitute(
       component_name=component_name,
-      description= R_r_name+', diode, small symbol, 二极管',
-      keyword = R_r_name+', diode, small symbol, 二极管',
+      description= R_r_name+', ',
+      keyword = R_r_name+', ',
     ))
 
     text_content = ''.join(text_content)
