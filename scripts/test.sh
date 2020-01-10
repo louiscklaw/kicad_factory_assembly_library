@@ -13,8 +13,8 @@ pipenv run python3 parse.py test/amplifiers_only.xls test/results &
 pipenv run python3 parse.py test/analog_ics_only.xls test/results &
 pipenv run python3 parse.py test/battery_products_only.xls test/results &
 pipenv run python3 parse.py test/capacitors_only.xls test/results &
-# pipenv run python3 parse.py test/crystals_only.xls test/results &
-# pipenv run python3 parse.py test/diodes_only.xls test/results &
+pipenv run python3 parse.py test/crystals_only.xls test/results &
+pipenv run python3 parse.py test/diodes_only.xls test/results &
 # pipenv run python3 parse.py test/driver_ics_only.xls test/results &
 # pipenv run python3 parse.py test/embedded_peripheral_ics_only.xls test/results &
 # pipenv run python3 parse.py test/embedded_processors_controllers_only.xls test/results &
