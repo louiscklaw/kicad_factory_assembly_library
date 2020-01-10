@@ -7,3 +7,6 @@
 **/boilerplate/output
 
 **/*.out
+
+/home/logic/_workspace/kicad_factory_assembly_library/_util/kicad-library-utils/schlib/tmp
+_util/kicad-library-utils/schlib/tmp/

@@ -26,10 +26,10 @@ file_list = [
   # # 'jlcpcb_others.lib', 'jlcpcb_others.dcm',
   # 'jlcpcb_power_management_ics.lib', 'jlcpcb_power_management_ics.dcm',
   # 'jlcpcb_pushbutton_switches_relays.lib','jlcpcb_pushbutton_switches_relays.dcm',
-  'jlcpcb_resistors.lib','jlcpcb_resistors.dcm',
+  # 'jlcpcb_resistors.lib','jlcpcb_resistors.dcm',
   # 'jlcpcb_rf_radio.lib', 'jlcpcb_rf_radio.dcm',
   # 'jlcpcb_sensors.lib', 'jlcpcb_sensors.dcm',
-  # 'jlcpcb_transistors.lib', 'jlcpcb_transistors.dcm',
+  'jlcpcb_transistors.lib', 'jlcpcb_transistors.dcm',
   ]
 
 def try_build():
@@ -53,10 +53,10 @@ def try_build():
     # # 'pipenv run python3 parse.py test/others_only.xls test/results',
     # 'pipenv run python3 parse.py test/power_management_ics_only.xls test/results',
     # 'pipenv run python3 parse.py test/pushbutton_switches_relays_only.xls test/results',
-    'pipenv run python3 parse.py test/resistor_only.xls test/results',
+    # 'pipenv run python3 parse.py test/resistor_only.xls test/results',
     # 'pipenv run python3 parse.py test/rf_radio_only.xls test/results',
     # 'pipenv run python3 parse.py test/sensors_only.xls test/results',
-    # 'pipenv run python3 parse.py test/transistors_only.xls test/results',
+    'pipenv run python3 parse.py test/transistors_only.xls test/results',
   ]
   try:
     for command in commands:
@@ -68,7 +68,6 @@ def try_build():
     pass
   except Exception as e:
     raise e
-
 
 def test_convert_resistors():
   try_build()
