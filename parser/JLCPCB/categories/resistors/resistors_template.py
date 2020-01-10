@@ -13,20 +13,20 @@ from const import *
 
 # SOLVE: 'ERROR: footprint not found in fp_default_fp_matcher'
 fp_default_fp_matcher={
-    '0402_x4':'Resistor_SMD:R_0402_1005Metric',
-    '0402_x8':'Resistor_SMD:R_0402_1005Metric',
+    '0402_x4':'Resistor_SMD:R_Array_Convex_4x0402',
+    '0402_x8':'Resistor_SMD:not_found',
     '0402':'Resistor_SMD:R_0402_1005Metric',
-    '0402x2':'Resistor_SMD:R_0402_1005Metric',
-    '0603_x2':'Resistor_SMD:R_0402_1005Metric',
-    '0603_x4':'Resistor_SMD:R_0402_1005Metric',
+    '0402x2':'Resistor_SMD:R_Array_Convex_2x0402',
+    '0603_x2':'Resistor_SMD:R_Array_Concave_2x0603',
+    '0603_x4':'Resistor_SMD:R_Array_Concave_2x0603',
     '0603':'Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder',
     '0805':'Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder',
     '1206':'Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder',
-    '1210':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
-    '1812':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
-    '2010':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
-    '2220':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
-    '2512':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
+    '1210':'Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder',
+    '1812':'Resistor_SMD:R_1812_4532Metric_Pad1.30x3.40mm_HandSolder',
+    '2010':'Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder',
+    '2220':'Resistor_SMD:R_2220_5650Metric_Pad1.97x5.40mm_HandSolder',
+    '2512':'Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder',
     'SOT-23-3':'Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder',
 }
 
