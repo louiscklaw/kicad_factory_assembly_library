@@ -1,3 +1,6 @@
 [submodule "_ref/lib_value_generator"]
 	path = _ref/lib_value_generator
 	url = https://github.com/louiscklaw/lib_value_generator.git
+[submodule "_ref/kicad-library-utils"]
+	path = _ref/kicad-library-utils
+	url = https://github.com/KiCad/kicad-library-utils
