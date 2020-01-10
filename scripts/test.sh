@@ -13,13 +13,14 @@ pipenv sync
 # pipenv run python3 parse.py test/embedded_peripheral_ics_only.xls test/results &
 # pipenv run python3 parse.py test/embedded_processors_controllers_only.xls test/results &
 # pipenv run python3 parse.py test/filters_only.xls test/results &
-# pipenv run python3 parse.py test/fuses_only.xls test/results &
 # pipenv run python3 parse.py test/inductors_chokes_transformers_only.xls test/results &
 # pipenv run python3 parse.py test/logic_ics_only.xls test/results &
 # pipenv run python3 parse.py test/memory_only.xls test/results &
 # pipenv run python3 parse.py test/optocouplers_leds_infrared_only.xls test/results &
 # pipenv run python3 parse.py test/transistors_only.xls test/results &
 
+# no problems
+pipenv run python3 parse.py test/fuses_only.xls test/results &
 pipenv run python3 parse.py test/amplifiers_only.xls test/results &
 pipenv run python3 parse.py test/analog_ics_only.xls test/results &
 pipenv run python3 parse.py test/battery_products_only.xls test/results &
