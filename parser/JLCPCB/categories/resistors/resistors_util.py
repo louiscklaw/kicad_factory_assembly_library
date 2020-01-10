@@ -27,16 +27,21 @@ def massage_mfr_part_value(str_in):
 def general_handler(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
 
+
   massaged_mfr_part_value =massage_mfr_part_value(mfr_part_value)
 
-  m_with_smd_code = check_if_r_with_smd_code(mfr_part_value)
-  m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
-  m_with_power_rating = check_if_r_with_power_rating(mfr_part_value)
-  m_with_part_number = check_if_r_with_part_number(mfr_part_value)
-  m_with_ntc_name = check_if_r_with_ntc_name(mfr_part_value)
-  m_with_varistor_name = check_if_r_with_varistor_name(mfr_part_value)
-  m_with_max_resistor = check_if_with_max_resistor(mfr_part_value)
-  m_with_ppm_resistor = check_if_with_ppm_resistor(mfr_part_value)
+  m_with_smd_code = check_if_r_with_smd_code(massaged_mfr_part_value)
+  m_without_smd_code = check_if_r_without_smd_code(massaged_mfr_part_value)
+  m_with_power_rating = check_if_r_with_power_rating(massaged_mfr_part_value)
+  m_with_part_number = check_if_r_with_part_number(massaged_mfr_part_value)
+  m_with_ntc_name = check_if_r_with_ntc_name(massaged_mfr_part_value)
+  m_with_varistor_name = check_if_r_with_varistor_name(massaged_mfr_part_value)
+  m_with_max_resistor = check_if_with_max_resistor(massaged_mfr_part_value)
+  m_with_ppm_resistor = check_if_with_ppm_resistor(massaged_mfr_part_value)
+
+  # if get_component_lcsc_part(cell_values) == 'C95220':
+  #   print('C95220')
+  #   sys.exit()
 
   if m_with_smd_code:
     print('handle_jlc_resistors_with_smd_code')
@@ -92,8 +97,15 @@ def general_handler(cell_values):
     print(cell_values)
     sys.exit(1)
 
+
+
 def general_handler_for_ntc(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
+
+  if get_component_lcsc_part(cell_values) == 'C75245':
+    # print('findme1')
+    # sys.exit()
+    pass
 
   m_with_resistance_precision = check_if_r_resistance_precision(mfr_part_value)
   m_with_ntc_name = check_if_r_with_ntc_name(mfr_part_value)
@@ -209,13 +221,19 @@ def check_if_with_max_resistor(str_in):
 
 def check_if_with_ppm_resistor(str_in):
   # 10KΩ ±1% 25PPM
-  m = re.match(r'^(.+?)Ω ±? ?(.+?)% (.+?)PPM$',str_in)
+  m = re.match(r'^(.+?)Ω ±?(.+?)% ([\d|\.]+?)PPM$',str_in)
+
+  # 20Ω ±0.5% 1/8W 25PPM
+  m_with_power = re.match(r'^(.+?)Ω ±? ?(.+?)% (.+?)W ([\d|\.]+?)PPM$',str_in)
+
+  # 10KΩ ±1% 25ppm
+  # m = re.match(r'^(.+?)Ω ±? ?(.+?)% (.+?)ppm$',str_in)
+
   if m:
     return m
   else:
-    # 10KΩ ±1% 25ppm
-    m = re.match(r'^(.+?)Ω ±? ?(.+?)% (.+?)ppm$',str_in)
-    return m
+    return m_with_power
+
 
 def handle_jlc_varistor_name(cell_values_array, m_r):
   try:
@@ -272,9 +290,11 @@ def handle_jlc_resistors_with_smd_code(cell_values_array, m_r):
     r_text_value = m_r[1]
     r_smd_code = m_r[2]
     r_accuracy = m_r[3]
+
     package = get_component_package(cell_values_array)
     lcsc_part = get_component_lcsc_part(cell_values_array)
     component_name = ','.join(["R"+r_smd_code,package,lcsc_part])
+    component_name = massage_component_name(component_name)
 
     # translate
     temp_lib = gen_r.getLibText(*[
@@ -545,6 +565,7 @@ def handle_r_resistance_precision(cell_values_array, m_r):
     package = get_component_package(cell_values_array)
     lcsc_part = get_component_lcsc_part(cell_values_array)
     component_name = ','.join([resistance_value, package, lcsc_part])
+    component_name = massage_component_name(component_name)
 
     # r_smd_code = str(parseTextCode(r_text_value.replace('Ω','')))
     # r_smd_code = getThreeDigitCode(r_smd_code)
