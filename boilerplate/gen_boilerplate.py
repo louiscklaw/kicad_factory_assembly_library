@@ -358,10 +358,10 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
     # fo_templates.write(categories_content)
 
   # TODO: remove me
-  # for key in ['Inductors & Chokes & Transformers']:
   # print(first_cat_in)
   # sys.exit()
-  for key in first_cat_in:
+  # for key in first_cat_in:
+  for key in ['Inductors & Chokes & Transformers']:
     # first_cat_in=['Inductors & Chokes & Transformers']
     try:
       first_cat = first_cat_in[key]
@@ -392,7 +392,6 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       output_generator_filepath = os.path.join(CURRENT_OUTPUT_PATH, output_generator_py_file)
       output_gen_template_filepath = os.path.join(CURRENT_OUTPUT_PATH, output_gen_template_file)
       print(output_gen_template_filepath)
-
 
       constants = '\n'.join([f"{var_name_in} = '{var_content_in}'" for (var_name_in, var_content_in) in zip(const_var_list, const_var_content_list)])
 

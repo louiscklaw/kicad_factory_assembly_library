@@ -21,6 +21,10 @@ def check_if_str_with_part_number(str_in):
   m = re.match(r'^(.+)$',str_in)
   return m
 
+def massage_manufacturer(str_in):
+  str_in = str_in.replace('"','').strip()
+  return str_in
+
 def handle_jlc_inductors_chokes_transformers(cell_values_array, m_r):
 
   try:
@@ -30,6 +34,7 @@ def handle_jlc_inductors_chokes_transformers(cell_values_array, m_r):
     text_value = m_r[1]
     r_smd_code = cell_values_array[COL_NUM_PACKAGE]
     r_accuracy = None
+    manufacturer = massage_manufacturer(cell_values_array[COL_NUM_MANUFACTURER])
 
     # translate
     component_name = m_r[1].replace(' ','_')
@@ -42,7 +47,7 @@ def handle_jlc_inductors_chokes_transformers(cell_values_array, m_r):
           cell_values_array[COL_NUM_FIRST_CATEGORY],
           cell_values_array[COL_NUM_SECOND_CATEGORY],
           cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER],
+          manufacturer,
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
     temp_dcm = gen_inductors_chokes_transformers.getDcmText(*[
@@ -54,7 +59,7 @@ def handle_jlc_inductors_chokes_transformers(cell_values_array, m_r):
           cell_values_array[COL_NUM_FIRST_CATEGORY],
           cell_values_array[COL_NUM_SECOND_CATEGORY],
           cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER],
+          manufacturer,
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
 

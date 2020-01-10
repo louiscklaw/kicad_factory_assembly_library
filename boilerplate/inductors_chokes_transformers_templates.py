@@ -26,6 +26,7 @@ UTIL_PY_TEMPLATE = '''
 #!/usr/bin/env python3
 # UTIL_PY_TEMPLATE
 
+
 import os,sys,re
 from math import *
 from pprint import pprint
@@ -56,6 +57,8 @@ def handle_jlc_{first_category}(cell_values_array, m_r):
     r_smd_code = cell_values_array[COL_NUM_PACKAGE]
     r_accuracy = None
 
+    manufacturer = massage_manufacturer(cell_values_array[COL_NUM_MANUFACTURER])
+
     # translate
     component_name = m_r[1].replace(' ','_')
     temp_lib = gen_{component_name}.getLibText(*[
@@ -67,7 +70,7 @@ def handle_jlc_{first_category}(cell_values_array, m_r):
           cell_values_array[COL_NUM_FIRST_CATEGORY],
           cell_values_array[COL_NUM_SECOND_CATEGORY],
           cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER],
+          manufacturer,
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
     temp_dcm = gen_{component_name}.getDcmText(*[
@@ -79,7 +82,7 @@ def handle_jlc_{first_category}(cell_values_array, m_r):
           cell_values_array[COL_NUM_FIRST_CATEGORY],
           cell_values_array[COL_NUM_SECOND_CATEGORY],
           cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER],
+          manufacturer,
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
 
