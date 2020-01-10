@@ -421,13 +421,23 @@ def handle_with_power_rating(cell_values_array, m_r):
     pprint(m_r)
     raise e
 
+def massage_value(str_in):
+  str_in = re.sub('  ',' ',str_in)
+  str_in = str_in.strip()
+  return str_in
+
+def massage_ppm_value(str_in):
+  return massage_value(str_in)
+
 def handle_jlc_with_resistor_ppm(cell_values_array, m_r):
   try:
     # extract
     first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
     lcsc_number = cell_values_array[COL_NUM_LCSC_PART]
     package = cell_values_array[COL_NUM_PACKAGE]
-    ppm_spec = m_r[3]
+    ppm_value = m_r[3]
+    ppm_spec = massage_ppm_value(ppm_value)
+
     component_name = ','.join([m_r[1],ppm_spec+'PPM',package,lcsc_number])
     r_text_value = m_r[1]
 
