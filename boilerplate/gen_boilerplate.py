@@ -360,8 +360,8 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
   # TODO: remove me
   # print(first_cat_in)
   # sys.exit()
-  # for key in first_cat_in:
-  for key in ['Inductors & Chokes & Transformers']:
+  # for key in ['Inductors & Chokes & Transformers']:
+  for key in first_cat_in:
     # first_cat_in=['Inductors & Chokes & Transformers']
     try:
       first_cat = first_cat_in[key]

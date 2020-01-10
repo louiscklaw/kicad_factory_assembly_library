@@ -310,7 +310,6 @@ print('hello categories')
 
 '''.strip()
 
-
 GEN_TEMPLATE=r'''
 #!/usr/bin/env python
 # GEN_TEMPLATE
@@ -335,6 +334,10 @@ missing_footprint=[]
 def massage_component_name(component_name):
   output = component_name.replace(' ','_')
   return output
+
+def massage_footprint_alias(str_in):
+  str_in = str_in.replace(' ','*')
+  return str_in
 
 def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
     text_content=[]
@@ -361,6 +364,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
           return 'temporary skipping'
           pass
 
+        temp_footprint_alias = massage_footprint_alias(r_size)
         text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
             component_name=component_name,
             R_SIZE=r_size,
@@ -372,7 +376,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
             R_SOLDER_JOINT = solder_joint,
             R_MANU = manufacturer,
             R_LIB_TYPE = lib_type,
-            footprint_alias = "*"+r_size+"*"
+            footprint_alias = "*"+temp_footprint_alias+"*"
         ))
 
         # text_to_write = R_LIB_TEMPLATE.substitute(

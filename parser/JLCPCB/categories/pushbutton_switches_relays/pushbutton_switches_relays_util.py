@@ -21,6 +21,22 @@ def check_if_str_with_part_number(str_in):
   m = re.match(r'^(.+)$',str_in)
   return m
 
+def massage_manufacturer(str_in):
+  str_in = str_in.replace('"','').strip()
+  return str_in
+
+def massage_lcsc_part(str_in):
+  str_in = str_in.replace('"','').strip()
+  return str_in
+
+def massage_library_type(str_in):
+  str_in = str_in.replace('"','').strip()
+  return str_in
+
+def massage_component_name(str_in):
+  str_in = str_in.replace(' ','_')
+  return str_in
+
 def handle_jlc_pushbutton_switches_relays(cell_values_array, m_r):
 
   try:
@@ -31,31 +47,40 @@ def handle_jlc_pushbutton_switches_relays(cell_values_array, m_r):
     r_smd_code = cell_values_array[COL_NUM_PACKAGE]
     r_accuracy = None
 
+    # massaging
+    component_name = massage_component_name(m_r[1])
+    manufacturer = massage_manufacturer(cell_values_array[COL_NUM_MANUFACTURER])
+    lcsc_part = massage_lcsc_part(cell_values_array[COL_NUM_LCSC_PART])
+    mfr_part = massage_lcsc_part(cell_values_array[COL_NUM_MFR_PART])
+    first_cat = cell_values_array[COL_NUM_FIRST_CATEGORY]
+    sec_cat = cell_values_array[COL_NUM_SECOND_CATEGORY]
+    solder_joint = massage_library_type(cell_values_array[COL_NUM_SOLDER_JOINT])
+    lib_type = massage_library_type(cell_values_array[COL_NUM_LIBRARY_TYPE])
+
     # translate
-    component_name = m_r[1].replace(' ','_')
     temp_lib = gen_pushbutton_switches_relays.getLibText(*[
           component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
-          cell_values_array[COL_NUM_LCSC_PART],
-          cell_values_array[COL_NUM_MFR_PART],
-          cell_values_array[COL_NUM_FIRST_CATEGORY],
-          cell_values_array[COL_NUM_SECOND_CATEGORY],
-          cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER],
-          cell_values_array[COL_NUM_LIBRARY_TYPE]
+          lcsc_part,
+          mfr_part,
+          first_cat,
+          sec_cat,
+          solder_joint,
+          manufacturer,
+          lib_type
         ])
     temp_dcm = gen_pushbutton_switches_relays.getDcmText(*[
           component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
-          cell_values_array[COL_NUM_LCSC_PART],
-          cell_values_array[COL_NUM_MFR_PART],
-          cell_values_array[COL_NUM_FIRST_CATEGORY],
-          cell_values_array[COL_NUM_SECOND_CATEGORY],
-          cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER],
-          cell_values_array[COL_NUM_LIBRARY_TYPE]
+          lcsc_part,
+          mfr_part,
+          first_cat,
+          sec_cat,
+          solder_joint,
+          manufacturer,
+          lib_type
         ])
 
     return temp_lib, temp_dcm
@@ -74,33 +99,41 @@ def handle_with_part_number(cell_values_array, m_r):
     r_smd_code = None
     r_accuracy = None
 
+    # massaging
+    component_name = massage_component_name(m_r[1])
+    manufacturer = massage_manufacturer(cell_values_array[COL_NUM_MANUFACTURER])
+    lcsc_part = massage_lcsc_part(cell_values_array[COL_NUM_LCSC_PART])
+    mfr_part = massage_lcsc_part(cell_values_array[COL_NUM_MFR_PART])
+    first_cat = cell_values_array[COL_NUM_FIRST_CATEGORY]
+    sec_cat = cell_values_array[COL_NUM_SECOND_CATEGORY]
+    solder_joint = massage_library_type(cell_values_array[COL_NUM_SOLDER_JOINT])
+    lib_type = massage_library_type(cell_values_array[COL_NUM_LIBRARY_TYPE])
+
     # translate
-    component_name = m_r[1].replace(' ','_')
     temp_lib = gen_pushbutton_switches_relays.getLibText(*[
           component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
-          cell_values_array[COL_NUM_LCSC_PART],
-          cell_values_array[COL_NUM_MFR_PART],
-          cell_values_array[COL_NUM_FIRST_CATEGORY],
-          cell_values_array[COL_NUM_SECOND_CATEGORY],
-          cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER],
-          cell_values_array[COL_NUM_LIBRARY_TYPE]
+          lcsc_part,
+          mfr_part,
+          first_cat,
+          sec_cat,
+          solder_joint,
+          manufacturer,
+          lib_type
         ])
     temp_dcm = gen_pushbutton_switches_relays.getDcmText(*[
           component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
-          cell_values_array[COL_NUM_LCSC_PART],
-          cell_values_array[COL_NUM_MFR_PART],
-          cell_values_array[COL_NUM_FIRST_CATEGORY],
-          cell_values_array[COL_NUM_SECOND_CATEGORY],
-          cell_values_array[COL_NUM_SOLDER_JOINT],
-          cell_values_array[COL_NUM_MANUFACTURER],
-          cell_values_array[COL_NUM_LIBRARY_TYPE]
+          lcsc_part,
+          mfr_part,
+          first_cat,
+          sec_cat,
+          solder_joint,
+          manufacturer,
+          lib_type
         ])
-
 
     return temp_lib, temp_dcm
 

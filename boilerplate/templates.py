@@ -366,6 +366,10 @@ from {component_name}_template import *
 
 missing_footprint=[]
 
+def massage_footprint_alias(str_in):
+  str_in = str_in.replace(' ','*')
+  return str_in
+
 def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
     text_content=[]
     text_to_write = 'text_to_write'
@@ -391,6 +395,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
           return f'missing footprint for {r_size}'
           pass
 
+        temp_footprint_alias=massage_footprint_alias(r_size)
         text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
             component_name=component_name,
             R_SIZE=r_size,
@@ -402,7 +407,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
             R_SOLDER_JOINT = solder_joint,
             R_MANU = manufacturer,
             R_LIB_TYPE = lib_type,
-            footprint_alias = "*"+r_size+"*"
+            footprint_alias = "*"+temp_footprint_alias+"*"
         ))
 
         # text_to_write = R_LIB_TEMPLATE.substitute(
