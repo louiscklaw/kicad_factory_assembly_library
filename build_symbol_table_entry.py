@@ -16,7 +16,6 @@ CURR_DIR = os.path.dirname(__file__)
 results_dir = os.path.join(CURR_DIR, 'parser/JLCPCB/test/results')
 ls_result_command = "ls "+results_dir
 
-print(check_output(['pwd']))
 result_files = check_output(ls_result_command.split(' ')).decode('utf-8').split('\n')
 lib_files_in_result = filter(lambda x: x.find('.lib')>-1, result_files)
 

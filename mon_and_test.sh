@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'running test'
-nodemon -w '.' --ext '*.sh' --ext '*.xls' --ext '*.py'   --delay 300ms --exec './scripts/test.sh'
+nodemon -w '.' --ext '*sh' --ext '*py' --exec './scripts/test.sh'
 
 # python3 ./build_symbol_table_entry.py
 

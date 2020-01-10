@@ -7,8 +7,8 @@ cd _util/kicad-library-utils/schlib
 rm -rf /home/logic/_workspace/kicad_factory_assembly_library/_util/kicad-library-utils/schlib/tmp/*
 
 ./test_schlib.sh $LIB_RESULT_DIR/jlcpcb_amplifiers.lib &
-# ./test_schlib.sh $LIB_RESULT_DIR/jlcpcb_analog_ics.lib &
-# ./test_schlib.sh $LIB_RESULT_DIR/jlcpcb_battery_products.lib &
+./test_schlib.sh $LIB_RESULT_DIR/jlcpcb_analog_ics.lib &
+./test_schlib.sh $LIB_RESULT_DIR/jlcpcb_battery_products.lib &
 ./test_schlib.sh $LIB_RESULT_DIR/jlcpcb_capacitors.lib &
 # ./test_schlib.sh $LIB_RESULT_DIR/jlcpcb_crystals.lib &
 # ./test_schlib.sh $LIB_RESULT_DIR/jlcpcb_diodes.lib &
