@@ -361,7 +361,7 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
   # for key in ['Inductors & Chokes & Transformers']:
   # print(first_cat_in)
   # sys.exit()
-  for key in ['Embedded Processors & Controllers']:
+  for key in first_cat_in:
     # first_cat_in=['Inductors & Chokes & Transformers']
     try:
       first_cat = first_cat_in[key]
