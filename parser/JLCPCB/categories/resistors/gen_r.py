@@ -75,7 +75,7 @@ def getDcmText(component_name, r_text_value, r_size, r_accuracy=None):
     # text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=R_r_name,
     # R_TEXT_VALUE=r_name))
 
-    text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=component_name,
+    text_content.append(R_DCM_UNIT_TEMPLATE.substitute(COMPONENT_NAME=component_name,
     R_TEXT_VALUE=r_name))
 
     # text_to_write = R_DCM_TEMPLATE.substitute(

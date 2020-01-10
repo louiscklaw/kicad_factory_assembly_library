@@ -219,7 +219,7 @@ def process_metal_alloy_resistors(cell_values):
 def process_ntc_thermistors(cell_values):
   # implementation
   result = ''
-  result = general_handler(cell_values)
+  result = general_handler_for_ntc(cell_values)
 
   if result != '':
     return result

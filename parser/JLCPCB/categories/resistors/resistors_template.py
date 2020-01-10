@@ -83,9 +83,9 @@ ENDDEF
 
 R_DCM_UNIT_TEMPLATE=Template("""
 #
-$$CMP $R_THREE_DIGIT_VALUE
+$$CMP $COMPONENT_NAME
 D Resistor
-K R r res resistor $R_THREE_DIGIT_VALUE $R_TEXT_VALUE
+K R r res resistor $COMPONENT_NAME $R_TEXT_VALUE
 F ~
 $$ENDCMP
 """.strip())
