@@ -25,26 +25,37 @@ def general_handler(cell_values):
   m_with_ppm_resistor = check_if_with_ppm_resistor(mfr_part_value)
 
   if m_with_smd_code:
+    print('regular resistor')
+
     return handle_jlc_resistors_with_smd_code(cell_values, m_with_smd_code)
 
-  elif m_without_smd_code:
-    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
-    return result
-
   elif m_with_ntc_name:
+    print('ntc resistor')
+
     result = handle_jlc_ntc_name(cell_values, m_with_ntc_name)
     return result
 
   elif m_with_varistor_name:
+    print('varistor')
+
     result = handle_jlc_varistor_name(cell_values, m_with_varistor_name)
     return result
 
   elif m_with_max_resistor:
+    print('max resistor')
     result = handle_jlc_with_part_number(cell_values, m_with_max_resistor)
     return result
 
   elif m_with_ppm_resistor:
+    print('ppm resistor')
+
     result = handle_jlc_with_resistor_ppm(cell_values, m_with_ppm_resistor)
+    return result
+
+  elif m_without_smd_code:
+    print('without smd code')
+
+    result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
     return result
 
   elif m_with_part_number:
@@ -140,10 +151,11 @@ def check_if_with_max_resistor(str_in):
   return m
 
 def check_if_with_ppm_resistor(str_in):
-  m = re.match(r'^([\d|\.|\w]+?)Ω ([\d|\.]+?)% (\d+?)PPM$',str_in)
+  m = re.match(r'^([\d|\.|\w]+?)Ω ±? ?([\d|\.]+?)% (\d+?)PPM$',str_in)
   if m:
     return m
   else:
+    # 10KΩ ±1% 25PPM
     m = re.match(r'^([\d|\.|\w]+?)Ω ± ([\d|\.]+?)% (\d+?)ppm$',str_in)
   return m
 
@@ -314,13 +326,13 @@ def handle_jlc_ntc_name(cell_values_array, m_r):
     raise e
 
 def handle_jlc_with_resistor_ppm(cell_values_array, m_r):
-
   try:
     # extract
     first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
     lcsc_number = cell_values_array[COL_NUM_LCSC_PART]
     package = cell_values_array[COL_NUM_PACKAGE]
-    component_name = ','.join([m_r[1],package,lcsc_number])
+    ppm_spec = m_r[3]
+    component_name = ','.join([m_r[1],ppm_spec+'PPM',package,lcsc_number])
     r_text_value = m_r[1]
 
     # r_smd_code = str(parseTextCode(r_text_value.replace('Ω','')))
