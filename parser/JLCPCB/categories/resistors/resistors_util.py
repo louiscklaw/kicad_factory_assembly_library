@@ -187,6 +187,12 @@ def handle_jlc_varistor_name(cell_values_array, m_r):
     pprint(m_r)
     raise e
 
+def get_component_package(cell_values):
+  return cell_values[COL_NUM_PACKAGE]
+
+def get_component_lcsc_part(cell_values):
+  return cell_values[COL_NUM_LCSC_PART]
+
 def handle_jlc_resistors_with_smd_code(cell_values_array, m_r):
 
   try:
@@ -196,10 +202,13 @@ def handle_jlc_resistors_with_smd_code(cell_values_array, m_r):
     r_text_value = m_r[1]
     r_smd_code = m_r[2]
     r_accuracy = m_r[3]
+    package = get_component_package(cell_values_array)
+    lcsc_part = get_component_lcsc_part(cell_values_array)
+    component_name = ','.join([r_smd_code,package,lcsc_part])
 
     # translate
     temp_lib = gen_r.getLibText(*[
-          r_smd_code,
+          component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
           cell_values_array[COL_NUM_LCSC_PART],
@@ -211,7 +220,7 @@ def handle_jlc_resistors_with_smd_code(cell_values_array, m_r):
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
     temp_dcm = gen_r.getDcmText(
-      r_smd_code, r_text_value,
+      component_name, r_text_value,
       cell_values_array[COL_NUM_PACKAGE],
       r_accuracy)
 
