@@ -16,12 +16,12 @@ from checks_and_process import *
 
 from resistors_template import *
 
-def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
+def getLibText( component_name, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
     text_content=[]
     text_to_write = 'text_to_write'
 
     try:
-        R_r_name = 'R'+r_smd_code
+        # R_r_name = 'R'+r_smd_code
         # text_content.append(R_LIB_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=R_r_name,
         # # default symbol done deserve a default footprint (no size specified)
         # d_footprint=''
@@ -38,7 +38,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
             pass
 
         text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
-            R_THREE_DIGIT_VALUE_SIZE=','.join(filter(None, [R_r_name, r_size, r_accuracy])),
+            R_THREE_DIGIT_VALUE_SIZE=component_name,
             R_SIZE=r_size,
             d_footprint=fp_default_fp_matcher[r_size],
             R_LCSC_PART=lcsc_part,
@@ -65,17 +65,17 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
 
 
 
-def getDcmText(r_smd_code, r_text_value, r_size, r_accuracy=None):
+def getDcmText(component_name, r_text_value, r_size, r_accuracy=None):
     text_content=[]
 
     # int_r_value = parseTextCode(r_name)
     # R_r_name = 'R'+getThreeDigitCode(int_r_value)
-    R_r_name = 'R'+r_smd_code
+    # R_r_name = 'R'+r_smd_code
     r_name = r_text_value
     # text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=R_r_name,
     # R_TEXT_VALUE=r_name))
 
-    text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=','.join(filter(None, [R_r_name,r_size, r_accuracy])),
+    text_content.append(R_DCM_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=component_name,
     R_TEXT_VALUE=r_name))
 
     # text_to_write = R_DCM_TEMPLATE.substitute(

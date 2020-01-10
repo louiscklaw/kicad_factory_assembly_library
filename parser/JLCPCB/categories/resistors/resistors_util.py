@@ -31,10 +31,6 @@ def general_handler(cell_values):
     result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
     return result
 
-  elif m_with_part_number:
-    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
-    return result
-
   elif m_with_ntc_name:
     result = handle_jlc_ntc_name(cell_values, m_with_ntc_name)
     return result
@@ -49,6 +45,10 @@ def general_handler(cell_values):
 
   elif m_with_ppm_resistor:
     result = handle_jlc_with_resistor_ppm(cell_values, m_with_ppm_resistor)
+    return result
+
+  elif m_with_part_number:
+    result = handle_jlc_with_part_number(cell_values, m_with_part_number)
     return result
 
   else:
@@ -126,6 +126,7 @@ def check_if_r_with_part_number(str_in):
 
 
 def check_if_r_with_ntc_name(str_in):
+  # NTC 10K 1 %
   m = re.match(r'^NTC (.+?) (\d+?) %$',str_in)
   return m
 
@@ -264,8 +265,10 @@ def handle_jlc_ntc_name(cell_values_array, m_r):
   try:
     # extract
     first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
+    lcsc_part = cell_values_array[COL_NUM_LCSC_PART]
 
-    r_text_value = 'NTC_'+m_r[1]
+    component_name = ','.join(['NTC_'+m_r[1], lcsc_part])
+    r_text_value = component_name
 
     # r_smd_code = str(parseTextCode(r_text_value.replace('Ω','')))
     # r_smd_code = getThreeDigitCode(r_smd_code)
@@ -276,7 +279,7 @@ def handle_jlc_ntc_name(cell_values_array, m_r):
 
     # translate
     temp_lib = gen_r.getLibText(*[
-          r_text_value,
+          component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
           cell_values_array[COL_NUM_LCSC_PART],
@@ -288,7 +291,8 @@ def handle_jlc_ntc_name(cell_values_array, m_r):
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
     temp_dcm = gen_r.getDcmText(
-      cell_values_array[COL_NUM_MFR_PART], r_text_value,
+      component_name,
+      r_text_value,
       cell_values_array[COL_NUM_PACKAGE],
       '')
 
@@ -304,7 +308,9 @@ def handle_jlc_with_resistor_ppm(cell_values_array, m_r):
   try:
     # extract
     first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
-
+    lcsc_number = cell_values_array[COL_NUM_LCSC_PART]
+    package = cell_values_array[COL_NUM_PACKAGE]
+    component_name = ','.join([m_r[1],package,lcsc_number])
     r_text_value = m_r[1]
 
     # r_smd_code = str(parseTextCode(r_text_value.replace('Ω','')))
@@ -316,7 +322,7 @@ def handle_jlc_with_resistor_ppm(cell_values_array, m_r):
 
     # translate
     temp_lib = gen_r.getLibText(*[
-          r_text_value,
+          component_name,
           cell_values_array[COL_NUM_PACKAGE],
           None,
           cell_values_array[COL_NUM_LCSC_PART],
@@ -328,7 +334,8 @@ def handle_jlc_with_resistor_ppm(cell_values_array, m_r):
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
     temp_dcm = gen_r.getDcmText(
-      cell_values_array[COL_NUM_MFR_PART], r_text_value,
+      component_name,
+      r_text_value,
       cell_values_array[COL_NUM_PACKAGE],
       '')
 

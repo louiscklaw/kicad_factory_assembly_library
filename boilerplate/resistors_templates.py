@@ -35,6 +35,7 @@ from const import *
 
 import gen_{component_name}
 
+~
 # py_util_content
 
 def check_if_str_with_smd_code(str_in):
