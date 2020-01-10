@@ -16,7 +16,7 @@ import gen_r
 # SOLVE: missing_implementation in general_handler
 def general_handler(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
-  m_r = check_if_r_with_smd_code(mfr_part_value)
+  m_with_smd_code = check_if_r_with_smd_code(mfr_part_value)
   m_without_smd_code = check_if_r_without_smd_code(mfr_part_value)
   m_with_part_number = check_if_r_with_part_number(mfr_part_value)
   m_with_ntc_name = check_if_r_with_ntc_name(mfr_part_value)
@@ -24,8 +24,8 @@ def general_handler(cell_values):
   m_with_max_resistor = check_if_with_max_resistor(mfr_part_value)
   m_with_ppm_resistor = check_if_with_ppm_resistor(mfr_part_value)
 
-  if m_r:
-    return handle_jlc_resistors(cell_values, m_r)
+  if m_with_smd_code:
+    return handle_jlc_resistors_with_smd_code(cell_values, m_with_smd_code)
 
   elif m_without_smd_code:
     result = handle_jlc_without_smd_code(cell_values, m_without_smd_code)
@@ -113,6 +113,7 @@ def parseTextCode(number_value):
 
 
 def check_if_r_with_smd_code(str_in):
+  # 2Ω(2R00) ±1%
   m = re.match(r'^(.+?)Ω?.*\((.+?)\) (±[\d|.]+?%)',str_in)
   return m
 
@@ -186,7 +187,7 @@ def handle_jlc_varistor_name(cell_values_array, m_r):
     pprint(m_r)
     raise e
 
-def handle_jlc_resistors(cell_values_array, m_r):
+def handle_jlc_resistors_with_smd_code(cell_values_array, m_r):
 
   try:
     # extract
