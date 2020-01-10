@@ -27,7 +27,7 @@ pipenv sync
 # pipenv run python3 parse.py test/optocouplers_leds_infrared_only.xls test/results &
 # pipenv run python3 parse.py test/power_management_ics_only.xls test/results &
 # pipenv run python3 parse.py test/pushbutton_switches_relays_only.xls test/results &
-pipenv run python3 parse.py test/resistor_only.xls test/results &
+# pipenv run python3 parse.py test/resistor_only.xls test/results &
 # pipenv run python3 parse.py test/rf_radio_only.xls test/results &
 # pipenv run python3 parse.py test/sensors_only.xls test/results &
 # pipenv run python3 parse.py test/transistors_only.xls test/results &

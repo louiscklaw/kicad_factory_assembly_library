@@ -13,13 +13,20 @@ from const import *
 
 import gen_r
 
+
+
 def massage_mfr_part_value(str_in):
+  str_in = str_in.upper()
   str_in = re.sub('  ',' ',str_in)
+  str_in = re.sub('± ','±',str_in)
+  print(str_in)
+
   return str_in
 
 # SOLVE: missing_implementation in general_handler
 def general_handler(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
+
   massaged_mfr_part_value =massage_mfr_part_value(mfr_part_value)
 
   m_with_smd_code = check_if_r_with_smd_code(mfr_part_value)
@@ -172,6 +179,7 @@ def check_if_r_with_smd_code(str_in):
   return m
 
 def check_if_r_without_smd_code(str_in):
+  # 24KΩ ±1%
   m = re.match(r'^(.+?)Ω.*(±[\d|.]+?%)$',str_in)
   return m
 
@@ -266,7 +274,7 @@ def handle_jlc_resistors_with_smd_code(cell_values_array, m_r):
     r_accuracy = m_r[3]
     package = get_component_package(cell_values_array)
     lcsc_part = get_component_lcsc_part(cell_values_array)
-    component_name = ','.join([r_smd_code,package,lcsc_part])
+    component_name = ','.join(["R"+r_smd_code,package,lcsc_part])
 
     # translate
     temp_lib = gen_r.getLibText(*[
@@ -293,22 +301,32 @@ def handle_jlc_resistors_with_smd_code(cell_values_array, m_r):
     pprint(cell_values_array)
     raise e
 
+def get_smd_code(str_in):
+  # text_code = 24KΩ
+  # smd_code = 243
+  r_smd_code = str(parseTextCode(str_in.replace('Ω','')))
+  r_smd_code = getThreeDigitCode(r_smd_code)
+  return r_smd_code
+
+def get_r_name(str_in):
+  return "R"+str_in
+
 def handle_jlc_without_smd_code(cell_values_array, m_r):
   try:
     # extract
     first_category_value = cell_values_array[COL_NUM_FIRST_CATEGORY]
-
-    r_text_value = m_r[1]
-    r_smd_code = str(parseTextCode(r_text_value.replace('Ω','')))
-    r_smd_code = getThreeDigitCode(r_smd_code)
-    # print(r_smd_code)
-    # print(getThreeDigitCode(r_smd_code))
+    lcsc_part = cell_values_array[COL_NUM_LCSC_PART]
+    package = get_component_package(cell_values_array)
 
     r_accuracy = m_r[2]
 
+    r_smd_code = get_smd_code(m_r[1])
+    component_name = ','.join([get_r_name(r_smd_code),package, m_r[1],r_accuracy,lcsc_part])
+    component_name = massage_component_name(component_name)
+
     # translate
     temp_lib = gen_r.getLibText(*[
-          r_smd_code,
+          component_name,
           cell_values_array[COL_NUM_PACKAGE],
           r_accuracy,
           cell_values_array[COL_NUM_LCSC_PART],
@@ -320,7 +338,8 @@ def handle_jlc_without_smd_code(cell_values_array, m_r):
           cell_values_array[COL_NUM_LIBRARY_TYPE]
         ])
     temp_dcm = gen_r.getDcmText(
-      r_smd_code, r_text_value,
+      component_name,
+      '',
       cell_values_array[COL_NUM_PACKAGE],
       r_accuracy)
 
