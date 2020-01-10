@@ -620,7 +620,6 @@ F8 "$R_SOLDER_JOINT" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "$R_MANU" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $$FPLIST
- ALIAS
  $footprint_alias
 $$ENDFPLIST
 DRAW

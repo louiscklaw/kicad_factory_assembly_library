@@ -268,6 +268,8 @@ def gen_gen_template_file(component_name, output_filepath, first_cat_name):
   gen_file_content = gen_file_content.replace('{component_name}', component_name)
   with open(output_filepath, 'w') as fo_util:
     fo_util.write(gen_file_content)
+    # print('findme')
+    # sys.exit()
 
 template_map = {
   CAT_JLC_AMPLIFIERS: amplifiers_templates,
@@ -357,7 +359,9 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
 
   # TODO: remove me
   # for key in ['Inductors & Chokes & Transformers']:
-  for key in first_cat_in:
+  # print(first_cat_in)
+  # sys.exit()
+  for key in ['Embedded Processors & Controllers']:
     # first_cat_in=['Inductors & Chokes & Transformers']
     try:
       first_cat = first_cat_in[key]
@@ -387,12 +391,8 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       output_template_filepath = os.path.join(CURRENT_OUTPUT_PATH,output_template_py_file)
       output_generator_filepath = os.path.join(CURRENT_OUTPUT_PATH, output_generator_py_file)
       output_gen_template_filepath = os.path.join(CURRENT_OUTPUT_PATH, output_gen_template_file)
+      print(output_gen_template_filepath)
 
-
-      # mkdir_command = f'mkdir -p {os.path.join(CURRENT_OUTPUT_PATH)}'
-      # print(mkdir_command)
-      # subprocess.check_output(mkdir_command.split(' '))
-      # sys.exit()
 
       constants = '\n'.join([f"{var_name_in} = '{var_content_in}'" for (var_name_in, var_content_in) in zip(const_var_list, const_var_content_list)])
 
@@ -413,7 +413,7 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
       # IDEA: skip for special procedure of gen file and templates
       # if key.lower() in ['capacitors','resistors','inductors & chokes & transformers']:
       if key.lower() in ['capacitors','resistors']:
-
+        print('skipping for {}'.format(key.lower()))
         pass
       else:
         print(f'generating {key.lower()}...',end='')
@@ -437,9 +437,6 @@ def reform_list(filename_category_list, diluted_category_list, check_if_var_list
         gen_gen_file(component_name, output_generator_filepath, key)
 
         gen_gen_template_file(component_name, output_gen_template_filepath, key)
-        # pprint('findme')
-        # pprint(key)
-        # sys.exit()
 
         output_generator_content = GENERATOR_TEMPLATE
 
