@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 echo 'starting build'
 
 cd parser/JLCPCB

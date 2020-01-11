@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
-
 LIB_RESULT_DIR=$PWD/parser/JLCPCB/test/results
+
+set -e
 
 echo 'test to load kicad library'
 
