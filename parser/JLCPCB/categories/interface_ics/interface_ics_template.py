@@ -771,6 +771,7 @@ fp_default_fp_matcher={
     'WSON-14_EP_4.0x4.0x0.5P':'not verified',
     'WSON-8_EP_5.0x6.0x1.27P':'not verified',
     'WSON-8_EP_6.0x8.0x1.27P':'not verified',
+    'SOIC-32_7.5x10.3x0.635P':'not verified',
 }
 
 
