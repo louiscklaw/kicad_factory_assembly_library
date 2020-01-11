@@ -11,7 +11,7 @@ from const import *
 
 # SEC_CAT_CONSTANTS
 SEC_CAT_BATTERY_PROTECTION_ICS = 'Battery Protection ICs'
-SEC_CAT_DC_DC_CONVERTERS = 'DC-DC Converters'
+SEC_CAT_DC_DC_CONVERTERS = 'DC - DC Converters'
 SEC_CAT_LINEAR_VOLTAGE_REGULATORS = 'Linear Voltage Regulators'
 SEC_CAT_LOW_DROPOUT_REGULATORS_LDO = 'Low Dropout Regulators(LDO)'
 SEC_CAT_PMIC_BATTERY_MANAGEMENT = 'PMIC - Battery Management'

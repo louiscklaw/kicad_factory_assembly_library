@@ -187,7 +187,7 @@ def main():
 
 
   for k, lib_and_dcm_list in result_dictionary.items():
-    print(len(lib_and_dcm_list))
+    print('number of component received, ', len(lib_and_dcm_list))
 
 
     lib_filename, dcm_filename = get_output_filename(k)
