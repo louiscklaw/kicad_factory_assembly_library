@@ -169,7 +169,6 @@ def general_handler(cell_values):
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''.strip()
 
 
@@ -196,7 +195,6 @@ from const import *
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''.strip()
 
 
@@ -663,5 +661,4 @@ $R_CONTENT
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''

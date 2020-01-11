@@ -57,7 +57,7 @@ def handle_jlc_capacitors_without_package_size_in_name(cell_values_array, m_r):
     pprint(m_r[0])
     pprint(m_r[1])
     pprint(m_r[2])
-    print('findme')
+
     # sys.exit()
 
     r_smd_code = package
@@ -161,5 +161,3 @@ def general_handler(cell_values):
 
 def helloworld():
   print('helloworld util py')
-
-helloworld()

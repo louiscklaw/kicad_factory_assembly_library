@@ -305,8 +305,6 @@ first_categories_check_process = {
   FIRST_CAT_TRANSISTORS: [check_first_cat_transistors, process_first_cat_transistors],
 }
 
-print('hello categories')
-
 '''.strip()
 
 

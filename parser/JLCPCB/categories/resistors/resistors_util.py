@@ -604,5 +604,3 @@ def handle_r_resistance_precision(cell_values_array, m_r):
 
 def helloworld():
   print('helloworld util py')
-
-helloworld()

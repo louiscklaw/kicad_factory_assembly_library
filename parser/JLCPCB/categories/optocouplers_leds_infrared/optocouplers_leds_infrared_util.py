@@ -175,5 +175,3 @@ def general_handler(cell_values):
 
 def helloworld():
   print('helloworld util py')
-
-helloworld()

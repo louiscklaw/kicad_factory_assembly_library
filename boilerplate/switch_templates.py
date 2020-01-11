@@ -168,7 +168,6 @@ def general_handler(cell_values):
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''.strip()
 
 
@@ -195,7 +194,6 @@ from const import *
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''.strip()
 
 
@@ -305,8 +303,6 @@ first_categories_check_process = {
   FIRST_CAT_SENSORS: [check_first_cat_sensors, process_first_cat_sensors],
   FIRST_CAT_TRANSISTORS: [check_first_cat_transistors, process_first_cat_transistors],
 }
-
-print('hello categories')
 
 '''.strip()
 
@@ -662,5 +658,4 @@ $R_CONTENT
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''

@@ -146,5 +146,3 @@ DEFAULT_FOOTPRINT_LOOKUP={
 
 def helloworld():
   print('helloworld util py')
-
-helloworld()
