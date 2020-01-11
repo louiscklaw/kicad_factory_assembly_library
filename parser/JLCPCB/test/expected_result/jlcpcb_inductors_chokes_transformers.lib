@@ -16,7 +16,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -43,7 +42,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -70,7 +68,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -97,7 +94,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -124,7 +120,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -151,7 +146,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -178,7 +172,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -205,7 +198,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -229,10 +221,9 @@ F5 "1uH ±10%" -200 -300 50 H I L CNN "MFR_Part"
 F6 "Inductors (SMD)" 0 -600 50 H I C CNN "Second Category"
 F7 "1206" 0 -800 50 H I C CNN "Package"
 F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
-F9 "Meled Industrial"" 0 -700 50 H I C CNN "Manufacturer"
+F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -259,7 +250,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -286,7 +276,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -313,7 +302,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -340,7 +328,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -367,7 +354,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -394,7 +380,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -421,7 +406,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -448,7 +432,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -475,7 +458,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -502,7 +484,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -529,7 +510,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -556,7 +536,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -583,7 +562,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -610,7 +588,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -637,7 +614,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -664,7 +640,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -691,7 +666,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -718,7 +692,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -745,7 +718,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -772,7 +744,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -799,7 +770,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -826,7 +796,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -853,7 +822,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -880,7 +848,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -907,7 +874,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -934,7 +900,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -961,7 +926,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -988,7 +952,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1015,7 +978,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1042,7 +1004,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1069,7 +1030,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -1096,7 +1056,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1123,7 +1082,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1150,7 +1108,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -1177,7 +1134,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Bangke Elec" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1204,7 +1160,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1231,7 +1186,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1258,7 +1212,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -1285,7 +1238,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1312,7 +1264,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -1339,7 +1290,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1366,7 +1316,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1393,7 +1342,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1420,7 +1368,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1447,7 +1394,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -1474,7 +1420,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1501,7 +1446,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1528,7 +1472,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1555,7 +1498,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -1582,7 +1524,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -1609,7 +1550,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1636,7 +1576,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1663,7 +1602,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -1690,7 +1628,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1717,7 +1654,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1744,7 +1680,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1771,7 +1706,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1798,7 +1732,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1825,7 +1758,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Meled Industrial" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -1852,7 +1784,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -1879,7 +1810,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -1906,7 +1836,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1933,7 +1862,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -1960,7 +1888,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -1987,7 +1914,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2014,7 +1940,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2041,7 +1966,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -2068,7 +1992,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1206*
 $ENDFPLIST
 DRAW
@@ -2095,7 +2018,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2122,7 +2044,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2149,7 +2070,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2176,7 +2096,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2203,7 +2122,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2230,7 +2148,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2257,7 +2174,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2284,7 +2200,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2311,7 +2226,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2338,7 +2252,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2365,7 +2278,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2392,7 +2304,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2419,7 +2330,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2446,7 +2356,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2473,7 +2382,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2500,7 +2408,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2527,7 +2434,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -2554,7 +2460,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2581,7 +2486,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2608,7 +2512,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1812*
 $ENDFPLIST
 DRAW
@@ -2635,7 +2538,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1812*
 $ENDFPLIST
 DRAW
@@ -2662,7 +2564,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2689,7 +2590,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2716,7 +2616,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2743,7 +2642,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2770,7 +2668,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2797,7 +2694,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2824,7 +2720,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2851,7 +2746,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2878,7 +2772,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2905,7 +2798,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -2932,7 +2824,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2959,7 +2850,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -2986,7 +2876,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3013,7 +2902,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3040,7 +2928,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3067,7 +2954,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3094,7 +2980,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3121,7 +3006,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3148,7 +3032,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3175,7 +3058,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Sunlord" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3202,7 +3084,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3229,7 +3110,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3256,7 +3136,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3283,7 +3162,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3310,7 +3188,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3337,7 +3214,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3364,7 +3240,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3391,7 +3266,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -3418,7 +3292,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -3445,7 +3318,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -3472,7 +3344,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -3499,7 +3370,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -3526,7 +3396,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3553,7 +3422,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3580,7 +3448,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3607,7 +3474,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3634,7 +3500,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3661,7 +3526,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3688,7 +3552,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3715,7 +3578,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3742,7 +3604,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3769,7 +3630,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3796,7 +3656,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1812*
 $ENDFPLIST
 DRAW
@@ -3823,7 +3682,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Taiyo Yuden" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3850,7 +3708,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1812*
 $ENDFPLIST
 DRAW
@@ -3877,7 +3734,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Taiyo Yuden" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3904,7 +3760,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -3931,7 +3786,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3958,7 +3812,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -3985,7 +3838,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -4012,7 +3864,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -4039,7 +3890,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -4066,7 +3916,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -4093,7 +3942,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -4120,7 +3968,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -4147,7 +3994,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -4174,7 +4020,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -4201,7 +4046,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -4228,7 +4072,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -4255,7 +4098,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -4282,7 +4124,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4309,7 +4150,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4336,7 +4176,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4363,7 +4202,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4390,7 +4228,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4417,7 +4254,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4444,7 +4280,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4471,7 +4306,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4498,7 +4332,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -4525,7 +4358,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4552,7 +4384,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4579,7 +4410,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4606,7 +4436,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4633,7 +4462,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4660,7 +4488,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4687,7 +4514,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4714,7 +4540,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *1210*
 $ENDFPLIST
 DRAW
@@ -4741,7 +4566,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW
@@ -4768,7 +4592,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TDK" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -4795,7 +4618,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Taiyo Yuden" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0603*
 $ENDFPLIST
 DRAW
@@ -4822,7 +4644,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Taiyo Yuden" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -4849,7 +4670,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Guangdong Fenghua Advanced Tech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0805*
 $ENDFPLIST
 DRAW
@@ -4876,7 +4696,6 @@ F8 "2" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Murata Electronics" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *0402*
 $ENDFPLIST
 DRAW

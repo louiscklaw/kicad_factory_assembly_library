@@ -16,7 +16,6 @@ F8 "4" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "XKB Enterprise" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *SMD-SW-4_5.1x5.1x1.5*
 $ENDFPLIST
 DRAW
@@ -43,7 +42,6 @@ F8 "4" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "XKB Enterprise" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *SMD-SW-4_5.1x5.1x3.5*
 $ENDFPLIST
 DRAW
@@ -70,7 +68,6 @@ F8 "4" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "XKB Enterprise" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *SMD-SW-4_5.1x5.1x2.5*
 $ENDFPLIST
 DRAW
@@ -97,7 +94,6 @@ F8 "4" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "XKB Enterprise" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *SMD-SW-4_5.1x5.1x2.0*
 $ENDFPLIST
 DRAW
@@ -124,7 +120,6 @@ F8 "4" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "XKB Enterprise" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- ALIAS
  *SMD-SW-4_5.1x5.1x1.7*
 $ENDFPLIST
 DRAW

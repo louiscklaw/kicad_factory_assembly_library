@@ -14,6 +14,7 @@ from string import Template
 from const import *
 from checks_and_process import *
 
+from common import *
 from resistors_template import *
 
 def getLibText( component_name, r_size, r_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
@@ -21,15 +22,13 @@ def getLibText( component_name, r_size, r_accuracy, lcsc_part, mfr_part,first_ca
     text_to_write = 'text_to_write'
 
     try:
-        # R_r_name = 'R'+r_smd_code
-        # text_content.append(R_LIB_UNIT_TEMPLATE.substitute(R_THREE_DIGIT_VALUE=R_r_name,
-        # # default symbol done deserve a default footprint (no size specified)
-        # d_footprint=''
-        # ))
-
-        # TODO: 🤦 Temporary solution ...
-        # for r_size in l_r_size:
-        # r_size = package
+        # footprint_masks = [
+        #   'Resistor_SMD:R_*'+r_size+'*',
+        #   'Resistor_SMD:R_*',
+        #   '*'+r_size+'*',
+        # ]
+        footprint_masks = gen_footprint_mask('Resistor_SMD:R_', r_size)
+        footprint_mask_string = '\n'.join([' '+footprint_mask for footprint_mask in footprint_masks])
 
         try:
             fp_default_fp_matcher[r_size]
@@ -39,7 +38,7 @@ def getLibText( component_name, r_size, r_accuracy, lcsc_part, mfr_part,first_ca
 
         text_content.append(R_LIB_UNIT_WITH_SIZE_TEMPLATE.substitute(
             R_THREE_DIGIT_VALUE_SIZE=component_name,
-            R_SIZE=r_size,
+            COMPONENT_FOOTPRINT=footprint_mask_string,
             d_footprint=fp_default_fp_matcher[r_size],
             R_LCSC_PART=lcsc_part,
             R_MFR_PART= mfr_part,

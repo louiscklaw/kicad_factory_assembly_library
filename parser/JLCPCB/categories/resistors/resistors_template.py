@@ -71,7 +71,7 @@ F8 "$R_SOLDER_JOINT" 0 0 50 H I C CNN "Solder Joint"
 F9 "$R_MANU" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $$FPLIST
- Resistor_SMD:R_$R_SIZE*
+$COMPONENT_FOOTPRINT
 $$ENDFPLIST
 DRAW
 S -30 70 30 -70 0 1 8 N

@@ -75,7 +75,7 @@ F8 "$SOLDER_JOINT" 0 -1100 50 H I C CNN "Solder Joint"
 F9 "$MANU" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $$FPLIST
- C_$C_SIZE*
+$COMPONENT_FOOTPRINT
 $$ENDFPLIST
 DRAW
 P 2 0 1 13 -60 -20 60 -20 N
@@ -111,32 +111,32 @@ DEFAULT_FOOTPRINT_LOOKUP={
   "0603":"Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder",
   "0805":"Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",
   "1206":"Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder",
-  "1210":"Capacitor_SMD:C_0402_1005Metric",
-  "1812":"Capacitor_SMD:C_0402_1005Metric",
-  "CASE-A_3216":"Capacitor_SMD:C_0402_1005Metric",
-  "CASE-B_3528":"Capacitor_SMD:C_0402_1005Metric",
-  "CASE-C_6032":"Capacitor_SMD:C_0402_1005Metric",
-  "CASE-D_7343":"Capacitor_SMD:C_0402_1005Metric",
-  "CASE-E_7343":"Capacitor_SMD:C_0402_1005Metric",
-  "CASE-M_1608":"Capacitor_SMD:C_0402_1005Metric",
-  "CASE-P_2012":"Capacitor_SMD:C_0402_1005Metric",
-  "CASE-R_2012":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-10x10":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-10x7.7":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-4x5.3":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-5x5.3":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-5x5.8":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-6.3x5.3":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-6.3x5.7":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-6.3X5.7":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-6.3x5.8":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-6.3x7.7":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-6.6x4.4":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-6.6x5.8":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-6.6x7":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-8.3x6.7":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-8x10":"Capacitor_SMD:C_0402_1005Metric",
-  "SMD-ECAP-8x6.5":"Capacitor_SMD:C_0402_1005Metric"
+  "1210":"Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder",
+  "1812":"Capacitor_SMD:C_1812_4532Metric_Pad1.30x3.40mm_HandSolder",
+  "CASE-A_3216":"Capacitor_SMD:CASE-*",
+  "CASE-B_3528":"Capacitor_SMD:CASE-*",
+  "CASE-C_6032":"Capacitor_SMD:CASE-*",
+  "CASE-D_7343":"Capacitor_SMD:CASE-*",
+  "CASE-E_7343":"Capacitor_SMD:CASE-*",
+  "CASE-M_1608":"Capacitor_SMD:CASE-*",
+  "CASE-P_2012":"Capacitor_SMD:CASE-*",
+  "CASE-R_2012":"Capacitor_SMD:CASE-*",
+  "SMD-ECAP-10x10":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-10x7.7":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-4x5.3":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-5x5.3":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-5x5.8":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-6.3x5.3":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-6.3x5.7":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-6.3X5.7":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-6.3x5.8":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-6.3x7.7":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-6.6x4.4":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-6.6x5.8":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-6.6x7":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-8.3x6.7":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-8x10":"Capacitor_SMD:SMD*ECAP*",
+  "SMD-ECAP-8x6.5":"Capacitor_SMD:SMD*ECAP*"
 }
 
 
