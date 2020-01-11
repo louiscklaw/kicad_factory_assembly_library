@@ -21,7 +21,7 @@ pipenv run python3 parse.py test/optocouplers_leds_infrared_only.xls test/result
 pipenv run python3 parse.py test/embedded_processors_controllers_only.xls test/results &
 pipenv run python3 parse.py test/embedded_peripheral_ics_only.xls test/results &
 pipenv run python3 parse.py test/fuses_only.xls test/results &
-pipenv run python3 parse.gstpy test/amplifiers_only.xls test/results &
+pipenv run python3 parse.py test/amplifiers_only.xls test/results &
 pipenv run python3 parse.py test/analog_ics_only.xls test/results &
 pipenv run python3 parse.py test/battery_products_only.xls test/results &
 pipenv run python3 parse.py test/capacitors_only.xls test/results &
@@ -43,6 +43,7 @@ wait
 cd ../..
 
 echo 'test parsing by kicad library'
+mkdir -p ./_util/kicad-library-utils/schlib/tmp
 ./scripts/test_kicad.sh
 
 echo 'building symbol table entry ...'
