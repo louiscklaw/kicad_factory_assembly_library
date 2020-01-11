@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# pipenv run python3 test.py
+echo 'starting build'
 
 cd parser/JLCPCB
 
@@ -8,8 +8,6 @@ rm -rf test/results/*.*
 rm -rf test/expected_result/*.bck
 
 pipenv sync
-
-
 
 # OK library
 # pipenv run python3 parse.py test/amplifiers_only.xls test/results
@@ -35,12 +33,13 @@ pipenv sync
 # pipenv run python3 parse.py test/sensors_only.xls test/results
 # pipenv run python3 parse.py test/transistors_only.xls test/results
 
-pipenv run python3 parse.py xls_table/test.xls test/results
 
 # not implemented yet
 # pipenv run python3 parse.py test/others_only.xls test/results &
+# wait
 
-wait
+pipenv run python3 parse.py xls_table/test.xls test/results
+# pipenv run python3 helloworld.py
 
 # diff -r test/expected_result test/results
 
@@ -48,9 +47,9 @@ cd ../..
 
 echo 'test parsing by kicad library'
 mkdir -p ./_util/kicad-library-utils/schlib/tmp
-./scripts/test_kicad.sh
+./scripts/kicad_test.sh
 
 echo 'building symbol table entry ...'
 python3 ./build_symbol_table_entry.py
 
-echo 'test done'
+echo 'build done'
