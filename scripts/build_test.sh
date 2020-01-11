@@ -40,7 +40,7 @@ pipenv sync
 # pipenv run python3 parse.py test/others_only.xls test/results &
 # wait
 
-pipenv run python3 parse.py xls_table/test.xls test/results
+pipenv run python3 parse.py xls_table/test.xls ../../output
 # pipenv run python3 helloworld.py
 
 # diff -r test/expected_result test/results
@@ -52,6 +52,6 @@ mkdir -p ./_util/kicad-library-utils/schlib/tmp
 ./scripts/kicad_test.sh
 
 echo 'building symbol table entry ...'
-python3 ./build_symbol_table_entry.py
+python3 ./scripts/build_symbol_table_entry.py output
 
 echo 'build done'
