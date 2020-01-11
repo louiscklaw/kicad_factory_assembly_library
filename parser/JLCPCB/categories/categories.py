@@ -379,7 +379,7 @@ def process_first_cat_interface_ics(cell_values):
       break
 
   if not found:
-    print(second_cat_value)
+    print('ERROR: secondary category not found:', second_cat_value)
 
   return result
 

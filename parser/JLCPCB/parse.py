@@ -60,6 +60,11 @@ def get_xl_length(wl_to_open):
 
   return CURRENT_ROW
 
+def massage_cell_data(str_in):
+  str_in = re.sub(r'([a-zA-Z])-([a-zA-Z])',r'\1 - \2', str_in)
+  str_in = re.sub(r' +',' ', str_in)
+  return str_in
+
 def get_all_columns(wl_to_open):
   cell_values = []
   worksheet = open_xl_sheet(wl_to_open)
@@ -78,7 +83,22 @@ def get_all_columns(wl_to_open):
         ]
       ]
     )
-  return sorted(cell_values)
+
+  massaged_cell_values = []
+  for cell_value in cell_values:
+    massaged_cell_values.append([
+      cell_value[COL_NUM_LCSC_PART],
+      cell_value[COL_NUM_MFR_PART],
+      cell_value[COL_NUM_FIRST_CATEGORY],
+      massage_cell_data(cell_value[COL_NUM_SECOND_CATEGORY]),
+      cell_value[COL_NUM_PACKAGE],
+      cell_value[COL_NUM_SOLDER_JOINT],
+      cell_value[COL_NUM_MANUFACTURER],
+      cell_value[COL_NUM_LIBRARY_TYPE]
+    ])
+
+
+  return sorted(massaged_cell_values)
 
 shown_dictionary = {}
 result_dictionary = {}
@@ -116,7 +136,7 @@ def get_dcm_filename(first_cat_in):
   return filename
 
 def get_output_filename(first_cat_in):
-  print(f'debug first_cat_in {first_cat_in}')
+  # print(f'debug first_cat_in {first_cat_in}')
   return [get_lib_filename(first_cat_in), get_dcm_filename(first_cat_in)]
 
 def encap_lib_content(lib_content):
@@ -135,6 +155,11 @@ def main():
   # print(f'lib output file directory: {lib_output_path}')
   # print(f'dcm output file directory: {dcm_output_path}')
 
+  # pprint(xls_file_input)
+  # sys.exit()
+  # pprint(get_all_columns(xls_file_input))
+  # sys.exit()
+
   for cell_values in get_all_columns(xls_file_input):
 
     if cell_values[COL_NUM_FIRST_CATEGORY] == 'First Category':
@@ -147,6 +172,7 @@ def main():
       if sec_category_value not in SEC_CAT_SKIP_LIST:
         # print(cell_values)
         transformed_result = transform(cell_values)
+
         # print(transformed_result)
 
         if first_category_value in result_dictionary.keys():
@@ -154,11 +180,15 @@ def main():
         else:
           result_dictionary[first_category_value] = [transformed_result]
       else:
-        print(f'INFO: skipping {sec_category_value} as in skip list')
+        # print(f'INFO: skipping {sec_category_value} as in skip list')
+        pass
+
 
 
 
   for k, lib_and_dcm_list in result_dictionary.items():
+    print(len(lib_and_dcm_list))
+
 
     lib_filename, dcm_filename = get_output_filename(k)
 
@@ -170,7 +200,8 @@ def main():
 
     # TODO: remove me
     # for lib_content, dcm_content in lib_and_dcm_list:
-    for lib_content, dcm_content in sorted(lib_and_dcm_list):
+
+    for lib_content, dcm_content in lib_and_dcm_list:
       temp_lib_content.append(lib_content)
       temp_dcm_content.append(dcm_content)
 
