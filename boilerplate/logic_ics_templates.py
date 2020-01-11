@@ -349,7 +349,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
           else:
             # print('ERROR: footprint not found in fp_default_fp_matcher')
             # print(f"footprint wanted")
-            print(f"'{r_size}':'not verified', ")
+            print(f"'{r_size}':'not_verified', ")
             missing_footprint.append(r_size)
 
           # print('cannot find fp_default_fp_matcher[r_size]... ')
