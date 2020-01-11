@@ -32,7 +32,7 @@ SEC_CAT_SENSOR_INTERFACE_ICS = 'Sensor Interface ICs'
 SEC_CAT_TOUCH_SCREEN_CONTROLLERS = 'Touch Screen Controllers'
 SEC_CAT_USB = 'USB'
 SEC_CAT_USB_ICS = 'USB ICs'
-SEC_CAT_VIDEO_AUDIO_INTERFACE_ICS = 'Video-Audio Interface ICs'
+SEC_CAT_VIDEO_AUDIO_INTERFACE_ICS = 'Video - Audio Interface ICs'
 SEC_CAT_SERIAL_INTERFACE = 'serial interface'
 
 # check_defs

@@ -160,10 +160,14 @@ def main():
   # pprint(get_all_columns(xls_file_input))
   # sys.exit()
 
+  IGNORE_FIRST_CATEGORY = [FIRST_CAT_OTHERS]
   for cell_values in get_all_columns(xls_file_input):
-
-    if cell_values[COL_NUM_FIRST_CATEGORY] == 'First Category':
+    first_category = cell_values[COL_NUM_FIRST_CATEGORY]
+    if first_category == 'First Category':
       # skipping index column as sorted column appears in the middle
+      pass
+    elif first_category in IGNORE_FIRST_CATEGORY:
+      print('INFO: skipping process for first category', cell_values[COL_NUM_FIRST_CATEGORY])
       pass
     else:
       first_category_value = cell_values[COL_NUM_FIRST_CATEGORY]
