@@ -10,10 +10,14 @@ from math import log10, floor
 from string import Template
 import csv
 
+from common import *
 from inductors_chokes_transformers_template import *
 
 def getLibText( component_name, induct_size, c_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
   text_content=[]
+
+  footprint_masks = gen_footprint_mask('Capacitor_SMD:C_', induct_size)
+  footprint_mask_string = '\n'.join([' '+footprint_mask for footprint_mask in footprint_masks])
 
   text_content.append(
     L_LIB_UNIT_SIZE_TEMPLATE.substitute(

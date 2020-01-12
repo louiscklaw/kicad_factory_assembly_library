@@ -190,7 +190,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "ON Semicon" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *Power 56*
+ *Power*56*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -5694,7 +5694,7 @@ F2 "not verified" 0 -400 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 F4 "C112988" 0 -500 50 H I C CNN "LCSC_Part"
 F5 "2SK208-Y(TE85L,F)" -200 -300 50 H I L CNN "MFR_Part"
-F6 "Junction Field-Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
+F6 "Junction Field - Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
 F7 "SC-59-3" 0 -800 50 H I C CNN "Package"
 F8 "3" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "TOSHIBA" 0 -700 50 H I C CNN "Manufacturer"
@@ -6570,7 +6570,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -12834,7 +12834,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -20461,7 +20461,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -20490,7 +20490,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -20664,7 +20664,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -20722,7 +20722,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -20751,7 +20751,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -20780,7 +20780,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -20838,7 +20838,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -20983,7 +20983,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21041,7 +21041,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21070,7 +21070,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21215,7 +21215,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21244,7 +21244,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21447,7 +21447,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21476,7 +21476,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21505,7 +21505,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21534,7 +21534,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21650,7 +21650,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21766,7 +21766,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21795,7 +21795,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21824,7 +21824,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21853,7 +21853,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -21940,7 +21940,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22056,7 +22056,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22375,7 +22375,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22433,7 +22433,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22462,7 +22462,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22491,7 +22491,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22520,7 +22520,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22549,7 +22549,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22636,7 +22636,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22665,7 +22665,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22694,7 +22694,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22781,7 +22781,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22810,7 +22810,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -22926,7 +22926,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -23187,7 +23187,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -23448,7 +23448,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -23477,7 +23477,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -23622,7 +23622,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -23651,7 +23651,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -23709,7 +23709,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -23796,7 +23796,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -23825,7 +23825,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -24057,7 +24057,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -24405,7 +24405,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -24985,7 +24985,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -25391,7 +25391,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -25449,7 +25449,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -25594,7 +25594,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -26754,7 +26754,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -26870,7 +26870,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -26986,7 +26986,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -27131,7 +27131,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -27276,7 +27276,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -27305,7 +27305,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -27392,7 +27392,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -27450,7 +27450,7 @@ F8 "6" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SC-70-6*
+ *PowerPAK*SC-70-6*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -27479,7 +27479,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -28030,7 +28030,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -48353,7 +48353,7 @@ F2 "Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder" 0 -400 50 H I C CN
 F3 "" 0 0 50 H I C CNN
 F4 "C160435" 0 -500 50 H I C CNN "LCSC_Part"
 F5 "MMBFJ270" -200 -300 50 H I L CNN "MFR_Part"
-F6 "Junction Field-Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
+F6 "Junction Field - Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
 F7 "SOT-23-3" 0 -800 50 H I C CNN "Package"
 F8 "3" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "ON Semicon" 0 -700 50 H I C CNN "Manufacturer"
@@ -67609,7 +67609,7 @@ F2 "Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder" 0 -400 50 H I C CN
 F3 "" 0 0 50 H I C CNN
 F4 "C232842" 0 -500 50 H I C CNN "LCSC_Part"
 F5 "MMBFJ177" -200 -300 50 H I L CNN "MFR_Part"
-F6 "Junction Field-Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
+F6 "Junction Field - Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
 F7 "SOT-23-3" 0 -800 50 H I C CNN "Package"
 F8 "3" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "ON Semicon" 0 -700 50 H I C CNN "Manufacturer"
@@ -72684,7 +72684,7 @@ F2 "Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder" 0 -400 50 H I C CN
 F3 "" 0 0 50 H I C CNN
 F4 "C259802" 0 -500 50 H I C CNN "LCSC_Part"
 F5 "MMBF4392LT1G" -200 -300 50 H I L CNN "MFR_Part"
-F6 "Junction Field-Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
+F6 "Junction Field - Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
 F7 "SOT-23-3" 0 -800 50 H I C CNN "Package"
 F8 "3" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "ON Semicon" 0 -700 50 H I C CNN "Manufacturer"
@@ -73299,7 +73299,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -74221,7 +74221,7 @@ F2 "Resistor_SMD:R_1210_3216Metric_Pad1.42x1.75mm_HandSolder" 0 -400 50 H I C CN
 F3 "" 0 0 50 H I C CNN
 F4 "C274688" 0 -500 50 H I C CNN "LCSC_Part"
 F5 "MMBFJ111" -200 -300 50 H I L CNN "MFR_Part"
-F6 "Junction Field-Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
+F6 "Junction Field - Effect Transistor，JFET" 0 -600 50 H I C CNN "Second Category"
 F7 "SOT-23-3" 0 -800 50 H I C CNN "Package"
 F8 "3" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "ON Semicon" 0 -700 50 H I C CNN "Manufacturer"
@@ -82347,7 +82347,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "HUAYI" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -88814,7 +88814,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Diodes Incorporated" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -92613,7 +92613,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -94034,7 +94034,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -94411,7 +94411,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -99921,7 +99921,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *Power PAK-8_EP_3.3x3.3x0.65P*
+ *Power*PAK-8_EP_3.3x3.3x0.65P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -104648,7 +104648,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N
@@ -115175,7 +115175,7 @@ F8 "8" 0 -1000 50 H I C CNN "Solder Joint"
 F9 "Vishay Intertech" 0 -700 50 H I C CNN "Manufacturer"
 F10 "base" 0 -900 50 H I C CNN "Library Type"
 $FPLIST
- *PowerPAK SO-8_EP_5.2x6.2x1.27P*
+ *PowerPAK*SO-8_EP_5.2x6.2x1.27P*
 $ENDFPLIST
 DRAW
 C 50 0 111 0 1 10 N

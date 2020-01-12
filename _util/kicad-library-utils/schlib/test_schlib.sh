@@ -10,7 +10,7 @@ fi
 
 function test_schlib {
     filename=`basename "$1"`
-    tmp='/home/logic/_workspace/kicad_factory_assembly_library/_util/kicad-library-utils/schlib/tmp'
+    tmp="$PWD/tmp"
 
 # python code --- START
 python << EOF

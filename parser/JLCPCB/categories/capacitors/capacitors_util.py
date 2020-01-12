@@ -54,10 +54,10 @@ def handle_jlc_capacitors_without_package_size_in_name(cell_values_array, m_r):
     lcsc_part = cell_values_array[COL_NUM_LCSC_PART]
 
     # TODO: remove debug
-    pprint(m_r[0])
-    pprint(m_r[1])
-    pprint(m_r[2])
-    print('findme')
+    # pprint(m_r[0])
+    # pprint(m_r[1])
+    # pprint(m_r[2])
+
     # sys.exit()
 
     r_smd_code = package
@@ -134,7 +134,7 @@ def general_handler(cell_values):
   mfr_part_value = cell_values[COL_NUM_MFR_PART]
 
   # TODO: remove me
-  pprint(mfr_part_value)
+  # pprint(mfr_part_value)
 
   m_with_package_size = check_if_c_with_smd_code(mfr_part_value)
   m_without_package_size = check_if_c_without_smd_code_in_name(mfr_part_value)
@@ -161,5 +161,3 @@ def general_handler(cell_values):
 
 def helloworld():
   print('helloworld util py')
-
-helloworld()

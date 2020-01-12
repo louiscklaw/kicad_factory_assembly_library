@@ -6,7 +6,7 @@ install:
 
 script:
   - pip3 install --user pipenv
-  - bash ./scripts/test.sh
+  - bash ./scripts/build_test.sh
 
 after_success:
   - id

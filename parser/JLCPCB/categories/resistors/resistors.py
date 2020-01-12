@@ -280,5 +280,3 @@ SEC_CAT_RESISTOR_NETWORKS_ARRAYS:[check_if_resistor_networks_arrays,process_resi
 SEC_CAT_VARISTORS:[check_if_varistors,process_varistors]}
 
 # py_util_content
-
-print('helloworld')
