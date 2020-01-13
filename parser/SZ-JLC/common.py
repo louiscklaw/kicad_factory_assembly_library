@@ -8,6 +8,34 @@ import xlrd
 from constant import *
 from config import *
 
+def gen_lib(cell_values):
+  temp=''
+  for test in cell_values:
+    temp_test = '--- lib head ---' + '\n'+ '\n'.join(test) +'\n' + '--- lib tail ---' +'\n'
+    temp += temp_test
+
+  return temp
+
+def gen_dcm(cell_values):
+  temp=''
+  for test in cell_values:
+    temp_test = '--- dcm head ---' + '\n'+ '\n'.join(test) +'\n' + '--- dcm tail ---' +'\n'
+    temp += temp_test
+
+  return temp
+
+def filter_components_by_category(cell_values, component_category):
+  return list(filter(
+  lambda cell_value: cell_value[COL_NUM_COMPONENT_CATEGORY]==component_category, cell_values))
+
+def write_kicad_lib_file(output_filepath, content):
+  with open(output_filepath, 'w') as fo_kicad_lib:
+    fo_kicad_lib.write(content)
+
+def write_kicad_dcm_file(output_filepath, content):
+  with open(output_filepath, 'w') as fo_kicad_lib:
+    fo_kicad_lib.write(content)
+
 def open_xl_sheet(wl_to_open):
   workbook = xlrd.open_workbook(wl_to_open)
   worksheet = workbook.sheet_by_index(0)
@@ -34,8 +62,10 @@ def get_xl_length(wl_to_open):
   return CURRENT_ROW
 
 def massage_cell_data(str_in):
-  str_in = re.sub(r'([a-zA-Z])-([a-zA-Z])',r'\1 - \2', str_in)
-  str_in = re.sub(r' +',' ', str_in)
+  # str_in = re.sub(r'([a-zA-Z])-([a-zA-Z])',r'\1 - \2', str_in)
+  # str_in = re.sub(r' +',' ', str_in)
+  str_in = re.sub(r'  ',' ', str_in)
+  str_in = str_in.strip()
   return str_in
 
 def get_all_columns(wl_to_open):
@@ -64,4 +94,4 @@ def get_all_columns(wl_to_open):
     massaged_cell_values.append([ massage_cell_data(cell_value[col_num_idx])  for col_num_idx in COL_LIST_COMPONET_FIELD])
 
 
-  return sorted(massaged_cell_values)
+  return massaged_cell_values
