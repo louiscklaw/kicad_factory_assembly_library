@@ -3,19 +3,22 @@ LIB_RESULT_DIR=$PWD/output
 
 set -e
 
+pwd
+
 echo 'test to load kicad library'
 
-cd _util/kicad-library-utils/schlib
+cd ../../_util/kicad-library-utils/schlib
 
 rm -rf tmp/*
 
+ls -l $LIB_RESULT_DIR
+
 for filename in $LIB_RESULT_DIR/*.lib; do
-  # echo ./test_schlib.sh $filename
-  ./test_schlib.sh $filename
+  ./test_schlib.sh $filename &
 done
 
-wait
+# wait
 
-echo 'test load done'
+# echo 'test load done'
 
-cd ../../..
+# cd ../../..
