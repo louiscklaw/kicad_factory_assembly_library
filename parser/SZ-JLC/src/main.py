@@ -20,7 +20,7 @@ list_idx, list_name, list_comp_type, list_footprint, list_pad, list_manu, list_l
 
 list_capacitors = filter_components_by_category(cell_values, '电容_贴片电容')
 
-list_capacitors = list_capacitors[0:1]
+list_capacitors = list_capacitors
 
 lib_text = gen_lib(list_capacitors)
 dcm_text = gen_dcm(list_capacitors)

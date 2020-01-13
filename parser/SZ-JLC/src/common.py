@@ -10,12 +10,16 @@ from constant import *
 from config import *
 from template import *
 
+def massage_component_name(str_in):
+  str_in = str_in.replace(' ',',')
+  return str_in
+
 def gen_lib(cell_values):
   output_list=[]
 
   for cell_value in cell_values:
     component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
-    component_name = cell_value[COL_NUM_COMPONENT_NAME]
+    component_name = massage_component_name(cell_value[COL_NUM_COMPONENT_NAME])
     component_id = cell_value[COL_NUM_COMPONENT_ID]
     component_category = cell_value[COL_NUM_COMPONENT_CATEGORY]
     component_solder_joint = cell_value[COL_NUM_COMPONENT_SOLDER_PAD]
@@ -23,15 +27,15 @@ def gen_lib(cell_values):
 
     output_list.append(
       lib_template.substitute(
-        C_VALUE_SIZE= 'component_name',
-        C_DEFAULT_FOOTPRINT= 'component_package',
-        LCSC_PART = 'component_id',
-        MFR_PART = 'component_name',
-        SEC_CAT = 'component_category',
-        PACKAGE = 'component_package',
-        SOLDER_JOINT = 'component_solder_joint',
-        MANU = 'component_manufacturer',
-        COMPONENT_FOOTPRINT = 'component_package'
+        C_VALUE_SIZE = component_name,
+        C_DEFAULT_FOOTPRINT = component_package,
+        LCSC_PART = component_id,
+        MFR_PART = component_name,
+        SEC_CAT = component_category,
+        PACKAGE = component_package,
+        SOLDER_JOINT = component_solder_joint,
+        MANU = component_manufacturer,
+        COMPONENT_FOOTPRINT = component_package,
       )
     )
   return output_list
@@ -41,7 +45,7 @@ def gen_dcm(cell_values):
 
   for cell_value in cell_values:
     component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
-    component_name = cell_value[COL_NUM_COMPONENT_NAME]
+    component_name = massage_component_name(cell_value[COL_NUM_COMPONENT_NAME])
     component_id = cell_value[COL_NUM_COMPONENT_ID]
     component_category = cell_value[COL_NUM_COMPONENT_CATEGORY]
     component_solder_joint = cell_value[COL_NUM_COMPONENT_SOLDER_PAD]
@@ -49,17 +53,17 @@ def gen_dcm(cell_values):
 
     output_list.append(
       dcm_template.substitute(
-        C_VALUE_SIZE= 'component_name',
-        C_DEFAULT_FOOTPRINT= 'component_package',
-        LCSC_PART = 'component_id',
-        MFR_PART = 'component_name',
-        SEC_CAT = 'component_category',
-        PACKAGE = 'component_package',
-        SOLDER_JOINT = 'component_solder_joint',
-        MANU = 'component_manufacturer',
-        COMPONENT_FOOTPRINT = 'component_package',
-        DESCRIPTION='test description',
-        KEY='test key'
+        C_VALUE_SIZE = component_name,
+        C_DEFAULT_FOOTPRINT = component_package,
+        LCSC_PART = component_id,
+        MFR_PART = component_name,
+        SEC_CAT = component_category,
+        PACKAGE = component_package,
+        SOLDER_JOINT = component_solder_joint,
+        MANU = component_manufacturer,
+        COMPONENT_FOOTPRINT = component_package,
+        DESCRIPTION ='test description',
+        KEY = 'test key',
       )
     )
   return output_list
