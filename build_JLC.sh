@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-# rm -rf parser/SZ-JLC/output/*.lib
-# rm -rf parser/SZ-JLC/output/*.dcm
+rm -rf parser/SZ-JLC/output/*.lib
+rm -rf parser/SZ-JLC/output/*.dcm
 
-# cd parser/SZ-JLC
+cd parser/SZ-JLC
 
-# pipenv sync
-# pipenv run python3 ./src/main.py input/exportComponentList.xls
+pipenv sync
+pipenv run python3 ./src/main.py input/exportComponentList.xls
 
-# cd ../..
+cd ../..
 
 echo 'test start'
 

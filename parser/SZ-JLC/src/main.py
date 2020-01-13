@@ -8,6 +8,7 @@ import xlrd
 from constant import *
 from config import *
 from common import *
+from template import *
 
 
 xls_file_input = sys.argv[1]
