@@ -3,6 +3,8 @@
 import os,sys,re
 from category import *
 
+from all_footprint_list import *
+
 capacitor_footprint_list_expand = {
   '0402':'*0402*',
   '0603_x4':'default_footprint_list_0603_x4',
@@ -276,12 +278,3 @@ foootprint_list_lookup_dic = {
   # CAT_SMD_WIRELESS_TRANSCEIVER_CHIP: wireless_transceiver_chip_footprint_list_expand,
   # CAT_SMD_ZENER_DIODE: zener_diode_footprint_list_expand,
 }
-
-def footprint_list_lookup(str_in, component_category):
-  try:
-    temp_dic =  foootprint_list_lookup_dic[component_category]
-    return ' '+temp_dic[str_in]
-  except Exception as e:
-    print('please add entry in footprint_list_lookup', __file__)
-    raise e
-    sys.exit(1)

@@ -1,94 +1,11 @@
 #!/usr/bin/env python3
 
 import os,sys,re
-from category import *
+from pprint import pprint
 
-capacitor_footprint_expand={
-  '0402':'w_smd_cap:c_0402',
-  '0603':'w_smd_cap:c_0603',
-  '0603_x4':'default_footprint_0603_x4',
-  '1206':'w_smd_cap:c_1206',
-  '1812':'w_smd_cap:c_1812',
-  '0805':'w_smd_cap:c_0805',
-  '1210':'w_smd_cap:c_1210',
-}
+from footprint_db import *
+from footprint_list_db import *
 
-resistor_footprint_expand={
-  '0402':'w_smd_resistors:r_0402',
-  '0603_x4':'default_footprint_0603_x4',
-  '0603':'w_smd_resistors:r_0603',
-  '0805':'w_smd_resistors:r_0805',
-  '1206':'w_smd_resistors:r_1206',
-  '1210':'w_smd_resistors:r_1210',
-  '1812':'w_smd_resistors:r_1812',
-  '2010':'w_smd_resistors:r_2010',
-  '2512':'w_smd_resistors:r_2512',
-}
-
-inductor_footprint_expand={
-  '0402':'w_smd_inductors:r_0402',
-  '0603_x4':'default_footprint_0603_x4',
-  '0603':'w_smd_inductors:r_0603',
-  '0805':'w_smd_inductors:r_0805',
-  '1206':'w_smd_inductors:r_1206',
-  '1210':'w_smd_inductors:r_1210',
-  '1812':'w_smd_inductors:r_1812',
-  '2010':'w_smd_inductors:r_2010',
-  '2512':'w_smd_inductors:r_2512',
-}
-
-led_footprint_expand={
-  'LED_0603':'w_smd_inductors:r_0402',
-}
-
-diode_footprint_expand={
-  '0402':'w_smd_inductors:r_0402',
-  '0603_x4':'default_footprint_0603_x4',
-  '0603':'w_smd_inductors:r_0603',
-  '0805':'w_smd_inductors:r_0805',
-  '1206':'w_smd_inductors:r_1206',
-  '1210':'w_smd_inductors:r_1210',
-  '1812':'w_smd_inductors:r_1812',
-  '2010':'w_smd_inductors:r_2010',
-  '2512':'w_smd_inductors:r_2512',
-  'SMAF':'SMAF',
-  '0402':'0402',
-  '0603':'0603',
-  'DFN-10_1.0x2.5x0.5P':'DFN-10_1.0x2.5x0.5P',
-  'LED_0603':'LED_0603',
-  'SC-70-5':'SC-70-5',
-  'SC-74-6':'SC-74-6',
-  'SLP1006P2':'SLP1006P2',
-  'SMB,DO-214AA':'SMB,DO-214AA',
-  'SMD-DFN1006':'SMD-DFN1006',
-  'SOD-123':'SOD-123',
-  'SOD-123F':'SOD-123F',
-  'SOD-123FL':'SOD-123FL',
-  'SOD-323':'SOD-323',
-  'SOD-323F':'SOD-323F',
-  'SOD-523':'SOD-523',
-  'SOD-882':'SOD-882',
-  'SOD-962':'SOD-962',
-  'SOIC-8_3.9x4.9x1.27P':'SOIC-8_3.9x4.9x1.27P',
-  'SOP-8_3.9x4.9x1.27P':'SOP-8_3.9x4.9x1.27P',
-  'SOT-143':'SOT-143',
-  'SOT-23-3':'SOT-23-3',
-  'SOT-23-3L':'SOT-23-3L',
-  'SOT-23-5':'SOT-23-5',
-  'SOT-23-6L':'SOT-23-6L',
-  'SOT-323-3':'SOT-323-3',
-  'SOT-353':'SOT-353',
-  'SOT-363':'SOT-363',
-  'SOT-523':'SOT-523',
-  'SOT-553':'SOT-553',
-  'SOT-563':'SOT-563',
-  'SOT-666':'SOT-666',
-  'TSOP-5_1.5x3.0x0.95P':'TSOP-5_1.5x3.0x0.95P',
-  'TSOP-6_1.5x3.0x0.95P':'TSOP-6_1.5x3.0x0.95P',
-  'uDFN-10_1.0x2.5x0.5P':'uDFN-10_1.0x2.5x0.5P',
-  'uDFN-14_1.4x3.5x0.5P':'uDFN-14_1.4x3.5x0.5P',
-  'USON-10_1.0x2.5x0.5P':'USON-10_1.0x2.5x0.5P',
-}
 
 footprint_lookup_dic={
   CAT_SMD_CAPACITOR: capacitor_footprint_expand,
@@ -146,10 +63,9 @@ footprint_lookup_dic={
   # CAT_SMD_EMI_RFI_FILTERS_LC_RC_NETWORKS: emi_rfi_filters_lc_rc_networks_footprint_expand,
   # CAT_SMD_EPROM_MEMORY: eprom_memory_footprint_expand,
   CAT_SMD_ESD_DIODE:   diode_footprint_expand,
-,
+
   # CAT_SMD_ETHERNET_CHIP: ethernet_chip_footprint_expand,
-  # CAT_SMD_FAST_RECOVERY_DIODE: fast_recovery_diode_footprint_expand,
-  # CAT_SMD_FAST_RECOVERY_DIODE: fast_recovery_diode_footprint_expand,
+  # CAT_SMD_FAST_RECOVERY_DIODE: diode_footprint_expand,
   # CAT_SMD_FET_INPUT_OP_AMP: fet_input_op_amp_footprint_expand,
   # CAT_SMD_FLASH_MEMORY: flash_memory_footprint_expand,
   # CAT_SMD_FONT_CHIP: font_chip_footprint_expand,
@@ -159,14 +75,14 @@ footprint_lookup_dic={
   # CAT_SMD_GAS_SENSOR: gas_sensor_footprint_expand,
   # CAT_SMD_GATE_AND_INVERTER: gate_and_inverter_footprint_expand,
   # CAT_SMD_HF_INDUCTOR: hf_inductor_footprint_expand,
-  # CAT_SMD_HIGH_EFFICIENCY_DIODE: high_efficiency_diode_footprint_expand,
+  CAT_SMD_HIGH_EFFICIENCY_DIODE: diode_footprint_expand,
   # CAT_SMD_HIGH_PRESISION_RESISTOR: high_presision_resistor_footprint_expand,
   # CAT_SMD_HIGH_SPEED_BROADBAND_OP_AMP: high_speed_broadband_op_amp_footprint_expand,
   # CAT_SMD_HIGH_VOLTAGE_RESISTOR: high_voltage_resistor_footprint_expand,
   # CAT_SMD_I_O_EXPANDER: i_o_expander_footprint_expand,
   # CAT_SMD_IGBT_DRIVE: igbt_drive_footprint_expand,
   # CAT_SMD_IGBT_TUBE: igbt_tube_footprint_expand,
-  # CAT_SMD_INDUCTOR: inductor_footprint_expand,
+
   # CAT_SMD_INFRARED_EMISSION_TUBE: infrared_emission_tube_footprint_expand,
   # CAT_SMD_INFRARED_RECEIVER_TUBE: infrared_receiver_tube_footprint_expand,
   # CAT_SMD_INFRARED_SENSOR: infrared_sensor_footprint_expand,
@@ -230,7 +146,7 @@ footprint_lookup_dic={
   # CAT_SMD_RF_SWITCH: rf_switch_footprint_expand,
   # CAT_SMD_RS232_CHIP: rs232_chip_footprint_expand,
   # CAT_SMD_RS485_RS422_CHIP: rs485_rs422_chip_footprint_expand,
-  # CAT_SMD_SCHOTTKY_DIODE: schottky_diode_footprint_expand,
+  CAT_SMD_SCHOTTKY_DIODE: diode_footprint_expand,
   # CAT_SMD_SDRAM_MEMORY: sdram_memory_footprint_expand,
   # CAT_SMD_SECOND_CLASSIFICATION_OF_ENGINEERING_DEPARTMENT_DATA: second_classification_of_engineering_department_data_footprint_expand,
   # CAT_SMD_SECURITY_VERIFICATION_ENCRYPTION_CHIP: security_verification_encryption_chip_footprint_expand,
@@ -249,7 +165,7 @@ footprint_lookup_dic={
   # CAT_SMD_SPECIAL_FUNCTION_AMPLIFIER: special_function_amplifier_footprint_expand,
   # CAT_SMD_SPECIAL_FUNCTION_DRIVEN: special_function_driven_footprint_expand,
   # CAT_SMD_SRAM_MEMORY: sram_memory_footprint_expand,
-  # CAT_SMD_SWITCHING_DIODE: switching_diode_footprint_expand,
+  CAT_SMD_SWITCHING_DIODE: diode_footprint_expand,
   # CAT_SMD_SWITCHING_POWER_CHIP: switching_power_chip_footprint_expand,
   # CAT_SMD_TACT_SWITCH: tact_switch_footprint_expand,
   # CAT_SMD_TANTALUM_CAPACITOR: tantalum_capacitor_footprint_expand,
@@ -263,8 +179,8 @@ footprint_lookup_dic={
   # CAT_SMD_TRIGGER: trigger_footprint_expand,
   # CAT_SMD_TRIODE_DIGITAL_TRIODE: triode_digital_triode_footprint_expand,
   # CAT_SMD_TRIODE: triode_footprint_expand,
-  # CAT_SMD_TVS_DIODE: tvs_diode_footprint_expand,
-  # CAT_SMD_ULTRA_FAST_RECOVERY_DIODE: ultra_fast_recovery_diode_footprint_expand,
+  CAT_SMD_TVS_DIODE: diode_footprint_expand,
+  CAT_SMD_ULTRA_FAST_RECOVERY_DIODE: diode_footprint_expand,
   # CAT_SMD_USB_CHIP: usb_chip_footprint_expand,
   # CAT_SMD_VARICAP_DIODE: varicap_diode_footprint_expand,
   # CAT_SMD_VARISTOR: varistor_footprint_expand,
@@ -273,7 +189,7 @@ footprint_lookup_dic={
   # CAT_SMD_VOLTAGE_COMPARATOR: voltage_comparator_footprint_expand,
   # CAT_SMD_VOLTAGE_REFERENCE_CHIP: voltage_reference_chip_footprint_expand,
   # CAT_SMD_WIRELESS_TRANSCEIVER_CHIP: wireless_transceiver_chip_footprint_expand,
-  # CAT_SMD_ZENER_DIODE: zener_diode_footprint_expand,
+  CAT_SMD_ZENER_DIODE: diode_footprint_expand,
 }
 
 def footprint_lookup(str_in, component_category):
@@ -282,5 +198,14 @@ def footprint_lookup(str_in, component_category):
     return temp_dic[str_in]
   except Exception as e:
     print('please add entry in footprint_lookup', __file__)
+    raise e
+    sys.exit(1)
+
+def footprint_list_lookup(str_in, component_category):
+  try:
+    temp_dic =  foootprint_list_lookup_dic[component_category]
+    return ' '+temp_dic[str_in]
+  except Exception as e:
+    print('please add entry in footprint_list_lookup', __file__)
     raise e
     sys.exit(1)
