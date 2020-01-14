@@ -3,6 +3,8 @@
 import os,sys,re
 from pprint import pprint
 
+from category import *
+
 COL_NUM_COMPONENT_ID=0
 COL_NUM_COMPONENT_NAME=1
 COL_NUM_COMPONENT_CATEGORY=2
@@ -31,7 +33,8 @@ COL_LIST_COMPONET_FIELD=[
 CONST_LIB_TYPE_EXTENDED = '扩展库'
 CONST_LIB_TYPE_BASIC='基础库'
 
-
-
-# COMPONENT_CATEGORY
-CAT_SMD_CAPACITOR = '电容_贴片电容'
+convert_list = [
+  [CAT_SMD_CAPACITOR, 'output/sz_jlc_capacitor.lib', 'output/sz_jlc_capacitor.dcm'],
+  [CAT_SMD_RESISTOR, 'output/sz_jlc_resistor.lib', 'output/sz_jlc_resistor.dcm'],
+  [CAT_SMD_INDUCTOR, 'output/sz_jlc_inductor.lib', 'output/sz_jlc_inductor.dcm'],
+]

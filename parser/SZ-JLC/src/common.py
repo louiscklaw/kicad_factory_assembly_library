@@ -11,6 +11,7 @@ from config import *
 from template import *
 from draw_symbol import *
 from footprint import *
+from designation import *
 
 def massage_component_name(str_in):
   str_in = str_in.replace(' ',',')
@@ -39,33 +40,12 @@ def gen_lib(cell_values):
         SOLDER_JOINT = component_solder_joint,
         MANU = component_manufacturer,
         FOOTPRINT_LIST = footprint_list_lookup(component_package, component_category),
-        LIB_DRAW = CAPACITOR_SYMBOL,
-        LIB_TYPE = component_lib_type
+        LIB_DRAW = lookup_drawing(component_category),
+        LIB_TYPE = component_lib_type,
+        COMPONENT_DESIGNATION = lookup_component_designation(component_category)
       )
     )
   return output_list
-
-def footprint_lookup(str_in, component_category):
-  try:
-    if component_category == CAT_SMD_CAPACITOR:
-      return capacitor_footprint_expand[str_in]
-    else:
-      print('component_category not found,',component_category)
-
-  except Exception as e:
-    raise e
-    sys.exit(1)
-
-def footprint_list_lookup(str_in, component_category):
-  try:
-    if component_category == CAT_SMD_CAPACITOR:
-      return ' '+capacitor_footprint_list_expand[str_in]
-    else:
-      print('component_category not found,',component_category)
-
-  except Exception as e:
-    raise e
-    sys.exit(1)
 
 def gen_dcm(cell_values):
   output_list=[]
