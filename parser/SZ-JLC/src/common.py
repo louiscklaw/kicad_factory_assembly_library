@@ -9,6 +9,8 @@ import xlrd
 from constant import *
 from config import *
 from template import *
+from draw_symbol import *
+from footprint import *
 
 def massage_component_name(str_in):
   str_in = str_in.replace(' ',',')
@@ -18,43 +20,68 @@ def gen_lib(cell_values):
   output_list=[]
 
   for cell_value in cell_values:
-    component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
-    component_name = massage_component_name(cell_value[COL_NUM_COMPONENT_NAME])
     component_id = cell_value[COL_NUM_COMPONENT_ID]
+    component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
+    component_name = massage_component_name(cell_value[COL_NUM_COMPONENT_NAME]+','+component_id)
     component_category = cell_value[COL_NUM_COMPONENT_CATEGORY]
     component_solder_joint = cell_value[COL_NUM_COMPONENT_SOLDER_PAD]
     component_manufacturer = cell_value[COL_NUM_COMPONENT_MANUFACTURER]
+    component_lib_type = cell_value[COL_NUM_COMPONENT_LIB_TYPE]
 
     output_list.append(
       lib_template.substitute(
-        C_VALUE_SIZE = component_name,
-        C_DEFAULT_FOOTPRINT = component_package,
+        COMPONENT_NAME = component_name,
+        C_DEFAULT_FOOTPRINT = footprint_lookup(component_package, component_category),
         LCSC_PART = component_id,
         MFR_PART = component_name,
         SEC_CAT = component_category,
         PACKAGE = component_package,
         SOLDER_JOINT = component_solder_joint,
         MANU = component_manufacturer,
-        COMPONENT_FOOTPRINT = component_package,
+        FOOTPRINT_LIST = footprint_list_lookup(component_package, component_category),
+        LIB_DRAW = CAPACITOR_SYMBOL,
+        LIB_TYPE = component_lib_type
       )
     )
   return output_list
+
+def footprint_lookup(str_in, component_category):
+  try:
+    if component_category == CAT_SMD_CAPACITOR:
+      return ' '+capacitor_footprint_expand[str_in]
+    else:
+      print('component_category not found,',component_category)
+
+  except Exception as e:
+    raise e
+    sys.exit(1)
+
+def footprint_list_lookup(str_in, component_category):
+  try:
+    if component_category == CAT_SMD_CAPACITOR:
+      return ' '+capacitor_footprint_list_expand[str_in]
+    else:
+      print('component_category not found,',component_category)
+
+  except Exception as e:
+    raise e
+    sys.exit(1)
 
 def gen_dcm(cell_values):
   output_list=[]
 
   for cell_value in cell_values:
-    component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
-    component_name = massage_component_name(cell_value[COL_NUM_COMPONENT_NAME])
     component_id = cell_value[COL_NUM_COMPONENT_ID]
+    component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
+    component_name = massage_component_name(cell_value[COL_NUM_COMPONENT_NAME]+','+component_id)
     component_category = cell_value[COL_NUM_COMPONENT_CATEGORY]
     component_solder_joint = cell_value[COL_NUM_COMPONENT_SOLDER_PAD]
     component_manufacturer = cell_value[COL_NUM_COMPONENT_MANUFACTURER]
 
     output_list.append(
       dcm_template.substitute(
-        C_VALUE_SIZE = component_name,
-        C_DEFAULT_FOOTPRINT = component_package,
+        COMPONENT_NAME = component_name,
+        C_DEFAULT_FOOTPRINT = footprint_lookup(component_package, component_category),
         LCSC_PART = component_id,
         MFR_PART = component_name,
         SEC_CAT = component_category,
