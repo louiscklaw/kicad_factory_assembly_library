@@ -37,5 +37,6 @@ convert_list = [
   [CAT_SMD_CAPACITOR, 'output/sz_jlc_capacitor.lib', 'output/sz_jlc_capacitor.dcm'],
   [CAT_SMD_RESISTOR, 'output/sz_jlc_resistor.lib', 'output/sz_jlc_resistor.dcm'],
   [CAT_SMD_INDUCTOR, 'output/sz_jlc_inductor.lib', 'output/sz_jlc_inductor.dcm'],
+  [CAT_SMD_LED, 'output/sz_jlc_led.lib', 'output/sz_jlc_led.dcm'],
   [CAT_SMD_DIODE, 'output/sz_jlc_diode.lib', 'output/sz_jlc_diode.dcm'],
 ]

@@ -71,17 +71,57 @@ inductor_footprint_list_expand = {
   '2512':'*2512*',
 }
 
+led_footprint_expand={
+  'LED_0603':'w_smd_inductors:r_0402',
+}
+
+led_footprint_list_expand = {
+  'LED_0603':'*0402*',
+}
+
+
+diode_footprint_expand={
+  '0402':'w_smd_inductors:r_0402',
+  '0603_x4':'default_footprint_0603_x4',
+  '0603':'w_smd_inductors:r_0603',
+  '0805':'w_smd_inductors:r_0805',
+  '1206':'w_smd_inductors:r_1206',
+  '1210':'w_smd_inductors:r_1210',
+  '1812':'w_smd_inductors:r_1812',
+  '2010':'w_smd_inductors:r_2010',
+  '2512':'w_smd_inductors:r_2512',
+  'SMAF':'SMAF'
+}
+
+diode_footprint_list_expand = {
+  '0402':'*0402*',
+  '0603_x4':'default_footprint_list_0603_x4',
+  '0603':'*0603*',
+  '0805':'*0805*',
+  '1206':'*1206*',
+  '1210':'*1210*',
+  '1812':'*1812*',
+  '2010':'*2010*',
+  '2512':'*2512*',
+  'SMAF':'SMAF'
+}
+
+
 footprint_lookup_dic={
   CAT_SMD_CAPACITOR: capacitor_footprint_expand,
   CAT_SMD_RESISTOR: resistor_footprint_expand,
-  CAT_SMD_INDUCTOR: inductor_footprint_expand
+  CAT_SMD_INDUCTOR: inductor_footprint_expand,
+  CAT_SMD_LED: led_footprint_expand,
+  CAT_SMD_DIODE: diode_footprint_expand
 
 }
 
 foootprint_list_lookup_dic = {
   CAT_SMD_CAPACITOR: capacitor_footprint_list_expand,
   CAT_SMD_RESISTOR: resistor_footprint_list_expand,
-  CAT_SMD_INDUCTOR: inductor_footprint_list_expand
+  CAT_SMD_INDUCTOR: inductor_footprint_list_expand,
+  CAT_SMD_LED: led_footprint_list_expand,
+  CAT_SMD_DIODE: diode_footprint_list_expand
 }
 
 def footprint_lookup(str_in, component_category):

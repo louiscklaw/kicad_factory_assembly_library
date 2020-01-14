@@ -54,9 +54,11 @@ CAT_SMD_CHIPS='专用传感器'
 CAT_SMD_CHIPS='串行接口'
 
 # CAT_DIODE
+CAT_SMD_LED='二极管_发光二极管'
+CAT_SMD_DIODE='二极管_通用二极管'
+
 CAT_SMD_CHIPS='二极管_ESD二极管'
 CAT_SMD_CHIPS='二极管_TVS二极管'
-CAT_SMD_LED='二极管_发光二极管'
 CAT_SMD_CHIPS='二极管_变容二极管'
 CAT_SMD_CHIPS='二极管_开关二极管'
 CAT_SMD_CHIPS='二极管_快恢复二极管'
@@ -65,7 +67,6 @@ CAT_SMD_CHIPS='二极管_整流桥'
 CAT_SMD_CHIPS='二极管_稳压二极管'
 CAT_SMD_CHIPS='二极管_肖特基二极管'
 CAT_SMD_CHIPS='二极管_超快恢复二极管'
-CAT_SMD_CHIPS='二极管_通用二极管'
 CAT_SMD_CHIPS='二极管_雪崩二极管'
 CAT_SMD_CHIPS='二极管_高效率二极管'
 
