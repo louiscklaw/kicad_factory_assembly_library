@@ -14,19 +14,21 @@ print('input xls file: ', xls_file_input)
 
 cell_values = sorted(get_all_columns(xls_file_input)[1:])
 
-for convert_item in convert_list:
-  # debug start
-  # list_idx, list_name, list_comp_type, list_footprint, list_pad, list_manu, list_lib_type = zip(*list_component)
-  # print(set(list_footprint))
-  # sys.exit(1)
-  # debug end
-
+# TODO: resume me
+# for convert_item in convert_list:
+for convert_item in [[CAT_SMD_ESD_DIODE,  'output/sz_jlc_esd_diode.lib', 'output/sz_jlc_esd_diode.dcm']]:
   filter_component_category = convert_item[0]
   lib_filename = convert_item[1]
   dcm_filename = convert_item[2]
 
   list_component = filter_components_by_category(cell_values, filter_component_category)
-  list_component = list_component[1:3]
+  # list_component = list_component[1:3]
+
+  # debug start
+  # list_idx, list_name, list_comp_type, list_footprint, list_pad, list_manu, list_lib_type = zip(*list_component)
+  # print(set(list_footprint))
+  # sys.exit(1)
+  # debug end
 
   lib_text = gen_lib(list_component)
   dcm_text = gen_dcm(list_component)

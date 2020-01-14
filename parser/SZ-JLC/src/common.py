@@ -10,8 +10,10 @@ from constant import *
 from config import *
 from template import *
 from draw_symbol import *
-from footprint import *
 from designation import *
+
+from footprint import *
+from footprint_list import *
 
 def massage_component_name(str_in):
   str_in = str_in.replace(' ',',')

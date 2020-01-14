@@ -1,14 +1,103 @@
 #!/usr/bin/env python3
 
-import os,sys, re
-from constant import *
+import os,sys,re
+from category import *
 
-component_designation={
-  CAT_SMD_CAPACITOR: 'C',
-  CAT_SMD_RESISTOR: 'R',
-  CAT_SMD_INDUCTOR: 'L',
-  CAT_SMD_LED: 'D',
-  CAT_SMD_DIODE: 'D',
+capacitor_footprint_list_expand = {
+  '0402':'*0402*',
+  '0603_x4':'default_footprint_list_0603_x4',
+  '0603':'*0603*',
+  '0805':'*0805*',
+  '1206':'*1206*',
+  '1210':'*1210*',
+  '1812':'*1812*'
+}
+
+resistor_footprint_list_expand = {
+  '0402':'*0402*',
+  '0603_x4':'default_footprint_list_0603_x4',
+  '0603':'*0603*',
+  '0805':'*0805*',
+  '1206':'*1206*',
+  '1210':'*1210*',
+  '1812':'*1812*',
+  '2010':'*2010*',
+  '2512':'*2512*',
+}
+
+inductor_footprint_list_expand = {
+  '0402':'*0402*',
+  '0603_x4':'default_footprint_list_0603_x4',
+  '0603':'*0603*',
+  '0805':'*0805*',
+  '1206':'*1206*',
+  '1210':'*1210*',
+  '1812':'*1812*',
+  '2010':'*2010*',
+  '2512':'*2512*',
+}
+
+led_footprint_list_expand = {
+  'LED_0603':'*0402*',
+}
+
+diode_footprint_list_expand = {
+  '0402':'*0402*',
+  '0603_x4':'default_footprint_list_0603_x4',
+  '0603':'*0603*',
+  '0805':'*0805*',
+  '1206':'*1206*',
+  '1210':'*1210*',
+  '1812':'*1812*',
+  '2010':'*2010*',
+  '2512':'*2512*',
+  'SMAF':'SMAF',
+  '0402':'0402',
+  '0603':'0603',
+  'DFN-10_1.0x2.5x0.5P':'DFN-10_1.0x2.5x0.5P',
+  'LED_0603':'LED_0603',
+  'SC-70-5':'SC-70-5',
+  'SC-74-6':'SC-74-6',
+  'SLP1006P2':'SLP1006P2',
+  'SMB,DO-214AA':'SMB,DO-214AA',
+  'SMD-DFN1006':'SMD-DFN1006',
+  'SOD-123':'SOD-123',
+  'SOD-123F':'SOD-123F',
+  'SOD-123FL':'SOD-123FL',
+  'SOD-323':'SOD-323',
+  'SOD-323F':'SOD-323F',
+  'SOD-523':'SOD-523',
+  'SOD-882':'SOD-882',
+  'SOD-962':'SOD-962',
+  'SOIC-8_3.9x4.9x1.27P':'SOIC-8_3.9x4.9x1.27P',
+  'SOP-8_3.9x4.9x1.27P':'SOP-8_3.9x4.9x1.27P',
+  'SOT-143':'SOT-143',
+  'SOT-23-3':'SOT-23-3',
+  'SOT-23-3L':'SOT-23-3L',
+  'SOT-23-5':'SOT-23-5',
+  'SOT-23-6L':'SOT-23-6L',
+  'SOT-323-3':'SOT-323-3',
+  'SOT-353':'SOT-353',
+  'SOT-363':'SOT-363',
+  'SOT-523':'SOT-523',
+  'SOT-553':'SOT-553',
+  'SOT-563':'SOT-563',
+  'SOT-666':'SOT-666',
+  'TSOP-5_1.5x3.0x0.95P':'TSOP-5_1.5x3.0x0.95P',
+  'TSOP-6_1.5x3.0x0.95P':'TSOP-6_1.5x3.0x0.95P',
+  'uDFN-10_1.0x2.5x0.5P':'uDFN-10_1.0x2.5x0.5P',
+  'uDFN-14_1.4x3.5x0.5P':'uDFN-14_1.4x3.5x0.5P',
+  'USON-10_1.0x2.5x0.5P':'USON-10_1.0x2.5x0.5P',
+}
+
+
+
+foootprint_list_lookup_dic = {
+  CAT_SMD_CAPACITOR: capacitor_footprint_list_expand,
+  CAT_SMD_RESISTOR: resistor_footprint_list_expand,
+  CAT_SMD_INDUCTOR: inductor_footprint_list_expand,
+  CAT_SMD_LED: led_footprint_list_expand,
+  CAT_SMD_DIODE: diode_footprint_list_expand,
 
   # CAT_SMD_ACTIVE_FILTER: active_filter_footprint_list_expand,
   # CAT_SMD_AMBIENT_LIGHT_SENSOR: ambient_light_sensor_footprint_list_expand,
@@ -58,7 +147,7 @@ component_designation={
   # CAT_SMD_ELECTROLYTIC_CAPACITORS: electrolytic_capacitors_footprint_list_expand,
   # CAT_SMD_EMI_RFI_FILTERS_LC_RC_NETWORKS: emi_rfi_filters_lc_rc_networks_footprint_list_expand,
   # CAT_SMD_EPROM_MEMORY: eprom_memory_footprint_list_expand,
-  CAT_SMD_ESD_DIODE: 'D',
+  CAT_SMD_ESD_DIODE: diode_footprint_list_expand,
   # CAT_SMD_ETHERNET_CHIP: ethernet_chip_footprint_list_expand,
   # CAT_SMD_FAST_RECOVERY_DIODE: fast_recovery_diode_footprint_list_expand,
   # CAT_SMD_FAST_RECOVERY_DIODE: fast_recovery_diode_footprint_list_expand,
@@ -186,8 +275,13 @@ component_designation={
   # CAT_SMD_VOLTAGE_REFERENCE_CHIP: voltage_reference_chip_footprint_list_expand,
   # CAT_SMD_WIRELESS_TRANSCEIVER_CHIP: wireless_transceiver_chip_footprint_list_expand,
   # CAT_SMD_ZENER_DIODE: zener_diode_footprint_list_expand,
-
 }
 
-def lookup_component_designation(str_in):
-  return component_designation[str_in]
+def footprint_list_lookup(str_in, component_category):
+  try:
+    temp_dic =  foootprint_list_lookup_dic[component_category]
+    return ' '+temp_dic[str_in]
+  except Exception as e:
+    print('please add entry in footprint_list_lookup', __file__)
+    raise e
+    sys.exit(1)
