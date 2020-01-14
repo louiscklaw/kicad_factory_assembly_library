@@ -4,7 +4,14 @@ import os,sys,re
 from pprint import pprint
 
 # COMPONENT_CATEGORY
+
+# CAT_CAPACITOR
 CAT_SMD_CAPACITOR = '电容_贴片电容'
+CAT_SMD_CHIPS='电容_固态电解电容'
+CAT_SMD_CHIPS='电容_氧化铌电容'
+CAT_SMD_CHIPS='电容_贴片电解电容'
+CAT_SMD_CHIPS='电容_钽电容'
+
 CAT_SMD_CHIPS='CAN芯片'
 CAT_SMD_CHIPS='CPLD/FPGA芯片'
 CAT_SMD_CHIPS='DC-DC芯片'
@@ -45,9 +52,11 @@ CAT_SMD_CHIPS='三极管'
 CAT_SMD_CHIPS='专业电源管理 (PMIC)'
 CAT_SMD_CHIPS='专用传感器'
 CAT_SMD_CHIPS='串行接口'
+
+# CAT_DIODE
 CAT_SMD_CHIPS='二极管_ESD二极管'
 CAT_SMD_CHIPS='二极管_TVS二极管'
-CAT_SMD_CHIPS='二极管_发光二极管'
+CAT_SMD_LED='二极管_发光二极管'
 CAT_SMD_CHIPS='二极管_变容二极管'
 CAT_SMD_CHIPS='二极管_开关二极管'
 CAT_SMD_CHIPS='二极管_快恢复二极管'
@@ -59,6 +68,7 @@ CAT_SMD_CHIPS='二极管_超快恢复二极管'
 CAT_SMD_CHIPS='二极管_通用二极管'
 CAT_SMD_CHIPS='二极管_雪崩二极管'
 CAT_SMD_CHIPS='二极管_高效率二极管'
+
 CAT_SMD_CHIPS='以太网芯片'
 CAT_SMD_CHIPS='仪表运放'
 CAT_SMD_CHIPS='传感器接口芯片'
@@ -92,6 +102,8 @@ CAT_SMD_CHIPS='开关电源芯片'
 CAT_SMD_CHIPS='微控制器(MCU)'
 CAT_SMD_CHIPS='快恢复二极管'
 CAT_SMD_CHIPS='恒流二极管'
+
+# CAT_CONNECTOR
 CAT_SMD_CHIPS='接口-LIN收发器'
 CAT_SMD_CHIPS='接口-专用'
 CAT_SMD_CHIPS='接口-控制器'
@@ -117,10 +129,7 @@ CAT_SMD_CHIPS='特殊功能驱动'
 CAT_SMD_CHIPS='环境光传感器'
 CAT_SMD_CHIPS='电压基准芯片'
 CAT_SMD_CHIPS='电压比较器'
-CAT_SMD_CHIPS='电容_固态电解电容'
-CAT_SMD_CHIPS='电容_氧化铌电容'
-CAT_SMD_CHIPS='电容_贴片电解电容'
-CAT_SMD_CHIPS='电容_钽电容'
+
 CAT_SMD_CHIPS='电平转换器、移位器'
 
 # CAT_INDUCTOR
