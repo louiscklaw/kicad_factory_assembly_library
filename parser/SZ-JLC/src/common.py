@@ -11,6 +11,7 @@ from config import *
 from template import *
 from draw_symbol import *
 from designation import *
+from translate import *
 
 from footprint import *
 # from footprint_list import *
@@ -20,14 +21,26 @@ def massage_component_name(str_in):
   str_in = str_in.replace(' ',',')
   return str_in
 
+def translate_component_name(str_in):
+  output = str_in
+  for chi_text, eng_text in component_name_dic.items():
+    output = output.replace(chi_text,eng_text)
+
+  return output
+
 def gen_lib(cell_values, footprint_in, footprint_list_in):
   output_list=[]
 
   for cell_value in cell_values:
     try:
+      print(translate_component_name('翠绿'))
+      sys.exit()
+
+      component_name = translate_component_name(cell_value[COL_NUM_COMPONENT_NAME])
+
       component_id = cell_value[COL_NUM_COMPONENT_ID]
       component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
-      component_name = massage_component_name(cell_value[COL_NUM_COMPONENT_NAME]+','+component_package+','+component_id)
+      component_name = massage_component_name( component_name +','+component_package+','+component_id)
       component_category = cell_value[COL_NUM_COMPONENT_CATEGORY]
       component_solder_joint = cell_value[COL_NUM_COMPONENT_SOLDER_PAD]
       component_manufacturer = cell_value[COL_NUM_COMPONENT_MANUFACTURER]
