@@ -6,7 +6,7 @@ from category import *
 from all_footprint import *
 
 ldo_low_dropout_linear_regulation_footprint_expand={
-  'SOT-223':'*SOT*223*'
+  'SOT-223':'footprint-lib:AMS1117_SOT-223'
 }
 
 
