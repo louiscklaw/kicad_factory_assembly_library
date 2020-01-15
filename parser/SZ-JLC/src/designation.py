@@ -9,6 +9,7 @@ component_designation={
   CAT_SMD_INDUCTOR: 'L',
   CAT_SMD_LED: 'D',
   CAT_SMD_DIODE: 'D',
+  CAT_SMD_LDO_LOW_DROPOUT_LINEAR_REGULATION: "U",
 
   # CAT_SMD_ACTIVE_FILTER: active_filter_footprint_list_expand,
   # CAT_SMD_AMBIENT_LIGHT_SENSOR: ambient_light_sensor_footprint_list_expand,
@@ -92,7 +93,7 @@ component_designation={
   # CAT_SMD_JFET_JUNCTION_FIELD_EFFECT_TRANSISTOR: jfet_junction_field_effect_transistor_footprint_list_expand,
   # CAT_SMD_LATCHES: latches_footprint_list_expand,
   # CAT_SMD_LCD_DRIVER: lcd_driver_footprint_list_expand,
-  # CAT_SMD_LDO_LOW_DROPOUT_LINEAR_REGULATION: ldo_low_dropout_linear_regulation_footprint_list_expand,
+
   # CAT_SMD_LED_DRIVE: led_drive_footprint_list_expand,
   # CAT_SMD_LED_RESISTOR: led_resistor_footprint_list_expand,
   # CAT_SMD_LED: led_footprint_list_expand,

@@ -19,3 +19,13 @@ cd parser/SZ-JLC
 cd ../..
 
 echo 'test done'
+
+echo 'generate sym-table'
+
+cd parser/SZ-JLC
+
+python3 src/gen_sym_table.py
+
+cd ../..
+
+echo 'generate sym-table done'
