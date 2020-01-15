@@ -9,7 +9,7 @@ ldo_low_dropout_linear_regulation_footprint_expand={
   'SOT-223':'*SOT*223*'
 }
 
-active_filter_footprint_expand={}
+accelerometer_footprint_expand={}
 active_filter_footprint_expand={}
 ambient_light_sensor_footprint_expand={}
 amplifier_footprint_expand={}

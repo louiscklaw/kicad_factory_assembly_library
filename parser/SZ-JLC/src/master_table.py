@@ -24,9 +24,9 @@ master_table = [
   # [CAT_SMD_MCU_MONITORING_CHIP,  'output/sz_jlc_mcu_monitoring_chip.lib', 'output/sz_jlc_mcu_monitoring_chip.dcm'],
   [CAT_SMD_MICROCONTROLLER_MCU,  'output/sz_jlc_microcontroller_mcu.lib', 'output/sz_jlc_microcontroller_mcu.dcm', microcontroller_mcu_footprint_expand, microcontroller_mcu_footprint_list_expand, SMD_MICROCONTROLLER_MCU_SYMBOL],
 
-  # [CAT_SMD_ACCELEROMETER,  'output/sz_jlc_accelerometer.lib', 'output/sz_jlc_accelerometer.dcm'],
-  # [CAT_SMD_ACTIVE_FILTER,  'output/sz_jlc_active_filter.lib', 'output/sz_jlc_active_filter.dcm'],
-  # [CAT_SMD_AMBIENT_LIGHT_SENSOR,  'output/sz_jlc_ambient_light_sensor.lib', 'output/sz_jlc_ambient_light_sensor.dcm'],
+  [CAT_SMD_ACCELEROMETER,  'output/sz_jlc_accelerometer.lib', 'output/sz_jlc_accelerometer.dcm', accelerometer_footprint_expand, accelerometer_footprint_list_expand, SMD_ACCELEROMETER_SYMBOL],
+  [CAT_SMD_ACTIVE_FILTER,  'output/sz_jlc_active_filter.lib', 'output/sz_jlc_active_filter.dcm', active_filter_footprint_expand, active_filter_footprint_list_expand, SMD_ACTIVE_FILTER_SYMBOL],
+  [CAT_SMD_AMBIENT_LIGHT_SENSOR,  'output/sz_jlc_ambient_light_sensor.lib', 'output/sz_jlc_ambient_light_sensor.dcm', ambient_light_sensor_footprint_expand, ambient_light_sensor_footprint_list_expand, SMD_AMBIENT_LIGHT_SENSOR_SYMBOL],
   # [CAT_SMD_AMPLIFIER,  'output/sz_jlc_amplifier.lib', 'output/sz_jlc_amplifier.dcm'],
   # [CAT_SMD_ANALOG_SWITCH_CHIP,  'output/sz_jlc_analog_switch_chip.lib', 'output/sz_jlc_analog_switch_chip.dcm'],
   # [CAT_SMD_ANALOG_TO_DIGITAL_CONVERSION_CHIP,  'output/sz_jlc_analog_to_digital_conversion_chip.lib', 'output/sz_jlc_analog_to_digital_conversion_chip.dcm'],

@@ -8,7 +8,7 @@ from all_footprint_list import *
 ldo_low_dropout_linear_regulation_footprint_list_expand={
   'SOT-223':'SOT?223*TabPin2*'
 }
-active_filter_footprint_list_expand={}
+accelerometer_footprint_list_expand={}
 active_filter_footprint_list_expand={}
 ambient_light_sensor_footprint_list_expand={}
 amplifier_footprint_list_expand={}
