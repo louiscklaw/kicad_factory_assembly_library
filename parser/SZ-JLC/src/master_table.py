@@ -14,7 +14,7 @@ master_table = [
   [CAT_SMD_ESD_DIODE,  'output/sz_jlc_esd_diode.lib', 'output/sz_jlc_esd_diode.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_DIODE_SYMBOL],
   [CAT_SMD_ZENER_DIODE,  'output/sz_jlc_zener_diode.lib', 'output/sz_jlc_zener_diode.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_DIODE_SYMBOL],
   [CAT_SMD_AVALANCHE_DIODE,  'output/sz_jlc_avalanche_diode.lib', 'output/sz_jlc_avalanche_diode.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_DIODE_SYMBOL],
-  [CAT_SMD_LED, 'output/sz_jlc_led.lib', 'output/sz_jlc_led.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_DIODE_SYMBOL],
+  [CAT_SMD_LED, 'output/sz_jlc_led.lib', 'output/sz_jlc_led.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_LED_SYMBOL],
 
   [CAT_SMD_INDUCTOR, 'output/sz_jlc_inductor.lib', 'output/sz_jlc_inductor.dcm', inductor_footprint_expand, inductor_footprint_list_expand, SMD_INDUCTOR_SYMBOL],
   [CAT_SMD_RESISTOR, 'output/sz_jlc_resistor.lib', 'output/sz_jlc_resistor.dcm', resistor_footprint_expand, resistor_footprint_list_expand, SMD_RESISTOR_SYMBOL],
