@@ -31,6 +31,8 @@ for convert_item in convert_list:
     # sys.exit(1)
     # debug end
 
+    print(filter_component_category, len(list_component), 'count')
+
     lib_text = gen_lib(list_component)
     dcm_text = gen_dcm(list_component)
 

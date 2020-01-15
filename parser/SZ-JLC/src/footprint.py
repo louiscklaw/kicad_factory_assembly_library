@@ -195,7 +195,10 @@ def footprint_lookup(str_in, component_category):
   try:
     temp_dic =  footprint_lookup_dic[component_category][0]
     default_dic = default_footprint_expand
-    lookup_dic = {**temp_dic, **default_dic}
+
+    # NOTE: sequence is a concern, place most important at the end
+    lookup_dic = {**default_dic, **temp_dic}
+
     return lookup_dic[str_in]
   except Exception as e:
     print('please add entry in footprint_lookup', __file__)
@@ -206,7 +209,10 @@ def footprint_list_lookup(str_in, component_category):
   try:
     temp_dic =  footprint_lookup_dic[component_category][1]
     default_dic = default_footprint_list_expand
-    lookup_dic = {**temp_dic, **default_dic}
+
+    # NOTE: sequence is a concern, place most important at the end
+    lookup_dic = {**default_dic, **temp_dic}
+
     return ' '+lookup_dic[str_in]
   except Exception as e:
     print('please add entry in footprint_list_lookup', __file__)

@@ -35,12 +35,12 @@ CONST_LIB_TYPE_BASIC='基础库'
 
 convert_list = [
 
-  [CAT_SMD_CAPACITOR, 'output/sz_jlc_capacitor.lib', 'output/sz_jlc_capacitor.dcm'],
-  [CAT_SMD_DIODE, 'output/sz_jlc_diode.lib', 'output/sz_jlc_diode.dcm'],
-  [CAT_SMD_ESD_DIODE,  'output/sz_jlc_esd_diode.lib', 'output/sz_jlc_esd_diode.dcm'],
-  [CAT_SMD_INDUCTOR, 'output/sz_jlc_inductor.lib', 'output/sz_jlc_inductor.dcm'],
-  [CAT_SMD_LED, 'output/sz_jlc_led.lib', 'output/sz_jlc_led.dcm'],
-  [CAT_SMD_RESISTOR, 'output/sz_jlc_resistor.lib', 'output/sz_jlc_resistor.dcm'],
+  # [CAT_SMD_CAPACITOR, 'output/sz_jlc_capacitor.lib', 'output/sz_jlc_capacitor.dcm'],
+  # [CAT_SMD_DIODE, 'output/sz_jlc_diode.lib', 'output/sz_jlc_diode.dcm'],
+  # [CAT_SMD_ESD_DIODE,  'output/sz_jlc_esd_diode.lib', 'output/sz_jlc_esd_diode.dcm'],
+  # [CAT_SMD_INDUCTOR, 'output/sz_jlc_inductor.lib', 'output/sz_jlc_inductor.dcm'],
+  # [CAT_SMD_LED, 'output/sz_jlc_led.lib', 'output/sz_jlc_led.dcm'],
+  # [CAT_SMD_RESISTOR, 'output/sz_jlc_resistor.lib', 'output/sz_jlc_resistor.dcm'],
   [CAT_SMD_LDO_LOW_DROPOUT_LINEAR_REGULATION,  'output/sz_jlc_ldo_low_dropout_linear_regulation.lib', 'output/sz_jlc_ldo_low_dropout_linear_regulation.dcm'],
 
   # [CAT_SMD_ACCELEROMETER,  'output/sz_jlc_accelerometer.lib', 'output/sz_jlc_accelerometer.dcm'],

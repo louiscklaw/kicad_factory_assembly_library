@@ -5,7 +5,9 @@ from category import *
 
 from all_footprint import *
 
-ldo_low_dropout_linear_regulation_footprint_expand={}
+ldo_low_dropout_linear_regulation_footprint_expand={
+  'SOT-223':'*SOT*223*'
+}
 
 active_filter_footprint_expand={}
 active_filter_footprint_expand={}

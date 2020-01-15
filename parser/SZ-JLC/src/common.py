@@ -48,11 +48,12 @@ def gen_lib(cell_values):
           COMPONENT_DESIGNATION = lookup_component_designation(component_category)
         )
       )
-      return output_list
 
     except Exception as e:
       print('error occur during converting ,', cell_value)
       raise e
+
+  return output_list
 
 def gen_dcm(cell_values):
   output_list=[]

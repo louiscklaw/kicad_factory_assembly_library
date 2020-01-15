@@ -1,9 +1,3 @@
 (sym_lib_table
- (lib (name sz_jlc_capacitor.lib)(type Legacy)(uri /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/output/sz_jlc_capacitor.lib)(options "")(descr ""))
- (lib (name sz_jlc_diode.lib)(type Legacy)(uri /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/output/sz_jlc_diode.lib)(options "")(descr ""))
- (lib (name sz_jlc_esd_diode.lib)(type Legacy)(uri /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/output/sz_jlc_esd_diode.lib)(options "")(descr ""))
- (lib (name sz_jlc_inductor.lib)(type Legacy)(uri /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/output/sz_jlc_inductor.lib)(options "")(descr ""))
  (lib (name sz_jlc_ldo_low_dropout_linear_regulation.lib)(type Legacy)(uri /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/output/sz_jlc_ldo_low_dropout_linear_regulation.lib)(options "")(descr ""))
- (lib (name sz_jlc_led.lib)(type Legacy)(uri /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/output/sz_jlc_led.lib)(options "")(descr ""))
- (lib (name sz_jlc_resistor.lib)(type Legacy)(uri /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/output/sz_jlc_resistor.lib)(options "")(descr ""))
 )
