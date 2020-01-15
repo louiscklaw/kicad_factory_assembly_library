@@ -25,4 +25,10 @@ https://jlcpcb.com/smt-assembly
 - https://github.com/xtoolbox/lc_kicad_lib
 
 ### build:
+master:
+[![Build Status](https://travis-ci.org/louiscklaw/kicad_factory_assembly_library.svg?branch=master)](https://travis-ci.org/louiscklaw/kicad_factory_assembly_library)
+
+develop:
+[![Build Status](https://travis-ci.org/louiscklaw/kicad_factory_assembly_library.svg?branch=develop)](https://travis-ci.org/louiscklaw/kicad_factory_assembly_library)
+
 https://travis-ci.org/louiscklaw/kicad_factory_assembly_library
