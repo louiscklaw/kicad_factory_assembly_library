@@ -92,7 +92,7 @@ jfet_junction_field_effect_transistor_footprint_expand={}
 latches_footprint_expand={}
 lcd_driver_footprint_expand={}
 led_drive_footprint_expand={}
-led_footprint_expand={}
+
 led_resistor_footprint_expand={}
 level_shifter_shifter_footprint_expand={}
 linear_voltage_regulator_chip_footprint_expand={}
@@ -218,7 +218,43 @@ inductor_footprint_expand={
 }
 
 led_footprint_expand={
-  'LED_0603':'w_smd_inductors:r_0402',
+  '0805':'footprint-lib:LED_0805_2012Metric',
+  'LED_0.6x2.1':'',
+  'LED_0402':'footprint-lib:LED_0805_2012Metric',
+  'LED_0603':'w_smd_inductors:r_0603',
+  'LED_0805':'footprint-lib:LED_0805_2012Metric',
+  'LED_1.6x1.6x4P':'',
+  'LED_1206':'',
+  'LED_3528':'',
+  'LED-0805':'footprint-lib:LED_0805_2012Metric',
+  'LED-4_0805':'',
+  'LED-4_1.25x3.2x0.75P':'',
+  'LED-4_1.5x1.6x0.8P':'',
+  'LED-4_1.5x1.6x0.9P':'',
+  'LED-4_1.6x1.6x0.85P':'',
+  'LED-4_1.6x1.6x0.9P':'',
+  'LED-4_1010':'',
+  'LED-4_1206':'',
+  'LED-4_1515':'',
+  'LED-4_1921':'',
+  'LED-4_2.5x3x1.5P':'',
+  'LED-4_2.7x3.2x1.38P':'',
+  'LED-4_2.8x3.5x1.45P':'',
+  'LED-4_2020':'',
+  'LED-4_2121':'',
+  'LED-4_2727':'',
+  'LED-4_3.2x2.8x1.45P':'',
+  'LED-4_3528':'',
+  'LED-4_3535':'',
+  'LED-4_5050':'',
+  'LED-6_3535':'',
+  'LED-6_5050':'',
+  'LED-6_5060':'',
+  'SMD_5.0x5.0x1.6P':'',
+  'SMD-4_1.5x1.6x0.72P':'',
+  'SMD-4_2.8x3.2x1.5P':'',
+  'SMD-4_4x4x2.5P':'',
+  'SMD-6_5x5.4x1.6P':''
 }
 
 diode_footprint_expand={

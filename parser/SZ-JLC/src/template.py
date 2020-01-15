@@ -34,6 +34,7 @@ F7 "$PACKAGE" 0 -800 50 H I C CNN "Package"
 F8 "$SOLDER_JOINT" 0 -1100 50 H I C CNN "Solder Joint"
 F9 "$MANU" 0 -700 50 H I C CNN "Manufacturer"
 F10 "$LIB_TYPE" 0 -900 50 H I C CNN "Library Type"
+F11 "$EXCEL_TABLE_NAME" 0 -900 50 H I C CNN "Library Type"
 $$FPLIST
 $FOOTPRINT_LIST
 $$ENDFPLIST

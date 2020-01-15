@@ -23,8 +23,19 @@ def massage_component_name(str_in):
 
 def translate_component_name(str_in):
   output = str_in
+  replace_occur = False
   for chi_text, eng_text in component_name_dic.items():
-    output = output.replace(chi_text,eng_text)
+    if output.find(chi_text) > -1:
+      replace_occur = True
+    output = output.replace(chi_text,eng_text+'_')
+
+
+
+  if replace_occur:
+    if output[-1] == '_':
+      output = output[:-1]
+    output = output.lower()
+    output = output.replace('_ ',' ')
 
   return output
 
@@ -33,10 +44,8 @@ def gen_lib(cell_values, footprint_in, footprint_list_in):
 
   for cell_value in cell_values:
     try:
-      print(translate_component_name('翠绿'))
-      sys.exit()
-
       component_name = translate_component_name(cell_value[COL_NUM_COMPONENT_NAME])
+
 
       component_id = cell_value[COL_NUM_COMPONENT_ID]
       component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
@@ -61,7 +70,8 @@ def gen_lib(cell_values, footprint_in, footprint_list_in):
           # FOOTPRINT_LIST = footprint_list_in,
           LIB_DRAW = lookup_drawing_by_category(component_category),
           LIB_TYPE = component_lib_type,
-          COMPONENT_DESIGNATION = lookup_component_designation(component_category)
+          COMPONENT_DESIGNATION = lookup_component_designation(component_category),
+          EXCEL_TABLE_NAME = cell_value[COL_NUM_COMPONENT_NAME]
         )
       )
 
@@ -75,28 +85,37 @@ def gen_dcm(cell_values, footprint_in, footprint_list_in):
   output_list=[]
 
   for cell_value in cell_values:
-    component_id = cell_value[COL_NUM_COMPONENT_ID]
-    component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
-    component_name = massage_component_name(cell_value[COL_NUM_COMPONENT_NAME]+','+component_package+','+component_id)
-    component_category = cell_value[COL_NUM_COMPONENT_CATEGORY]
-    component_solder_joint = cell_value[COL_NUM_COMPONENT_SOLDER_PAD]
-    component_manufacturer = cell_value[COL_NUM_COMPONENT_MANUFACTURER]
+    try:
+      component_name = translate_component_name(cell_value[COL_NUM_COMPONENT_NAME])
 
-    output_list.append(
-      dcm_template.substitute(
-        COMPONENT_NAME = component_name,
-        C_DEFAULT_FOOTPRINT = footprint_lookup(component_package, footprint_in),
-        LCSC_PART = component_id,
-        MFR_PART = component_name,
-        SEC_CAT = component_category,
-        PACKAGE = component_package,
-        SOLDER_JOINT = component_solder_joint,
-        MANU = component_manufacturer,
-        COMPONENT_FOOTPRINT = component_package,
-        DESCRIPTION ='test description',
-        KEY = 'test key',
+      component_id = cell_value[COL_NUM_COMPONENT_ID]
+      component_package = cell_value[COL_NUM_COMPONENT_FOOTPRINT]
+      component_name = massage_component_name(component_name+','+component_package+','+component_id)
+      component_category = cell_value[COL_NUM_COMPONENT_CATEGORY]
+      component_solder_joint = cell_value[COL_NUM_COMPONENT_SOLDER_PAD]
+      component_manufacturer = cell_value[COL_NUM_COMPONENT_MANUFACTURER]
+
+      output_list.append(
+        dcm_template.substitute(
+          COMPONENT_NAME = component_name,
+          C_DEFAULT_FOOTPRINT = footprint_lookup(component_package, footprint_in),
+          LCSC_PART = component_id,
+          MFR_PART = component_name,
+          SEC_CAT = component_category,
+          PACKAGE = component_package,
+          SOLDER_JOINT = component_solder_joint,
+          MANU = component_manufacturer,
+          COMPONENT_FOOTPRINT = component_package,
+          DESCRIPTION ='test description',
+          KEY = 'test key',
+        )
       )
-    )
+      pass
+    except Exception as e:
+      print('error occur during converting ,', cell_value)
+      raise e
+
+
   return output_list
 
 def filter_components_by_category(cell_values, component_category):
