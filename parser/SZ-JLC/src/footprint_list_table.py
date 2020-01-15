@@ -1270,7 +1270,7 @@ default_footprint_list_expand={
 #   # CAT_SMD_SHIFT_REGISTER: shift_register_footprint_list_expand,
 #   # CAT_SMD_SIGNAL_BUFFERS_REPEATERS_DISTRIBUTORS: signal_buffers_repeaters_distributors_footprint_list_expand,
 #   # CAT_SMD_SIGNAL_SWITCHES_MULTIPLEXERS_DECODERS: signal_switches_multiplexers_decoders_footprint_list_expand,
-#   # CAT_SMD_SMD_ACTIVE_CRYSTAL_OSCILLATOR: smd_active_crystal_oscillator_footprint_list_expand,
+#   # CAT_SMD_ACTIVE_CRYSTAL_OSCILLATOR: smd_active_crystal_oscillator_footprint_list_expand,
 #   # CAT_SMD_DISPOSABLE_FUSES: disposable_fuses_footprint_list_expand,
 #   # CAT_SMD_MAGNETIC_BEADS: magnetic_beads_footprint_list_expand,
 #   # CAT_SMD_OPTOCOUPLER: optocoupler_footprint_list_expand,

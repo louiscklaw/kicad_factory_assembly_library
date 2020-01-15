@@ -35,12 +35,12 @@ CONST_LIB_TYPE_BASIC='基础库'
 
 convert_list = [
 
-  # [CAT_SMD_CAPACITOR, 'output/sz_jlc_capacitor.lib', 'output/sz_jlc_capacitor.dcm'],
-  # [CAT_SMD_DIODE, 'output/sz_jlc_diode.lib', 'output/sz_jlc_diode.dcm'],
-  # [CAT_SMD_ESD_DIODE,  'output/sz_jlc_esd_diode.lib', 'output/sz_jlc_esd_diode.dcm'],
-  # [CAT_SMD_INDUCTOR, 'output/sz_jlc_inductor.lib', 'output/sz_jlc_inductor.dcm'],
-  # [CAT_SMD_LED, 'output/sz_jlc_led.lib', 'output/sz_jlc_led.dcm'],
-  # [CAT_SMD_RESISTOR, 'output/sz_jlc_resistor.lib', 'output/sz_jlc_resistor.dcm'],
+  [CAT_SMD_CAPACITOR, 'output/sz_jlc_capacitor.lib', 'output/sz_jlc_capacitor.dcm'],
+  [CAT_SMD_DIODE, 'output/sz_jlc_diode.lib', 'output/sz_jlc_diode.dcm'],
+  [CAT_SMD_ESD_DIODE,  'output/sz_jlc_esd_diode.lib', 'output/sz_jlc_esd_diode.dcm'],
+  [CAT_SMD_INDUCTOR, 'output/sz_jlc_inductor.lib', 'output/sz_jlc_inductor.dcm'],
+  [CAT_SMD_LED, 'output/sz_jlc_led.lib', 'output/sz_jlc_led.dcm'],
+  [CAT_SMD_RESISTOR, 'output/sz_jlc_resistor.lib', 'output/sz_jlc_resistor.dcm'],
   [CAT_SMD_LDO_LOW_DROPOUT_LINEAR_REGULATION,  'output/sz_jlc_ldo_low_dropout_linear_regulation.lib', 'output/sz_jlc_ldo_low_dropout_linear_regulation.dcm'],
 
   # [CAT_SMD_ACCELEROMETER,  'output/sz_jlc_accelerometer.lib', 'output/sz_jlc_accelerometer.dcm'],
@@ -180,7 +180,7 @@ convert_list = [
   # [CAT_SMD_SHIFT_REGISTER,  'output/sz_jlc_shift_register.lib', 'output/sz_jlc_shift_register.dcm'],
   # [CAT_SMD_SIGNAL_BUFFERS_REPEATERS_DISTRIBUTORS,  'output/sz_jlc_signal_buffers_repeaters_distributors.lib', 'output/sz_jlc_signal_buffers_repeaters_distributors.dcm'],
   # [CAT_SMD_SIGNAL_SWITCHES_MULTIPLEXERS_DECODERS,  'output/sz_jlc_signal_switches_multiplexers_decoders.lib', 'output/sz_jlc_signal_switches_multiplexers_decoders.dcm'],
-  # [CAT_SMD_SMD_ACTIVE_CRYSTAL_OSCILLATOR,  'output/sz_jlc_smd_active_crystal_oscillator.lib', 'output/sz_jlc_smd_active_crystal_oscillator.dcm'],
+  # [CAT_SMD_ACTIVE_CRYSTAL_OSCILLATOR,  'output/sz_jlc_smd_active_crystal_oscillator.lib', 'output/sz_jlc_smd_active_crystal_oscillator.dcm'],
   # [CAT_SMD_SOLID_ELECTROLYTIC_CAPACITOR,  'output/sz_jlc_solid_electrolytic_capacitor.lib', 'output/sz_jlc_solid_electrolytic_capacitor.dcm'],
   # [CAT_SMD_SOUND_SURFACE_RESONATOR_SAW,  'output/sz_jlc_sound_surface_resonator_saw.lib', 'output/sz_jlc_sound_surface_resonator_saw.dcm'],
   # [CAT_SMD_SPECIAL_FUNCTION_AMPLIFIER,  'output/sz_jlc_special_function_amplifier.lib', 'output/sz_jlc_special_function_amplifier.dcm'],
