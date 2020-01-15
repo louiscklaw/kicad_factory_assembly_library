@@ -185,7 +185,6 @@ component_designation={
   CAT_SMD_VOLTAGE_REFERENCE_CHIP: 'U',
   CAT_SMD_WIRELESS_TRANSCEIVER_CHIP: 'U',
   CAT_SMD_ZENER_DIODE: 'U',
-
 }
 
 def lookup_component_designation(str_in):

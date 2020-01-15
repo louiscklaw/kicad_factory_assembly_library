@@ -8,6 +8,7 @@ from constant import *
 from config import *
 from common import *
 from template import *
+from master_table import *
 
 xls_file_input = sys.argv[1]
 print('input xls file: ', xls_file_input)
@@ -15,12 +16,14 @@ print('input xls file: ', xls_file_input)
 cell_values = sorted(get_all_columns(xls_file_input)[1:])
 
 # TODO: resume me
-for convert_item in convert_list:
+for convert_item in master_table:
   try:
     # for convert_item in [[CAT_SMD_ESD_DIODE,  'output/sz_jlc_esd_diode.lib', 'output/sz_jlc_esd_diode.dcm']]:
     filter_component_category = convert_item[0]
     lib_filename = convert_item[1]
     dcm_filename = convert_item[2]
+    footprint = convert_item[3]
+    footprint_expand = convert_item[4]
 
     list_component = filter_components_by_category(cell_values, filter_component_category)
     # list_component = list_component[1:3]
@@ -33,8 +36,8 @@ for convert_item in convert_list:
 
     print(filter_component_category, len(list_component), 'count')
 
-    lib_text = gen_lib(list_component)
-    dcm_text = gen_dcm(list_component)
+    lib_text = gen_lib(list_component, footprint, footprint_expand)
+    dcm_text = gen_dcm(list_component, footprint, footprint_expand)
 
     write_kicad_lib_file(lib_filename,'\n'.join(lib_text))
     write_kicad_dcm_file(dcm_filename,'\n'.join(dcm_text))

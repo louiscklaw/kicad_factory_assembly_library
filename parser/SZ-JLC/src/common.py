@@ -14,12 +14,13 @@ from designation import *
 
 from footprint import *
 # from footprint_list import *
+from master_table import *
 
 def massage_component_name(str_in):
   str_in = str_in.replace(' ',',')
   return str_in
 
-def gen_lib(cell_values):
+def gen_lib(cell_values, footprint_in, footprint_list_in):
   output_list=[]
 
   for cell_value in cell_values:
@@ -35,15 +36,17 @@ def gen_lib(cell_values):
       output_list.append(
         lib_template.substitute(
           COMPONENT_NAME = component_name,
-          C_DEFAULT_FOOTPRINT = footprint_lookup(component_package, component_category),
+          C_DEFAULT_FOOTPRINT = footprint_lookup(component_package, footprint_in),
+          # C_DEFAULT_FOOTPRINT = footprint_in,
           LCSC_PART = component_id,
           MFR_PART = component_name,
           SEC_CAT = component_category,
           PACKAGE = component_package,
           SOLDER_JOINT = component_solder_joint,
           MANU = component_manufacturer,
-          FOOTPRINT_LIST = footprint_list_lookup(component_package, component_category),
-          LIB_DRAW = lookup_drawing(component_category),
+          FOOTPRINT_LIST = footprint_list_lookup(component_package, footprint_list_in),
+          # FOOTPRINT_LIST = footprint_list_in,
+          LIB_DRAW = lookup_drawing_by_category(component_category),
           LIB_TYPE = component_lib_type,
           COMPONENT_DESIGNATION = lookup_component_designation(component_category)
         )
@@ -55,7 +58,7 @@ def gen_lib(cell_values):
 
   return output_list
 
-def gen_dcm(cell_values):
+def gen_dcm(cell_values, footprint_in, footprint_list_in):
   output_list=[]
 
   for cell_value in cell_values:
@@ -69,7 +72,7 @@ def gen_dcm(cell_values):
     output_list.append(
       dcm_template.substitute(
         COMPONENT_NAME = component_name,
-        C_DEFAULT_FOOTPRINT = footprint_lookup(component_package, component_category),
+        C_DEFAULT_FOOTPRINT = footprint_lookup(component_package, footprint_in),
         LCSC_PART = component_id,
         MFR_PART = component_name,
         SEC_CAT = component_category,
