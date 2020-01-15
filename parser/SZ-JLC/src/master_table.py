@@ -20,6 +20,10 @@ master_table = [
   [CAT_SMD_RESISTOR, 'output/sz_jlc_resistor.lib', 'output/sz_jlc_resistor.dcm', resistor_footprint_expand, resistor_footprint_list_expand, SMD_RESISTOR_SYMBOL],
   [CAT_SMD_LDO_LOW_DROPOUT_LINEAR_REGULATION,  'output/sz_jlc_ldo_low_dropout_linear_regulation.lib', 'output/sz_jlc_ldo_low_dropout_linear_regulation.dcm', ldo_low_dropout_linear_regulation_footprint_expand, ldo_low_dropout_linear_regulation_footprint_list_expand, SMD_LDO_SYMBOL],
 
+  # MCU
+  # [CAT_SMD_MCU_MONITORING_CHIP,  'output/sz_jlc_mcu_monitoring_chip.lib', 'output/sz_jlc_mcu_monitoring_chip.dcm'],
+  [CAT_SMD_MICROCONTROLLER_MCU,  'output/sz_jlc_microcontroller_mcu.lib', 'output/sz_jlc_microcontroller_mcu.dcm', microcontroller_mcu_footprint_expand, microcontroller_mcu_footprint_list_expand, SMD_MICROCONTROLLER_MCU_SYMBOL],
+
   # [CAT_SMD_ACCELEROMETER,  'output/sz_jlc_accelerometer.lib', 'output/sz_jlc_accelerometer.dcm'],
   # [CAT_SMD_ACTIVE_FILTER,  'output/sz_jlc_active_filter.lib', 'output/sz_jlc_active_filter.dcm'],
   # [CAT_SMD_AMBIENT_LIGHT_SENSOR,  'output/sz_jlc_ambient_light_sensor.lib', 'output/sz_jlc_ambient_light_sensor.dcm'],
@@ -111,8 +115,7 @@ master_table = [
   # [CAT_SMD_LVDS_CHIP,  'output/sz_jlc_lvds_chip.lib', 'output/sz_jlc_lvds_chip.dcm'],
   # [CAT_SMD_MAGNETIC_BEADS,  'output/sz_jlc_magnetic_beads.lib', 'output/sz_jlc_magnetic_beads.dcm'],
   # [CAT_SMD_MAGNETIC_SENSOR,  'output/sz_jlc_magnetic_sensor.lib', 'output/sz_jlc_magnetic_sensor.dcm'],
-  # [CAT_SMD_MCU_MONITORING_CHIP,  'output/sz_jlc_mcu_monitoring_chip.lib', 'output/sz_jlc_mcu_monitoring_chip.dcm'],
-  # [CAT_SMD_MICROCONTROLLER_MCU,  'output/sz_jlc_microcontroller_mcu.lib', 'output/sz_jlc_microcontroller_mcu.dcm'],
+
   # [CAT_SMD_MOS_DRIVE,  'output/sz_jlc_mos_drive.lib', 'output/sz_jlc_mos_drive.dcm'],
   # [CAT_SMD_MOS_FIELD_EFFECT_TUBE,  'output/sz_jlc_mos_field_effect_tube.lib', 'output/sz_jlc_mos_field_effect_tube.dcm'],
   # [CAT_SMD_MOTOR_DRIVER,  'output/sz_jlc_motor_driver.lib', 'output/sz_jlc_motor_driver.dcm'],
