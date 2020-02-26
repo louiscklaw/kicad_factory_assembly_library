@@ -6,11 +6,14 @@ from pprint import pprint
 from footprint import *
 from draw_symbol import *
 
+
+# CAT_SMD_CAPACITOR=>parser/SZ-JLC/src/category.py
 master_table = [
 
   [CAT_SMD_CAPACITOR, 'output/sz_jlc_capacitor.lib', 'output/sz_jlc_capacitor.dcm', capacitor_footprint_expand, capacitor_footprint_list_expand, SMD_CAPACITOR_SYMBOL],
 
   [CAT_SMD_DIODE, 'output/sz_jlc_diode.lib', 'output/sz_jlc_diode.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_DIODE_SYMBOL],
+
   [CAT_SMD_ESD_DIODE,  'output/sz_jlc_esd_diode.lib', 'output/sz_jlc_esd_diode.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_DIODE_SYMBOL],
   [CAT_SMD_ZENER_DIODE,  'output/sz_jlc_zener_diode.lib', 'output/sz_jlc_zener_diode.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_DIODE_SYMBOL],
   [CAT_SMD_AVALANCHE_DIODE,  'output/sz_jlc_avalanche_diode.lib', 'output/sz_jlc_avalanche_diode.dcm', diode_footprint_expand, diode_footprint_list_expand, SMD_DIODE_SYMBOL],
@@ -50,7 +53,7 @@ master_table = [
   [CAT_SMD_CODEC_CHIP,  'output/sz_jlc_codec_chip.lib', 'output/sz_jlc_codec_chip.dcm', codec_chip_footprint_expand, codec_chip_footprint_list_expand, SMD_CODEC_CHIP_SYMBOL],
   [CAT_SMD_COLOR_SENSOR,  'output/sz_jlc_color_sensor.lib', 'output/sz_jlc_color_sensor.dcm', color_sensor_footprint_expand, color_sensor_footprint_list_expand, SMD_COLOR_SENSOR_SYMBOL],
   [CAT_SMD_COMMON_MODE_INDUCTOR_FILTER,  'output/sz_jlc_common_mode_inductor_filter.lib', 'output/sz_jlc_common_mode_inductor_filter.dcm', common_mode_inductor_filter_footprint_expand, common_mode_inductor_filter_footprint_list_expand, SMD_COMMON_MODE_INDUCTOR_FILTER_SYMBOL],
-  [CAT_SMD_CONSTANT_CURRENT_DIODE,  'output/sz_jlc_constant_current_diode.lib', 'output/sz_jlc_constant_current_diode.dcm', constant_current_diode_footprint_expand, constant_current_diode_footprint_list_expand, SMD_CONSTANT_CURRENT_DIODE_SYMBOL],
+  # [CAT_SMD_CONSTANT_CURRENT_DIODE,  'output/sz_jlc_constant_current_diode.lib', 'output/sz_jlc_constant_current_diode.dcm', constant_current_diode_footprint_expand, constant_current_diode_footprint_list_expand, SMD_CONSTANT_CURRENT_DIODE_SYMBOL],
   [CAT_SMD_CONSTANT_CURRENT_DIODE,  'output/sz_jlc_constant_current_diode.lib', 'output/sz_jlc_constant_current_diode.dcm', constant_current_diode_footprint_expand, constant_current_diode_footprint_list_expand, SMD_CONSTANT_CURRENT_DIODE_SYMBOL],
   [CAT_SMD_COUNTER_DIVIDER,  'output/sz_jlc_counter_divider.lib', 'output/sz_jlc_counter_divider.dcm', counter_divider_footprint_expand, counter_divider_footprint_list_expand, SMD_COUNTER_DIVIDER_SYMBOL],
   [CAT_SMD_CPLD_FPGA_CHIP,  'output/sz_jlc_cpld_fpga_chip.lib', 'output/sz_jlc_cpld_fpga_chip.dcm', cpld_fpga_chip_footprint_expand, cpld_fpga_chip_footprint_list_expand, SMD_CPLD_FPGA_CHIP_SYMBOL],
@@ -190,15 +193,19 @@ master_table = [
   [CAT_SMD_WIRELESS_TRANSCEIVER_CHIP,  'output/sz_jlc_wireless_transceiver_chip.lib', 'output/sz_jlc_wireless_transceiver_chip.dcm', wireless_transceiver_chip_footprint_expand, wireless_transceiver_chip_footprint_list_expand, SMD_WIRELESS_TRANSCEIVER_CHIP_SYMBOL],
 ]
 
+
+
 def lookup_drawing_by_category(component_category):
   output = list(lookup_master_table_by_category(component_category))
   try:
     if (len(output) == 1):
       return output[0][5]
     else:
-      raise 'lookup_drawing_by_category error'
+      raise Exception('lookup_drawing_by_category exception')
   except Exception as e:
     pprint('lookup_drawing_by_category error')
+    # pprint(f'error during lookup category {component_category}')
+    pprint(list(lookup_master_table_by_category(component_category)))
     raise e
     pass
 
