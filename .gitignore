@@ -1,6 +1,6 @@
-*.bck
-*~*
-
+**/*.bck
+**/*~*
+**/*.log
 **/*.pyc
 
 **/*.dcm
@@ -8,10 +8,10 @@
 **/boilerplate/output
 
 **/*.out
-output
+**/output
 
 
-/home/logic/_workspace/kicad_factory_assembly_library/_util/kicad-library-utils/schlib/tmp
+**/tmp
 _util/kicad-library-utils/schlib/tmp/
 
 parser/SZ-JLC/input/exportComponentList.xls
