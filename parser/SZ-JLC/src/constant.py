@@ -3,6 +3,8 @@
 import os,sys,re
 from pprint import pprint
 
+from category import *
+
 COL_NUM_COMPONENT_ID=0
 COL_NUM_COMPONENT_NAME=1
 COL_NUM_COMPONENT_CATEGORY=2

@@ -4,3 +4,12 @@
 [submodule "_ref/kicad-library-utils"]
 	path = _ref/kicad-library-utils
 	url = https://github.com/KiCad/kicad-library-utils
+[submodule "_ref/pcad2kicad"]
+	path = _ref/pcad2kicad
+	url = https://github.com/xtoolbox/pcad2kicad.git
+[submodule "_ref/kicad_tools"]
+	path = _ref/kicad_tools
+	url = https://github.com/xtoolbox/kicad_tools
+[submodule "_ref/lc_kicad_lib"]
+	path = _ref/lc_kicad_lib
+	url = https://github.com/xtoolbox/lc_kicad_lib.git
