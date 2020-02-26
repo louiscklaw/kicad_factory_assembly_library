@@ -1,31 +1,31 @@
 #!/usr/bin/env bash
 
-rm -rf parser/SZ-JLC/output/*.lib
-rm -rf parser/SZ-JLC/output/*.dcm
+SZ_JLC_DIR="parser/SZ-JLC"
 
-cd parser/SZ-JLC
+rm -rf $SZ_JLC_DIR/output/*.lib
+rm -rf $SZ_JLC_DIR/output/*.dcm
+rm -rf $SZ_JLC_DIR/input/exportComponentList.xls
 
-pipenv sync
-pipenv run python3 ./src/main.py input/exportComponentList.xls
+cd $SZ_JLC_DIR
+  wget -O input/exportComponentList.xls https://www.sz-jlc.com/home/none/exportComponentList.html
 
-cd ../..
-
-echo 'test start'
-
-cd parser/SZ-JLC
-
-./scripts/kicad_test.sh
+  pipenv sync
+  pipenv run python3 ./src/main.py input/test.xls
 
 cd ../..
 
-echo 'test done'
 
-echo 'generate sym-table'
+cd $SZ_JLC_DIR
+  printf '\ntest start\n'
 
-cd parser/SZ-JLC
+  ./scripts/kicad_test.sh
 
-python3 src/gen_sym_table.py
+  printf '\ntest done\n'
 
+
+  printf '\ngenerate sym-table\n'
+
+  python3 src/gen_sym_table.py
+
+  printf '\ngenerate sym-table done\n'
 cd ../..
-
-echo 'generate sym-table done'
