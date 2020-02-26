@@ -1,0 +1,34 @@
+{
+  "name": "kicad_factory_assembly_library",
+  "version": "1.0.0",
+  "description": "### SZ JLC ### place new component type /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/src/constant.py /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/src/footprint.py /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/src/draw_symbol.py /home/logic/_workspace/kicad_factory_assembly_library/parser/SZ-JLC/src/designation.py",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louiscklaw/kicad_factory_assembly_library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louiscklaw/kicad_factory_assembly_library/issues"
+  },
+  "homepage": "https://github.com/louiscklaw/kicad_factory_assembly_library#readme",
+  "dependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-push": "./test.sh"
+    }
+  }
+}

@@ -40,6 +40,8 @@ for convert_item in master_table:
     dcm_text = gen_dcm(list_component, footprint, footprint_expand)
 
     write_kicad_lib_file(lib_filename,'\n'.join(lib_text))
+
+    print(f'writing dcm file {dcm_filename}')
     write_kicad_dcm_file(dcm_filename,'\n'.join(dcm_text))
 
     # list_MCUs = filter_components_by_category(cell_values,'微控制器(MCU)')
