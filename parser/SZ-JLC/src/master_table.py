@@ -78,7 +78,7 @@ master_table = [
   [CAT_SMD_EPROM_MEMORY,  'output/sz_jlc_eprom_memory.lib', 'output/sz_jlc_eprom_memory.dcm', eprom_memory_footprint_expand, eprom_memory_footprint_list_expand, SMD_EPROM_MEMORY_SYMBOL],
   [CAT_SMD_ETHERNET_CHIP,  'output/sz_jlc_ethernet_chip.lib', 'output/sz_jlc_ethernet_chip.dcm', ethernet_chip_footprint_expand, ethernet_chip_footprint_list_expand, SMD_ETHERNET_CHIP_SYMBOL],
   [CAT_SMD_FAST_RECOVERY_DIODE,  'output/sz_jlc_fast_recovery_diode.lib', 'output/sz_jlc_fast_recovery_diode.dcm', fast_recovery_diode_footprint_expand, fast_recovery_diode_footprint_list_expand, SMD_FAST_RECOVERY_DIODE_SYMBOL],
-  [CAT_SMD_FAST_RECOVERY_DIODE,  'output/sz_jlc_fast_recovery_diode.lib', 'output/sz_jlc_fast_recovery_diode.dcm', fast_recovery_diode_footprint_expand, fast_recovery_diode_footprint_list_expand, SMD_FAST_RECOVERY_DIODE_SYMBOL],
+  # [CAT_SMD_FAST_RECOVERY_DIODE,  'output/sz_jlc_fast_recovery_diode.lib', 'output/sz_jlc_fast_recovery_diode.dcm', fast_recovery_diode_footprint_expand, fast_recovery_diode_footprint_list_expand, SMD_FAST_RECOVERY_DIODE_SYMBOL],
   [CAT_SMD_FET_INPUT_OP_AMP,  'output/sz_jlc_fet_input_op_amp.lib', 'output/sz_jlc_fet_input_op_amp.dcm', fet_input_op_amp_footprint_expand, fet_input_op_amp_footprint_list_expand, SMD_FET_INPUT_OP_AMP_SYMBOL],
   [CAT_SMD_FLASH_MEMORY,  'output/sz_jlc_flash_memory.lib', 'output/sz_jlc_flash_memory.dcm', flash_memory_footprint_expand, flash_memory_footprint_list_expand, SMD_FLASH_MEMORY_SYMBOL],
   [CAT_SMD_FONT_CHIP,  'output/sz_jlc_font_chip.lib', 'output/sz_jlc_font_chip.dcm', font_chip_footprint_expand, font_chip_footprint_list_expand, SMD_FONT_CHIP_SYMBOL],
