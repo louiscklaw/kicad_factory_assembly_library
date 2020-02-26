@@ -19,6 +19,7 @@ cd $SZ_JLC_DIR
   printf '\ntest start\n'
 
   ./scripts/kicad_test.sh
+  test $? -eq 0 || echo "test failed" && exit 1
 
   printf '\ntest done\n'
 
@@ -26,6 +27,7 @@ cd $SZ_JLC_DIR
   printf '\ngenerate sym-table\n'
 
   python3 src/gen_sym_table.py
+  test $? -eq 0 || echo "generate sym-table failed" && exit 1
 
   printf '\ngenerate sym-table done\n'
 cd ../..
