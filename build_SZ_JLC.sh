@@ -4,13 +4,13 @@ SZ_JLC_DIR="parser/SZ-JLC"
 
 rm -rf $SZ_JLC_DIR/output/*.lib
 rm -rf $SZ_JLC_DIR/output/*.dcm
-rm -rf $SZ_JLC_DIR/input/exportComponentList.xls
+# rm -rf $SZ_JLC_DIR/input/exportComponentList.xls
 
 cd $SZ_JLC_DIR
-  wget -O input/exportComponentList.xls https://www.sz-jlc.com/home/none/exportComponentList.html
+  # wget -O input/exportComponentList.xls https://www.sz-jlc.com/home/none/exportComponentList.html
 
   pipenv sync
-  pipenv run python3 ./src/main.py input/test.xls
+  pipenv run python3 ./src/main.py input/exportComponentList.xls
 
 cd ../..
 
