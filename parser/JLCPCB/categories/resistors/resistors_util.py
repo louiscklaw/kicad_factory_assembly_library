@@ -19,8 +19,6 @@ def massage_mfr_part_value(str_in):
   str_in = str_in.upper()
   str_in = re.sub('  ',' ',str_in)
   str_in = re.sub('± ','±',str_in)
-  print(str_in)
-
   return str_in
 
 # SOLVE: missing_implementation in general_handler
@@ -604,5 +602,3 @@ def handle_r_resistance_precision(cell_values_array, m_r):
 
 def helloworld():
   print('helloworld util py')
-
-helloworld()

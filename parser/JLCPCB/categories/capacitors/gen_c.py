@@ -10,16 +10,20 @@ from math import log10, floor
 from string import Template
 import csv
 
+from common import *
 from capacitors_template import *
+
 
 def getLibText( component_name, cap_size, c_accuracy, lcsc_part, mfr_part,first_category, secondary_category, solder_joint, manufacturer, lib_type ):
   text_content=[]
 
+  footprint_masks = gen_footprint_mask('Capacitor_SMD:C_', cap_size)
+  footprint_mask_string = '\n'.join([' '+footprint_mask for footprint_mask in footprint_masks])
 
   text_content.append(
     C_LIB_UNIT_SIZE_TEMPLATE.substitute(
       C_VALUE_SIZE = component_name,
-      C_SIZE = cap_size,
+      COMPONENT_FOOTPRINT=footprint_mask_string,
       C_DEFAULT_FOOTPRINT= DEFAULT_FOOTPRINT_LOOKUP[cap_size] if cap_size in DEFAULT_FOOTPRINT_LOOKUP.keys() else '',
       LCSC_PART=lcsc_part,
       MFR_PART= mfr_part,

@@ -268,7 +268,7 @@ def gen_gen_template_file(component_name, output_filepath, first_cat_name):
   gen_file_content = gen_file_content.replace('{component_name}', component_name)
   with open(output_filepath, 'w') as fo_util:
     fo_util.write(gen_file_content)
-    # print('findme')
+    #
     # sys.exit()
 
 template_map = {

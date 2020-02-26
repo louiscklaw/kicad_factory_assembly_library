@@ -169,7 +169,6 @@ def general_handler(cell_values):
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''.strip()
 
 
@@ -196,7 +195,6 @@ from const import *
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''.strip()
 
 
@@ -307,8 +305,6 @@ first_categories_check_process = {
   FIRST_CAT_TRANSISTORS: [check_first_cat_transistors, process_first_cat_transistors],
 }
 
-print('hello categories')
-
 '''.strip()
 
 
@@ -351,7 +347,7 @@ def getLibText( r_smd_code, r_size, r_accuracy, lcsc_part, mfr_part,first_catego
           else:
             # print('ERROR: footprint not found in fp_default_fp_matcher')
             # print(f"footprint wanted")
-            print(f"'{r_size}':'not verified', ")
+            print(f"'{r_size}':'not_verified', ")
             missing_footprint.append(r_size)
 
           # print('cannot find fp_default_fp_matcher[r_size]... ')
@@ -551,5 +547,4 @@ $R_CONTENT
 def helloworld():
   print('helloworld util py')
 
-helloworld()
 '''.strip().replace('{footprint_templates}',footprint_list)

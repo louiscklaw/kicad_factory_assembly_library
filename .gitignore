@@ -1,12 +1,18 @@
 *.bck
 *~*
 
+**/*.pyc
 
 **/*.dcm
 **/*.lib
 **/boilerplate/output
 
 **/*.out
+output
+
 
 /home/logic/_workspace/kicad_factory_assembly_library/_util/kicad-library-utils/schlib/tmp
 _util/kicad-library-utils/schlib/tmp/
+
+parser/SZ-JLC/input/exportComponentList.xls
+**/node_modules

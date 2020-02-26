@@ -194,5 +194,3 @@ capacitors_mapping = {
 }
 
 # py_util_content
-
-print('helloworld')

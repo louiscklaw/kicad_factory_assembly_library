@@ -19,5 +19,3 @@ from const import *
 
 def helloworld():
   print('helloworld util py')
-
-helloworld()

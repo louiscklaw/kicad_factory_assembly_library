@@ -12,11 +12,11 @@ from const import *
 # SEC_CAT_CONSTANTS
 SEC_CAT_CLOCK_BUFFERS_DRIVERS = 'Clock Buffers, Drivers'
 SEC_CAT_CLOCK_GENERATORS_PLLS_FREQUENCY_SYNTHESIZERS = 'Clock Generators, PLLs, Frequency Synthesizers'
-SEC_CAT_CLOCK_TIMING_APPLICATION_SPECIFIC = 'Clock/Timing-Application Specific'
+SEC_CAT_CLOCK_TIMING_APPLICATION_SPECIFIC = 'Clock/Timing - Application Specific'
 SEC_CAT_FONT_CHIPS = 'Font chips'
 SEC_CAT_I_O_EXPANSION = 'I/O Expansion'
 SEC_CAT_MICROPROCESSOR_MICROCONTROLLER_SUPERVISORS = 'Microprocessor & Microcontroller Supervisors'
-SEC_CAT_REAL_TIME_CLOCKS = 'Real-time Clocks'
+SEC_CAT_REAL_TIME_CLOCKS = 'Real - time Clocks'
 SEC_CAT_SECURITY_AUTHENTICATION_ICS = 'Security Authentication ICs'
 
 # check_defs

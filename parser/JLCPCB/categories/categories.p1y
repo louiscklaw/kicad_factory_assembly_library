@@ -12,8 +12,6 @@ from capacitors.capacitors import *
 from inductors_chokes_transformers.inductors_chokes_transformers import *
 
 
-print('hello categories')
-
 FIRST_CAT_RESISTORS = "Resistors"
 FIRST_CAT_INDUCTORS_CHOKES_TRANSFORMERS = "Inductors & Chokes & Transformers"
 FIRST_CAT_CAPACITORS = "Capacitors"
@@ -202,79 +200,79 @@ def process_first_cat_diodes(cell_values):
   return result
 
 def process_first_cat_transistors(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_power_management_ics(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_optocouplers_leds_infrared(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_embedded_processors_controllers(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_logic_ics(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_driver_ics(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_interface_ics(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_embedded_peripheral_ics(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_memory(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_sensors(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_amplifiers(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_filters(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_crystals(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_rf_radio(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_fuses(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_analog_ics(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_pushbutton_switches_relays(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_battery_products(cell_values):
-  print('findme')
+
   pass
 
 def process_first_cat_others(cell_values):
-  print('findme')
+
   pass
 
 
