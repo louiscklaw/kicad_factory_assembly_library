@@ -11,7 +11,7 @@ cd $SZ_JLC_DIR
 
   pipenv sync
   pipenv run python3 ./src/main.py input/exportComponentList.xls
-
+  test $? -eq 0 || echo "cannot parse xls component" && exit 1
 cd ../..
 
 
