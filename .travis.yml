@@ -6,8 +6,7 @@ install:
 
 script:
   - pip3 install --user pipenv
-  - bash ./test/test_SZ_JLC.sh
-  - bash ./scripts/refresh_SZ_JLC.sh
+  - bash ./test.sh
 
 after_success:
   - id
