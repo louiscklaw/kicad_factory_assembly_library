@@ -27,7 +27,9 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS"
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "./build_SZ_JLC.sh",
+      "pre-push": "./build_SZ_JLC.sh"
     }
   }
 }
