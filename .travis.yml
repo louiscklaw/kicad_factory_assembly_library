@@ -9,11 +9,8 @@ script:
   - bash ./test.sh
 
 after_success:
-  - cd .travis
   - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/.travis/merge_if_success.sh
   - bash merge_if_success.sh | tee /tmp/merge.log
-  - cd -
-
 
 notifications:
   slack:
